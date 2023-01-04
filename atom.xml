@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Gehan Zheng&#39;s blog</title>
+  
+  
+  <link href="https://grahamzen.github.io/atom.xml" rel="self"/>
+  
+  <link href="https://grahamzen.github.io/"/>
+  <updated>2023-01-04T08:51:24.000Z</updated>
+  <id>https://grahamzen.github.io/</id>
+  
+  <author>
+    <name>Gehan Zheng</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>跨页表格的题注</title>
+    <link href="https://grahamzen.github.io/2022/05/06/table-caption-continued/"/>
+    <id>https://grahamzen.github.io/2022/05/06/table-caption-continued/</id>
+    <published>2022-05-06T05:28:06.000Z</published>
+    <updated>2023-01-04T08:51:24.000Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;使用latex写文章，尤其是和图像相关的文章时，常常会遇到需要用图片表格的情况。为了能够跨页，我们可以使用&lt;code&gt;longtable&lt;/code&gt;。因为图片较大，如果没有刻意缩小，那么表格就会跨页。有的文章接收方会要求跨页表格在第二页顶部增加额外的题注来接上上一页的表格，以及第一个题注在表格顶部。&lt;/p&gt;
+&lt;h2 id=&quot;跨页题注&quot;&gt;&lt;a href=&quot;#跨页题注&quot; class=&quot;headerlink&quot; title=&quot;跨页题注&quot;&gt;&lt;/a&gt;跨页题注&lt;/h2&gt;&lt;p&gt;&lt;a href=&quot;https://tex.stackexchange.com/questions/115195/table-captions-continued&quot;&gt;https://tex.stackexchange.com/questions/115195/table-captions-continued&lt;/a&gt; 给出了一个解决方法。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="学习" scheme="https://grahamzen.github.io/categories/%E5%AD%A6%E4%B9%A0/"/>
+    
+    <category term="文章排版" scheme="https://grahamzen.github.io/categories/%E5%AD%A6%E4%B9%A0/%E6%96%87%E7%AB%A0%E6%8E%92%E7%89%88/"/>
+    
+    
+    <category term="latex" scheme="https://grahamzen.github.io/tags/latex/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>在latex项目里用plotneuralnet</title>
+    <link href="https://grahamzen.github.io/2022/03/16/plotneuralnet-in-a-project/"/>
+    <id>https://grahamzen.github.io/2022/03/16/plotneuralnet-in-a-project/</id>
+    <published>2022-03-17T03:48:26.000Z</published>
+    <updated>2023-01-04T08:51:24.000Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;plotneuralnet是一个绘制神经网络的工具，使用该工具可以将python脚本转换为latex脚本，编译得到pdf。需要以下几个步骤：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;下载plotneuralnet的github源码，&lt;a href=&quot;https://github.com/HarisIqbal88/PlotNeuralNet&quot;&gt;https://github.com/HarisIqbal88/PlotNeuralNet&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;找一个latex环境，可以是win/linux/overleaf，前两种需要安装latex的环境，比如texlive，可以参考&lt;a href=&quot;https://github.com/luanshiyinyang/PlotNeuralNet，texlive在这里可以找到https://mirrors.tuna.tsinghua.edu.cn/CTAN/systems/texlive/Images/。&quot;&gt;https://github.com/luanshiyinyang/PlotNeuralNet，texlive在这里可以找到https://mirrors.tuna.tsinghua.edu.cn/CTAN/systems/texlive/Images/。&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;写好脚本&lt;code&gt;my_arch.py&lt;/code&gt;（名字可以随便起）放在源码的pyexamples文件夹下，编写的教程可以在其他地方搜到。&lt;/li&gt;
+&lt;li&gt;直接用&lt;code&gt;python&lt;/code&gt;运行&lt;code&gt;python my_arch.py&lt;/code&gt;，可以看到目录下的&lt;code&gt;my_arch.tex&lt;/code&gt;&lt;/li&gt;
+&lt;/ol&gt;</summary>
+    
+    
+    
+    <category term="学习" scheme="https://grahamzen.github.io/categories/%E5%AD%A6%E4%B9%A0/"/>
+    
+    <category term="工具使用" scheme="https://grahamzen.github.io/categories/%E5%AD%A6%E4%B9%A0/%E5%B7%A5%E5%85%B7%E4%BD%BF%E7%94%A8/"/>
+    
+    
+    <category term="latex" scheme="https://grahamzen.github.io/tags/latex/"/>
+    
+    <category term="神经网络可视化" scheme="https://grahamzen.github.io/tags/%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C%E5%8F%AF%E8%A7%86%E5%8C%96/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>JOKR笔记</title>
+    <link href="https://grahamzen.github.io/2021/12/13/JOKR-report/"/>
+    <id>https://grahamzen.github.io/2021/12/13/JOKR-report/</id>
+    <published>2021-12-14T03:15:01.000Z</published>
+    <updated>2023-01-04T08:51:24.000Z</updated>
+    
+    
+    <summary type="html">&lt;h2 id=&quot;JOKR-Joint-Keypoint-Representation-for-Unsupervised-Cross-Domain-Motion-Retargeting&quot;&gt;&lt;a href=&quot;#JOKR-Joint-Keypoint-Representation-for-Unsupervised-Cross-Domain-Motion-Retargeting&quot; class=&quot;headerlink&quot; title=&quot;JOKR: Joint Keypoint Representation for Unsupervised Cross-Domain Motion Retargeting&quot;&gt;&lt;/a&gt;&lt;a href=&quot;https://arxiv.org/abs/2106.09679&quot;&gt;JOKR: Joint Keypoint Representation for Unsupervised Cross-Domain Motion Retargeting&lt;/a&gt;&lt;/h2&gt;&lt;h3 id=&quot;摘要&quot;&gt;&lt;a href=&quot;#摘要&quot; class=&quot;headerlink&quot; title=&quot;摘要&quot;&gt;&lt;/a&gt;摘要&lt;/h3&gt;&lt;p&gt;原视频和目标视频形状不同时，之前专注于特定对象先验的方法就会失败，作者提出联合关键点表达可以捕捉原视频和目标视频都有的动作，而且不需要物体先验或者数据采集。使用domain confusion项有利于对于两个domain的动作的一致的部分的解耦，可区分的外观和动作使得捕捉其中一个视频动作同时描绘另一个视频的风格的视频得以生成。&lt;/p&gt;
+&lt;p&gt;为处理物体有不同比例缩放或者不同方向的情形，作者应用了JOKR之间的仿射变换。这使得表达具有仿射不变性。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="学习" scheme="https://grahamzen.github.io/categories/%E5%AD%A6%E4%B9%A0/"/>
+    
+    <category term="论文笔记" scheme="https://grahamzen.github.io/categories/%E5%AD%A6%E4%B9%A0/%E8%AE%BA%E6%96%87%E7%AC%94%E8%AE%B0/"/>
+    
+    <category term="图像动画" scheme="https://grahamzen.github.io/categories/%E5%AD%A6%E4%B9%A0/%E8%AE%BA%E6%96%87%E7%AC%94%E8%AE%B0/%E5%9B%BE%E5%83%8F%E5%8A%A8%E7%94%BB/"/>
+    
+    
+    <category term="图像动画" scheme="https://grahamzen.github.io/tags/%E5%9B%BE%E5%83%8F%E5%8A%A8%E7%94%BB/"/>
+    
+    <category term="计算机视觉" scheme="https://grahamzen.github.io/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>三篇图像动画论文的比较(FOMM,AA,SDEMT)</title>
+    <link href="https://grahamzen.github.io/2021/12/13/FOMM-AA-SDEMT/"/>
+    <id>https://grahamzen.github.io/2021/12/13/FOMM-AA-SDEMT/</id>
+    <published>2021-12-14T02:45:19.000Z</published>
+    <updated>2023-01-04T05:52:53.631Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;FOMM和AA是很经典的论文，都来自作者Aliaksandr Siarohin，最近有一篇新论文在此基础上做了较大的改进，给出的效果看起来也很好，因此总结三个论文的内容。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://arxiv.org/abs/2003.00196&quot;&gt;FOMM&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://arxiv.org/abs/2104.11280&quot;&gt;AA&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://arxiv.org/abs/2110.04658&quot;&gt;Self-appearance-aided Differential Evolution for Motion Transfer&lt;/a&gt;</summary>
+    
+    
+    
+    <category term="学习" scheme="https://grahamzen.github.io/categories/%E5%AD%A6%E4%B9%A0/"/>
+    
+    <category term="论文笔记" scheme="https://grahamzen.github.io/categories/%E5%AD%A6%E4%B9%A0/%E8%AE%BA%E6%96%87%E7%AC%94%E8%AE%B0/"/>
+    
+    <category term="图像动画" scheme="https://grahamzen.github.io/categories/%E5%AD%A6%E4%B9%A0/%E8%AE%BA%E6%96%87%E7%AC%94%E8%AE%B0/%E5%9B%BE%E5%83%8F%E5%8A%A8%E7%94%BB/"/>
+    
+    
+    <category term="图像动画" scheme="https://grahamzen.github.io/tags/%E5%9B%BE%E5%83%8F%E5%8A%A8%E7%94%BB/"/>
+    
+    <category term="计算机视觉" scheme="https://grahamzen.github.io/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Hello World</title>
+    <link href="https://grahamzen.github.io/2021/12/12/hello-world/"/>
+    <id>https://grahamzen.github.io/2021/12/12/hello-world/</id>
+    <published>2021-12-12T14:09:13.000Z</published>
+    <updated>2023-01-04T08:51:24.000Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;是时候建个blog了，参考的&lt;a href=&quot;https://www.bilibili.com/read/cv12633102&quot;&gt;2021最全hexo搭建博客+matery美化+使用&lt;/a&gt;，写的比较详细。踩的坑都在main和master分支上。以后大概主要写学习相关的文章，记录一下免得忘记。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="随笔" scheme="https://grahamzen.github.io/categories/%E9%9A%8F%E7%AC%94/"/>
+    
+    
+    <category term="随笔" scheme="https://grahamzen.github.io/tags/%E9%9A%8F%E7%AC%94/"/>
+    
+  </entry>
+  
+</feed>
