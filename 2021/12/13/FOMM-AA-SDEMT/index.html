@@ -35,34 +35,39 @@
 <ul>
 <li><a target="_blank" rel="noopener" href="https://arxiv.org/abs/2003.00196">FOMM</a></li>
 <li><a target="_blank" rel="noopener" href="https://arxiv.org/abs/2104.11280">AA</a></li>
-<li><a target="_blank" rel="noopener" href="https://arxiv.org/abs/2110.04658">Self-appearance-aided Differential Evolution for Motion Transfer</a><span id="more"></span></li>
+<li><a target="_blank" rel="noopener" href="https://arxiv.org/abs/2110.04658">Self-appearance-aided Differential Evolution for Motion Transfer</a><span id="more"></span>
+<h2 id="FOMM"><a href="#FOMM" class="headerlink" title="FOMM"></a>FOMM</h2></li>
 </ul>
-<h2 id="FOMM"><a href="#FOMM" class="headerlink" title="FOMM"></a>FOMM</h2><h3 id="motion-representation"><a href="#motion-representation" class="headerlink" title="motion representation"></a>motion representation</h3><p>包含稀疏动作估计和稠密动作估计。</p>
-<h4 id="稀疏动作"><a href="#稀疏动作" class="headerlink" title="稀疏动作"></a>稀疏动作</h4><p>使用$\mathcal{T}<em>{S\leftarrow R}(p_k),\mathcal{T}</em>{D\leftarrow R}(p_k)$来计算D中每个关键点处到S的仿射变换，具体方法是用泰勒展开，然后将涉及到$\mathcal{T}<em>{S\leftarrow R}(p_k),\mathcal{T}</em>{D\leftarrow R}(p_k)$之外的变化都用$\mathcal{T}<em>{S\leftarrow R}(p_k),\mathcal{T}</em>{D\leftarrow R}(p_k)$来代替。<br>$$<br>\mathcal{T_{S\leftarrow D}}(z) \approx \mathcal{T_{S\leftarrow R}}(p_k) + J_k(z-\mathcal{T_{D\leftarrow R}}(p_k))<br>$$</p>
-<h4 id="稠密动作"><a href="#稠密动作" class="headerlink" title="稠密动作"></a>稠密动作</h4><p>用$\mathcal{T}<em>{S\leftarrow R}(p_k),\mathcal{T}</em>{D\leftarrow R}(p_k)$的高斯分布之差计算<strong>热力图</strong>来找出变换发生的位置。对S进行稀疏动作的逆变换，得到K个结果(每个关键点一个变换)。然后将热力图和S变换结果一起喂给U-net，预测K+1个mask作为每个关键点上稀疏动作的权值，多出的一个mask用于处理背景。稠密动作就是各个关键点的稀疏动作的加权和。</p>
-<h3 id="extraction"><a href="#extraction" class="headerlink" title="extraction"></a>extraction</h3><p>使用u-net分别提取参考帧到两个输入图像的仿射变换$\mathcal{T}<em>{S\leftarrow R}(p_k),\mathcal{T}</em>{D\leftarrow R}(p_k)$，每个关键点对应一个变换。还额外输出一个遮挡图的通道。</p>
+<h3 id="motion-representation"><a href="#motion-representation" class="headerlink" title="motion representation"></a>motion representation</h3><p>包含稀疏动作估计和稠密动作估计。</p>
+<h4 id="稀疏动作"><a href="#稀疏动作" class="headerlink" title="稀疏动作"></a>稀疏动作</h4><p>使用$\mathcal{T}_{S\leftarrow R}(p_k),\mathcal{T}_{D\leftarrow R}(p_k)$来计算D中每个关键点处到S的仿射变换，具体方法是用泰勒展开，然后将涉及到$\mathcal{T}_{S\leftarrow R}(p_k),\mathcal{T}_{D\leftarrow R}(p_k)$之外的变化都用$\mathcal{T}_{S\leftarrow R}(p_k),\mathcal{T}_{D\leftarrow R}(p_k)$来代替。</p>
+<script type="math/tex; mode=display">
+\mathcal{T_{S\leftarrow D}}(z) \approx \mathcal{T_{S\leftarrow R}}(p_k) + J_k(z-\mathcal{T_{D\leftarrow R}}(p_k))</script><h4 id="稠密动作"><a href="#稠密动作" class="headerlink" title="稠密动作"></a>稠密动作</h4><p>用$\mathcal{T}_{S\leftarrow R}(p_k),\mathcal{T}_{D\leftarrow R}(p_k)$的高斯分布之差计算<strong>热力图</strong>来找出变换发生的位置。对S进行稀疏动作的逆变换，得到K个结果(每个关键点一个变换)。然后将热力图和S变换结果一起喂给U-net，预测K+1个mask作为每个关键点上稀疏动作的权值，多出的一个mask用于处理背景。稠密动作就是各个关键点的稀疏动作的加权和。</p>
+<h3 id="extraction"><a href="#extraction" class="headerlink" title="extraction"></a>extraction</h3><p>使用u-net分别提取参考帧到两个输入图像的仿射变换$\mathcal{T}_{S\leftarrow R}(p_k),\mathcal{T}_{D\leftarrow R}(p_k)$，每个关键点对应一个变换。还额外输出一个遮挡图的通道。</p>
 <h3 id="transfer"><a href="#transfer" class="headerlink" title="transfer"></a>transfer</h3><p>用稠密动作warp输入图像，然后用遮挡图计算阿达马乘积，最后通过一个解码器处理得到最终结果。</p>
 <h2 id="Articulated-Animation"><a href="#Articulated-Animation" class="headerlink" title="Articulated Animation"></a>Articulated Animation</h2><h3 id="motion-representation-1"><a href="#motion-representation-1" class="headerlink" title="motion representation"></a>motion representation</h3><p>包含稀疏动作估计和稠密动作估计。论文和代码里<strong>热力图</strong>的概念被重复用在两个地方，一个是指输入图像提取出来的热力图，相当于特征点，另一个是稠密动作里用高斯分布得到的热力图，用于找出发生变换的位置。</p>
 <h4 id="稀疏动作-1"><a href="#稀疏动作-1" class="headerlink" title="稀疏动作"></a>稀疏动作</h4><p>使用PCA处理热力图的协方差得到仿射变换的线性变换的部分，热力图的均值作为仿射变换的偏移量，总共5个自由度，加上背景的恒等变换就得到稀疏动作。</p>
 <h4 id="稠密动作-1"><a href="#稠密动作-1" class="headerlink" title="稠密动作"></a>稠密动作</h4><p>和FOMM的做法完全一样（包括使用的神经网络结构），稠密动作就是各个关键点的稀疏动作的加权和。</p>
 <h3 id="extraction-1"><a href="#extraction-1" class="headerlink" title="extraction"></a>extraction</h3><p>使用U-net结构提取输入图像的特征图，经过一层卷积和softmax，得到热力图。</p>
 <h3 id="transfer-1"><a href="#transfer-1" class="headerlink" title="transfer"></a>transfer</h3><p>和FOMM一样。</p>
-<h2 id="Self-appearance-aided-Differential-Evolution-for-Motion-Transfer"><a href="#Self-appearance-aided-Differential-Evolution-for-Motion-Transfer" class="headerlink" title="Self-appearance-aided Differential Evolution for Motion Transfer"></a>Self-appearance-aided Differential Evolution for Motion Transfer</h2><h3 id="motion-representation-2"><a href="#motion-representation-2" class="headerlink" title="motion representation"></a>motion representation</h3><p>计算关键点的差值作为神经网络的输入，回归出系数来加权关键点的差值作为稀疏动作，同时作为微分方程<br>$$<br>\frac{d \mathscr{T}}{d t}&#x3D;\mathscr{F}_{E}\left(\mathscr{T}^{(t)}, t\right), \quad \text { for } t \in[0,1]<br>$$<br>的初值$\mathscr{F}^{(0)}$：，两侧积分就得到稠密动作。</p>
+<h2 id="Self-appearance-aided-Differential-Evolution-for-Motion-Transfer"><a href="#Self-appearance-aided-Differential-Evolution-for-Motion-Transfer" class="headerlink" title="Self-appearance-aided Differential Evolution for Motion Transfer"></a>Self-appearance-aided Differential Evolution for Motion Transfer</h2><h3 id="motion-representation-2"><a href="#motion-representation-2" class="headerlink" title="motion representation"></a>motion representation</h3><p>计算关键点的差值作为神经网络的输入，回归出系数来加权关键点的差值作为稀疏动作，同时作为微分方程</p>
+<script type="math/tex; mode=display">
+\frac{d \mathscr{T}}{d t}=\mathscr{F}_{E}\left(\mathscr{T}^{(t)}, t\right), \quad \text { for } t \in[0,1]</script><p>的初值$\mathscr{F}^{(0)}$：，两侧积分就得到稠密动作。</p>
 <h3 id="extraction-2"><a href="#extraction-2" class="headerlink" title="extraction"></a>extraction</h3><p>用编码器解码器网络获得S和D的关键点。</p>
 <h3 id="transfer-2"><a href="#transfer-2" class="headerlink" title="transfer"></a>transfer</h3><ol>
 <li><p>用特征提取网络提取输入图像的特征$\mathbb{F}_{\mathbb{S}}$。</p>
 </li>
-<li><p>将$\mathbb{F}<em>{\mathbb{S}}$用稠密动作进行扭曲得到$\widetilde{\mathbb{F}}</em>{\mathbb{S D}}$。</p>
+<li><p>将$\mathbb{F}_{\mathbb{S}}$用稠密动作进行扭曲得到$\widetilde{\mathbb{F}}_{\mathbb{S D}}$。</p>
 </li>
-<li><p>扭曲后用$\mathscr{F}<em>A$来预测self-appearance流变形场$\mathscr{T}</em>{App}$，$\mathscr{T}_{App}$是用来扭曲原区域到缺失区域的（流）特征的。</p>
+<li><p>扭曲后用$\mathscr{F}_A$来预测self-appearance流变形场$\mathscr{T}_{App}$，$\mathscr{T}_{App}$是用来扭曲原区域到缺失区域的（流）特征的。</p>
 </li>
-<li><p>计算$\mathbb{F}<em>{A p p}&#x3D;\mathscr{T}</em>{A p p} \circ \widetilde{\mathbb{F}}_{\mathbb{S D}}$。</p>
+<li><p>计算$\mathbb{F}_{A p p}=\mathscr{T}_{A p p} \circ \widetilde{\mathbb{F}}_{\mathbb{S D}}$。</p>
 </li>
-<li><p>用生成器$\mathscr{F}<em>G$为N个不同视角的view输出置信度掩码$C^{(j)}$，每个视角的置信度掩码各自进行归一化：$\widetilde{C}^{(j)}(\mathbf{x})&#x3D;C^{(j)}(\mathbf{x}) &#x2F; \sum</em>{j&#x3D;0}^{N} C^{(j)}(\mathbf{x})$。</p>
+<li><p>用生成器$\mathscr{F}_G$为N个不同视角的view输出置信度掩码$C^{(j)}$，每个视角的置信度掩码各自进行归一化：$\widetilde{C}^{(j)}(\mathbf{x})=C^{(j)}(\mathbf{x}) / \sum_{j=0}^{N} C^{(j)}(\mathbf{x})$。</p>
 </li>
-<li><p>用置信度掩码对$\mathbb{F}<em>{A p p} ,\widetilde{\mathbb{F}}</em>{\mathbb{S D}}$分别计算加权和：<br>$$<br>\overline{\mathbb{F}}<em>{A p p}&#x3D;\sum</em>{j&#x3D;1}^{N} \widetilde{C}^{(j)} \mathbb{F}<em>{A p p}^{(j)}, \quad \overline{\widetilde{\mathbb{F}}}</em>{\mathbb{D}}&#x3D;\sum_{j&#x3D;1}^{N} \widetilde{C}^{(j)} \widetilde{\mathbb{F}}_\mathbb{SD}^{(j)}<br>$$</p>
-</li>
-<li><p>只有一个视图时，用$\mathbb{F}<em>{A p p} ,\widetilde{\mathbb{F}}</em>{\mathbb{S D}}$连接起来喂给$\mathscr{F}_G$的编码器部分用于生成图像。有多个时，用加权后的连接起来喂给$\mathscr{F}_G$的编码器部分用于生成图像。</p>
+<li><p>用置信度掩码对$\mathbb{F}_{A p p} ,\widetilde{\mathbb{F}}_{\mathbb{S D}}$分别计算加权和：</p>
+<script type="math/tex; mode=display">
+\overline{\mathbb{F}}_{A p p}=\sum_{j=1}^{N} \widetilde{C}^{(j)} \mathbb{F}_{A p p}^{(j)}, \quad \overline{\widetilde{\mathbb{F}}}_{\mathbb{D}}=\sum_{j=1}^{N} \widetilde{C}^{(j)} \widetilde{\mathbb{F}}_\mathbb{SD}^{(j)}</script></li>
+<li><p>只有一个视图时，用$\mathbb{F}_{A p p} ,\widetilde{\mathbb{F}}_{\mathbb{S D}}$连接起来喂给$\mathscr{F}_G$的编码器部分用于生成图像。有多个时，用加权后的连接起来喂给$\mathscr{F}_G$的编码器部分用于生成图像。</p>
 </li>
 </ol>
 <h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><h2 id="差别"><a href="#差别" class="headerlink" title="差别"></a>差别</h2><ol>
