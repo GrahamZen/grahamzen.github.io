@@ -6,7 +6,7 @@
   <link href="https://grahamzen.github.io/atom.xml" rel="self"/>
   
   <link href="https://grahamzen.github.io/"/>
-  <updated>2023-01-11T05:12:02.454Z</updated>
+  <updated>2023-01-14T22:59:11.504Z</updated>
   <id>https://grahamzen.github.io/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>光线投射（raycast）公式中的far-clip</title>
+    <link href="https://grahamzen.github.io/2023/01/14/raycast-formula/"/>
+    <id>https://grahamzen.github.io/2023/01/14/raycast-formula/</id>
+    <published>2023-01-14T09:01:49.000Z</published>
+    <updated>2023-01-14T22:59:11.504Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html"></summary>
+        
+      
+    
+    
+    
+    
+    <category term="学习" scheme="https://grahamzen.github.io/tags/%E5%AD%A6%E4%B9%A0/"/>
+    
+    <category term="计算机图形学" scheme="https://grahamzen.github.io/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9B%BE%E5%BD%A2%E5%AD%A6/"/>
+    
+    <category term="CIS-5610" scheme="https://grahamzen.github.io/tags/CIS-5610/"/>
+    
+  </entry>
   
   <entry>
     <title>程序优化</title>
