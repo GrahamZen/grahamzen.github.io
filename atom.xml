@@ -6,7 +6,7 @@
   <link href="https://grahamzen.github.io/atom.xml" rel="self"/>
   
   <link href="https://grahamzen.github.io/"/>
-  <updated>2023-01-14T23:04:29.283Z</updated>
+  <updated>2023-01-14T23:05:14.470Z</updated>
   <id>https://grahamzen.github.io/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://grahamzen.github.io/2023/01/14/raycast-formula/"/>
     <id>https://grahamzen.github.io/2023/01/14/raycast-formula/</id>
     <published>2023-01-14T09:01:49.000Z</published>
-    <updated>2023-01-14T23:04:29.283Z</updated>
+    <updated>2023-01-14T23:05:14.470Z</updated>
     
     
     <summary type="html">&lt;h2 id=&quot;光线投射公式&quot;&gt;&lt;a href=&quot;#光线投射公式&quot; class=&quot;headerlink&quot; title=&quot;光线投射公式&quot;&gt;&lt;/a&gt;光线投射公式&lt;/h2&gt;&lt;p&gt;从相机发出一条光线，穿过与相机距离为1的屏幕上的某点，已知相机参数和点在屏幕空间上的位置&lt;code&gt;(sx,sy)&lt;/code&gt;，计算世界空间中投影到该点的对应点的坐标的公式为：&lt;/p&gt;
@@ -34,12 +34,16 @@ P=[p.x,p.y,p.z,p.w]/p.w.&lt;/script&gt;</summary>
     
     
     
+    <category term="学习" scheme="https://grahamzen.github.io/categories/%E5%AD%A6%E4%B9%A0/"/>
     
-    <category term="学习" scheme="https://grahamzen.github.io/tags/%E5%AD%A6%E4%B9%A0/"/>
+    <category term="计算机图形学" scheme="https://grahamzen.github.io/categories/%E5%AD%A6%E4%B9%A0/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9B%BE%E5%BD%A2%E5%AD%A6/"/>
+    
+    <category term="CIS-5610" scheme="https://grahamzen.github.io/categories/%E5%AD%A6%E4%B9%A0/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9B%BE%E5%BD%A2%E5%AD%A6/CIS-5610/"/>
+    
     
     <category term="计算机图形学" scheme="https://grahamzen.github.io/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9B%BE%E5%BD%A2%E5%AD%A6/"/>
     
-    <category term="CIS-5610" scheme="https://grahamzen.github.io/tags/CIS-5610/"/>
+    <category term="光线跟踪" scheme="https://grahamzen.github.io/tags/%E5%85%89%E7%BA%BF%E8%B7%9F%E8%B8%AA/"/>
     
   </entry>
   
