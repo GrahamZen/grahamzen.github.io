@@ -32,13 +32,90 @@
       window.addEventListener('hashchange', switchTab, false);
   })();
   </script><!-- hexo injector head_end end --><meta name="generator" content="Hexo 6.3.0"><link rel="alternate" href="/atom.xml" title="Gehan Zheng's blog" type="application/atom+xml">
-</head><body class="is-3-column"><nav class="navbar navbar-main"><div class="container navbar-container"><div class="navbar-brand justify-content-center"><a class="navbar-item navbar-logo" href="/"><img src="/img/logo.svg" alt="Gehan Zheng&#039;s blog" height="28"></a></div><div class="navbar-menu"><div class="navbar-start"><a class="navbar-item is-active" href="/">Home</a><a class="navbar-item" href="/archives">Archives</a><a class="navbar-item" href="/categories">Categories</a><a class="navbar-item" href="/tags">Tags</a><a class="navbar-item" href="/about">About</a></div><div class="navbar-end"><a class="navbar-item" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/ppoffice/hexo-theme-icarus"><i class="fab fa-github"></i></a><a class="navbar-item search" title="搜索" href="javascript:;"><i class="fas fa-search"></i></a></div></div></div></nav><section class="section"><div class="container"><div class="columns"><div class="column order-2 column-main is-8-tablet is-8-desktop is-6-widescreen"><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2023-01-14T09:01:49.000Z" title="2023/1/14 上午4:01:49">2023-01-14</time>发表</span><span class="level-item"><time dateTime="2023-01-14T22:59:44.485Z" title="2023/1/14 下午5:59:44">2023-01-15</time>更新</span><span class="level-item">1 分钟读完 (大约115个字)</span></div></div><h1 class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2023/01/14/raycast-formula/">光线投射（raycast）公式中的far-clip</a></h1><div class="content"><h2 id="光线投射公式"><a href="#光线投射公式" class="headerlink" title="光线投射公式"></a>光线投射公式</h2><p>从相机发出一条光线，穿过与相机距离为1的屏幕上的某点，已知相机参数和点在屏幕空间上的位置，计算公式为：</p>
+</head><body class="is-3-column"><nav class="navbar navbar-main"><div class="container navbar-container"><div class="navbar-brand justify-content-center"><a class="navbar-item navbar-logo" href="/"><img src="/img/logo.svg" alt="Gehan Zheng&#039;s blog" height="28"></a></div><div class="navbar-menu"><div class="navbar-start"><a class="navbar-item is-active" href="/">Home</a><a class="navbar-item" href="/archives">Archives</a><a class="navbar-item" href="/categories">Categories</a><a class="navbar-item" href="/tags">Tags</a><a class="navbar-item" href="/about">About</a></div><div class="navbar-end"><a class="navbar-item" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/ppoffice/hexo-theme-icarus"><i class="fab fa-github"></i></a><a class="navbar-item search" title="搜索" href="javascript:;"><i class="fas fa-search"></i></a></div></div></div></nav><section class="section"><div class="container"><div class="columns"><div class="column order-2 column-main is-8-tablet is-8-desktop is-6-widescreen"><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2023-01-14T09:01:49.000Z" title="2023/1/14 上午4:01:49">2023-01-14</time>发表</span><span class="level-item"><time dateTime="2023-01-14T23:01:20.175Z" title="2023/1/14 下午6:01:20">2023-01-15</time>更新</span><span class="level-item">4 分钟读完 (大约552个字)</span></div></div><h1 class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2023/01/14/raycast-formula/">光线投射（raycast）公式中的far-clip</a></h1><div class="content"><h2 id="光线投射公式"><a href="#光线投射公式" class="headerlink" title="光线投射公式"></a>光线投射公式</h2><p>从相机发出一条光线，穿过与相机距离为1的屏幕上的某点，已知相机参数和点在屏幕空间上的位置，计算公式为：</p>
 <script type="math/tex; mode=display">
 P = ViewMat^{-1} * ProjMat^{-1} * ((sx, sy, 1, 1) * farClip).</script><p>使用下面的公式得到的结果实际上是一样的。</p>
 <script type="math/tex; mode=display">
 P = ViewMat^{-1} * ProjMat^{-1} * (sx, sy, 1, 1),</script><p>但是需要对向量进行规范化，即：</p>
 <script type="math/tex; mode=display">
-P=[p.x,p.y,p.z,p.w]/p.w.</script><h2 id="证明"><a href="#证明" class="headerlink" title="证明"></a>证明</h2></div><hr style="height:1px;margin:1rem 0"><div class="level is-mobile is-flex"><div class="article-tags is-size-7 is-uppercase"><i class="fas fa-tags has-text-grey"></i> <a class="link-muted" rel="tag" href="/tags/%E5%AD%A6%E4%B9%A0/">学习, </a><a class="link-muted" rel="tag" href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9B%BE%E5%BD%A2%E5%AD%A6/">计算机图形学, </a><a class="link-muted" rel="tag" href="/tags/CIS-5610/">CIS-5610 </a></div></div>                    </article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2023-01-10T14:08:53.000Z" title="2023/1/10 上午9:08:53">2023-01-10</time>发表</span><span class="level-item"><time dateTime="2023-01-11T05:12:02.454Z" title="2023/1/11 上午12:12:02">2023-01-11</time>更新</span><span class="level-item"><a class="link-muted" href="/categories/%E5%AD%A6%E4%B9%A0/">学习</a><span> / </span><a class="link-muted" href="/categories/%E5%AD%A6%E4%B9%A0/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/">计算机组成原理</a></span><span class="level-item">12 分钟读完 (大约1737个字)</span></div></div><h1 class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2023/01/10/program-optimization/">程序优化</a></h1><div class="content"><p>C代码中有许多比较通用的可以优化的地方。其中大部分优化方式在其他语言中也是有效的。</p></div><hr style="height:1px;margin:1rem 0"><div class="level is-mobile is-flex"><div class="article-tags is-size-7 is-uppercase"><i class="fas fa-tags has-text-grey"></i> <a class="link-muted" rel="tag" href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/">计算机组成原理 </a></div><a class="article-more button is-small is-size-7" href="/2023/01/10/program-optimization/#more"><i class="fas fa-book-reader has-text-grey"></i>  阅读更多</a></div>                    </article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2023-01-05T14:03:16.000Z" title="2023/1/5 上午9:03:16">2023-01-05</time>发表</span><span class="level-item"><time dateTime="2023-01-06T03:13:49.739Z" title="2023/1/5 下午10:13:49">2023-01-06</time>更新</span><span class="level-item"><a class="link-muted" href="/categories/%E5%AD%A6%E4%B9%A0/">学习</a><span> / </span><a class="link-muted" href="/categories/%E5%AD%A6%E4%B9%A0/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/">计算机组成原理</a></span><span class="level-item">几秒读完 (大约86个字)</span></div></div><h1 class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2023/01/05/float-number/">浮点数</a></h1><div class="content"><p>浮点数的表示方法为</p>
+P=[p.x,p.y,p.z,p.w]/p.w.</script><h2 id="证明"><a href="#证明" class="headerlink" title="证明"></a>证明</h2><p>投影公式<code>ProjMat</code>为:</p>
+<script type="math/tex; mode=display">
+P=\begin{bmatrix}
+ \frac{1}{A\tan(FOV/2)}  & 0 & 0 & 0 \\
+ 0 &  \frac{1}{\tan(FOV/2)} & 0 & 0 \\
+ 0 & 0 & \frac{f}{f-n} & \frac{-fn}{f-n}\\
+ 0 & 0 & 1 & 0
+\end{bmatrix}.</script><p>因为<code>ViewMat</code>是齐次矩阵，不修改w，所以只考虑投影公式。首先计算它的逆。<br>因为左下角与右上角为0，可以视为$2\times 2$的分块矩阵，计算逆时只需要计算右下角的逆即可。左上角为对角矩阵，逆是对角元素的倒数。2维矩阵较小，可以用伴随矩阵计算逆。伴随矩阵公式为：</p>
+<script type="math/tex; mode=display">
+adj({ {\begin{bmatrix}{a}&{b}\\{c}&{d}\end{bmatrix} }})={ {\begin{bmatrix}\,\,\,{d}&\!\!{-b}\\{-c}&{a}\end{bmatrix} }}.</script><p>关于n×n矩阵A，有</p>
+<script type="math/tex; mode=display">
+\mathbf{A}\, \mathrm{adj}(\mathbf{A}) = \mathrm{adj}(\mathbf{A})\, \mathbf{A} = \det(\mathbf{A})\, \mathbf{I}.</script><p>即</p>
+<script type="math/tex; mode=display">
+\mathbf{A}^{-1} = \det(\mathbf{A})^{-1}\, \mathrm{adj}(\mathbf{A})</script><p>令</p>
+<script type="math/tex; mode=display">
+A=\begin{bmatrix}
+  \frac{f}{f-n} & \frac{-fn}{f-n}\\
+  1 & 0
+\end{bmatrix}</script><p>则</p>
+<script type="math/tex; mode=display">
+det(A)=\frac{fn}{f-n}.\\
+A^{-1}=\frac{1}{\frac{fn}{f-n} }\begin{bmatrix}
+  0 & \frac{fn}{f-n}\\
+  -1 & \frac{f}{f-n}
+\end{bmatrix}=\begin{bmatrix}
+  0 & 1\\
+  -\frac{f-n}{fn}  & \frac{1}{n}
+\end{bmatrix}</script><p>因此投影矩阵的逆为：</p>
+<script type="math/tex; mode=display">
+P^{-1}=\begin{bmatrix}
+ {A\tan(FOV/2)}  & 0 & 0 & 0 \\
+ 0 &  {\tan(FOV/2)} & 0 & 0 \\
+ 0 & 0 & 0 & 1\\
+ 0 & 0 & -\frac{f-n}{fn} & \frac{1}{n}
+\end{bmatrix}</script><p>根据公式：</p>
+<script type="math/tex; mode=display">
+\begin{bmatrix}
+sx\\ sy\\ 1\\ 1  
+\end{bmatrix}
+ \times farClip=
+ \begin{bmatrix}
+sx\times farClip\\
+ sy\times farClip\\
+ farClip\\
+ farClip  
+\end{bmatrix},</script><script type="math/tex; mode=display">
+P^{-1}*\begin{bmatrix}
+sx\times farClip\\
+ sy\times farClip\\
+ farClip\\
+ farClip  
+\end{bmatrix}=
+\begin{bmatrix}
+{A\tan(FOV/2)}sx\times farClip\\
+ {\tan(FOV/2)}sy\times farClip\\
+ farClip\\
+ 1  
+\end{bmatrix}</script><p>对比直接相乘的结果：</p>
+<script type="math/tex; mode=display">
+P^{-1}*\begin{bmatrix}
+sx\\
+ sy\\
+ 1\\
+ 1  
+\end{bmatrix}=
+\begin{bmatrix}
+{A\tan(FOV/2)}sx\\
+ {\tan(FOV/2)}sy\\
+ 1\\
+ 1  
+\end{bmatrix}=
+\begin{bmatrix}
+{A\tan(FOV/2)}sx\\
+ {\tan(FOV/2)}sy\\
+1\\
+ \frac{1}{f}
+\end{bmatrix}</script><p>可以看出，无论乘不乘<code>farClip</code>规范化后的结果确实是一样的。但是因为glm并没有提供我们需要的规范化的函数，所以通过乘<code>farClip</code>来省去手动规范化的步骤是可以提高效率的。</p>
+</div><hr style="height:1px;margin:1rem 0"><div class="level is-mobile is-flex"><div class="article-tags is-size-7 is-uppercase"><i class="fas fa-tags has-text-grey"></i> <a class="link-muted" rel="tag" href="/tags/%E5%AD%A6%E4%B9%A0/">学习, </a><a class="link-muted" rel="tag" href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9B%BE%E5%BD%A2%E5%AD%A6/">计算机图形学, </a><a class="link-muted" rel="tag" href="/tags/CIS-5610/">CIS-5610 </a></div></div>                    </article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2023-01-10T14:08:53.000Z" title="2023/1/10 上午9:08:53">2023-01-10</time>发表</span><span class="level-item"><time dateTime="2023-01-11T05:12:02.454Z" title="2023/1/11 上午12:12:02">2023-01-11</time>更新</span><span class="level-item"><a class="link-muted" href="/categories/%E5%AD%A6%E4%B9%A0/">学习</a><span> / </span><a class="link-muted" href="/categories/%E5%AD%A6%E4%B9%A0/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/">计算机组成原理</a></span><span class="level-item">12 分钟读完 (大约1737个字)</span></div></div><h1 class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2023/01/10/program-optimization/">程序优化</a></h1><div class="content"><p>C代码中有许多比较通用的可以优化的地方。其中大部分优化方式在其他语言中也是有效的。</p></div><hr style="height:1px;margin:1rem 0"><div class="level is-mobile is-flex"><div class="article-tags is-size-7 is-uppercase"><i class="fas fa-tags has-text-grey"></i> <a class="link-muted" rel="tag" href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/">计算机组成原理 </a></div><a class="article-more button is-small is-size-7" href="/2023/01/10/program-optimization/#more"><i class="fas fa-book-reader has-text-grey"></i>  阅读更多</a></div>                    </article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2023-01-05T14:03:16.000Z" title="2023/1/5 上午9:03:16">2023-01-05</time>发表</span><span class="level-item"><time dateTime="2023-01-06T03:13:49.739Z" title="2023/1/5 下午10:13:49">2023-01-06</time>更新</span><span class="level-item"><a class="link-muted" href="/categories/%E5%AD%A6%E4%B9%A0/">学习</a><span> / </span><a class="link-muted" href="/categories/%E5%AD%A6%E4%B9%A0/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/">计算机组成原理</a></span><span class="level-item">几秒读完 (大约86个字)</span></div></div><h1 class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2023/01/05/float-number/">浮点数</a></h1><div class="content"><p>浮点数的表示方法为</p>
 <script type="math/tex; mode=display">
 v=(-l)^s M 2^E</script><p><img src="../images/IEEE-754-ENGLISH.jpg" alt=""><br>对于规范化编码(Normalized Encoding)，M是frac的部分加1得到的，所以能表示的最小的正数是$2^{E_{min}}$。因此需要引入非规范化编码(Denormalized Encoding)，它的M不需要加1，E=1-Bias。最小的数是0。</p>
 </div><hr style="height:1px;margin:1rem 0"><div class="level is-mobile is-flex"><div class="article-tags is-size-7 is-uppercase"><i class="fas fa-tags has-text-grey"></i> <a class="link-muted" rel="tag" href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/">计算机组成原理 </a></div></div>                    </article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2022-05-06T05:28:06.000Z" title="2022/5/6 上午1:28:06">2022-05-06</time>发表</span><span class="level-item"><time dateTime="2023-01-04T08:51:24.000Z" title="2023/1/4 上午3:51:24">2023-01-04</time>更新</span><span class="level-item"><a class="link-muted" href="/categories/%E5%AD%A6%E4%B9%A0/">学习</a><span> / </span><a class="link-muted" href="/categories/%E5%AD%A6%E4%B9%A0/%E6%96%87%E7%AB%A0%E6%8E%92%E7%89%88/">文章排版</a></span><span class="level-item">7 分钟读完 (大约990个字)</span></div></div><h1 class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2022/05/06/table-caption-continued/">跨页表格的题注</a></h1><div class="content"><p>使用latex写文章，尤其是和图像相关的文章时，常常会遇到需要用图片表格的情况。为了能够跨页，我们可以使用<code>longtable</code>。因为图片较大，如果没有刻意缩小，那么表格就会跨页。有的文章接收方会要求跨页表格在第二页顶部增加额外的题注来接上上一页的表格，以及第一个题注在表格顶部。</p>
