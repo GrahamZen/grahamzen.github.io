@@ -6,7 +6,7 @@
   <link href="https://grahamzen.github.io/atom.xml" rel="self"/>
   
   <link href="https://grahamzen.github.io/"/>
-  <updated>2023-01-14T23:01:20.175Z</updated>
+  <updated>2023-01-14T23:03:44.160Z</updated>
   <id>https://grahamzen.github.io/</id>
   
   <author>
@@ -21,16 +21,16 @@
     <link href="https://grahamzen.github.io/2023/01/14/raycast-formula/"/>
     <id>https://grahamzen.github.io/2023/01/14/raycast-formula/</id>
     <published>2023-01-14T09:01:49.000Z</published>
-    <updated>2023-01-14T23:01:20.175Z</updated>
+    <updated>2023-01-14T23:03:44.160Z</updated>
     
     
-      
-      
-        
-        
-    <summary type="html"></summary>
-        
-      
+    <summary type="html">&lt;h2 id=&quot;光线投射公式&quot;&gt;&lt;a href=&quot;#光线投射公式&quot; class=&quot;headerlink&quot; title=&quot;光线投射公式&quot;&gt;&lt;/a&gt;光线投射公式&lt;/h2&gt;&lt;p&gt;从相机发出一条光线，穿过与相机距离为1的屏幕上的某点，已知相机参数和点在屏幕空间上的位置&lt;code&gt;(sx,sy)&lt;/code&gt;，计算世界空间中投影到该点的对应点的坐标的公式为：&lt;/p&gt;
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;
+P = ViewMat^{-1} * ProjMat^{-1} * ((sx, sy, 1, 1) * farClip).&lt;/script&gt;&lt;p&gt;使用下面的公式得到的结果实际上是一样的。&lt;/p&gt;
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;
+P = ViewMat^{-1} * ProjMat^{-1} * (sx, sy, 1, 1),&lt;/script&gt;&lt;p&gt;但是需要对向量进行规范化，即：&lt;/p&gt;
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;
+P=[p.x,p.y,p.z,p.w]/p.w.&lt;/script&gt;</summary>
     
     
     
