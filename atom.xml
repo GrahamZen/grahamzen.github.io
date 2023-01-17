@@ -6,7 +6,7 @@
   <link href="https://grahamzen.github.io/atom.xml" rel="self"/>
   
   <link href="https://grahamzen.github.io/"/>
-  <updated>2023-01-17T03:05:40.688Z</updated>
+  <updated>2023-01-14T23:05:28.251Z</updated>
   <id>https://grahamzen.github.io/</id>
   
   <author>
@@ -15,27 +15,6 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
-  
-  <entry>
-    <title>A Case Analysis on the Early Success of HP</title>
-    <link href="https://grahamzen.github.io/2023/01/16/case-study1-HP/"/>
-    <id>https://grahamzen.github.io/2023/01/16/case-study1-HP/</id>
-    <published>2023-01-16T07:16:41.000Z</published>
-    <updated>2023-01-17T03:05:40.688Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;As an entrepreneur, it is crucial to understand the key requirements for success in any venture: &lt;strong&gt;focusing on the market, having financial foresight, having a top management team, and having a clear definition of the founders’ roles&lt;/strong&gt;. In the case of HP, some key requirements significantly contributed to their early success.&lt;/p&gt;</summary>
-    
-    
-    
-    
-    <category term="学习" scheme="https://grahamzen.github.io/tags/%E5%AD%A6%E4%B9%A0/"/>
-    
-    <category term="企业管理" scheme="https://grahamzen.github.io/tags/%E4%BC%81%E4%B8%9A%E7%AE%A1%E7%90%86/"/>
-    
-    <category term="EAS-5450" scheme="https://grahamzen.github.io/tags/EAS-5450/"/>
-    
-  </entry>
   
   <entry>
     <title>光线投射（raycast）公式中的far-clip</title>
