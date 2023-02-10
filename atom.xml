@@ -6,7 +6,7 @@
   <link href="https://grahamzen.github.io/atom.xml" rel="self"/>
   
   <link href="https://grahamzen.github.io/"/>
-  <updated>2023-02-10T06:37:15.269Z</updated>
+  <updated>2023-02-10T06:41:00.044Z</updated>
   <id>https://grahamzen.github.io/</id>
   
   <author>
@@ -21,16 +21,10 @@
     <link href="https://grahamzen.github.io/2023/02/09/BSDFs/"/>
     <id>https://grahamzen.github.io/2023/02/09/BSDFs/</id>
     <published>2023-02-09T15:49:50.000Z</published>
-    <updated>2023-02-10T06:37:15.269Z</updated>
+    <updated>2023-02-10T06:41:00.044Z</updated>
     
     
-      
-      
-        
-        
-    <summary type="html"></summary>
-        
-      
+    <summary type="html">&lt;p&gt;本来想写BSDF的推导，但是发现基础知识很多，正好整理一下作为复习。部分内容参考&lt;a href=&quot;https://www.pbr-book.org/&quot;&gt;Physically Based Rendering, Third Edition&lt;/a&gt;，非常推荐阅读。&lt;/p&gt;</summary>
     
     
     
@@ -56,16 +50,10 @@
     <link href="https://grahamzen.github.io/2023/02/04/derivative/"/>
     <id>https://grahamzen.github.io/2023/02/04/derivative/</id>
     <published>2023-02-04T13:52:00.000Z</published>
-    <updated>2023-02-05T03:19:20.681Z</updated>
+    <updated>2023-02-10T06:41:13.854Z</updated>
     
     
-      
-      
-        
-        
-    <summary type="html"></summary>
-        
-      
+    <summary type="html">&lt;p&gt;标量求导和向量求导是矩阵求导的特殊情况。向量求导使用的频率较高。对向量求导时运用乘法和除法公式时会出现标量求导，这里记录一下各种求导的结果。&lt;/p&gt;</summary>
     
     
     
