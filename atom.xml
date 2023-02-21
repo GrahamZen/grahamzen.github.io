@@ -6,7 +6,7 @@
   <link href="https://grahamzen.github.io/atom.xml" rel="self"/>
   
   <link href="https://grahamzen.github.io/"/>
-  <updated>2023-02-10T06:41:00.044Z</updated>
+  <updated>2023-02-21T03:53:06.206Z</updated>
   <id>https://grahamzen.github.io/</id>
   
   <author>
@@ -17,11 +17,44 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>渲染方程及BSDFs</title>
+    <link href="https://grahamzen.github.io/2023/02/09/rendering-equation/"/>
+    <id>https://grahamzen.github.io/2023/02/09/rendering-equation/</id>
+    <published>2023-02-09T17:42:42.000Z</published>
+    <updated>2023-02-21T03:53:06.206Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html"></summary>
+        
+      
+    
+    
+    
+    <category term="学习" scheme="https://grahamzen.github.io/categories/%E5%AD%A6%E4%B9%A0/"/>
+    
+    <category term="计算机图形学" scheme="https://grahamzen.github.io/categories/%E5%AD%A6%E4%B9%A0/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9B%BE%E5%BD%A2%E5%AD%A6/"/>
+    
+    <category term="CIS-5610" scheme="https://grahamzen.github.io/categories/%E5%AD%A6%E4%B9%A0/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9B%BE%E5%BD%A2%E5%AD%A6/CIS-5610/"/>
+    
+    
+    <category term="计算机图形学" scheme="https://grahamzen.github.io/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9B%BE%E5%BD%A2%E5%AD%A6/"/>
+    
+    <category term="光线跟踪" scheme="https://grahamzen.github.io/tags/%E5%85%89%E7%BA%BF%E8%B7%9F%E8%B8%AA/"/>
+    
+    <category term="蒙特卡洛" scheme="https://grahamzen.github.io/tags/%E8%92%99%E7%89%B9%E5%8D%A1%E6%B4%9B/"/>
+    
+  </entry>
+  
+  <entry>
     <title>渲染方程背景知识</title>
-    <link href="https://grahamzen.github.io/2023/02/09/BSDFs/"/>
-    <id>https://grahamzen.github.io/2023/02/09/BSDFs/</id>
+    <link href="https://grahamzen.github.io/2023/02/09/rendering-equation-bg/"/>
+    <id>https://grahamzen.github.io/2023/02/09/rendering-equation-bg/</id>
     <published>2023-02-09T15:49:50.000Z</published>
-    <updated>2023-02-10T06:41:00.044Z</updated>
+    <updated>2023-02-21T03:32:47.249Z</updated>
     
     
     <summary type="html">&lt;p&gt;本来想写BSDF的推导，但是发现基础知识很多，正好整理一下作为复习。部分内容参考&lt;a href=&quot;https://www.pbr-book.org/&quot;&gt;Physically Based Rendering, Third Edition&lt;/a&gt;，非常推荐阅读。&lt;/p&gt;</summary>
@@ -36,8 +69,6 @@
     
     
     <category term="计算机图形学" scheme="https://grahamzen.github.io/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9B%BE%E5%BD%A2%E5%AD%A6/"/>
-    
-    <category term="光线跟踪" scheme="https://grahamzen.github.io/tags/%E5%85%89%E7%BA%BF%E8%B7%9F%E8%B8%AA/"/>
     
     <category term="概率论" scheme="https://grahamzen.github.io/tags/%E6%A6%82%E7%8E%87%E8%AE%BA/"/>
     
