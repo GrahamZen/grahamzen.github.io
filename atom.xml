@@ -6,7 +6,7 @@
   <link href="https://grahamzen.github.io/atom.xml" rel="self"/>
   
   <link href="https://grahamzen.github.io/"/>
-  <updated>2023-02-21T05:38:43.368Z</updated>
+  <updated>2023-02-21T17:28:53.139Z</updated>
   <id>https://grahamzen.github.io/</id>
   
   <author>
@@ -21,11 +21,14 @@
     <link href="https://grahamzen.github.io/2023/02/09/rendering-equation/"/>
     <id>https://grahamzen.github.io/2023/02/09/rendering-equation/</id>
     <published>2023-02-09T17:42:42.000Z</published>
-    <updated>2023-02-21T05:38:43.368Z</updated>
+    <updated>2023-02-21T17:28:53.139Z</updated>
     
     
-    <summary type="html">&lt;h2 id=&quot;光传播方程-The-Light-Transport-Equation-LTE&quot;&gt;&lt;a href=&quot;#光传播方程-The-Light-Transport-Equation-LTE&quot; class=&quot;headerlink&quot; title=&quot;光传播方程(The Light Transport Equation, LTE)&quot;&gt;&lt;/a&gt;光传播方程(The Light Transport Equation, LTE)&lt;/h2&gt;&lt;script type=&quot;math/tex; mode=display&quot;&gt;
-L_o(p,\omega_o)=L_e(p,\omega_o)+\int_{s^2}f(p,\omega_o,\omega_i)|\cos\theta_i|d\omega_i&lt;/script&gt;</summary>
+    <summary type="html">&lt;h2 id=&quot;光传播方程the-light-transport-equation-lte&quot;&gt;光传播方程(The Light
+Transport Equation, LTE)&lt;/h2&gt;
+&lt;p&gt;&lt;span class=&quot;math display&quot;&gt;\[
+L_o(p,\omega_o)=L_e(p,\omega_o)+\int_{s^2}f(p,\omega_o,\omega_i)|\cos\theta_i|d\omega_i
+\]&lt;/span&gt;&lt;/p&gt;</summary>
     
     
     
