@@ -6,7 +6,7 @@
   <link href="https://grahamzen.github.io/atom.xml" rel="self"/>
   
   <link href="https://grahamzen.github.io/"/>
-  <updated>2023-02-21T17:28:53.139Z</updated>
+  <updated>2023-03-05T07:36:15.954Z</updated>
   <id>https://grahamzen.github.io/</id>
   
   <author>
@@ -15,6 +15,64 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Bspline</title>
+    <link href="https://grahamzen.github.io/2023/03/04/BSpline/"/>
+    <id>https://grahamzen.github.io/2023/03/04/BSpline/</id>
+    <published>2023-03-04T14:13:56.000Z</published>
+    <updated>2023-03-05T07:36:15.954Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html"></summary>
+        
+      
+    
+    
+    
+    <category term="学习" scheme="https://grahamzen.github.io/categories/%E5%AD%A6%E4%B9%A0/"/>
+    
+    <category term="建模" scheme="https://grahamzen.github.io/categories/%E5%AD%A6%E4%B9%A0/%E5%BB%BA%E6%A8%A1/"/>
+    
+    <category term="CIS-5620" scheme="https://grahamzen.github.io/categories/%E5%AD%A6%E4%B9%A0/%E5%BB%BA%E6%A8%A1/CIS-5620/"/>
+    
+    
+    <category term="Bspline" scheme="https://grahamzen.github.io/tags/Bspline/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>cmake笔记</title>
+    <link href="https://grahamzen.github.io/2023/03/04/cmake-related/"/>
+    <id>https://grahamzen.github.io/2023/03/04/cmake-related/</id>
+    <published>2023-03-04T10:53:03.000Z</published>
+    <updated>2023-03-05T06:55:17.331Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html"></summary>
+        
+      
+    
+    
+    
+    <category term="学习" scheme="https://grahamzen.github.io/categories/%E5%AD%A6%E4%B9%A0/"/>
+    
+    <category term="项目管理" scheme="https://grahamzen.github.io/categories/%E5%AD%A6%E4%B9%A0/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86/"/>
+    
+    <category term="cmake" scheme="https://grahamzen.github.io/categories/%E5%AD%A6%E4%B9%A0/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86/cmake/"/>
+    
+    
+    <category term="cmake" scheme="https://grahamzen.github.io/tags/cmake/"/>
+    
+  </entry>
   
   <entry>
     <title>渲染方程及BSDFs</title>
