@@ -32,115 +32,50 @@
       window.addEventListener('hashchange', switchTab, false);
   })();
   </script><!-- hexo injector head_end end --><meta name="generator" content="Hexo 6.3.0"><link rel="alternate" href="/atom.xml" title="Gehan Zheng's blog" type="application/atom+xml">
-</head><body class="is-3-column"><nav class="navbar navbar-main"><div class="container navbar-container"><div class="navbar-brand justify-content-center"><a class="navbar-item navbar-logo" href="/"><img src="/img/logo.svg" alt="Gehan Zheng&#039;s blog" height="28"></a></div><div class="navbar-menu"><div class="navbar-start"><a class="navbar-item" href="/">Home</a><a class="navbar-item" href="/archives">Archives</a><a class="navbar-item" href="/categories">Categories</a><a class="navbar-item" href="/tags">Tags</a><a class="navbar-item" href="/about">About</a></div><div class="navbar-end"><a class="navbar-item" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/ppoffice/hexo-theme-icarus"><i class="fab fa-github"></i></a><a class="navbar-item search" title="搜索" href="javascript:;"><i class="fas fa-search"></i></a></div></div></div></nav><section class="section"><div class="container"><div class="columns"><div class="column order-2 column-main is-8-tablet is-8-desktop is-6-widescreen"><div class="card"><div class="card-content"><nav class="breadcrumb" aria-label="breadcrumbs"><ul><li><a href="/categories">分类</a></li><li><a href="/categories/%E5%AD%A6%E4%B9%A0/">学习</a></li><li class="is-active"><a href="#" aria-current="page">建模</a></li></ul></nav></div></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2023-03-04T14:13:56.000Z" title="2023/3/4 上午9:13:56">2023-03-04</time>发表</span><span class="level-item"><time dateTime="2023-03-05T07:47:30.374Z" title="2023/3/5 上午2:47:30">2023-03-05</time>更新</span><span class="level-item"><a class="link-muted" href="/categories/%E5%AD%A6%E4%B9%A0/">学习</a><span> / </span><a class="link-muted" href="/categories/%E5%AD%A6%E4%B9%A0/%E5%BB%BA%E6%A8%A1/">建模</a><span> / </span><a class="link-muted" href="/categories/%E5%AD%A6%E4%B9%A0/%E5%BB%BA%E6%A8%A1/CIS-5620/">CIS-5620</a></span><span class="level-item">11 分钟读完 (大约1678个字)</span></div></div><h1 class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2023/03/04/BSpline/">Bspline</a></h1><div class="content"><h2 id="bspline上任意点的计算公式">Bspline上任意点的计算公式</h2>
-<p>Bspline和贝塞尔曲线类似，也是将所有控制点用基函数<span
-class="math inline">\(N_{i}^{k}\)</span>进行加权得到曲线上的点。也就是说，Bspline有<span
-class="math inline">\(n+1\)</span>个控制点，<span
-class="math inline">\(n+1\)</span>个基函数，<span
-class="math inline">\(k\)</span>为次数（t在基函数中出现的最高次幂），<span
-class="math inline">\(i\in[0,n]\)</span>。比如有10个控制点<span
-class="math inline">\(p_0,p_1,p_2,p_3,...,p_{9}\)</span>，使用4次的Bspline基函数<span
-class="math inline">\(N^{4}_{0}(t),N^{4}_{1}(t),N^{4}_{2}(t),N^{4}_{3}(t),...,N^{4}_{9}(t)\)</span>，那么曲线上任意一点可以表示为：</p>
+</head><body class="is-3-column"><nav class="navbar navbar-main"><div class="container navbar-container"><div class="navbar-brand justify-content-center"><a class="navbar-item navbar-logo" href="/"><img src="/img/logo.svg" alt="Gehan Zheng&#039;s blog" height="28"></a></div><div class="navbar-menu"><div class="navbar-start"><a class="navbar-item" href="/">Home</a><a class="navbar-item" href="/archives">Archives</a><a class="navbar-item" href="/categories">Categories</a><a class="navbar-item" href="/tags">Tags</a><a class="navbar-item" href="/about">About</a></div><div class="navbar-end"><a class="navbar-item" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/ppoffice/hexo-theme-icarus"><i class="fab fa-github"></i></a><a class="navbar-item search" title="搜索" href="javascript:;"><i class="fas fa-search"></i></a></div></div></div></nav><section class="section"><div class="container"><div class="columns"><div class="column order-2 column-main is-8-tablet is-8-desktop is-6-widescreen"><div class="card"><div class="card-content"><nav class="breadcrumb" aria-label="breadcrumbs"><ul><li><a href="/categories">分类</a></li><li><a href="/categories/%E5%AD%A6%E4%B9%A0/">学习</a></li><li class="is-active"><a href="#" aria-current="page">建模</a></li></ul></nav></div></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2023-03-04T14:13:56.000Z" title="2023/3/4 上午9:13:56">2023-03-04</time>发表</span><span class="level-item"><time dateTime="2023-03-05T07:57:16.214Z" title="2023/3/5 上午2:57:16">2023-03-05</time>更新</span><span class="level-item"><a class="link-muted" href="/categories/%E5%AD%A6%E4%B9%A0/">学习</a><span> / </span><a class="link-muted" href="/categories/%E5%AD%A6%E4%B9%A0/%E5%BB%BA%E6%A8%A1/">建模</a><span> / </span><a class="link-muted" href="/categories/%E5%AD%A6%E4%B9%A0/%E5%BB%BA%E6%A8%A1/CIS-5620/">CIS-5620</a></span><span class="level-item">11 分钟读完 (大约1676个字)</span></div></div><h1 class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2023/03/04/BSpline/">Bspline</a></h1><div class="content"><h2 id="bspline上任意点的计算公式">Bspline上任意点的计算公式</h2>
+<p>Bspline和贝塞尔曲线类似，也是将所有控制点用基函数<span class="math inline">\(N_{i}^{k}\)</span>进行加权得到曲线上的点。也就是说，Bspline有<span class="math inline">\(n+1\)</span>个控制点，<span class="math inline">\(n+1\)</span>个基函数，<span class="math inline">\(k\)</span>为次数（t在基函数中出现的最高次幂），<span class="math inline">\(i\in[0,n]\)</span>。比如有10个控制点<span class="math inline">\(p_0,p_1,p_2,p_3,...,p_{9}\)</span>，使用4次的Bspline基函数<span class="math inline">\(N^{4}_{0}(t),N^{4}_{1}(t),N^{4}_{2}(t),N^{4}_{3}(t),...,N^{4}_{9}(t)\)</span>，那么曲线上任意一点可以表示为：</p>
 <p>$$ <span class="math display">\[\begin{align*}
 f(t)&amp;=\sum_{i=0}^{n}N_{i}^{k}(t)p_i\\
     &amp;=N_{0}^{4}p_0+N_{1}^{4}p_1+N_{2}^{4}p_2...+N_{9}^{4}p_{9}\tag{1}
 \end{align*}\]</span></p>
 <p>$$</p>
 <h2 id="节点">节点</h2>
-<p>与贝塞尔曲线不同的是，Bspline除了控制点，基函数之外还有<span
-class="math inline">\(m+1\)</span>个节点<span
-class="math inline">\(t_0,t_1,...,t_m\)</span>。B样条基函数是分段k阶（k-1次）多项式，它们由节点向量(knot
-vector)唯一决定。<span class="math inline">\(n\)</span>和<span
-class="math inline">\(m,k\)</span>有如下关系：</p>
+<p>与贝塞尔曲线不同的是，Bspline除了控制点，基函数之外还有<span class="math inline">\(m+1\)</span>个节点<span class="math inline">\(t_0,t_1,...,t_m\)</span>。B样条基函数是分段k阶（k-1次）多项式，它们由节点向量(knot
+vector)唯一决定。<span class="math inline">\(n\)</span>和<span class="math inline">\(m,k\)</span>有如下关系：</p>
 <p>$$ m=n+k</p>
 <p>$$
-注意这里的k是指基函数中t的最高次幂而不是阶数，最高次幂为0时，阶数为1。如果阶数是k+1，那么关系为<span
-class="math inline">\(m=n+k+1\)</span>。给出公式后就可以解释为什么有这个关系。</p>
-<p>也就是说，在上面这个例子里，<span
-class="math inline">\(m=9+4=13\)</span>，节点个数是14。为了方便理解，我们可以认为节点是用来生成基函数的辅助量。节点向量则是一串非减(non-decreasing)的实数序列，比如<span
-class="math inline">\([0,0,\frac{1}{11},\frac{2}{11},\frac{3}{11},\frac{4}{11},\frac{5}{11},\frac{6}{11},\frac{7}{11},\frac{8}{11},\frac{9}{11},\frac{10}{11},1,1]\)</span>。一般来说节点的值是在<span
-class="math inline">\([0,1]\)</span>之间，但是也可以不是。</p>
+注意这里的k是指基函数中t的最高次幂而不是阶数，最高次幂为0时，阶数为1。如果阶数是k+1，那么关系为<span class="math inline">\(m=n+k+1\)</span>。给出公式后就可以解释为什么有这个关系。</p>
+<p>也就是说，在上面这个例子里，<span class="math inline">\(m=9+4=13\)</span>，节点个数是14。为了方便理解，我们可以认为节点是用来生成基函数的辅助量。节点向量则是一串非减(non-decreasing)的实数序列，比如<span class="math inline">\([0,0,\frac{1}{11},\frac{2}{11},\frac{3}{11},\frac{4}{11},\frac{5}{11},\frac{6}{11},\frac{7}{11},\frac{8}{11},\frac{9}{11},\frac{10}{11},1,1]\)</span>。一般来说节点的值是在<span class="math inline">\([0,1]\)</span>之间，但是也可以不是。</p>
 <h2 id="bspline基函数的定义">Bspline基函数的定义</h2>
 <p>有了节点就可以计算基函数了，基函数的公式是递归定义的：</p>
 $$ N_{j}^{0}(t):={ {
 <span class="math display">\[\begin{matrix}1&amp;\quad t_{j}&lt;t&lt;t_{
 {j+1} }\\0&amp;  {...}\end{matrix}\]</span>
 <p>}.\ N_{j}<sup>{k}(t):={}N_{j}</sup>{k-1}(t)+{ }N_{j+1}^{k-1}(t).</p>
-<p>$$ 看起来比较复杂，实际上从中可以看出对于节点<span
-class="math inline">\(t_j\)</span>的几个特点： 1.
-0次的时候是一个仅在<span
-class="math inline">\([t_j,t_{j+1}]\)</span>区间为1，其他地方的值为0的0次函数。从递归形式可以看出递归次数和次幂相同。
-2. <span class="math inline">\(k\)</span>阶的基函数是由<span
-class="math inline">\(k-1\)</span>阶的第<span
-class="math inline">\(j\)</span>和<span
-class="math inline">\(j+1\)</span>个基函数决定的。而且前一个基函数的权重是正的，后一个是负的（前一个t是正号，后一个的t是负号）。
-3. 从第一点可以看出0次的时候每个<span
-class="math inline">\(t_j\)</span>分别在各自的<span
-class="math inline">\([t_j,t_{j+1}]\)</span>上是1，其他地方是0。结合1，2点可以看出，<span
-class="math inline">\(f(t)\)</span>在<span
-class="math inline">\([t_0,t_{m+1}]\)</span>上不为0，其他位置为0。<span
-class="math inline">\(N_j^k (t)\)</span>是<span
-class="math inline">\([t_j,t_{j+k} ]\)</span>上的分段非零多项式。 4.
-随着<span class="math inline">\(N\)</span>的次数（上标）增加到<span
-class="math inline">\(k\)</span>，第<span
-class="math inline">\(j\)</span>个节点的值受到第<span
-class="math inline">\(j\)</span>到<span
-class="math inline">\(j+k\)</span>个节点的值的影响。这个特点结合来自<a
-target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/139759835">曲线篇：深刻理解B
+<p>$$ 看起来比较复杂，实际上从中可以看出对于节点<span class="math inline">\(t_j\)</span>的几个特点： 1.
+0次的时候是一个仅在<span class="math inline">\([t_j,t_{j+1}]\)</span>区间为1，其他地方的值为0的0次函数。从递归形式可以看出递归次数和次幂相同。
+2. <span class="math inline">\(k\)</span>阶的基函数是由<span class="math inline">\(k-1\)</span>阶的第<span class="math inline">\(j\)</span>和<span class="math inline">\(j+1\)</span>个基函数决定的。而且前一个基函数的权重是正的，后一个是负的（前一个t是正号，后一个的t是负号）。
+3. 从第一点可以看出0次的时候每个<span class="math inline">\(t_j\)</span>分别在各自的<span class="math inline">\([t_j,t_{j+1}]\)</span>上是1，其他地方是0。结合1，2点可以看出，<span class="math inline">\(f(t)\)</span>在<span class="math inline">\([t_0,t_{m+1}]\)</span>上不为0，其他位置为0。<span class="math inline">\(N_j^k (t)\)</span>是<span class="math inline">\([t_j,t_{j+k} ]\)</span>上的分段非零多项式。 4.
+随着<span class="math inline">\(N\)</span>的次数（上标）增加到<span class="math inline">\(k\)</span>，第<span class="math inline">\(j\)</span>个节点的值受到第<span class="math inline">\(j\)</span>到<span class="math inline">\(j+k\)</span>个节点的值的影响。这个特点结合来自<a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/139759835">曲线篇：深刻理解B
 样条曲线（上）</a>的下图看更直观。</p>
 <figure>
-<img src="image/BSpline/1677993861105.png" alt="1677993861105" />
+<img src="../images/1677993861105.png" alt="1677993861105">
 <figcaption aria-hidden="true">1677993861105</figcaption>
 </figure>
-<p>因为只有<span class="math inline">\(N_j^{k}(t)\)</span>不为0时第<span
-class="math inline">\(j\)</span>个控制点才有对计算贡献。从第四个特点可以得到一个重要的观察：<strong>在<span
-class="math inline">\([t_j,t_{j+k+1}]\)</span>这个区间上第<span
-class="math inline">\(j\)</span>个控制点才会用上，即Bspline具有局部性：每个控制点仅在<span
-class="math inline">\([t_j,t_{j+k+1}]\)</span>内对曲线的形状有影响。若n非常小，改变了一个控制点的位置，影响的范围也是非常小的。</strong></p>
-<p>该图中还可以得到另一个重要的观察：当我们使用<span
-class="math inline">\(k\)</span>次的基函数计算公式<span
-class="math inline">\((1)\)</span>时，区间<span
-class="math inline">\([t_j,t_{j+1}]\)</span>上仅有<span
-class="math inline">\(N_{j-k}^k,...,N_{j}^k\)</span>有贡献，也就是说，这个区间上的曲线的形状由<span
-class="math inline">\(k\)</span>个控制点决定。</p>
+<p>因为只有<span class="math inline">\(N_j^{k}(t)\)</span>不为0时第<span class="math inline">\(j\)</span>个控制点才有对计算贡献。从第四个特点可以得到一个重要的观察：<strong>在<span class="math inline">\([t_j,t_{j+k+1}]\)</span>这个区间上第<span class="math inline">\(j\)</span>个控制点才会用上，即Bspline具有局部性：每个控制点仅在<span class="math inline">\([t_j,t_{j+k+1}]\)</span>内对曲线的形状有影响。若n非常小，改变了一个控制点的位置，影响的范围也是非常小的。</strong></p>
+<p>该图中还可以得到另一个重要的观察：当我们使用<span class="math inline">\(k\)</span>次的基函数计算公式<span class="math inline">\((1)\)</span>时，区间<span class="math inline">\([t_j,t_{j+1}]\)</span>上仅有<span class="math inline">\(N_{j-k}^k,...,N_{j}^k\)</span>有贡献，也就是说，这个区间上的曲线的形状由<span class="math inline">\(k\)</span>个控制点决定。</p>
 <p>上面的两个观察可以概括为Bspline的局部支持性：</p>
 <ol type="1">
-<li>区间<span
-class="math inline">\(t\in[t_j,t_{j+1}]\)</span>上的曲线仅由至多k个控制点决定。</li>
+<li>区间<span class="math inline">\(t\in[t_j,t_{j+1}]\)</span>上的曲线仅由至多k个控制点决定。</li>
 <li>修改控制点<span class="math inline">\(p_i\)</span>
-仅会影响到区间<span
-class="math inline">\([t_j,t_{j+k+1}]\)</span>上的曲线。</li>
+仅会影响到区间<span class="math inline">\([t_j,t_{j+k+1}]\)</span>上的曲线。</li>
 </ol>
-<p>这里就可以解释为什么<span
-class="math inline">\(m=n+k\)</span>。因为我们计算曲线上的点使用了公式<span
-class="math inline">\((1)\)</span>，它需要<span
-class="math inline">\(N_{0}^{k},N_{1}^{k},...,N_{n}^{k}\)</span>。但是从<span
-class="math inline">\(N_{0}^{0},...,N_{m}^{0}\)</span>开始递归，每一次递归都会少一项，因为<span
-class="math inline">\(N_{m}^{1}\)</span>只能由<span
-class="math inline">\(N_{m}^{1},N_{m+1}^{1}\)</span>得到，但是<span
-class="math inline">\(N_{m+1}^{1}\)</span>不存在，所以实际上当计算到<span
-class="math inline">\(k=1\)</span>时，只能计算到<span
-class="math inline">\(N_{0}^{1},...,N_{m-1}^{1}\)</span>。以此类推，计算到<span
-class="math inline">\(k\)</span>时，只能计算到<span
-class="math inline">\(N_{0}^{k},...,N_{m-k}^{k}\)</span>，最后的这一项就对应<span
-class="math inline">\(N_{n}^{k}\)</span>。</p>
-<p>在下面这个例子中，有四个控制点，最高三次，即<span
-class="math inline">\(k=3,n=3\)</span>，总共6个节点。 <img
-src="image/BSpline/1677987392294.png" alt="1677987392294" />
-从图中可以看到，同一个颜色的曲线对应着同一个序号<span
-class="math inline">\(j\)</span>的<span
-class="math inline">\(N_j^k(t)\)</span>，他们的左端点都是不变的，因为<span
-class="math inline">\((2)\)</span>公式左端始终乘的是<span
-class="math inline">\(t-t_j\)</span>，也就是说<span
-class="math inline">\(t=t_j\)</span>时的值一定为0。</p>
+<p>这里就可以解释为什么<span class="math inline">\(m=n+k\)</span>。因为我们计算曲线上的点使用了公式<span class="math inline">\((1)\)</span>，它需要<span class="math inline">\(N_{0}^{k},N_{1}^{k},...,N_{n}^{k}\)</span>。但是从<span class="math inline">\(N_{0}^{0},...,N_{m}^{0}\)</span>开始递归，每一次递归都会少一项，因为<span class="math inline">\(N_{m}^{1}\)</span>只能由<span class="math inline">\(N_{m}^{1},N_{m+1}^{1}\)</span>得到，但是<span class="math inline">\(N_{m+1}^{1}\)</span>不存在，所以实际上当计算到<span class="math inline">\(k=1\)</span>时，只能计算到<span class="math inline">\(N_{0}^{1},...,N_{m-1}^{1}\)</span>。以此类推，计算到<span class="math inline">\(k\)</span>时，只能计算到<span class="math inline">\(N_{0}^{k},...,N_{m-k}^{k}\)</span>，最后的这一项就对应<span class="math inline">\(N_{n}^{k}\)</span>。</p>
+<p>在下面这个例子中，有四个控制点，最高三次，即<span class="math inline">\(k=3,n=3\)</span>，总共6个节点。 <img src="../images/1677987392294.png" alt="1677987392294">
+从图中可以看到，同一个颜色的曲线对应着同一个序号<span class="math inline">\(j\)</span>的<span class="math inline">\(N_j^k(t)\)</span>，他们的左端点都是不变的，因为<span class="math inline">\((2)\)</span>公式左端始终乘的是<span class="math inline">\(t-t_j\)</span>，也就是说<span class="math inline">\(t=t_j\)</span>时的值一定为0。</p>
 <h2 id="bspline插值">Bspline插值</h2>
-<p>已知<span class="math inline">\(m+1\)</span>个点<span
-class="math inline">\((t_0,p_0),...,(t_m,p_m)\)</span>，计算一条穿过所有点的Bspline的公式<span
-class="math inline">\(f(t)\)</span>。</p>
-<p>因为<span class="math inline">\(f(t)\)</span>需要在<span
-class="math inline">\(t\in[t_j,t_{j+1}]\)</span>上有定义，需要左右各增加<span
-class="math inline">\(k\)</span>（次数）个节点。所有要确定节点向量<span
-class="math inline">\([\lambda_0,...\lambda_{m+2k}]\)</span>，为方便计算，节点向量均匀分布，为</p>
+<p>已知<span class="math inline">\(m+1\)</span>个点<span class="math inline">\((t_0,p_0),...,(t_m,p_m)\)</span>，计算一条穿过所有点的Bspline的公式<span class="math inline">\(f(t)\)</span>。</p>
+<p>因为<span class="math inline">\(f(t)\)</span>需要在<span class="math inline">\(t\in[t_j,t_{j+1}]\)</span>上有定义，需要左右各增加<span class="math inline">\(k\)</span>（次数）个节点。所有要确定节点向量<span class="math inline">\([\lambda_0,...\lambda_{m+2k}]\)</span>，为方便计算，节点向量均匀分布，为</p>
 <p>$$ <span class="math display">\[\begin{align*}
     
 \mathbf{\lambda}&amp;=\begin{bmatrix}
@@ -153,9 +88,7 @@ t_{-3}&amp;t_{-2}&amp;t_{-1}&amp; \vdots&amp; t_0 &amp;... &amp;t_{m}
 <p>$$</p>
 <p>由此可以计算矩阵<span class="math inline">\(\mathbf{A}\)</span>。</p>
 <p>For the cubic case <span class="math inline">\((k = 3)\)</span> with
-natural spline endpoint conditions (i.e. second derivative = 0 at <span
-class="math inline">\(t_0\)</span> and <span
-class="math inline">\(t_m\)</span>)。</p>
+natural spline endpoint conditions (i.e. second derivative = 0 at <span class="math inline">\(t_0\)</span> and <span class="math inline">\(t_m\)</span>)。</p>
 $$ =
 <span class="math display">\[\begin{bmatrix}
 { }^{(2)} N_0^3(t_0)&amp;  { }^{(2)} N_1^3(t_0)&amp; { }^{(2)}
@@ -180,9 +113,7 @@ N_m^3(t_m) &amp;{ }^{(2)} N_{m+1}^3(t_m) &amp; { }^{(2)} N_{m+2}^3(t_m)
 \\
 &amp;
 \end{bmatrix}\]</span>
-<p>$$ 当<span class="math inline">\(k=3\)</span>时，矩阵<span
-class="math inline">\(\mathbf{A}\)</span>为<span
-class="math inline">\((m+3)\times(m+3)\)</span>。</p>
+<p>$$ 当<span class="math inline">\(k=3\)</span>时，矩阵<span class="math inline">\(\mathbf{A}\)</span>为<span class="math inline">\((m+3)\times(m+3)\)</span>。</p>
 <p>向量<span class="math inline">\(d=\begin{bmatrix}0
 &amp;p_0&amp;p_1&amp;...&amp;p_m&amp;0\end{bmatrix}\)</span>。</p>
 <p>求得系数为：</p>
