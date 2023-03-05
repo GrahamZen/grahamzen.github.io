@@ -32,7 +32,7 @@
       window.addEventListener('hashchange', switchTab, false);
   })();
   </script><!-- hexo injector head_end end --><meta name="generator" content="Hexo 6.3.0"><link rel="alternate" href="/atom.xml" title="Gehan Zheng's blog" type="application/atom+xml">
-</head><body class="is-3-column"><nav class="navbar navbar-main"><div class="container navbar-container"><div class="navbar-brand justify-content-center"><a class="navbar-item navbar-logo" href="/"><img src="/img/logo.svg" alt="Gehan Zheng&#039;s blog" height="28"></a></div><div class="navbar-menu"><div class="navbar-start"><a class="navbar-item" href="/">Home</a><a class="navbar-item" href="/archives">Archives</a><a class="navbar-item" href="/categories">Categories</a><a class="navbar-item" href="/tags">Tags</a><a class="navbar-item" href="/about">About</a></div><div class="navbar-end"><a class="navbar-item" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/ppoffice/hexo-theme-icarus"><i class="fab fa-github"></i></a><a class="navbar-item search" title="搜索" href="javascript:;"><i class="fas fa-search"></i></a></div></div></div></nav><section class="section"><div class="container"><div class="columns"><div class="column order-2 column-main is-8-tablet is-8-desktop is-6-widescreen"><div class="card"><div class="card-content"><nav class="breadcrumb" aria-label="breadcrumbs"><ul><li><a href="/categories">分类</a></li><li class="is-active"><a href="#" aria-current="page">学习</a></li></ul></nav></div></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2023-03-04T14:13:56.000Z" title="2023/3/4 上午9:13:56">2023-03-04</time>发表</span><span class="level-item"><time dateTime="2023-03-05T07:38:12.085Z" title="2023/3/5 上午2:38:12">2023-03-05</time>更新</span><span class="level-item"><a class="link-muted" href="/categories/%E5%AD%A6%E4%B9%A0/">学习</a><span> / </span><a class="link-muted" href="/categories/%E5%AD%A6%E4%B9%A0/%E5%BB%BA%E6%A8%A1/">建模</a><span> / </span><a class="link-muted" href="/categories/%E5%AD%A6%E4%B9%A0/%E5%BB%BA%E6%A8%A1/CIS-5620/">CIS-5620</a></span><span class="level-item">11 分钟读完 (大约1678个字)</span></div></div><h1 class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2023/03/04/BSpline/">Bspline</a></h1><div class="content"><h2 id="bspline上任意点的计算公式">Bspline上任意点的计算公式</h2>
+</head><body class="is-3-column"><nav class="navbar navbar-main"><div class="container navbar-container"><div class="navbar-brand justify-content-center"><a class="navbar-item navbar-logo" href="/"><img src="/img/logo.svg" alt="Gehan Zheng&#039;s blog" height="28"></a></div><div class="navbar-menu"><div class="navbar-start"><a class="navbar-item" href="/">Home</a><a class="navbar-item" href="/archives">Archives</a><a class="navbar-item" href="/categories">Categories</a><a class="navbar-item" href="/tags">Tags</a><a class="navbar-item" href="/about">About</a></div><div class="navbar-end"><a class="navbar-item" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/ppoffice/hexo-theme-icarus"><i class="fab fa-github"></i></a><a class="navbar-item search" title="搜索" href="javascript:;"><i class="fas fa-search"></i></a></div></div></div></nav><section class="section"><div class="container"><div class="columns"><div class="column order-2 column-main is-8-tablet is-8-desktop is-6-widescreen"><div class="card"><div class="card-content"><nav class="breadcrumb" aria-label="breadcrumbs"><ul><li><a href="/categories">分类</a></li><li class="is-active"><a href="#" aria-current="page">学习</a></li></ul></nav></div></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2023-03-04T14:13:56.000Z" title="2023/3/4 上午9:13:56">2023-03-04</time>发表</span><span class="level-item"><time dateTime="2023-03-05T07:43:42.317Z" title="2023/3/5 上午2:43:42">2023-03-05</time>更新</span><span class="level-item"><a class="link-muted" href="/categories/%E5%AD%A6%E4%B9%A0/">学习</a><span> / </span><a class="link-muted" href="/categories/%E5%AD%A6%E4%B9%A0/%E5%BB%BA%E6%A8%A1/">建模</a><span> / </span><a class="link-muted" href="/categories/%E5%AD%A6%E4%B9%A0/%E5%BB%BA%E6%A8%A1/CIS-5620/">CIS-5620</a></span><span class="level-item">11 分钟读完 (大约1678个字)</span></div></div><h1 class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2023/03/04/BSpline/">Bspline</a></h1><div class="content"><h2 id="bspline上任意点的计算公式">Bspline上任意点的计算公式</h2>
 <p>Bspline和贝塞尔曲线类似，也是将所有控制点用基函数<span
 class="math inline">\(N_{i}^{k}\)</span>进行加权得到曲线上的点。也就是说，Bspline有<span
 class="math inline">\(n+1\)</span>个控制点，<span
@@ -46,8 +46,9 @@ class="math inline">\(N^{4}_{0}(t),N^{4}_{1}(t),N^{4}_{2}(t),N^{4}_{3}(t),...,N^
 f(t)&amp;=\sum_{i=0}^{n}N_{i}^{k}(t)p_i\\
     &amp;=N_{0}^{4}p_0+N_{1}^{4}p_1+N_{2}^{4}p_2...+N_{9}^{4}p_{9}\tag{1}
 \end{align*}
-\]</span> ## 节点
-与贝塞尔曲线不同的是，Bspline除了控制点，基函数之外还有<span
+\]</span></p>
+<h2 id="节点">节点</h2>
+<p>与贝塞尔曲线不同的是，Bspline除了控制点，基函数之外还有<span
 class="math inline">\(m+1\)</span>个节点<span
 class="math inline">\(t_0,t_1,...,t_m\)</span>。B样条基函数是分段k阶（k-1次）多项式，它们由节点向量(knot
 vector)唯一决定。<span class="math inline">\(n\)</span>和<span
@@ -60,9 +61,9 @@ class="math inline">\(m=n+k+1\)</span>。给出公式后就可以解释为什么
 <p>也就是说，在上面这个例子里，<span
 class="math inline">\(m=9+4=13\)</span>，节点个数是14。为了方便理解，我们可以认为节点是用来生成基函数的辅助量。节点向量则是一串非减(non-decreasing)的实数序列，比如<span
 class="math inline">\([0,0,\frac{1}{11},\frac{2}{11},\frac{3}{11},\frac{4}{11},\frac{5}{11},\frac{6}{11},\frac{7}{11},\frac{8}{11},\frac{9}{11},\frac{10}{11},1,1]\)</span>。一般来说节点的值是在<span
-class="math inline">\([0,1]\)</span>之间，但是也可以不是。 ##
-Bspline基函数的定义
-有了节点就可以计算基函数了，基函数的公式是递归定义的： <span
+class="math inline">\([0,1]\)</span>之间，但是也可以不是。</p>
+<h2 id="bspline基函数的定义">Bspline基函数的定义</h2>
+<p>有了节点就可以计算基函数了，基函数的公式是递归定义的： <span
 class="math display">\[
 N_{j}^{0}(t):=\left\{ {\begin{matrix}1&amp;\quad t_{j}&lt;t&lt;t_{ {j+1}
 }\\0&amp;  {...}\end{matrix} }\right.\\
@@ -191,8 +192,9 @@ class="math inline">\((m+3)\times(m+3)\)</span>。</p>
 c=\mathbf{A}^{-1}d,\\
 \]</span> 则可以得到Bspline的公式： <span class="math display">\[
 f(t)=\sum_{j=0}^{m+k-1}c_jN_j^k(t)
-\]</span> ## 参考 <a
-target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/139759835">曲线篇：深刻理解B
+\]</span></p>
+<h2 id="参考">参考</h2>
+<p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/139759835">曲线篇：深刻理解B
 样条曲线（上）</a></p>
 </div><hr style="height:1px;margin:1rem 0"><div class="level is-mobile is-flex"><div class="article-tags is-size-7 is-uppercase"><i class="fas fa-tags has-text-grey"></i> <a class="link-muted" rel="tag" href="/tags/Bspline/">Bspline </a></div></div>                    </article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2023-03-04T10:53:03.000Z" title="2023/3/4 上午5:53:03">2023-03-04</time>发表</span><span class="level-item"><time dateTime="2023-03-05T06:55:17.331Z" title="2023/3/5 上午1:55:17">2023-03-05</time>更新</span><span class="level-item"><a class="link-muted" href="/categories/%E5%AD%A6%E4%B9%A0/">学习</a><span> / </span><a class="link-muted" href="/categories/%E5%AD%A6%E4%B9%A0/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86/">项目管理</a><span> / </span><a class="link-muted" href="/categories/%E5%AD%A6%E4%B9%A0/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86/cmake/">cmake</a></span><span class="level-item">几秒读完 (大约58个字)</span></div></div><h1 class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2023/03/04/cmake-related/">cmake笔记</a></h1><div class="content"><p>build时可以指定debug或者release。 <figure class="highlight cmake"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cmake --build . --<span class="keyword">target</span> <span class="keyword">install</span> --config Debug</span><br></pre></td></tr></table></figure>
 install时默认在本机安装软件的目录下，比如<code>C:\Program Files (x86)</code>。因此有时需要管理员权限。
