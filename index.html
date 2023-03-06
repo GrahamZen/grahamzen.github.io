@@ -136,14 +136,14 @@ f(t)=\sum_{j=0}^{m+k-1}c_jN_j^k(t)
 <h2 id="参考">参考</h2>
 <p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/139759835">曲线篇：深刻理解B
 样条曲线（上）</a></p>
-</div><hr style="height:1px;margin:1rem 0"><div class="level is-mobile is-flex"><div class="article-tags is-size-7 is-uppercase"><i class="fas fa-tags has-text-grey"></i> <a class="link-muted" rel="tag" href="/tags/Bspline/">Bspline </a></div></div>                    </article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2023-03-04T10:53:03.000Z" title="2023/3/4 上午5:53:03">2023-03-04</time>发表</span><span class="level-item"><time dateTime="2023-03-06T22:54:18.884Z" title="2023/3/6 下午5:54:18">2023-03-07</time>更新</span><span class="level-item"><a class="link-muted" href="/categories/%E5%AD%A6%E4%B9%A0/">学习</a><span> / </span><a class="link-muted" href="/categories/%E5%AD%A6%E4%B9%A0/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86/">项目管理</a><span> / </span><a class="link-muted" href="/categories/%E5%AD%A6%E4%B9%A0/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86/cmake/">cmake</a></span><span class="level-item">13 分钟读完 (大约1971个字)</span></div></div><h1 class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2023/03/04/cmake-related/">cmake笔记</a></h1><div class="content"><p>运行 <code>cmake</code>：</p>
-<figure class="highlight cmake"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cmake -B build -DCMAKE_BUILD_TYPE=Release</span><br><span class="line">cmake --build build -j4 </span><br></pre></td></tr></table></figure>
+</div><hr style="height:1px;margin:1rem 0"><div class="level is-mobile is-flex"><div class="article-tags is-size-7 is-uppercase"><i class="fas fa-tags has-text-grey"></i> <a class="link-muted" rel="tag" href="/tags/Bspline/">Bspline </a></div></div>                    </article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2023-03-04T10:53:03.000Z" title="2023/3/4 上午5:53:03">2023-03-04</time>发表</span><span class="level-item"><time dateTime="2023-03-06T23:28:24.265Z" title="2023/3/6 下午6:28:24">2023-03-07</time>更新</span><span class="level-item"><a class="link-muted" href="/categories/%E5%AD%A6%E4%B9%A0/">学习</a><span> / </span><a class="link-muted" href="/categories/%E5%AD%A6%E4%B9%A0/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86/">项目管理</a><span> / </span><a class="link-muted" href="/categories/%E5%AD%A6%E4%B9%A0/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86/cmake/">cmake</a></span><span class="level-item">15 分钟读完 (大约2251个字)</span></div></div><h1 class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2023/03/04/cmake-related/">cmake笔记</a></h1><div class="content"><p>运行 <code>cmake</code>：</p>
+<figure class="highlight cmake"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cmake -B build -DCMAKE_BUILD_TYPE=Release</span><br><span class="line">cmake --build build -j8 </span><br></pre></td></tr></table></figure>
 <h2 id="常用函数">常用函数</h2>
 <table>
 <colgroup>
-<col style="width: 18%">
-<col style="width: 54%">
-<col style="width: 26%">
+<col style="width: 8%">
+<col style="width: 74%">
+<col style="width: 16%">
 </colgroup>
 <thead>
 <tr class="header">
@@ -199,75 +199,118 @@ f(t)=\sum_{j=0}^{m+k-1}c_jN_j^k(t)
 <td>查找包</td>
 </tr>
 <tr class="even">
+<td>aux_source_directory</td>
+<td>aux_source_directory(. sources)</td>
+<td>自动搜集有需要的后缀名的文件放入 <code>sources</code>变量</td>
+</tr>
+<tr class="odd">
 <td>target_include_directories</td>
 <td>target_include_directories(test PRIVATE VulkanUtils)</td>
 <td>包含子库</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>target_link_libraries</td>
 <td>target_link_libraries(VulkanToy utilTest)</td>
 <td>链接子库目录</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>target_add_definitions</td>
 <td>target_add_definitions(VulkanToy PUBLIC MY_MACRO=1)</td>
 <td>添加一个宏定义</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>target_compile_options</td>
 <td>target_compile_options(VulkanToy PUBLIC -fopenmp)</td>
 <td>添加编译器命令行选项</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>target_sources</td>
 <td>target_sources(VulkanToy PUBLIC test.cpp other.cpp)</td>
 <td>添加要编译的源文件</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>include_directories</td>
 <td>include_directories(/opt/cuda/include)</td>
 <td>添加头文件搜索目录</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>link_directories</td>
 <td>link_directories(/opt/cuda)</td>
 <td>添加库文件的搜索路径</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>add_definitions</td>
 <td>add_definitions(MY_MACRO=1)</td>
 <td>添加一个宏定义</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>add_compile_options</td>
 <td>add_compile_options(-fopenmp)</td>
 <td>添加编译器命令行选项</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>configure_file</td>
 <td>configure_file(VulkanToyConfig.h.in VulkanToyConfig.h)</td>
 <td>配置文件</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>install</td>
 <td>install(TARGETS VulkanToy DESTINATION bin)</td>
 <td>安装</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>enable_testing</td>
 <td>enable_testing()</td>
 <td>启动测试功能</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>add_test</td>
 <td>add_test(NAME VulkanToyRuns COMMAND VulkanToy)</td>
 <td>添加一个测试</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>set_tests_properties</td>
 <td>set_tests_properties(VulkanToyRuns PROPERTIES
 PASS_REGULAR_EXPRESSION ".*")</td>
 <td>设置测试的属性（比如结果是否满足条件</td>
+</tr>
+<tr class="odd">
+<td>add_custom_command</td>
+<td>add_custom_command(TARGET${target_name} POST_BUILD COMMAND
+${CMAKE_COMMAND} -E copy ${PROJECT_SOURCE_DIR}/vert.spv $<a href="TARGET_FILE_DIR:$%7Btarget_name%7D">TARGET_FILE_DIR:${target_name}</a>(TARGET_FILE_DIR:${target_name}))</td>
+<td>自定义命令</td>
+</tr>
+</tbody>
+</table>
+<h2 id="部分关键字">部分关键字</h2>
+<table>
+<colgroup>
+<col style="width: 13%">
+<col style="width: 44%">
+<col style="width: 41%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>关键字</th>
+<th>例子</th>
+<th>用途</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>GLBO</td>
+<td>file(GLBO sources CONFIGURE_DEPENDS <em>.cpp </em>.h)</td>
+<td>将文件夹下的对应扩展名的所有文件都放入 <code>sources</code>中</td>
+</tr>
+<tr class="even">
+<td>GLOB_RECURSE</td>
+<td>file(GLOB_RECURSE sources CONFIGURE_DEPENDS <em>.cpp </em>.h)</td>
+<td>自动包含所有子文件夹下的文件</td>
+</tr>
+<tr class="odd">
+<td>CONFIGURE_DEPENDS</td>
+<td>file(GLBO sources CONFIGURE_DEPENDS <em>.cpp </em>.h)</td>
+<td>当添加新文件时，自动更新变量</td>
 </tr>
 </tbody>
 </table>
@@ -319,7 +362,8 @@ bar.h中包含了foo.h，<strong>但是bar.cpp并没有用到foo定义的符号<
 <code>.lib</code>)。</p>
 <h4 id="包含的依赖关系">包含的依赖关系</h4>
 <p>一般 <code>target_include_directories</code>和
-<code>target_link_libraries</code>会使用相同的关键字，含义也是一样的。</p>
+<code>target_link_libraries</code>会使用相同的关键字，含义也是一样的。但是
+<code>target_link_libraries</code>可以省略关键字，<code>target_include_directories</code>不可以。</p>
 <p>总结来说，如果有 <code>foo-&gt;bar-&gt;app</code>这样的依赖关系，如果
 <code>bar.cpp</code>使用了 <code>foo.hpp</code>里的符号，且
 <code>app.cpp</code>里使用了 <code>foo.hpp</code>里的符号，那么就只能用
@@ -371,6 +415,12 @@ bar.h中包含了foo.h，<strong>但是bar.cpp并没有用到foo定义的符号<
 <code>Test not available without configuration.  (Missing "-C &lt;config&gt;"?)</code>这样的错误，就可以用
 <code>-C</code>指定配置：</p>
 <figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cmake ..</span><br><span class="line">ctest <span class="literal">-C</span> DEBUG</span><br></pre></td></tr></table></figure>
+<h3 id="自定义命令">自定义命令</h3>
+<p><code>add_custom_command</code>有两种，一种用于生成输出文件，一种在生成目标文件时自动执行。</p>
+<h2 id="参考">参考</h2>
+<p><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV16P4y1g7MH">【公开课】现代CMake高级教程（持续更新中）</a>
+非常推荐观看。 <a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/95771200">cmake：添加自定义操作</a>
+<a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/437404485">CMake应用：生成器表达式</a></p>
 </div><hr style="height:1px;margin:1rem 0"><div class="level is-mobile is-flex"><div class="article-tags is-size-7 is-uppercase"><i class="fas fa-tags has-text-grey"></i> <a class="link-muted" rel="tag" href="/tags/cmake/">cmake </a></div></div>                    </article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2023-02-09T17:42:42.000Z" title="2023/2/9 下午12:42:42">2023-02-10</time>发表</span><span class="level-item"><time dateTime="2023-02-21T17:28:53.139Z" title="2023/2/21 下午12:28:53">2023-02-22</time>更新</span><span class="level-item"><a class="link-muted" href="/categories/%E5%AD%A6%E4%B9%A0/">学习</a><span> / </span><a class="link-muted" href="/categories/%E5%AD%A6%E4%B9%A0/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9B%BE%E5%BD%A2%E5%AD%A6/">计算机图形学</a><span> / </span><a class="link-muted" href="/categories/%E5%AD%A6%E4%B9%A0/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9B%BE%E5%BD%A2%E5%AD%A6/CIS-5610/">CIS-5610</a></span><span class="level-item">2 分钟读完 (大约254个字)</span></div></div><h1 class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2023/02/09/rendering-equation/">渲染方程及BSDFs</a></h1><div class="content"><h2 id="光传播方程the-light-transport-equation-lte">光传播方程(The Light
 Transport Equation, LTE)</h2>
 <p><span class="math display">\[
