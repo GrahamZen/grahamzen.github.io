@@ -6,7 +6,7 @@
   <link href="https://grahamzen.github.io/atom.xml" rel="self"/>
   
   <link href="https://grahamzen.github.io/"/>
-  <updated>2023-03-05T16:04:04.599Z</updated>
+  <updated>2023-03-06T23:31:47.783Z</updated>
   <id>https://grahamzen.github.io/</id>
   
   <author>
@@ -21,16 +21,17 @@
     <link href="https://grahamzen.github.io/2023/03/04/BSpline/"/>
     <id>https://grahamzen.github.io/2023/03/04/BSpline/</id>
     <published>2023-03-04T14:13:56.000Z</published>
-    <updated>2023-03-05T16:04:04.599Z</updated>
+    <updated>2023-03-06T23:31:47.783Z</updated>
     
     
-      
-      
-        
-        
-    <summary type="html"></summary>
-        
-      
+    <summary type="html">&lt;h2 id=&quot;bspline上任意点的计算公式&quot;&gt;Bspline上任意点的计算公式&lt;/h2&gt;
+&lt;p&gt;Bspline和贝塞尔曲线类似，也是将所有控制点用基函数&lt;span class=&quot;math inline&quot;&gt;\(N_{i}^{k}\)&lt;/span&gt;进行加权得到曲线上的点。也就是说，Bspline有&lt;span class=&quot;math inline&quot;&gt;\(n+1\)&lt;/span&gt;个控制点，&lt;span class=&quot;math inline&quot;&gt;\(n+1\)&lt;/span&gt;个基函数，&lt;span class=&quot;math inline&quot;&gt;\(k\)&lt;/span&gt;为次数（t在基函数中出现的最高次幂），&lt;span class=&quot;math inline&quot;&gt;\(i\in[0,n]\)&lt;/span&gt;。比如有10个控制点&lt;span class=&quot;math inline&quot;&gt;\(p_0,p_1,p_2,p_3,...,p_{9}\)&lt;/span&gt;，使用4次的Bspline基函数&lt;span class=&quot;math inline&quot;&gt;\(N^{4}_{0}(t),N^{4}_{1}(t),N^{4}_{2}(t),N^{4}_{3}(t),...,N^{4}_{9}(t)\)&lt;/span&gt;，那么曲线上任意一点可以表示为：&lt;/p&gt;
+&lt;p&gt;&lt;span class=&quot;math display&quot;&gt;\[
+\begin{align*}
+f(t)&amp;amp;=\sum_{i=0}^{n}N_{i}^{k}(t)p_i\\
+    &amp;amp;=N_{0}^{4}p_0+N_{1}^{4}p_1+N_{2}^{4}p_2...+N_{9}^{4}p_{9}\tag{1}
+\end{align*}
+\]&lt;/span&gt;&lt;/p&gt;</summary>
     
     
     
@@ -50,16 +51,156 @@
     <link href="https://grahamzen.github.io/2023/03/04/cmake-related/"/>
     <id>https://grahamzen.github.io/2023/03/04/cmake-related/</id>
     <published>2023-03-04T10:53:03.000Z</published>
-    <updated>2023-03-06T23:29:47.103Z</updated>
+    <updated>2023-03-06T23:31:38.633Z</updated>
     
     
-      
-      
-        
-        
-    <summary type="html"></summary>
-        
-      
+    <summary type="html">&lt;p&gt;记录一个&lt;code&gt;CMake&lt;/code&gt;速查表。&lt;/p&gt;
+&lt;p&gt;运行 &lt;code&gt;cmake&lt;/code&gt;：&lt;/p&gt;
+&lt;figure class=&quot;highlight cmake&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;cmake -B build -DCMAKE_BUILD_TYPE=Release&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;cmake --build build -j8 &lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h2 id=&quot;常用函数&quot;&gt;常用函数&lt;/h2&gt;
+&lt;table&gt;
+&lt;colgroup&gt;
+&lt;col style=&quot;width: 8%&quot;&gt;
+&lt;col style=&quot;width: 74%&quot;&gt;
+&lt;col style=&quot;width: 16%&quot;&gt;
+&lt;/colgroup&gt;
+&lt;thead&gt;
+&lt;tr class=&quot;header&quot;&gt;
+&lt;th&gt;函数名&lt;/th&gt;
+&lt;th&gt;例子&lt;/th&gt;
+&lt;th&gt;用途&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr class=&quot;odd&quot;&gt;
+&lt;td&gt;set&lt;/td&gt;
+&lt;td&gt;set(CMAKE_CXX_STANDARD 11)&lt;/td&gt;
+&lt;td&gt;为变量赋值&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&quot;even&quot;&gt;
+&lt;td&gt;option&lt;/td&gt;
+&lt;td&gt;option(USE_VULKAN_UTILS &quot;use custom vulkan utilities&quot; ON)&lt;/td&gt;
+&lt;td&gt;选项（和set功能相同）&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&quot;odd&quot;&gt;
+&lt;td&gt;include&lt;/td&gt;
+&lt;td&gt;include(Ctest)&lt;/td&gt;
+&lt;td&gt;包含cmake文件&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&quot;even&quot;&gt;
+&lt;td&gt;cmake_minimum_required&lt;/td&gt;
+&lt;td&gt;cmake_minimum_required(VERSION 3.10)&lt;/td&gt;
+&lt;td&gt;cmake版本指定&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&quot;odd&quot;&gt;
+&lt;td&gt;project&lt;/td&gt;
+&lt;td&gt;project(VulkanToy VERSION 1.0)&lt;/td&gt;
+&lt;td&gt;项目名称，可以包括版本&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&quot;even&quot;&gt;
+&lt;td&gt;add_executable&lt;/td&gt;
+&lt;td&gt;add_executable(VulkanToy main.cpp)&lt;/td&gt;
+&lt;td&gt;添加一个要生成可执行文件的目标&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&quot;odd&quot;&gt;
+&lt;td&gt;add_library&lt;/td&gt;
+&lt;td&gt;add_library(VulkanUtils utils.cpp)&lt;/td&gt;
+&lt;td&gt;添加一个要生成库的目标&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&quot;even&quot;&gt;
+&lt;td&gt;add_subdirectory&lt;/td&gt;
+&lt;td&gt;add_subdirectory(VulkanUtils)&lt;/td&gt;
+&lt;td&gt;添加子目录&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&quot;odd&quot;&gt;
+&lt;td&gt;find_package&lt;/td&gt;
+&lt;td&gt;find_package(Vulkan REQUIRED)&lt;/td&gt;
+&lt;td&gt;查找包&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&quot;even&quot;&gt;
+&lt;td&gt;aux_source_directory&lt;/td&gt;
+&lt;td&gt;aux_source_directory(. sources)&lt;/td&gt;
+&lt;td&gt;自动搜集有需要的后缀名的文件放入 &lt;code&gt;sources&lt;/code&gt;变量&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&quot;odd&quot;&gt;
+&lt;td&gt;target_include_directories&lt;/td&gt;
+&lt;td&gt;target_include_directories(test PRIVATE VulkanUtils)&lt;/td&gt;
+&lt;td&gt;包含子库&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&quot;even&quot;&gt;
+&lt;td&gt;target_link_libraries&lt;/td&gt;
+&lt;td&gt;target_link_libraries(VulkanToy utilTest)&lt;/td&gt;
+&lt;td&gt;链接子库目录&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&quot;odd&quot;&gt;
+&lt;td&gt;target_add_definitions&lt;/td&gt;
+&lt;td&gt;target_add_definitions(VulkanToy PUBLIC MY_MACRO=1)&lt;/td&gt;
+&lt;td&gt;添加一个宏定义&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&quot;even&quot;&gt;
+&lt;td&gt;target_compile_options&lt;/td&gt;
+&lt;td&gt;target_compile_options(VulkanToy PUBLIC -fopenmp)&lt;/td&gt;
+&lt;td&gt;添加编译器命令行选项&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&quot;odd&quot;&gt;
+&lt;td&gt;target_sources&lt;/td&gt;
+&lt;td&gt;target_sources(VulkanToy PUBLIC test.cpp other.cpp)&lt;/td&gt;
+&lt;td&gt;添加要编译的源文件&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&quot;even&quot;&gt;
+&lt;td&gt;include_directories&lt;/td&gt;
+&lt;td&gt;include_directories(/opt/cuda/include)&lt;/td&gt;
+&lt;td&gt;添加头文件搜索目录&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&quot;odd&quot;&gt;
+&lt;td&gt;link_directories&lt;/td&gt;
+&lt;td&gt;link_directories(/opt/cuda)&lt;/td&gt;
+&lt;td&gt;添加库文件的搜索路径&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&quot;even&quot;&gt;
+&lt;td&gt;add_definitions&lt;/td&gt;
+&lt;td&gt;add_definitions(MY_MACRO=1)&lt;/td&gt;
+&lt;td&gt;添加一个宏定义&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&quot;odd&quot;&gt;
+&lt;td&gt;add_compile_options&lt;/td&gt;
+&lt;td&gt;add_compile_options(-fopenmp)&lt;/td&gt;
+&lt;td&gt;添加编译器命令行选项&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&quot;even&quot;&gt;
+&lt;td&gt;configure_file&lt;/td&gt;
+&lt;td&gt;configure_file(VulkanToyConfig.h.in VulkanToyConfig.h)&lt;/td&gt;
+&lt;td&gt;配置文件&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&quot;odd&quot;&gt;
+&lt;td&gt;install&lt;/td&gt;
+&lt;td&gt;install(TARGETS VulkanToy DESTINATION bin)&lt;/td&gt;
+&lt;td&gt;安装&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&quot;even&quot;&gt;
+&lt;td&gt;enable_testing&lt;/td&gt;
+&lt;td&gt;enable_testing()&lt;/td&gt;
+&lt;td&gt;启动测试功能&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&quot;odd&quot;&gt;
+&lt;td&gt;add_test&lt;/td&gt;
+&lt;td&gt;add_test(NAME VulkanToyRuns COMMAND VulkanToy)&lt;/td&gt;
+&lt;td&gt;添加一个测试&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&quot;even&quot;&gt;
+&lt;td&gt;set_tests_properties&lt;/td&gt;
+&lt;td&gt;set_tests_properties(VulkanToyRuns PROPERTIES
+PASS_REGULAR_EXPRESSION &quot;.*&quot;)&lt;/td&gt;
+&lt;td&gt;设置测试的属性（比如结果是否满足条件&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr class=&quot;odd&quot;&gt;
+&lt;td&gt;add_custom_command&lt;/td&gt;
+&lt;td&gt;add_custom_command(TARGET${target_name} POST_BUILD COMMAND
+${CMAKE_COMMAND} -E copy ${PROJECT_SOURCE_DIR}/vert.spv $&lt;a href=&quot;TARGET_FILE_DIR:$%7Btarget_name%7D&quot;&gt;TARGET_FILE_DIR:${target_name}&lt;/a&gt;(TARGET_FILE_DIR:${target_name}))&lt;/td&gt;
+&lt;td&gt;自定义命令&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;</summary>
     
     
     
