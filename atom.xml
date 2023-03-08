@@ -6,7 +6,7 @@
   <link href="https://grahamzen.github.io/atom.xml" rel="self"/>
   
   <link href="https://grahamzen.github.io/"/>
-  <updated>2023-03-08T02:12:41.215Z</updated>
+  <updated>2023-03-08T02:14:07.421Z</updated>
   <id>https://grahamzen.github.io/</id>
   
   <author>
@@ -21,16 +21,19 @@
     <link href="https://grahamzen.github.io/2023/03/07/VkPresentModeKHR/"/>
     <id>https://grahamzen.github.io/2023/03/07/VkPresentModeKHR/</id>
     <published>2023-03-07T06:15:11.000Z</published>
-    <updated>2023-03-08T02:12:41.215Z</updated>
+    <updated>2023-03-08T02:14:07.421Z</updated>
     
     
-      
-      
-        
-        
-    <summary type="html"></summary>
-        
-      
+    <summary type="html">&lt;p&gt;在构建交换链 &lt;code&gt;vk::SwapchainCreateInfoKHR&lt;/code&gt;时，有一个设置是
+&lt;code&gt;VkPresentModeKHR&lt;/code&gt;。根据官方手册&lt;a href=&quot;https://registry.khronos.org/vulkan/specs/1.3-extensions/man/html/VkPresentModeKHR.html&quot;&gt;VkPresentModeKHR(3)
+Manual Page&lt;/a&gt;，模式有6种。&lt;/p&gt;
+&lt;h2 id=&quot;相关术语&quot;&gt;相关术语&lt;/h2&gt;
+&lt;h3 id=&quot;垂直空白间隙vertical-blank-interval&quot;&gt;垂直空白间隙(Vertical Blank
+Interval)&lt;/h3&gt;
+&lt;p&gt;指在扫描线技术中（例如隔行扫描）电子束从前一画面的右下角移至后一画面的左上角时的时间差所引起的空白画面。这一情况出现在使用阴极射线管的显示器、使用视频图形阵列标准的显示器中。下面简称VBI。&lt;/p&gt;
+&lt;p&gt;在现代的显示器（比如LCD）中，虽然没有电子枪进行隔行扫描，但是同时控制上百万个像素点是不可能的，还是需要动态扫描进行刷新。这个刷新过程可以理解为从上往下的逐行扫描。因此VBI的含义是一段可以安全的换出&quot;显示到显示器上的图像&quot;的时间，可以简单理解为在从上到下扫描完帧缓冲，即可以认为屏幕上显示了完整画面（实际上某些情况下有撕裂）后的一段空白时间。这个扫描过程只受帧同步信号（VSYNC）影响。&lt;/p&gt;
+&lt;h3 id=&quot;撕裂tearing&quot;&gt;撕裂(tearing)&lt;/h3&gt;
+&lt;p&gt;在显示引擎正在显示一张图像时，如果它不再显示当前这张图像，而是显示另一张图像（某些模式下会有这样做），那么屏幕上有一部分是旧的图像（比如上面一半），另一部分是新的图像（比如下面一半）。这个现象就是撕裂。&lt;/p&gt;</summary>
     
     
     
