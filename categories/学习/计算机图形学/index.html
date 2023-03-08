@@ -32,9 +32,9 @@
       window.addEventListener('hashchange', switchTab, false);
   })();
   </script><!-- hexo injector head_end end --><meta name="generator" content="Hexo 6.3.0"><link rel="alternate" href="/atom.xml" title="Gehan Zheng's blog" type="application/atom+xml">
-</head><body class="is-3-column"><nav class="navbar navbar-main"><div class="container navbar-container"><div class="navbar-brand justify-content-center"><a class="navbar-item navbar-logo" href="/"><img src="/img/logo.svg" alt="Gehan Zheng&#039;s blog" height="28"></a></div><div class="navbar-menu"><div class="navbar-start"><a class="navbar-item" href="/">Home</a><a class="navbar-item" href="/archives">Archives</a><a class="navbar-item" href="/categories">Categories</a><a class="navbar-item" href="/tags">Tags</a><a class="navbar-item" href="/about">About</a></div><div class="navbar-end"><a class="navbar-item" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/ppoffice/hexo-theme-icarus"><i class="fab fa-github"></i></a><a class="navbar-item search" title="搜索" href="javascript:;"><i class="fas fa-search"></i></a></div></div></div></nav><section class="section"><div class="container"><div class="columns"><div class="column order-2 column-main is-8-tablet is-8-desktop is-6-widescreen"><div class="card"><div class="card-content"><nav class="breadcrumb" aria-label="breadcrumbs"><ul><li><a href="/categories">分类</a></li><li><a href="/categories/%E5%AD%A6%E4%B9%A0/">学习</a></li><li class="is-active"><a href="#" aria-current="page">计算机图形学</a></li></ul></nav></div></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2023-03-07T06:15:11.000Z" title="2023/3/7 上午1:15:11">2023-03-07</time>发表</span><span class="level-item"><time dateTime="2023-03-08T00:04:29.759Z" title="2023/3/7 下午7:04:29">2023-03-08</time>更新</span><span class="level-item"><a class="link-muted" href="/categories/%E5%AD%A6%E4%B9%A0/">学习</a><span> / </span><a class="link-muted" href="/categories/%E5%AD%A6%E4%B9%A0/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9B%BE%E5%BD%A2%E5%AD%A6/">计算机图形学</a><span> / </span><a class="link-muted" href="/categories/%E5%AD%A6%E4%B9%A0/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9B%BE%E5%BD%A2%E5%AD%A6/%E5%9B%BE%E5%BD%A2API/">图形API</a><span> / </span><a class="link-muted" href="/categories/%E5%AD%A6%E4%B9%A0/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9B%BE%E5%BD%A2%E5%AD%A6/%E5%9B%BE%E5%BD%A2API/Vulkan/">Vulkan</a></span><span class="level-item">12 分钟读完 (大约1766个字)</span></div></div><h1 class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2023/03/07/VkPresentModeKHR/">VkPresentModeKHR-表面显示模式</a></h1><div class="content"><p>在构建交换链 <code>vk::SwapchainCreateInfoKHR</code>时，有一个设置是
+</head><body class="is-3-column"><nav class="navbar navbar-main"><div class="container navbar-container"><div class="navbar-brand justify-content-center"><a class="navbar-item navbar-logo" href="/"><img src="/img/logo.svg" alt="Gehan Zheng&#039;s blog" height="28"></a></div><div class="navbar-menu"><div class="navbar-start"><a class="navbar-item" href="/">Home</a><a class="navbar-item" href="/archives">Archives</a><a class="navbar-item" href="/categories">Categories</a><a class="navbar-item" href="/tags">Tags</a><a class="navbar-item" href="/about">About</a></div><div class="navbar-end"><a class="navbar-item" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/ppoffice/hexo-theme-icarus"><i class="fab fa-github"></i></a><a class="navbar-item search" title="搜索" href="javascript:;"><i class="fas fa-search"></i></a></div></div></div></nav><section class="section"><div class="container"><div class="columns"><div class="column order-2 column-main is-8-tablet is-8-desktop is-6-widescreen"><div class="card"><div class="card-content"><nav class="breadcrumb" aria-label="breadcrumbs"><ul><li><a href="/categories">分类</a></li><li><a href="/categories/%E5%AD%A6%E4%B9%A0/">学习</a></li><li class="is-active"><a href="#" aria-current="page">计算机图形学</a></li></ul></nav></div></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2023-03-07T06:15:11.000Z" title="2023/3/7 上午1:15:11">2023-03-07</time>发表</span><span class="level-item"><time dateTime="2023-03-08T02:12:41.215Z" title="2023/3/7 下午9:12:41">2023-03-08</time>更新</span><span class="level-item"><a class="link-muted" href="/categories/%E5%AD%A6%E4%B9%A0/">学习</a><span> / </span><a class="link-muted" href="/categories/%E5%AD%A6%E4%B9%A0/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9B%BE%E5%BD%A2%E5%AD%A6/">计算机图形学</a><span> / </span><a class="link-muted" href="/categories/%E5%AD%A6%E4%B9%A0/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9B%BE%E5%BD%A2%E5%AD%A6/%E5%9B%BE%E5%BD%A2API/">图形API</a><span> / </span><a class="link-muted" href="/categories/%E5%AD%A6%E4%B9%A0/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9B%BE%E5%BD%A2%E5%AD%A6/%E5%9B%BE%E5%BD%A2API/Vulkan/">Vulkan</a></span><span class="level-item">12 分钟读完 (大约1754个字)</span></div></div><h1 class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2023/03/07/VkPresentModeKHR/">VkPresentModeKHR-表面显示模式</a></h1><div class="content"><p>在构建交换链 <code>vk::SwapchainCreateInfoKHR</code>时，有一个设置是
 <code>VkPresentModeKHR</code>。根据官方手册<a target="_blank" rel="noopener" href="https://registry.khronos.org/vulkan/specs/1.3-extensions/man/html/VkPresentModeKHR.html">VkPresentModeKHR(3)
-Manual Page</a>，他有6种。</p>
+Manual Page</a>，模式有6种。</p>
 <h2 id="相关术语">相关术语</h2>
 <h3 id="垂直空白间隙vertical-blank-interval">垂直空白间隙(Vertical Blank
 Interval)</h3>
@@ -44,6 +44,7 @@ Interval)</h3>
 <p>在显示引擎正在显示一张图像时，如果它不再显示当前这张图像，而是显示另一张图像（某些模式下会有这样做），那么屏幕上有一部分是旧的图像（比如上面一半），另一部分是新的图像（比如下面一半）。这个现象就是撕裂。</p>
 <h2 id="显示模式">显示模式</h2>
 <h3 id="总结">总结</h3>
+<p><code>VK_PRESENT_MODE_</code>和<code>_KHR</code>在表中省略。</p>
 <table>
 <thead>
 <tr class="header">
@@ -75,42 +76,42 @@ Interval)</h3>
 </thead>
 <tbody>
 <tr class="odd">
-<td>VK_PRESENT_MODE_IMMEDIATE_KHR</td>
+<td>IMMEDIATE</td>
 <td>❌</td>
 <td>❌</td>
 <td>❌</td>
 <td>✅</td>
 </tr>
 <tr class="even">
-<td>VK_PRESENT_MODE_MAILBOX_KHR</td>
+<td>MAILBOX</td>
 <td>✅单项目队列</td>
 <td>✅</td>
 <td>❌</td>
 <td>❌</td>
 </tr>
 <tr class="odd">
-<td>VK_PRESENT_MODE_FIFO_KHR</td>
+<td>FIFO</td>
 <td>✅</td>
 <td>✅</td>
 <td>❌</td>
 <td>❌</td>
 </tr>
 <tr class="even">
-<td>VK_PRESENT_MODE_FIFO_RELAXED_KHR</td>
+<td>FIFO_RELAXED</td>
 <td>✅</td>
 <td>☑️</td>
 <td>❌</td>
 <td>✅</td>
 </tr>
 <tr class="odd">
-<td>VK_PRESENT_MODE_SHARED_DEMAND_REFRESH_KHR</td>
+<td>SHARED_DEMAND_REFRESH</td>
 <td>❓</td>
 <td>❓</td>
 <td>✅</td>
 <td>✅</td>
 </tr>
 <tr class="even">
-<td>VK_PRESENT_MODE_SHARED_CONTINUOUS_REFRESH_KHR</td>
+<td>SHARED_CONTINUOUS_REFRESH</td>
 <td>❓</td>
 <td>❓</td>
 <td>✅</td>
@@ -127,13 +128,16 @@ Interval)</h3>
 <h3 id="vk_present_mode_mailbox_khr">VK_PRESENT_MODE_MAILBOX_KHR</h3>
 <p>显示引擎等待下个VBI再更新当前图像。有一个内部的可以容纳一个项目的队列保存等待显示的请求项目。如果队列满时收到新的显示请求，新的会替代现有的项目，与之前的项目关联的任何图像都可以被应用重复使用。在VBI期间队列不为空时，队列中的一个请求会被移除然后在这个期间被处理。</p>
 <h3 id="vk_present_mode_fifo_khr">VK_PRESENT_MODE_FIFO_KHR</h3>
-<p>显示引擎等待下个VBI再更新当前图像。有一个内部的单向队列保存等待显示的请求项目。新请求被放到队尾。在VBI期间队列不为空时，队列中队头的请求会被移除然后在这个期间被处理。这是唯一<strong>必须</strong>支持的<code>presentMode</code>的值。</p>
+<p>显示引擎等待下个VBI再更新当前图像。有一个内部的单向队列保存等待显示的请求项目。新请求被放到队尾。在VBI期间队列不为空时，队列中队头的请求会被移除然后在这个期间被处理。这是唯一<strong>必须</strong>支持的
+<code>presentMode</code>的值。</p>
 <h3 id="vk_present_mode_fifo_relaxed_khr">VK_PRESENT_MODE_FIFO_RELAXED_KHR</h3>
 <p>显示引擎一般会等待下个VBI再更新当前图像。如果从上次更新到当前时刻已经经过了一个或更多VBI，显示引擎就不再等待下一个VBI而直接更新图像，这个模式可以减轻一些应用的视觉延迟。这些应用大部分时间可以在下个VBI之前生成新图像，但是偶尔会迟到，正好在下个VBI之后生成好新图像。有一个内部的单向队列保存等待显示的请求项目。新请求被放到队尾。在VBI期间队列不为空时，队列中队头的请求会被移除然后在这个期间或者之后被处理。</p>
 <h3 id="vk_present_mode_shared_demand_refresh_khr">VK_PRESENT_MODE_SHARED_DEMAND_REFRESH_KHR</h3>
-<p>显示引擎和应用可以并发访问单个图像，这被称为共享的可展示图像<code>shared presentable image</code>。显示引擎仅需要在收到新的显示请求后更新当前图像。因此无论是否需要更新，应用必须发起显示请求。但是，显示引擎可能在任何时间更新当前图像，意味着可能有撕裂。</p>
+<p>显示引擎和应用可以并发访问单个图像，这被称为共享的可展示图像
+<code>shared presentable image</code>。显示引擎仅需要在收到新的显示请求后更新当前图像。因此无论是否需要更新，应用必须发起显示请求。但是，显示引擎可能在任何时间更新当前图像，意味着可能有撕裂。</p>
 <h3 id="vk_present_mode_shared_continuous_refresh_khr">VK_PRESENT_MODE_SHARED_CONTINUOUS_REFRESH_KHR</h3>
-<p>显示引擎和应用可以并发访问单个图像，这被称为共享的可展示图像<code>shared presentable image</code>。显示引擎在他的有规律的刷新循环下周期性更新当前图像。应用只需要发起初次显示请求，在这个请求之后显示引擎必须更新当前图像，不需要更多的显示请求。应用可以通过发起显示请求表明图像内容已更新，但是这并不能保证更新的实机。如果该图像的渲染实机不正确有可能产生视觉撕裂。</p>
+<p>显示引擎和应用可以并发访问单个图像，这被称为共享的可展示图像
+<code>shared presentable image</code>。显示引擎在他的有规律的刷新循环下周期性更新当前图像。应用只需要发起初次显示请求，在这个请求之后显示引擎必须更新当前图像，不需要更多的显示请求。应用可以通过发起显示请求表明图像内容已更新，但是这并不能保证更新的实机。如果该图像的渲染实机不正确有可能产生视觉撕裂。</p>
 <h2 id="参考">参考</h2>
 <p><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1Me4y1k72b">【硬件科普】一个视频带你了解LCD
 OLED QLED mini-LED等显示技术的区别</a> <a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_55203246/article/details/124155818">从点阵到OLED屏幕——动态扫描显示原理</a>
