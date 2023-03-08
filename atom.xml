@@ -6,7 +6,7 @@
   <link href="https://grahamzen.github.io/atom.xml" rel="self"/>
   
   <link href="https://grahamzen.github.io/"/>
-  <updated>2023-03-08T02:14:07.421Z</updated>
+  <updated>2023-03-08T02:16:21.002Z</updated>
   <id>https://grahamzen.github.io/</id>
   
   <author>
@@ -17,16 +17,16 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>VkPresentModeKHR-表面显示模式</title>
+    <title>VkPresentModeKHR-呈现模式</title>
     <link href="https://grahamzen.github.io/2023/03/07/VkPresentModeKHR/"/>
     <id>https://grahamzen.github.io/2023/03/07/VkPresentModeKHR/</id>
     <published>2023-03-07T06:15:11.000Z</published>
-    <updated>2023-03-08T02:14:07.421Z</updated>
+    <updated>2023-03-08T02:16:21.002Z</updated>
     
     
     <summary type="html">&lt;p&gt;在构建交换链 &lt;code&gt;vk::SwapchainCreateInfoKHR&lt;/code&gt;时，有一个设置是
 &lt;code&gt;VkPresentModeKHR&lt;/code&gt;。根据官方手册&lt;a href=&quot;https://registry.khronos.org/vulkan/specs/1.3-extensions/man/html/VkPresentModeKHR.html&quot;&gt;VkPresentModeKHR(3)
-Manual Page&lt;/a&gt;，模式有6种。&lt;/p&gt;
+Manual Page&lt;/a&gt;，呈现模式有6种。&lt;/p&gt;
 &lt;h2 id=&quot;相关术语&quot;&gt;相关术语&lt;/h2&gt;
 &lt;h3 id=&quot;垂直空白间隙vertical-blank-interval&quot;&gt;垂直空白间隙(Vertical Blank
 Interval)&lt;/h3&gt;
