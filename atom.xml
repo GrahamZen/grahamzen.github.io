@@ -80,7 +80,7 @@
     <link href="https://grahamzen.github.io/2023/04/09/GAMES103/"/>
     <id>https://grahamzen.github.io/2023/04/09/GAMES103/</id>
     <published>2023-04-09T09:50:21.000Z</published>
-    <updated>2023-11-20T18:02:36.231Z</updated>
+    <updated>2023-11-20T18:07:39.929Z</updated>
     
     
     <summary type="html">&lt;h1 id=&quot;math&quot;&gt;2 Math&lt;/h1&gt;
@@ -92,24 +92,7 @@
 &lt;figure&gt;
 &lt;img src=&quot;../images/GAMES103/1681077089478.png&quot; alt=&quot;1681077089478&quot;&gt;
 &lt;figcaption aria-hidden=&quot;true&quot;&gt;1681077089478&lt;/figcaption&gt;
-&lt;/figure&gt;
-&lt;h2 id=&quot;barycentric-weights&quot;&gt;Barycentric Weights&lt;/h2&gt;
-&lt;figure&gt;
-&lt;img src=&quot;../images/GAMES103/1681077102213.png&quot; alt=&quot;1681077102213&quot;&gt;
-&lt;figcaption aria-hidden=&quot;true&quot;&gt;1681077102213&lt;/figcaption&gt;
-&lt;/figure&gt;
-&lt;figure&gt;
-&lt;img src=&quot;../images/GAMES103/1681077142508.png&quot; alt=&quot;1681077142508&quot;&gt;
-&lt;figcaption aria-hidden=&quot;true&quot;&gt;1681077142508&lt;/figcaption&gt;
-&lt;/figure&gt;
-&lt;h2 id=&quot;particle-triangle-intersection&quot;&gt;Particle-triangle
-Intersection&lt;/h2&gt;
-&lt;p&gt;First, we find 𝑡 when the particle hits the plane:&lt;/p&gt;
-&lt;figure&gt;
-&lt;img src=&quot;../images/GAMES103/1681077167578.png&quot; alt=&quot;1681077167578&quot;&gt;
-&lt;figcaption aria-hidden=&quot;true&quot;&gt;1681077167578&lt;/figcaption&gt;
-&lt;/figure&gt;
-&lt;p&gt;We then check if 𝐩(𝑡) is inside or not.&lt;/p&gt;</summary>
+&lt;/figure&gt;</summary>
     
     
     
