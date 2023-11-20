@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="zh"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta><title>在latex项目里用plotneuralnet - Gehan Zheng&#039;s blog</title><link rel="manifest" href="/manifest.json"><meta name="application-name" content="Gehan Zheng&#039;s blog"><meta name="msapplication-TileImage" content="/img/favicon.svg"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="Gehan Zheng&#039;s blog"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta name="description" content="plotneuralnet是一个绘制神经网络的工具，使用该工具可以将python脚本转换为latex脚本，编译得到pdf。需要以下几个步骤：  下载plotneuralnet的github源码，https:&amp;#x2F;&amp;#x2F;github.com&amp;#x2F;HarisIqbal88&amp;#x2F;PlotNeuralNet 找一个latex环境，可以是win&amp;#x2F;linux&amp;#x2F;overleaf，前两种需要安装latex的环境，比如texliv"><meta property="og:type" content="blog"><meta property="og:title" content="在latex项目里用plotneuralnet"><meta property="og:url" content="https://grahamzen.github.io/"><meta property="og:site_name" content="Gehan Zheng&#039;s blog"><meta property="og:description" content="plotneuralnet是一个绘制神经网络的工具，使用该工具可以将python脚本转换为latex脚本，编译得到pdf。需要以下几个步骤：  下载plotneuralnet的github源码，https:&amp;#x2F;&amp;#x2F;github.com&amp;#x2F;HarisIqbal88&amp;#x2F;PlotNeuralNet 找一个latex环境，可以是win&amp;#x2F;linux&amp;#x2F;overleaf，前两种需要安装latex的环境，比如texliv"><meta property="og:locale" content="zh_CN"><meta property="og:image" content="https://grahamzen.github.io/img/og_image.png"><meta property="article:published_time" content="2022-03-17T03:48:26.000Z"><meta property="article:modified_time" content="2023-01-04T08:51:24.000Z"><meta property="article:author" content="Gehan Zheng"><meta property="article:tag" content="latex"><meta property="article:tag" content="神经网络可视化"><meta property="twitter:card" content="summary"><meta property="twitter:image:src" content="https://grahamzen.github.io/img/og_image.png"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://grahamzen.github.io/2022/03/16/plotneuralnet-in-a-project/"},"headline":"在latex项目里用plotneuralnet","image":["https://grahamzen.github.io/img/og_image.png"],"datePublished":"2022-03-17T03:48:26.000Z","dateModified":"2023-01-04T08:51:24.000Z","author":{"@type":"Person","name":"Gehan Zheng"},"publisher":{"@type":"Organization","name":"Gehan Zheng's blog","logo":{"@type":"ImageObject","url":"https://grahamzen.github.io/img/logo.svg"}},"description":"plotneuralnet是一个绘制神经网络的工具，使用该工具可以将python脚本转换为latex脚本，编译得到pdf。需要以下几个步骤：  下载plotneuralnet的github源码，https:&#x2F;&#x2F;github.com&#x2F;HarisIqbal88&#x2F;PlotNeuralNet 找一个latex环境，可以是win&#x2F;linux&#x2F;overleaf，前两种需要安装latex的环境，比如texliv"}</script><link rel="canonical" href="https://grahamzen.github.io/2022/03/16/plotneuralnet-in-a-project/"><link rel="icon" href="/img/favicon.svg"><link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.0.0/css/all.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@9.12.0/styles/atom-one-light.css"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;600&amp;family=Source+Code+Pro"><link rel="stylesheet" href="/css/default.css"><style>body>.footer,body>.navbar,body>.section{opacity:0}</style><!--!--><!--!--><!--!--><!--!--><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.10.0/dist/css/lightgallery.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/css/justifiedGallery.min.css"><!--!--><!--!--><!--!--><!--!--><style>.pace{-webkit-pointer-events:none;pointer-events:none;-webkit-user-select:none;-moz-user-select:none;user-select:none}.pace-inactive{display:none}.pace .pace-progress{background:#3273dc;position:fixed;z-index:2000;top:0;right:100%;width:100%;height:2px}</style><script src="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/pace.min.js"></script><!--!--><!--!--><!-- hexo injector head_end start -->
+<html lang="zh"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta><title>在latex项目里用plotneuralnet - Gehan Zheng&#039;s blog</title><link rel="manifest" href="/manifest.json"><meta name="application-name" content="Gehan Zheng&#039;s blog"><meta name="msapplication-TileImage" content="/img/favicon.svg"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="Gehan Zheng&#039;s blog"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta name="description" content="plotneuralnet是一个绘制神经网络的工具，使用该工具可以将python脚本转换为latex脚本，编译得到pdf。需要以下几个步骤：  下载plotneuralnet的github源码，https:&amp;#x2F;&amp;#x2F;github.com&amp;#x2F;HarisIqbal88&amp;#x2F;PlotNeuralNet 找一个latex环境，可以是win&amp;#x2F;linux&amp;#x2F;overleaf，前两种需要安装latex的环境，比如tex"><meta property="og:type" content="blog"><meta property="og:title" content="在latex项目里用plotneuralnet"><meta property="og:url" content="https://grahamzen.github.io/"><meta property="og:site_name" content="Gehan Zheng&#039;s blog"><meta property="og:description" content="plotneuralnet是一个绘制神经网络的工具，使用该工具可以将python脚本转换为latex脚本，编译得到pdf。需要以下几个步骤：  下载plotneuralnet的github源码，https:&amp;#x2F;&amp;#x2F;github.com&amp;#x2F;HarisIqbal88&amp;#x2F;PlotNeuralNet 找一个latex环境，可以是win&amp;#x2F;linux&amp;#x2F;overleaf，前两种需要安装latex的环境，比如tex"><meta property="og:locale" content="zh_CN"><meta property="og:image" content="https://grahamzen.github.io/img/og_image.png"><meta property="article:published_time" content="2022-03-17T03:48:26.000Z"><meta property="article:modified_time" content="2023-01-04T08:51:24.000Z"><meta property="article:author" content="Gehan Zheng"><meta property="article:tag" content="latex"><meta property="article:tag" content="神经网络可视化"><meta property="twitter:card" content="summary"><meta property="twitter:image:src" content="https://grahamzen.github.io/img/og_image.png"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://grahamzen.github.io/2022/03/16/plotneuralnet-in-a-project/"},"headline":"在latex项目里用plotneuralnet","image":["https://grahamzen.github.io/img/og_image.png"],"datePublished":"2022-03-17T03:48:26.000Z","dateModified":"2023-01-04T08:51:24.000Z","author":{"@type":"Person","name":"Gehan Zheng"},"publisher":{"@type":"Organization","name":"Gehan Zheng's blog","logo":{"@type":"ImageObject","url":"https://grahamzen.github.io/img/logo.svg"}},"description":"plotneuralnet是一个绘制神经网络的工具，使用该工具可以将python脚本转换为latex脚本，编译得到pdf。需要以下几个步骤：\r \r 下载plotneuralnet的github源码，https:&#x2F;&#x2F;github.com&#x2F;HarisIqbal88&#x2F;PlotNeuralNet\r 找一个latex环境，可以是win&#x2F;linux&#x2F;overleaf，前两种需要安装latex的环境，比如tex"}</script><link rel="canonical" href="https://grahamzen.github.io/2022/03/16/plotneuralnet-in-a-project/"><link rel="icon" href="/img/favicon.svg"><link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.0.0/css/all.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@9.12.0/styles/atom-one-light.css"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;600&amp;family=Source+Code+Pro"><link rel="stylesheet" href="/css/default.css"><style>body>.footer,body>.navbar,body>.section{opacity:0}</style><!--!--><!--!--><!--!--><!--!--><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.10.0/dist/css/lightgallery.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/css/justifiedGallery.min.css"><!--!--><!--!--><!--!--><!--!--><style>.pace{-webkit-pointer-events:none;pointer-events:none;-webkit-user-select:none;-moz-user-select:none;user-select:none}.pace-inactive{display:none}.pace .pace-progress{background:#3273dc;position:fixed;z-index:2000;top:0;right:100%;width:100%;height:2px}</style><script src="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/pace.min.js"></script><!--!--><!--!--><!-- hexo injector head_end start -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css">
 <script>
   (function () {
@@ -33,93 +33,96 @@
   })();
   </script><!-- hexo injector head_end end --><meta name="generator" content="Hexo 6.3.0"><link rel="alternate" href="/atom.xml" title="Gehan Zheng's blog" type="application/atom+xml">
 </head><body class="is-3-column"><nav class="navbar navbar-main"><div class="container navbar-container"><div class="navbar-brand justify-content-center"><a class="navbar-item navbar-logo" href="/"><img src="/img/logo.svg" alt="Gehan Zheng&#039;s blog" height="28"></a></div><div class="navbar-menu"><div class="navbar-start"><a class="navbar-item" href="/">Home</a><a class="navbar-item" href="/archives">Archives</a><a class="navbar-item" href="/categories">Categories</a><a class="navbar-item" href="/tags">Tags</a><a class="navbar-item" href="/about">About</a></div><div class="navbar-end"><a class="navbar-item" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/ppoffice/hexo-theme-icarus"><i class="fab fa-github"></i></a><a class="navbar-item is-hidden-tablet catalogue" title="目录" href="javascript:;"><i class="fas fa-list-ul"></i></a><a class="navbar-item search" title="搜索" href="javascript:;"><i class="fas fa-search"></i></a></div></div></div></nav><section class="section"><div class="container"><div class="columns"><div class="column order-2 column-main is-8-tablet is-8-desktop is-6-widescreen"><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2022-03-17T03:48:26.000Z" title="2022/3/16 下午11:48:26">2022-03-17</time>发表</span><span class="level-item"><time dateTime="2023-01-04T08:51:24.000Z" title="2023/1/4 上午3:51:24">2023-01-04</time>更新</span><span class="level-item"><a class="link-muted" href="/categories/%E5%AD%A6%E4%B9%A0/">学习</a><span> / </span><a class="link-muted" href="/categories/%E5%AD%A6%E4%B9%A0/%E5%B7%A5%E5%85%B7%E4%BD%BF%E7%94%A8/">工具使用</a></span><span class="level-item">7 分钟读完 (大约981个字)</span></div></div><h1 class="title is-3 is-size-4-mobile">在latex项目里用plotneuralnet</h1><div class="content"><p>plotneuralnet是一个绘制神经网络的工具，使用该工具可以将python脚本转换为latex脚本，编译得到pdf。需要以下几个步骤：</p>
-<ol>
-<li>下载plotneuralnet的github源码，<a target="_blank" rel="noopener" href="https://github.com/HarisIqbal88/PlotNeuralNet">https://github.com/HarisIqbal88/PlotNeuralNet</a></li>
-<li>找一个latex环境，可以是win/linux/overleaf，前两种需要安装latex的环境，比如texlive，可以参考<a target="_blank" rel="noopener" href="https://github.com/luanshiyinyang/PlotNeuralNet，texlive在这里可以找到https://mirrors.tuna.tsinghua.edu.cn/CTAN/systems/texlive/Images/。">https://github.com/luanshiyinyang/PlotNeuralNet，texlive在这里可以找到https://mirrors.tuna.tsinghua.edu.cn/CTAN/systems/texlive/Images/。</a></li>
+<ol type="1">
+<li>下载plotneuralnet的github源码，https://github.com/HarisIqbal88/PlotNeuralNet</li>
+<li>找一个latex环境，可以是win/linux/overleaf，前两种需要安装latex的环境，比如texlive，可以参考https://github.com/luanshiyinyang/PlotNeuralNet，texlive在这里可以找到https://mirrors.tuna.tsinghua.edu.cn/CTAN/systems/texlive/Images/。</li>
 <li>写好脚本<code>my_arch.py</code>（名字可以随便起）放在源码的pyexamples文件夹下，编写的教程可以在其他地方搜到。</li>
 <li>直接用<code>python</code>运行<code>python my_arch.py</code>，可以看到目录下的<code>my_arch.tex</code></li>
 </ol>
 <span id="more"></span>
 <p>这样就得到了一个能够直接编译的tex文件。但是实际上很多情况下我们想把这个放进自己的项目里。我以一个比较大的tex项目为例，文件夹结构大致如下：</p>
 <details>
-  <summary>查看文件夹结构</summary>
-  <pre><code>  
+<summary>
+查看文件夹结构
+</summary>
+<pre><code>  
 .
 ├── Makefile
 ├── README.md
 ├── bibtex-style
-│   ├── gbt7714-2005.bst
-│   ├── thesis.bst
-│   └── thesis2.bst
+│   ├── gbt7714-2005.bst
+│   ├── thesis.bst
+│   └── thesis2.bst
 ├── code
-│   └── demo.cpp
+│   └── demo.cpp
 ├── ctex-fontset-adobe2.def
 ├── docs
-│   ├── abstract.tex
-│   ├── ack.tex
-│   ├── appendix1.tex
-│   ├── chap01.tex
-│   ├── chap02.tex
-│   ├── chap03.tex
-│   ├── chap04.tex
-│   ├── chap05.tex
-│   ├── chap06.tex
-│   ├── disclaim.tex
-│   ├── grading.tex
-│   ├── info.tex
-│   ├── progress.tex
-│   └── proposal.tex
+│   ├── abstract.tex
+│   ├── ack.tex
+│   ├── appendix1.tex
+│   ├── chap01.tex
+│   ├── chap02.tex
+│   ├── chap03.tex
+│   ├── chap04.tex
+│   ├── chap05.tex
+│   ├── chap06.tex
+│   ├── disclaim.tex
+│   ├── grading.tex
+│   ├── info.tex
+│   ├── progress.tex
+│   └── proposal.tex
 ├── fonts
-│   └── init_fonts.sh
+│   └── init_fonts.sh
 ├── gulpfile.js
 ├── image
-│   ├── appendix1
-│   ├── chap03
-│   │   ├── overleaf-config.jpg
-│   │   ├── overleaf-create-proj.jpg
-│   │   ├── overleaf-example.jpg
-│   │   ├── overleaf-upload-proj.jpg
-│   │   └── vscode-example.png
-│   ├── chap04
-│   │   ├── example
-│   │   │   ├── 2007_000799.jpg
-│   │   └── result
-│   │       ├── compare
-│   │       │   └── zoom_dog.png
-│   │       └── error
-│   │           └── p_2008_001580.png
-│   └── template
-│       ├── readme.md
-│       └── logo.pdf
+│   ├── appendix1
+│   ├── chap03
+│   │   ├── overleaf-config.jpg
+│   │   ├── overleaf-create-proj.jpg
+│   │   ├── overleaf-example.jpg
+│   │   ├── overleaf-upload-proj.jpg
+│   │   └── vscode-example.png
+│   ├── chap04
+│   │   ├── example
+│   │   │   ├── 2007_000799.jpg
+│   │   └── result
+│   │       ├── compare
+│   │       │   └── zoom_dog.png
+│   │       └── error
+│   │           └── p_2008_001580.png
+│   └── template
+│       ├── readme.md
+│       └── logo.pdf
 ├── main.bib
 ├── main.pdf
 ├── main.tex
 ├── package.json
 ├── packages
-│   ├── algorithm2e.sty
-│   ├── algorithm2e.tex
-│   └── ctex-xecjk-adobefonts.def
-│   └── thubeamer.sty
+│   ├── algorithm2e.sty
+│   ├── algorithm2e.tex
+│   └── ctex-xecjk-adobefonts.def
+│   └── thubeamer.sty
 ├── code.sty
 └── thesis.cls
   </code></pre>
 </details>
-
 <p>实际上只需要关心<code>docs</code>文件夹和<code>main.tex</code>，因为神经网络结构一般放在正文里。</p>
 <p>以放入<code>docs</code>的<code>chap03.tex</code>为例，需要以下步骤：</p>
-<ol>
+<ol type="1">
 <li>将源码的layers文件夹放进自己的项目文件夹。</li>
-<li>把<code>my_arch.tex</code>中这几行的内容（里面的配置可以调整）放入main.tex（最外层的文档）的序言（preamble）区，也就是放\usepackage的区域里。</li>
+<li>把<code>my_arch.tex</code>中这几行的内容（里面的配置可以调整）放入main.tex（最外层的文档）的序言（preamble）区，也就是放。</li>
 </ol>
 <figure class="highlight latex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">\documentclass</span>[border=8pt, multi, tikz]&#123;standalone&#125; </span><br><span class="line"><span class="keyword">\usepackage</span>&#123;import&#125;</span><br><span class="line"><span class="keyword">\subimport</span>&#123;../layers/&#125;&#123;init&#125;</span><br></pre></td></tr></table></figure>
-<ol>
+<ol start="3" type="1">
 <li><strong>调整subimport里面的layers的路径，按照第一步来做，则应该改成<code>\subimport&#123;layers/&#125;&#123;init&#125;</code></strong>。</li>
 <li>接下来将神经网络结构放入正文，把<code>my_arch.tex</code>里除上面这几行之外的内容完整地拷贝到<code>chap03.tex</code>里自己想放的位置。<strong>要去掉<code>\begin&#123;document&#125;</code>和<code>\end&#123;document&#125;</code>。</strong></li>
 <li>如果代码里有<code>includegraphics</code>，要把对应的图片放在对应的文件夹下。</li>
 <li>编译就可以看到结果。</li>
 </ol>
 <p>这样做会看到神经网络图片非常大，超出了页面。因为这个模块是<code>tikzpicture</code>的，所以可以用<code>TikZ</code>的方法来调整。</p>
-<p>以整体缩放为例，参考<a target="_blank" rel="noopener" href="https://liam.page/2017/07/23/global-scale-for-TikZ-picture/">在 LaTeX 中同步缩放 TikZ 与其中的 node</a>，可以在<code>\begin&#123;tikzpicture&#125;</code>上面加入下面这段代码：</p>
+<p>以整体缩放为例，参考<a target="_blank" rel="noopener" href="https://liam.page/2017/07/23/global-scale-for-TikZ-picture/">在
+LaTeX 中同步缩放 TikZ 与其中的
+node</a>，可以在<code>\begin&#123;tikzpicture&#125;</code>上面加入下面这段代码：</p>
 <figure class="highlight latex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">\tikzset</span>&#123;global scale/.style=&#123;</span><br><span class="line">    scale=<span class="params">#1</span>,</span><br><span class="line">    every node/.append style=&#123;scale=<span class="params">#1</span>&#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>然后把<code>\begin&#123;tikzpicture&#125;</code>改成<code>\begin&#123;tikzpicture&#125;[scale=0.5]</code>，就能把整个大小缩放为原来的0.5倍。</p>
 </div><div class="article-licensing box"><div class="licensing-title"><p>在latex项目里用plotneuralnet</p><p><a href="https://grahamzen.github.io/2022/03/16/plotneuralnet-in-a-project/">https://grahamzen.github.io/2022/03/16/plotneuralnet-in-a-project/</a></p></div><div class="licensing-meta level is-mobile"><div class="level-left"><div class="level-item is-narrow"><div><h6>作者</h6><p>Gehan Zheng</p></div></div><div class="level-item is-narrow"><div><h6>发布于</h6><p>2022-03-17</p></div></div><div class="level-item is-narrow"><div><h6>更新于</h6><p>2023-01-04</p></div></div><div class="level-item is-narrow"><div><h6>许可协议</h6><p><a class="icons" rel="noopener" target="_blank" title="Creative Commons" href="https://creativecommons.org/"><i class="icon fab fa-creative-commons"></i></a><a class="icons" rel="noopener" target="_blank" title="Attribution" href="https://creativecommons.org/licenses/by/4.0/"><i class="icon fab fa-creative-commons-by"></i></a><a class="icons" rel="noopener" target="_blank" title="Noncommercial" href="https://creativecommons.org/licenses/by-nc/4.0/"><i class="icon fab fa-creative-commons-nc"></i></a></p></div></div></div></div></div><hr style="height:1px;margin:1rem 0"><div class="level is-mobile is-flex"><div class="article-tags is-size-7 is-uppercase"><i class="fas fa-tags has-text-grey"></i> <a class="link-muted" rel="tag" href="/tags/latex/">latex, </a><a class="link-muted" rel="tag" href="/tags/%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C%E5%8F%AF%E8%A7%86%E5%8C%96/">神经网络可视化 </a></div></div>                    <div class="a2a_kit a2a_kit_size_32 a2a_default_style"><a class="a2a_dd" target="_blank" rel="noopener" href="https://www.addtoany.com/share"></a><a class="a2a_button_facebook"></a><a class="a2a_button_twitter"></a><a class="a2a_button_telegram"></a><a class="a2a_button_whatsapp"></a><a class="a2a_button_reddit"></a></div><script src="https://static.addtoany.com/menu/page.js" defer></script></article></div><!--!--><nav class="post-navigation mt-4 level is-mobile"><div class="level-start"><a class="article-nav-prev level level-item link-muted" href="/2022/05/06/table-caption-continued/"><i class="level-item fas fa-chevron-left"></i><span class="level-item">跨页表格的题注</span></a></div><div class="level-end"><a class="article-nav-next level level-item link-muted" href="/2021/12/13/JOKR-report/"><span class="level-item">JOKR笔记</span><i class="level-item fas fa-chevron-right"></i></a></div></nav><div class="card"><div class="card-content"><h3 class="title is-5">评论</h3><div class="content" id="waline-thread"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@waline/client@2.6.3/dist/waline.css"><script src="https://cdn.jsdelivr.net/npm/@waline/client@2.6.3/dist/waline.js"></script><script>Waline.init({
