@@ -32,25 +32,14 @@
       window.addEventListener('hashchange', switchTab, false);
   })();
   </script><!-- hexo injector head_end end --><meta name="generator" content="Hexo 6.3.0"><link rel="alternate" href="/atom.xml" title="Gehan Zheng's blog" type="application/atom+xml">
-</head><body class="is-3-column"><nav class="navbar navbar-main"><div class="container navbar-container"><div class="navbar-brand justify-content-center"><a class="navbar-item navbar-logo" href="/"><img src="/img/logo.svg" alt="Gehan Zheng&#039;s blog" height="28"></a></div><div class="navbar-menu"><div class="navbar-start"><a class="navbar-item" href="/">Home</a><a class="navbar-item" href="/archives">Archives</a><a class="navbar-item" href="/categories">Categories</a><a class="navbar-item" href="/tags">Tags</a><a class="navbar-item" href="/about">About</a></div><div class="navbar-end"><a class="navbar-item" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/ppoffice/hexo-theme-icarus"><i class="fab fa-github"></i></a><a class="navbar-item search" title="搜索" href="javascript:;"><i class="fas fa-search"></i></a></div></div></div></nav><section class="section"><div class="container"><div class="columns"><div class="column order-2 column-main is-8-tablet is-8-desktop is-6-widescreen"><div class="card"><div class="card-content"><nav class="breadcrumb" aria-label="breadcrumbs"><ul><li><a href="/categories">分类</a></li><li class="is-active"><a href="#" aria-current="page">学习</a></li></ul></nav></div></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2023-11-20T04:26:12.000Z" title="2023/11/19 下午11:26:12">2023-11-20</time>发表</span><span class="level-item"><time dateTime="2023-11-20T17:41:19.075Z" title="2023/11/20 下午12:41:19">2023-11-21</time>更新</span><span class="level-item"><a class="link-muted" href="/categories/%E5%AD%A6%E4%B9%A0/">学习</a><span> / </span><a class="link-muted" href="/categories/%E5%AD%A6%E4%B9%A0/%E8%BD%AF%E4%BB%B6%E5%88%86%E6%9E%90/">软件分析</a></span><span class="level-item">2 分钟读完 (大约365个字)</span></div></div><h1 class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2023/11/19/llvm-vscode/">对LLVM的Pass进行调试的vscode配置</a></h1><div class="content"><h2 id="文件夹结构">文件夹结构</h2>
-<p>安装LLVM的过程省去，假设当前目录下有 * CMakeLists.txt文件；编译pass *
-include文件夹：pass的头文件 * src文件夹；pass的源码 *
-test文件夹：用于静态分析pass的测试代码（.c文件）</p>
-<p>以下是CMakeLists.txt的内容，需要设置模式为<code>Debug</code>：
-<figure class="highlight cmake"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">cmake_minimum_required</span>(VERSION <span class="number">3.10</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">find_package</span>(LLVM <span class="number">8</span> REQUIRED CONFIG)</span><br><span class="line"><span class="keyword">list</span>(APPEND CMAKE_MODULE_PATH <span class="string">&quot;$&#123;LLVM_CMAKE_DIR&#125;&quot;</span>)</span><br><span class="line"><span class="keyword">include</span>(HandleLLVMOptions)</span><br><span class="line"><span class="keyword">include</span>(AddLLVM)</span><br><span class="line"></span><br><span class="line"><span class="keyword">message</span>(STATUS <span class="string">&quot;Found LLVM $&#123;LLVM_PACKAGE_VERSION&#125;&quot;</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">add_definitions</span>(<span class="variable">$&#123;LLVM_DEFINITIONS&#125;</span>)</span><br><span class="line"><span class="keyword">include_directories</span>(<span class="variable">$&#123;LLVM_INCLUDE_DIRS&#125;</span> <span class="keyword">include</span>)</span><br><span class="line"><span class="keyword">link_directories</span>(<span class="variable">$&#123;LLVM_LIBRARY_DIRS&#125;</span> <span class="variable">$&#123;CMAKE_CURRENT_BINARY_DIR&#125;</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">set</span>(CMAKE_BUILD_TYPE Debug)</span><br><span class="line"></span><br><span class="line">add_llvm_library(DivZeroPass MODULE</span><br><span class="line">  src/PointerAnalysis.cpp</span><br><span class="line">  src/DivZeroAnalysis.cpp</span><br><span class="line">  src/Transfer.cpp</span><br><span class="line">  src/ChaoticIteration.cpp</span><br><span class="line">  src/Domain.cpp</span><br><span class="line">  src/Utils.cpp</span><br><span class="line">)</span><br></pre></td></tr></table></figure></p>
-<h2 id="安装必要软件">安装必要软件</h2>
-<h3 id="安装lldb">安装lldb</h3>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo apt update</span><br><span class="line">sudo apt install lldb</span><br></pre></td></tr></table></figure>
-<h2 id="配置vscode">配置vscode</h2>
-<h3 id="填写json文件">填写json文件</h3>
-<p>在.vscode文件夹下新建<code>launch.json</code>文件，填写如下内容：
-<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="punctuation">&#123;</span></span><br><span class="line">    <span class="attr">&quot;version&quot;</span><span class="punctuation">:</span> <span class="string">&quot;0.2.0&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;configurations&quot;</span><span class="punctuation">:</span> <span class="punctuation">[</span></span><br><span class="line">        <span class="punctuation">&#123;</span></span><br><span class="line">            <span class="attr">&quot;name&quot;</span><span class="punctuation">:</span> <span class="string">&quot;Debug LLVM Pass&quot;</span><span class="punctuation">,</span></span><br><span class="line">            <span class="attr">&quot;type&quot;</span><span class="punctuation">:</span> <span class="string">&quot;cppdbg&quot;</span><span class="punctuation">,</span></span><br><span class="line">            <span class="attr">&quot;request&quot;</span><span class="punctuation">:</span> <span class="string">&quot;launch&quot;</span><span class="punctuation">,</span></span><br><span class="line">            <span class="attr">&quot;program&quot;</span><span class="punctuation">:</span> <span class="string">&quot;/usr/bin/opt&quot;</span><span class="punctuation">,</span></span><br><span class="line">            <span class="attr">&quot;args&quot;</span><span class="punctuation">:</span> <span class="punctuation">[</span></span><br><span class="line">                <span class="string">&quot;-load&quot;</span><span class="punctuation">,</span> <span class="string">&quot;$&#123;workspaceFolder&#125;/build/DivZeroPass.so&quot;</span><span class="punctuation">,</span></span><br><span class="line">                <span class="string">&quot;-DivZero&quot;</span><span class="punctuation">,</span> <span class="string">&quot;$&#123;fileDirname&#125;/$&#123;fileBasenameNoExtension&#125;.ll&quot;</span><span class="punctuation">,</span></span><br><span class="line">                <span class="string">&quot;-disable-output&quot;</span></span><br><span class="line">            <span class="punctuation">]</span><span class="punctuation">,</span></span><br><span class="line">            <span class="attr">&quot;stopAtEntry&quot;</span><span class="punctuation">:</span> <span class="literal"><span class="keyword">false</span></span><span class="punctuation">,</span></span><br><span class="line">            <span class="attr">&quot;cwd&quot;</span><span class="punctuation">:</span> <span class="string">&quot;$&#123;workspaceFolder&#125;&quot;</span><span class="punctuation">,</span></span><br><span class="line">            <span class="attr">&quot;environment&quot;</span><span class="punctuation">:</span> <span class="punctuation">[</span><span class="punctuation">]</span><span class="punctuation">,</span></span><br><span class="line">            <span class="attr">&quot;externalConsole&quot;</span><span class="punctuation">:</span> <span class="literal"><span class="keyword">false</span></span><span class="punctuation">,</span></span><br><span class="line">            <span class="attr">&quot;MIMode&quot;</span><span class="punctuation">:</span> <span class="string">&quot;lldb&quot;</span><span class="punctuation">,</span></span><br><span class="line">            <span class="attr">&quot;preLaunchTask&quot;</span><span class="punctuation">:</span> <span class="string">&quot;compile-llvm&quot;</span></span><br><span class="line">        <span class="punctuation">&#125;</span></span><br><span class="line">    <span class="punctuation">]</span></span><br><span class="line"><span class="punctuation">&#125;</span></span><br></pre></td></tr></table></figure>
-在.vscode文件夹下新建<code>tasks.json</code>文件，填写如下内容：
-<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="punctuation">&#123;</span></span><br><span class="line">    <span class="attr">&quot;version&quot;</span><span class="punctuation">:</span> <span class="string">&quot;2.0.0&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;tasks&quot;</span><span class="punctuation">:</span> <span class="punctuation">[</span></span><br><span class="line">        <span class="punctuation">&#123;</span></span><br><span class="line">            <span class="attr">&quot;label&quot;</span><span class="punctuation">:</span> <span class="string">&quot;compile-llvm&quot;</span><span class="punctuation">,</span></span><br><span class="line">            <span class="attr">&quot;type&quot;</span><span class="punctuation">:</span> <span class="string">&quot;shell&quot;</span><span class="punctuation">,</span></span><br><span class="line">            <span class="attr">&quot;command&quot;</span><span class="punctuation">:</span> <span class="string">&quot;clang&quot;</span><span class="punctuation">,</span></span><br><span class="line">            <span class="attr">&quot;args&quot;</span><span class="punctuation">:</span> <span class="punctuation">[</span></span><br><span class="line">                <span class="string">&quot;-g&quot;</span><span class="punctuation">,</span> <span class="string">&quot;-emit-llvm&quot;</span><span class="punctuation">,</span> <span class="string">&quot;-S&quot;</span><span class="punctuation">,</span> <span class="string">&quot;-fno-discard-value-names&quot;</span><span class="punctuation">,</span> <span class="string">&quot;-Xclang&quot;</span><span class="punctuation">,</span> <span class="string">&quot;-disable-O0-optnone&quot;</span><span class="punctuation">,</span> <span class="string">&quot;-c&quot;</span><span class="punctuation">,</span> <span class="string">&quot;-o&quot;</span><span class="punctuation">,</span> <span class="string">&quot;$&#123;fileDirname&#125;/$&#123;fileBasenameNoExtension&#125;.ll&quot;</span><span class="punctuation">,</span> <span class="string">&quot;$&#123;file&#125;&quot;</span></span><br><span class="line">            <span class="punctuation">]</span><span class="punctuation">,</span></span><br><span class="line">            <span class="attr">&quot;group&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">                <span class="attr">&quot;kind&quot;</span><span class="punctuation">:</span> <span class="string">&quot;build&quot;</span><span class="punctuation">,</span></span><br><span class="line">                <span class="attr">&quot;isDefault&quot;</span><span class="punctuation">:</span> <span class="literal"><span class="keyword">true</span></span></span><br><span class="line">            <span class="punctuation">&#125;</span></span><br><span class="line">        <span class="punctuation">&#125;</span></span><br><span class="line">    <span class="punctuation">]</span></span><br><span class="line"><span class="punctuation">&#125;</span></span><br></pre></td></tr></table></figure></p>
-<h2 id="调试">调试</h2>
-<p>因为有设置prelaunch
-task，在<code>test</code>目录下打开一个<code>.c</code>文件，按下F5即可开始调试当前活动的<code>.c</code>文件，调试前会自动编译。断点要设置在pass的源码中。</p>
-</div><hr style="height:1px;margin:1rem 0"><div class="level is-mobile is-flex"><div class="article-tags is-size-7 is-uppercase"><i class="fas fa-tags has-text-grey"></i> <a class="link-muted" rel="tag" href="/tags/LLVM/">LLVM, </a><a class="link-muted" rel="tag" href="/tags/vscode/">vscode, </a><a class="link-muted" rel="tag" href="/tags/%E9%9D%99%E6%80%81%E5%88%86%E6%9E%90/">静态分析 </a></div></div>                    </article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2023-11-19T15:32:17.000Z" title="2023/11/19 上午10:32:17">2023-11-19</time>发表</span><span class="level-item"><time dateTime="2023-11-20T17:21:24.772Z" title="2023/11/20 下午12:21:24">2023-11-21</time>更新</span><span class="level-item"><a class="link-muted" href="/categories/%E5%AD%A6%E4%B9%A0/">学习</a><span> / </span><a class="link-muted" href="/categories/%E5%AD%A6%E4%B9%A0/%E6%95%B0%E5%AD%A6/">数学</a></span><span class="level-item">3 分钟读完 (大约399个字)</span></div></div><h1 class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2023/11/19/tensor/">张量</a></h1><div class="content"><p>对于三维空间中的各向同性材料，弹性模量张量（Elastic Modulus
+</head><body class="is-3-column"><nav class="navbar navbar-main"><div class="container navbar-container"><div class="navbar-brand justify-content-center"><a class="navbar-item navbar-logo" href="/"><img src="/img/logo.svg" alt="Gehan Zheng&#039;s blog" height="28"></a></div><div class="navbar-menu"><div class="navbar-start"><a class="navbar-item" href="/">Home</a><a class="navbar-item" href="/archives">Archives</a><a class="navbar-item" href="/categories">Categories</a><a class="navbar-item" href="/tags">Tags</a><a class="navbar-item" href="/about">About</a></div><div class="navbar-end"><a class="navbar-item" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/ppoffice/hexo-theme-icarus"><i class="fab fa-github"></i></a><a class="navbar-item search" title="搜索" href="javascript:;"><i class="fas fa-search"></i></a></div></div></div></nav><section class="section"><div class="container"><div class="columns"><div class="column order-2 column-main is-8-tablet is-8-desktop is-6-widescreen"><div class="card"><div class="card-content"><nav class="breadcrumb" aria-label="breadcrumbs"><ul><li><a href="/categories">分类</a></li><li class="is-active"><a href="#" aria-current="page">学习</a></li></ul></nav></div></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2023-11-20T04:26:12.000Z" title="2023/11/19 下午11:26:12">2023-11-20</time>发表</span><span class="level-item"><time dateTime="2023-11-20T17:42:30.246Z" title="2023/11/20 下午12:42:30">2023-11-21</time>更新</span><span class="level-item"><a class="link-muted" href="/categories/%E5%AD%A6%E4%B9%A0/">学习</a><span> / </span><a class="link-muted" href="/categories/%E5%AD%A6%E4%B9%A0/%E8%BD%AF%E4%BB%B6%E5%88%86%E6%9E%90/">软件分析</a></span><span class="level-item">2 分钟读完 (大约366个字)</span></div></div><h1 class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2023/11/19/llvm-vscode/">对LLVM的Pass进行调试的vscode配置</a></h1><div class="content"><h2 id="文件夹结构">文件夹结构</h2>
+<p>安装LLVM的过程省去，假设当前目录下有:</p>
+<ul>
+<li>CMakeLists.txt文件；编译pass</li>
+<li>include文件夹：pass的头文件</li>
+<li>src文件夹；pass的源码</li>
+<li>test文件夹：用于静态分析pass的测试代码（.c文件）</li>
+</ul></div><hr style="height:1px;margin:1rem 0"><div class="level is-mobile is-flex"><div class="article-tags is-size-7 is-uppercase"><i class="fas fa-tags has-text-grey"></i> <a class="link-muted" rel="tag" href="/tags/LLVM/">LLVM, </a><a class="link-muted" rel="tag" href="/tags/vscode/">vscode, </a><a class="link-muted" rel="tag" href="/tags/%E9%9D%99%E6%80%81%E5%88%86%E6%9E%90/">静态分析 </a></div><a class="article-more button is-small is-size-7" href="/2023/11/19/llvm-vscode/#more"><i class="fas fa-book-reader has-text-grey"></i>  阅读更多</a></div>                    </article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2023-11-19T15:32:17.000Z" title="2023/11/19 上午10:32:17">2023-11-19</time>发表</span><span class="level-item"><time dateTime="2023-11-20T17:21:24.772Z" title="2023/11/20 下午12:21:24">2023-11-21</time>更新</span><span class="level-item"><a class="link-muted" href="/categories/%E5%AD%A6%E4%B9%A0/">学习</a><span> / </span><a class="link-muted" href="/categories/%E5%AD%A6%E4%B9%A0/%E6%95%B0%E5%AD%A6/">数学</a></span><span class="level-item">3 分钟读完 (大约399个字)</span></div></div><h1 class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2023/11/19/tensor/">张量</a></h1><div class="content"><p>对于三维空间中的各向同性材料，弹性模量张量（Elastic Modulus
 Tensor）可以视为一个<span class="math inline">\(3 \times
 3\)</span>矩阵，其中每个元素本身又是一个 <span class="math inline">\(3
 \times 3\)</span>
@@ -111,7 +100,7 @@ C_{3233} \\ C_{3331} &amp; C_{3332} &amp; C_{3333} \\
 \end{bmatrix}\]</span>
 <p>$$
 这里的ijkl索引里，i可以看做是大的3x3矩阵的行，j可以看做是小的3x3矩阵的行，k可以看做是大的3x3矩阵的列，l可以看做是小的3x3矩阵的列。</p>
-</div><hr style="height:1px;margin:1rem 0"><div class="level is-mobile is-flex"><div class="article-tags is-size-7 is-uppercase"><i class="fas fa-tags has-text-grey"></i> <a class="link-muted" rel="tag" href="/tags/%E5%BE%AE%E7%A7%AF%E5%88%86/">微积分 </a></div></div>                    </article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2023-04-09T09:50:21.000Z" title="2023/4/9 上午5:50:21">2023-04-09</time>发表</span><span class="level-item"><time dateTime="2023-11-20T17:25:32.848Z" title="2023/11/20 下午12:25:32">2023-11-21</time>更新</span><span class="level-item"><a class="link-muted" href="/categories/%E5%AD%A6%E4%B9%A0/">学习</a><span> / </span><a class="link-muted" href="/categories/%E5%AD%A6%E4%B9%A0/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9B%BE%E5%BD%A2%E5%AD%A6/">计算机图形学</a><span> / </span><a class="link-muted" href="/categories/%E5%AD%A6%E4%B9%A0/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9B%BE%E5%BD%A2%E5%AD%A6/%E6%A8%A1%E6%8B%9F/">模拟</a><span> / </span><a class="link-muted" href="/categories/%E5%AD%A6%E4%B9%A0/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9B%BE%E5%BD%A2%E5%AD%A6/%E6%A8%A1%E6%8B%9F/%E5%88%9A%E4%BD%93/">刚体</a></span><span class="level-item">4 分钟读完 (大约577个字)</span></div></div><h1 class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2023/04/09/GAMES103/">GAMES103:刚体模拟笔记</a></h1><div class="content"><h1 id="math">2 Math</h1>
+</div><hr style="height:1px;margin:1rem 0"><div class="level is-mobile is-flex"><div class="article-tags is-size-7 is-uppercase"><i class="fas fa-tags has-text-grey"></i> <a class="link-muted" rel="tag" href="/tags/%E5%BE%AE%E7%A7%AF%E5%88%86/">微积分 </a></div></div>                    </article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2023-04-09T09:50:21.000Z" title="2023/4/9 上午5:50:21">2023-04-09</time>发表</span><span class="level-item"><time dateTime="2023-11-20T17:42:42.171Z" title="2023/11/20 下午12:42:42">2023-11-21</time>更新</span><span class="level-item"><a class="link-muted" href="/categories/%E5%AD%A6%E4%B9%A0/">学习</a><span> / </span><a class="link-muted" href="/categories/%E5%AD%A6%E4%B9%A0/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9B%BE%E5%BD%A2%E5%AD%A6/">计算机图形学</a><span> / </span><a class="link-muted" href="/categories/%E5%AD%A6%E4%B9%A0/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9B%BE%E5%BD%A2%E5%AD%A6/%E6%A8%A1%E6%8B%9F/">模拟</a><span> / </span><a class="link-muted" href="/categories/%E5%AD%A6%E4%B9%A0/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9B%BE%E5%BD%A2%E5%AD%A6/%E6%A8%A1%E6%8B%9F/%E5%88%9A%E4%BD%93/">刚体</a></span><span class="level-item">4 分钟读完 (大约578个字)</span></div></div><h1 class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2023/04/09/GAMES103/">GAMES103:刚体模拟笔记</a></h1><div class="content"><h1 id="math">2 Math</h1>
 <h2 id="tetrahedral-volume">Tetrahedral Volume</h2>
 <figure>
 <img src="/2023/04/09/GAMES103/GAMES103/1681077071804.png" alt="1681077071804">
@@ -137,151 +126,7 @@ Intersection</h2>
 <img src="/2023/04/09/GAMES103/GAMES103/1681077167578.png" alt="1681077167578">
 <figcaption aria-hidden="true">1681077167578</figcaption>
 </figure>
-<p>We then check if 𝐩(𝑡) is inside or not.</p>
-<h2 id="singular-value-decomposition">Singular Value Decomposition</h2>
-<p><span class="math display">\[
-A=UDV^T
-\]</span> Any linear deformation can be decomposed into three steps:
-rotation, scaling and rotation</p>
-<h2 id="symmetric-positive-definiteness-s.p.d.">Symmetric Positive
-Definiteness (s.p.d.)</h2>
-<p>A is s.p.d. if only if: <span class="math inline">\(v^T
-A𝐯&gt;0\)</span>, for any 𝐯≠0.</p>
-<p>A is symmetric semi-definite if only if: <span class="math inline">\(v^T A𝐯≥0\)</span>, for any 𝐯≠0. <span class="math display">\[
-𝑎_{𝑖𝑖}&gt;∑_{𝑖≠𝑗}|𝑎_{𝑖𝑗} |  \forall 𝑖
-\]</span> A diagonally dominant matrix is p.d. Finally, a s.p.d. matrix
-must be invertible: <span class="math display">\[
-A^{−1}=(U^T )^{−1} D^{−1} U^{−1}=𝐔D^{−1} U^T.
-\]</span></p>
-<figure>
-<img src="/2023/04/09/GAMES103/GAMES103/1681077471574.png" alt="1681077471574">
-<figcaption aria-hidden="true">1681077471574</figcaption>
-</figure>
-<h2 id="linear-solver">Linear Solver</h2>
-<p>A direct solver is typically based LU factorization, or its variant:
-Cholesky, LDLT, etc… When A is sparse, L and U are not so sparse. Their
-sparsity depends on the permutation. (See matlab)</p>
-<p>It contains two steps: factorization and solving. If we must solve
-many linear systems with the same A, we can factorize it only once.</p>
-<p>Cannot be easily parallelized: Intel MKL PARDISO</p>
-<h2 id="iterative-linear-solver">Iterative Linear Solver</h2>
-<figure>
-<img src="/2023/04/09/GAMES103/GAMES103/1681077521644.png" alt="1681077521644">
-<figcaption aria-hidden="true">1681077521644</figcaption>
-</figure>
-<figure>
-<img src="/2023/04/09/GAMES103/GAMES103/1681077543465.png" alt="1681077543465">
-<figcaption aria-hidden="true">1681077543465</figcaption>
-</figure>
-<h2 id="tensor-calculus">Tensor Calculus</h2>
-<figure>
-<img src="/2023/04/09/GAMES103/GAMES103/1681077579832.png" alt="1681077579832">
-<figcaption aria-hidden="true">1681077579832</figcaption>
-</figure>
-<figure>
-<img src="/2023/04/09/GAMES103/GAMES103/1681077587043.png" alt="1681077587043">
-<figcaption aria-hidden="true">1681077587043</figcaption>
-</figure>
-<figure>
-<img src="/2023/04/09/GAMES103/GAMES103/1681077593875.png" alt="1681077593875">
-<figcaption aria-hidden="true">1681077593875</figcaption>
-</figure>
-<h1 id="rigid">3 rigid</h1>
-<h2 id="torque-and-inertia">Torque and Inertia</h2>
-<figure>
-<img src="/2023/04/09/GAMES103/GAMES103/1681077744681.png" alt="1681077744681">
-<figcaption aria-hidden="true">1681077744681</figcaption>
-</figure>
-<h2 id="translational-and-rotational-motion">Translational and
-Rotational Motion</h2>
-<figure>
-<img src="/2023/04/09/GAMES103/GAMES103/1681077765559.png" alt="1681077765559">
-<figcaption aria-hidden="true">1681077765559</figcaption>
-</figure>
-<h2 id="rigid-body-simulation">Rigid Body Simulation</h2>
-<figure>
-<img src="/2023/04/09/GAMES103/GAMES103/1681077796806.png" alt="1681077796806">
-<figcaption aria-hidden="true">1681077796806</figcaption>
-</figure>
-<h3 id="some-more-implementation-issues">Some More Implementation
-Issues</h3>
-<p>Translational motion is much easier to implement than rotational
-motion.</p>
-<p>You can implement the update of 𝐪 first using a constant 𝛚. In that
-case, the object should spin constantly.</p>
-<p>Gravity doesn’t cause any torque! If your simulator does not contain
-any other force, there is no need to update 𝛚.</p>
-<h1 id="rigid-contact">4 Rigid Contact</h1>
-<h2 id="particle-collision-detection-and-response">Particle Collision
-Detection and Response</h2>
-<h3 id="signed-distance-function">Signed Distance Function</h3>
-<p>A signed distance function 𝜙(𝐱) defines the distance from 𝐱 to a
-surface with a sign. The sign indicates on which side 𝐱 is located.</p>
-<figure>
-<img src="/2023/04/09/GAMES103/GAMES103/1681077902937.png" alt="1681077902937">
-<figcaption aria-hidden="true">1681077902937</figcaption>
-</figure>
-<h3 id="penalty-methods">Penalty methods</h3>
-<h4 id="quadratic-penalty-method">Quadratic Penalty Method</h4>
-<p><span class="math display">\[
-f\leftarrow −𝑘 \phi(x) N
-\]</span> #### Quadratic Penalty Method with a Buffer <span class="math display">\[
-f\leftarrow 𝑘(\epsilon − \phi(x))N
-\]</span> #### Log-Barrier Penalty Method <span class="math display">\[
-f\leftarrow \rho\frac{1}{\phi(x)}N
-\]</span> #### A Short Summary of Penalty Methods * The use of step size
-adjustment is a must.</p>
-<ul>
-<li><p>To avoid overshooting.</p></li>
-<li><p>To avoid penetration in log-barrier methods.</p></li>
-<li><p>Log-barrier method can be limited within a buffer as well.</p>
-<ul>
-<li><p>Li et al. 2020. Incremental Potential Contact: Intersection- and
-Inversion-free Large Deformation Dynamics. TOG.</p></li>
-<li><p>Wu et al. 2020. A Safe and Fast Repulsion Method for GPU-based
-Cloth Self Collisions. TOG.</p></li>
-</ul></li>
-<li><p>Frictional contacts are difficult to handle.</p></li>
-</ul>
-<h3 id="impulse-methods">Impulse methods</h3>
-<p>collision: <span class="math display">\[
-x^{new}\leftarrow x+|\phi(x)|N=x−\phi(x)∇\phi(x)
-\]</span></p>
-<figure>
-<img src="/2023/04/09/GAMES103/GAMES103/1681078352423.png" alt="1681078352423">
-<figcaption aria-hidden="true">1681078352423</figcaption>
-</figure>
-<h2 id="rigid-collision-detection-and-response-by-impulse">Rigid
-Collision Detection and Response by Impulse</h2>
-<figure>
-<img src="/2023/04/09/GAMES103/GAMES103/1681078374348.png" alt="1681078374348">
-<figcaption aria-hidden="true">1681078374348</figcaption>
-</figure>
-<h2 id="shape-matching">Shape Matching</h2>
-<h3 id="basic-idea">Basic Idea</h3>
-<figure>
-<img src="/2023/04/09/GAMES103/GAMES103/1681078420872.png" alt="1681078420872">
-<figcaption aria-hidden="true">1681078420872</figcaption>
-</figure>
-<h3 id="mathematical-formulation">Mathematical Formulation</h3>
-<figure>
-<img src="/2023/04/09/GAMES103/GAMES103/1681078437745.png" alt="1681078437745">
-<figcaption aria-hidden="true">1681078437745</figcaption>
-</figure>
-<figure>
-<img src="/2023/04/09/GAMES103/GAMES103/1681078456687.png" alt="1681078456687">
-<figcaption aria-hidden="true">1681078456687</figcaption>
-</figure>
-<h3 id="pros-and-cons">pros and cons</h3>
-<ul>
-<li>Easy to implement and compatible with other nodal systems, i.e.,
-cloth, soft bodies and even particle fluids.</li>
-<li>Difficult to strictly enforce friction and other goals.</li>
-<li>The rigidification process will destroy them.</li>
-<li>More suitable when the friction accuracy is unimportant, i.e.,
-buttons on clothes.</li>
-</ul>
-</div><hr style="height:1px;margin:1rem 0"><div class="level is-mobile is-flex"><div class="article-tags is-size-7 is-uppercase"><i class="fas fa-tags has-text-grey"></i> <a class="link-muted" rel="tag" href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9B%BE%E5%BD%A2%E5%AD%A6/">计算机图形学, </a><a class="link-muted" rel="tag" href="/tags/%E6%9C%80%E4%BC%98%E5%8C%96/">最优化, </a><a class="link-muted" rel="tag" href="/tags/%E6%95%B0%E5%AD%A6/">数学, </a><a class="link-muted" rel="tag" href="/tags/%E5%88%9A%E4%BD%93/">刚体 </a></div></div>                    </article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2023-03-07T06:15:11.000Z" title="2023/3/7 上午1:15:11">2023-03-07</time>发表</span><span class="level-item"><time dateTime="2023-03-14T01:43:52.980Z" title="2023/3/13 下午9:43:52">2023-03-14</time>更新</span><span class="level-item"><a class="link-muted" href="/categories/%E5%AD%A6%E4%B9%A0/">学习</a><span> / </span><a class="link-muted" href="/categories/%E5%AD%A6%E4%B9%A0/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9B%BE%E5%BD%A2%E5%AD%A6/">计算机图形学</a><span> / </span><a class="link-muted" href="/categories/%E5%AD%A6%E4%B9%A0/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9B%BE%E5%BD%A2%E5%AD%A6/%E5%9B%BE%E5%BD%A2API/">图形API</a><span> / </span><a class="link-muted" href="/categories/%E5%AD%A6%E4%B9%A0/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9B%BE%E5%BD%A2%E5%AD%A6/%E5%9B%BE%E5%BD%A2API/Vulkan/">Vulkan</a></span><span class="level-item">12 分钟读完 (大约1763个字)</span></div></div><h1 class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2023/03/07/VkPresentModeKHR/">VkPresentModeKHR-呈现模式</a></h1><div class="content"><p>在构建交换链 <code>vk::SwapchainCreateInfoKHR</code>时，有一个设置是
+<p>We then check if 𝐩(𝑡) is inside or not.</p></div><hr style="height:1px;margin:1rem 0"><div class="level is-mobile is-flex"><div class="article-tags is-size-7 is-uppercase"><i class="fas fa-tags has-text-grey"></i> <a class="link-muted" rel="tag" href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9B%BE%E5%BD%A2%E5%AD%A6/">计算机图形学, </a><a class="link-muted" rel="tag" href="/tags/%E6%9C%80%E4%BC%98%E5%8C%96/">最优化, </a><a class="link-muted" rel="tag" href="/tags/%E6%95%B0%E5%AD%A6/">数学, </a><a class="link-muted" rel="tag" href="/tags/%E5%88%9A%E4%BD%93/">刚体 </a></div><a class="article-more button is-small is-size-7" href="/2023/04/09/GAMES103/#more"><i class="fas fa-book-reader has-text-grey"></i>  阅读更多</a></div>                    </article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2023-03-07T06:15:11.000Z" title="2023/3/7 上午1:15:11">2023-03-07</time>发表</span><span class="level-item"><time dateTime="2023-03-14T01:43:52.980Z" title="2023/3/13 下午9:43:52">2023-03-14</time>更新</span><span class="level-item"><a class="link-muted" href="/categories/%E5%AD%A6%E4%B9%A0/">学习</a><span> / </span><a class="link-muted" href="/categories/%E5%AD%A6%E4%B9%A0/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9B%BE%E5%BD%A2%E5%AD%A6/">计算机图形学</a><span> / </span><a class="link-muted" href="/categories/%E5%AD%A6%E4%B9%A0/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9B%BE%E5%BD%A2%E5%AD%A6/%E5%9B%BE%E5%BD%A2API/">图形API</a><span> / </span><a class="link-muted" href="/categories/%E5%AD%A6%E4%B9%A0/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9B%BE%E5%BD%A2%E5%AD%A6/%E5%9B%BE%E5%BD%A2API/Vulkan/">Vulkan</a></span><span class="level-item">12 分钟读完 (大约1763个字)</span></div></div><h1 class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2023/03/07/VkPresentModeKHR/">VkPresentModeKHR-呈现模式</a></h1><div class="content"><p>在构建交换链 <code>vk::SwapchainCreateInfoKHR</code>时，有一个设置是
 <code>VkPresentModeKHR</code>。根据官方手册<a target="_blank" rel="noopener" href="https://registry.khronos.org/vulkan/specs/1.3-extensions/man/html/VkPresentModeKHR.html">VkPresentModeKHR(3)
 Manual Page</a>，呈现模式有6种。</p>
 <h2 id="相关术语">相关术语</h2>

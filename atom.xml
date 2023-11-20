@@ -6,7 +6,7 @@
   <link href="https://grahamzen.github.io/atom.xml" rel="self"/>
   
   <link href="https://grahamzen.github.io/"/>
-  <updated>2023-11-20T17:41:19.075Z</updated>
+  <updated>2023-11-20T17:42:30.246Z</updated>
   <id>https://grahamzen.github.io/</id>
   
   <author>
@@ -21,16 +21,17 @@
     <link href="https://grahamzen.github.io/2023/11/19/llvm-vscode/"/>
     <id>https://grahamzen.github.io/2023/11/19/llvm-vscode/</id>
     <published>2023-11-20T04:26:12.000Z</published>
-    <updated>2023-11-20T17:41:19.075Z</updated>
+    <updated>2023-11-20T17:42:30.246Z</updated>
     
     
-      
-      
-        
-        
-    <summary type="html"></summary>
-        
-      
+    <summary type="html">&lt;h2 id=&quot;文件夹结构&quot;&gt;文件夹结构&lt;/h2&gt;
+&lt;p&gt;安装LLVM的过程省去，假设当前目录下有:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;CMakeLists.txt文件；编译pass&lt;/li&gt;
+&lt;li&gt;include文件夹：pass的头文件&lt;/li&gt;
+&lt;li&gt;src文件夹；pass的源码&lt;/li&gt;
+&lt;li&gt;test文件夹：用于静态分析pass的测试代码（.c文件）&lt;/li&gt;
+&lt;/ul&gt;</summary>
     
     
     
@@ -79,16 +80,36 @@
     <link href="https://grahamzen.github.io/2023/04/09/GAMES103/"/>
     <id>https://grahamzen.github.io/2023/04/09/GAMES103/</id>
     <published>2023-04-09T09:50:21.000Z</published>
-    <updated>2023-11-20T17:25:32.848Z</updated>
+    <updated>2023-11-20T17:42:42.171Z</updated>
     
     
-      
-      
-        
-        
-    <summary type="html"></summary>
-        
-      
+    <summary type="html">&lt;h1 id=&quot;math&quot;&gt;2 Math&lt;/h1&gt;
+&lt;h2 id=&quot;tetrahedral-volume&quot;&gt;Tetrahedral Volume&lt;/h2&gt;
+&lt;figure&gt;
+&lt;img src=&quot;/2023/04/09/GAMES103/GAMES103/1681077071804.png&quot; alt=&quot;1681077071804&quot;&gt;
+&lt;figcaption aria-hidden=&quot;true&quot;&gt;1681077071804&lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;figure&gt;
+&lt;img src=&quot;/2023/04/09/GAMES103/GAMES103/1681077089478.png&quot; alt=&quot;1681077089478&quot;&gt;
+&lt;figcaption aria-hidden=&quot;true&quot;&gt;1681077089478&lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;h2 id=&quot;barycentric-weights&quot;&gt;Barycentric Weights&lt;/h2&gt;
+&lt;figure&gt;
+&lt;img src=&quot;/2023/04/09/GAMES103/GAMES103/1681077102213.png&quot; alt=&quot;1681077102213&quot;&gt;
+&lt;figcaption aria-hidden=&quot;true&quot;&gt;1681077102213&lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;figure&gt;
+&lt;img src=&quot;/2023/04/09/GAMES103/GAMES103/1681077142508.png&quot; alt=&quot;1681077142508&quot;&gt;
+&lt;figcaption aria-hidden=&quot;true&quot;&gt;1681077142508&lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;h2 id=&quot;particle-triangle-intersection&quot;&gt;Particle-triangle
+Intersection&lt;/h2&gt;
+&lt;p&gt;First, we find 𝑡 when the particle hits the plane:&lt;/p&gt;
+&lt;figure&gt;
+&lt;img src=&quot;/2023/04/09/GAMES103/GAMES103/1681077167578.png&quot; alt=&quot;1681077167578&quot;&gt;
+&lt;figcaption aria-hidden=&quot;true&quot;&gt;1681077167578&lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;p&gt;We then check if 𝐩(𝑡) is inside or not.&lt;/p&gt;</summary>
     
     
     
