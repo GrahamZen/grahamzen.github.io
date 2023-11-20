@@ -39,20 +39,21 @@
 <li>include文件夹：pass的头文件</li>
 <li>src文件夹；pass的源码</li>
 <li>test文件夹：用于静态分析pass的测试代码（.c文件）</li>
-</ul></div><hr style="height:1px;margin:1rem 0"><div class="level is-mobile is-flex"><div class="article-tags is-size-7 is-uppercase"><i class="fas fa-tags has-text-grey"></i> <a class="link-muted" rel="tag" href="/tags/LLVM/">LLVM, </a><a class="link-muted" rel="tag" href="/tags/vscode/">vscode, </a><a class="link-muted" rel="tag" href="/tags/%E9%9D%99%E6%80%81%E5%88%86%E6%9E%90/">静态分析 </a></div><a class="article-more button is-small is-size-7" href="/2023/11/19/llvm-vscode/#more"><i class="fas fa-book-reader has-text-grey"></i>  阅读更多</a></div>                    </article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2023-11-19T15:32:17.000Z" title="2023/11/19 上午10:32:17">2023-11-19</time>发表</span><span class="level-item"><time dateTime="2023-11-20T17:55:56.099Z" title="2023/11/20 下午12:55:56">2023-11-21</time>更新</span><span class="level-item"><a class="link-muted" href="/categories/%E5%AD%A6%E4%B9%A0/">学习</a><span> / </span><a class="link-muted" href="/categories/%E5%AD%A6%E4%B9%A0/%E6%95%B0%E5%AD%A6/">数学</a></span><span class="level-item">3 分钟读完 (大约399个字)</span></div></div><h1 class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2023/11/19/tensor/">张量</a></h1><div class="content"><p>对于三维空间中的各向同性材料，弹性模量张量（Elastic Modulus
+</ul></div><hr style="height:1px;margin:1rem 0"><div class="level is-mobile is-flex"><div class="article-tags is-size-7 is-uppercase"><i class="fas fa-tags has-text-grey"></i> <a class="link-muted" rel="tag" href="/tags/LLVM/">LLVM, </a><a class="link-muted" rel="tag" href="/tags/vscode/">vscode, </a><a class="link-muted" rel="tag" href="/tags/%E9%9D%99%E6%80%81%E5%88%86%E6%9E%90/">静态分析 </a></div><a class="article-more button is-small is-size-7" href="/2023/11/19/llvm-vscode/#more"><i class="fas fa-book-reader has-text-grey"></i>  阅读更多</a></div>                    </article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2023-11-19T15:32:17.000Z" title="2023/11/19 上午10:32:17">2023-11-19</time>发表</span><span class="level-item"><time dateTime="2023-11-20T17:58:59.286Z" title="2023/11/20 下午12:58:59">2023-11-21</time>更新</span><span class="level-item"><a class="link-muted" href="/categories/%E5%AD%A6%E4%B9%A0/">学习</a><span> / </span><a class="link-muted" href="/categories/%E5%AD%A6%E4%B9%A0/%E6%95%B0%E5%AD%A6/">数学</a></span><span class="level-item">3 分钟读完 (大约399个字)</span></div></div><h1 class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2023/11/19/tensor/">张量</a></h1><div class="content"><p>对于三维空间中的各向同性材料，弹性模量张量（Elastic Modulus
 Tensor）可以视为一个<span class="math inline">\(3 \times
 3\)</span>矩阵，其中每个元素本身又是一个 <span class="math inline">\(3
 \times 3\)</span>
 的矩阵。这样的表示反映了张量的四阶本质，即它有四个索引。</p>
 <p>在这种表示下，张量的每个元素 <span class="math inline">\(C_{ijkl}\)</span>表示当在 kl
 方向上施加应力时，材料在 ij
-方向上的应变响应。对于各向同性材料，这个张量可以通过两个Lamé常数 <span class="math inline">\(\lambda\)</span> 和 <span class="math inline">\(\mu\)</span> 来定义，其定义如下： <span class="math display">\[
+方向上的应变响应。对于各向同性材料，这个张量可以通过两个Lamé常数 <span class="math inline">\(\lambda\)</span> 和 <span class="math inline">\(\mu\)</span> 来定义，其定义如下：</p>
+<p><span class="math display">\[
 C_{ijkl} = \lambda \delta_{ij} \delta_{kl} + \mu (\delta_{ik}
 \delta_{jl} + \delta_{il} \delta_{jk})
-\]</span> 其中 <span class="math inline">\(\delta\)</span> 是Kronecker
+\]</span></p>
+<p>其中 <span class="math inline">\(\delta\)</span> 是Kronecker
 delta函数。</p>
 <p>下面是弹性模量张量的具体展开形式，其中每个元素 <span class="math inline">\(C_{ijkl}\)</span>根据上述公式计算：</p>
-$$
 <span class="math display">\[\begin{bmatrix}
 \begin{bmatrix}
 C_{1111} &amp; C_{1122} &amp; C_{1133} \\ C_{1211} &amp; C_{1212} &amp;
@@ -98,32 +99,31 @@ C_{3131} &amp; C_{3132} &amp; C_{3133} \\ C_{3231} &amp; C_{3232} &amp;
 C_{3233} \\ C_{3331} &amp; C_{3332} &amp; C_{3333} \\
 \end{bmatrix}
 \end{bmatrix}\]</span>
-<p>$$</p>
 <p>这里的ijkl索引里，i可以看做是大的3x3矩阵的行，j可以看做是小的3x3矩阵的行，k可以看做是大的3x3矩阵的列，l可以看做是小的3x3矩阵的列。</p>
-</div><hr style="height:1px;margin:1rem 0"><div class="level is-mobile is-flex"><div class="article-tags is-size-7 is-uppercase"><i class="fas fa-tags has-text-grey"></i> <a class="link-muted" rel="tag" href="/tags/%E5%BE%AE%E7%A7%AF%E5%88%86/">微积分 </a></div></div>                    </article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2023-04-09T09:50:21.000Z" title="2023/4/9 上午5:50:21">2023-04-09</time>发表</span><span class="level-item"><time dateTime="2023-11-20T17:42:42.171Z" title="2023/11/20 下午12:42:42">2023-11-21</time>更新</span><span class="level-item"><a class="link-muted" href="/categories/%E5%AD%A6%E4%B9%A0/">学习</a><span> / </span><a class="link-muted" href="/categories/%E5%AD%A6%E4%B9%A0/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9B%BE%E5%BD%A2%E5%AD%A6/">计算机图形学</a><span> / </span><a class="link-muted" href="/categories/%E5%AD%A6%E4%B9%A0/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9B%BE%E5%BD%A2%E5%AD%A6/%E6%A8%A1%E6%8B%9F/">模拟</a><span> / </span><a class="link-muted" href="/categories/%E5%AD%A6%E4%B9%A0/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9B%BE%E5%BD%A2%E5%AD%A6/%E6%A8%A1%E6%8B%9F/%E5%88%9A%E4%BD%93/">刚体</a></span><span class="level-item">4 分钟读完 (大约578个字)</span></div></div><h1 class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2023/04/09/GAMES103/">GAMES103:刚体模拟笔记</a></h1><div class="content"><h1 id="math">2 Math</h1>
+</div><hr style="height:1px;margin:1rem 0"><div class="level is-mobile is-flex"><div class="article-tags is-size-7 is-uppercase"><i class="fas fa-tags has-text-grey"></i> <a class="link-muted" rel="tag" href="/tags/%E5%BE%AE%E7%A7%AF%E5%88%86/">微积分 </a></div></div>                    </article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2023-04-09T09:50:21.000Z" title="2023/4/9 上午5:50:21">2023-04-09</time>发表</span><span class="level-item"><time dateTime="2023-11-20T18:02:36.231Z" title="2023/11/20 下午1:02:36">2023-11-21</time>更新</span><span class="level-item"><a class="link-muted" href="/categories/%E5%AD%A6%E4%B9%A0/">学习</a><span> / </span><a class="link-muted" href="/categories/%E5%AD%A6%E4%B9%A0/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9B%BE%E5%BD%A2%E5%AD%A6/">计算机图形学</a><span> / </span><a class="link-muted" href="/categories/%E5%AD%A6%E4%B9%A0/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9B%BE%E5%BD%A2%E5%AD%A6/%E6%A8%A1%E6%8B%9F/">模拟</a><span> / </span><a class="link-muted" href="/categories/%E5%AD%A6%E4%B9%A0/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9B%BE%E5%BD%A2%E5%AD%A6/%E6%A8%A1%E6%8B%9F/%E5%88%9A%E4%BD%93/">刚体</a></span><span class="level-item">4 分钟读完 (大约578个字)</span></div></div><h1 class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2023/04/09/GAMES103/">GAMES103:刚体模拟笔记</a></h1><div class="content"><h1 id="math">2 Math</h1>
 <h2 id="tetrahedral-volume">Tetrahedral Volume</h2>
 <figure>
-<img src="/2023/04/09/GAMES103/GAMES103/1681077071804.png" alt="1681077071804">
+<img src="../images/GAMES103/1681077071804.png" alt="1681077071804">
 <figcaption aria-hidden="true">1681077071804</figcaption>
 </figure>
 <figure>
-<img src="/2023/04/09/GAMES103/GAMES103/1681077089478.png" alt="1681077089478">
+<img src="../images/GAMES103/1681077089478.png" alt="1681077089478">
 <figcaption aria-hidden="true">1681077089478</figcaption>
 </figure>
 <h2 id="barycentric-weights">Barycentric Weights</h2>
 <figure>
-<img src="/2023/04/09/GAMES103/GAMES103/1681077102213.png" alt="1681077102213">
+<img src="../images/GAMES103/1681077102213.png" alt="1681077102213">
 <figcaption aria-hidden="true">1681077102213</figcaption>
 </figure>
 <figure>
-<img src="/2023/04/09/GAMES103/GAMES103/1681077142508.png" alt="1681077142508">
+<img src="../images/GAMES103/1681077142508.png" alt="1681077142508">
 <figcaption aria-hidden="true">1681077142508</figcaption>
 </figure>
 <h2 id="particle-triangle-intersection">Particle-triangle
 Intersection</h2>
 <p>First, we find 𝑡 when the particle hits the plane:</p>
 <figure>
-<img src="/2023/04/09/GAMES103/GAMES103/1681077167578.png" alt="1681077167578">
+<img src="../images/GAMES103/1681077167578.png" alt="1681077167578">
 <figcaption aria-hidden="true">1681077167578</figcaption>
 </figure>
 <p>We then check if 𝐩(𝑡) is inside or not.</p></div><hr style="height:1px;margin:1rem 0"><div class="level is-mobile is-flex"><div class="article-tags is-size-7 is-uppercase"><i class="fas fa-tags has-text-grey"></i> <a class="link-muted" rel="tag" href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9B%BE%E5%BD%A2%E5%AD%A6/">计算机图形学, </a><a class="link-muted" rel="tag" href="/tags/%E6%9C%80%E4%BC%98%E5%8C%96/">最优化, </a><a class="link-muted" rel="tag" href="/tags/%E6%95%B0%E5%AD%A6/">数学, </a><a class="link-muted" rel="tag" href="/tags/%E5%88%9A%E4%BD%93/">刚体 </a></div><a class="article-more button is-small is-size-7" href="/2023/04/09/GAMES103/#more"><i class="fas fa-book-reader has-text-grey"></i>  阅读更多</a></div>                    </article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2023-03-07T06:15:11.000Z" title="2023/3/7 上午1:15:11">2023-03-07</time>发表</span><span class="level-item"><time dateTime="2023-03-14T01:43:52.980Z" title="2023/3/13 下午9:43:52">2023-03-14</time>更新</span><span class="level-item"><a class="link-muted" href="/categories/%E5%AD%A6%E4%B9%A0/">学习</a><span> / </span><a class="link-muted" href="/categories/%E5%AD%A6%E4%B9%A0/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9B%BE%E5%BD%A2%E5%AD%A6/">计算机图形学</a><span> / </span><a class="link-muted" href="/categories/%E5%AD%A6%E4%B9%A0/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9B%BE%E5%BD%A2%E5%AD%A6/%E5%9B%BE%E5%BD%A2API/">图形API</a><span> / </span><a class="link-muted" href="/categories/%E5%AD%A6%E4%B9%A0/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9B%BE%E5%BD%A2%E5%AD%A6/%E5%9B%BE%E5%BD%A2API/Vulkan/">Vulkan</a></span><span class="level-item">12 分钟读完 (大约1763个字)</span></div></div><h1 class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2023/03/07/VkPresentModeKHR/">VkPresentModeKHR-呈现模式</a></h1><div class="content"><p>在构建交换链 <code>vk::SwapchainCreateInfoKHR</code>时，有一个设置是
