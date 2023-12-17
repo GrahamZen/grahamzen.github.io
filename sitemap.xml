@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://grahamzen.github.io/about/index.html</loc>
+    
+    <lastmod>2023-12-17</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://grahamzen.github.io/2023/12/16/Linear-Systems-and-LU/</loc>
     
     <lastmod>2023-12-17</lastmod>
@@ -158,15 +167,6 @@
     <loc>https://grahamzen.github.io/2023/02/09/rendering-equation/</loc>
     
     <lastmod>2023-02-21</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://grahamzen.github.io/about/index.html</loc>
-    
-    <lastmod>2023-01-29</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
