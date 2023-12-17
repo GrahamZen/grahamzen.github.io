@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://grahamzen.github.io/about/index.html</loc>
+    <loc>https://grahamzen.github.io/2023/12/16/Applied%20Numerical%20Algorithms/Introduction-number-systems-measuring-error/</loc>
     
     <lastmod>2023-12-17</lastmod>
     
@@ -11,7 +11,25 @@
   </url>
   
   <url>
-    <loc>https://grahamzen.github.io/2023/12/16/Linear-Systems-and-LU/</loc>
+    <loc>https://grahamzen.github.io/2023/12/16/Applied%20Numerical%20Algorithms/Linear-Systems-and-LU/</loc>
+    
+    <lastmod>2023-12-17</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://grahamzen.github.io/2023/12/17/Applied%20Numerical%20Algorithms/Cholesky-factorization-sparse-matrices/</loc>
+    
+    <lastmod>2023-12-17</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://grahamzen.github.io/about/index.html</loc>
     
     <lastmod>2023-12-17</lastmod>
     
@@ -57,15 +75,6 @@
   
   <url>
     <loc>https://grahamzen.github.io/2023/04/09/GAMES103/</loc>
-    
-    <lastmod>2023-12-17</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://grahamzen.github.io/2023/12/16/Introduction-number-systems-measuring-error/</loc>
     
     <lastmod>2023-12-17</lastmod>
     
@@ -408,6 +417,13 @@
   
   <url>
     <loc>https://grahamzen.github.io/tags/%E6%96%87%E7%AB%A0%E6%8E%92%E7%89%88/</loc>
+    <lastmod>2023-12-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://grahamzen.github.io/tags/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/</loc>
     <lastmod>2023-12-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>

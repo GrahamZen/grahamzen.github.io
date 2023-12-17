@@ -6,7 +6,7 @@
   <link href="https://grahamzen.github.io/atom.xml" rel="self"/>
   
   <link href="https://grahamzen.github.io/"/>
-  <updated>2023-12-17T23:11:24.858Z</updated>
+  <updated>2023-12-17T23:25:19.449Z</updated>
   <id>https://grahamzen.github.io/</id>
   
   <author>
@@ -17,11 +17,42 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Cholesky factorization, sparse matrices</title>
+    <link href="https://grahamzen.github.io/2023/12/17/Applied%20Numerical%20Algorithms/Cholesky-factorization-sparse-matrices/"/>
+    <id>https://grahamzen.github.io/2023/12/17/Applied%20Numerical%20Algorithms/Cholesky-factorization-sparse-matrices/</id>
+    <published>2023-12-17T10:23:19.000Z</published>
+    <updated>2023-12-17T23:25:19.449Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html"></summary>
+        
+      
+    
+    
+    
+    <category term="学习" scheme="https://grahamzen.github.io/categories/%E5%AD%A6%E4%B9%A0/"/>
+    
+    <category term="数学" scheme="https://grahamzen.github.io/categories/%E5%AD%A6%E4%B9%A0/%E6%95%B0%E5%AD%A6/"/>
+    
+    <category term="Applied Numerical Algorithms" scheme="https://grahamzen.github.io/categories/%E5%AD%A6%E4%B9%A0/%E6%95%B0%E5%AD%A6/Applied-Numerical-Algorithms/"/>
+    
+    
+    <category term="数学" scheme="https://grahamzen.github.io/tags/%E6%95%B0%E5%AD%A6/"/>
+    
+    <category term="数值计算" scheme="https://grahamzen.github.io/tags/%E6%95%B0%E5%80%BC%E8%AE%A1%E7%AE%97/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Linear Systems and LU</title>
-    <link href="https://grahamzen.github.io/2023/12/16/Linear-Systems-and-LU/"/>
-    <id>https://grahamzen.github.io/2023/12/16/Linear-Systems-and-LU/</id>
+    <link href="https://grahamzen.github.io/2023/12/16/Applied%20Numerical%20Algorithms/Linear-Systems-and-LU/"/>
+    <id>https://grahamzen.github.io/2023/12/16/Applied%20Numerical%20Algorithms/Linear-Systems-and-LU/</id>
     <published>2023-12-17T04:50:28.000Z</published>
-    <updated>2023-12-17T23:11:24.858Z</updated>
+    <updated>2023-12-17T23:25:32.616Z</updated>
     
     
     <summary type="html">&lt;h2 id=&quot;linear-systems&quot;&gt;Linear Systems&lt;/h2&gt;
@@ -47,14 +78,16 @@
     
     <category term="数值计算" scheme="https://grahamzen.github.io/tags/%E6%95%B0%E5%80%BC%E8%AE%A1%E7%AE%97/"/>
     
+    <category term="线性代数" scheme="https://grahamzen.github.io/tags/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/"/>
+    
   </entry>
   
   <entry>
     <title>Introduction, number systems, measuring error</title>
-    <link href="https://grahamzen.github.io/2023/12/16/Introduction-number-systems-measuring-error/"/>
-    <id>https://grahamzen.github.io/2023/12/16/Introduction-number-systems-measuring-error/</id>
+    <link href="https://grahamzen.github.io/2023/12/16/Applied%20Numerical%20Algorithms/Introduction-number-systems-measuring-error/"/>
+    <id>https://grahamzen.github.io/2023/12/16/Applied%20Numerical%20Algorithms/Introduction-number-systems-measuring-error/</id>
     <published>2023-12-16T07:47:52.000Z</published>
-    <updated>2023-12-17T23:04:46.627Z</updated>
+    <updated>2023-12-17T23:25:36.808Z</updated>
     
     
     <summary type="html">&lt;p&gt;Mathematically correct != numerically sound. Using Tolerance:
@@ -72,6 +105,8 @@
     <category term="数学" scheme="https://grahamzen.github.io/tags/%E6%95%B0%E5%AD%A6/"/>
     
     <category term="数值计算" scheme="https://grahamzen.github.io/tags/%E6%95%B0%E5%80%BC%E8%AE%A1%E7%AE%97/"/>
+    
+    <category term="线性代数" scheme="https://grahamzen.github.io/tags/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/"/>
     
   </entry>
   
