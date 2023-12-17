@@ -6,7 +6,7 @@
   <link href="https://grahamzen.github.io/atom.xml" rel="self"/>
   
   <link href="https://grahamzen.github.io/"/>
-  <updated>2023-12-17T23:02:18.074Z</updated>
+  <updated>2023-12-17T23:10:15.879Z</updated>
   <id>https://grahamzen.github.io/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://grahamzen.github.io/2023/12/16/Linear-Systems-and-LU/"/>
     <id>https://grahamzen.github.io/2023/12/16/Linear-Systems-and-LU/</id>
     <published>2023-12-17T04:50:28.000Z</published>
-    <updated>2023-12-17T23:02:18.074Z</updated>
+    <updated>2023-12-17T23:10:15.879Z</updated>
     
     
     <summary type="html">&lt;h2 id=&quot;linear-systems&quot;&gt;Linear Systems&lt;/h2&gt;
@@ -32,25 +32,7 @@
     x &amp;amp;\in \mathbb{R}^n \\
     b &amp;amp;\in \mathbb{R}^n
 \end{align}
-\]&lt;/span&gt;&lt;/p&gt;
-&lt;h3 id=&quot;case-1-solvable&quot;&gt;Case 1: Solvable&lt;/h3&gt;
-&lt;p&gt;&lt;span class=&quot;math display&quot;&gt;\[
-\begin{align}
-    \begin{bmatrix}
-        1 &amp;amp; 0 \\
-        0 &amp;amp; 1
-    \end{bmatrix}
-    \begin{bmatrix}
-        x \\
-        y
-    \end{bmatrix}
-    &amp;amp;=
-    \begin{bmatrix}
-        -1 \\
-        1
-    \end{bmatrix}
-\end{align}
-\]&lt;/span&gt; Completely determined&lt;/p&gt;</summary>
+\]&lt;/span&gt;&lt;/p&gt;</summary>
     
     
     
@@ -132,16 +114,14 @@
     <link href="https://grahamzen.github.io/2023/11/19/tensor/"/>
     <id>https://grahamzen.github.io/2023/11/19/tensor/</id>
     <published>2023-11-19T15:32:17.000Z</published>
-    <updated>2023-12-16T20:49:56.050Z</updated>
+    <updated>2023-12-17T23:09:58.821Z</updated>
     
     
-      
-      
-        
-        
-    <summary type="html"></summary>
-        
-      
+    <summary type="html">&lt;p&gt;对于三维空间中的各向同性材料，弹性模量张量（Elastic Modulus
+Tensor）可以视为一个&lt;span class=&quot;math inline&quot;&gt;\(3 \times
+3\)&lt;/span&gt;矩阵，其中每个元素本身又是一个 &lt;span class=&quot;math inline&quot;&gt;\(3
+\times 3\)&lt;/span&gt;
+的矩阵。这样的表示反映了张量的四阶本质，即它有四个索引。&lt;/p&gt;</summary>
     
     
     
@@ -161,7 +141,7 @@
     <link href="https://grahamzen.github.io/2023/04/09/GAMES103/"/>
     <id>https://grahamzen.github.io/2023/04/09/GAMES103/</id>
     <published>2023-04-09T09:50:21.000Z</published>
-    <updated>2023-12-17T23:03:03.259Z</updated>
+    <updated>2023-12-17T23:08:40.644Z</updated>
     
     
     <summary type="html">&lt;h1 id=&quot;math&quot;&gt;2 Math&lt;/h1&gt;
@@ -169,10 +149,6 @@
 &lt;figure&gt;
 &lt;img src=&quot;../images/GAMES103/1681077071804.png&quot; alt=&quot;1681077071804&quot;&gt;
 &lt;figcaption aria-hidden=&quot;true&quot;&gt;1681077071804&lt;/figcaption&gt;
-&lt;/figure&gt;
-&lt;figure&gt;
-&lt;img src=&quot;../images/GAMES103/1681077089478.png&quot; alt=&quot;1681077089478&quot;&gt;
-&lt;figcaption aria-hidden=&quot;true&quot;&gt;1681077089478&lt;/figcaption&gt;
 &lt;/figure&gt;</summary>
     
     
@@ -201,7 +177,7 @@
     <link href="https://grahamzen.github.io/2023/03/07/VkPresentModeKHR/"/>
     <id>https://grahamzen.github.io/2023/03/07/VkPresentModeKHR/</id>
     <published>2023-03-07T06:15:11.000Z</published>
-    <updated>2023-03-14T01:43:52.980Z</updated>
+    <updated>2023-12-17T23:09:10.368Z</updated>
     
     
     <summary type="html">&lt;p&gt;在构建交换链 &lt;code&gt;vk::SwapchainCreateInfoKHR&lt;/code&gt;时，有一个设置是
@@ -209,11 +185,7 @@
 Manual Page&lt;/a&gt;，呈现模式有6种。&lt;/p&gt;
 &lt;h2 id=&quot;相关术语&quot;&gt;相关术语&lt;/h2&gt;
 &lt;h3 id=&quot;垂直空白间隙vertical-blank-interval&quot;&gt;垂直空白间隙(Vertical Blank
-Interval)&lt;/h3&gt;
-&lt;p&gt;指在扫描线技术中（例如隔行扫描）电子束从前一画面的右下角移至后一画面的左上角时的时间差所引起的空白画面。这一情况出现在使用阴极射线管的显示器、使用视频图形阵列标准的显示器中。下面简称VBI。&lt;/p&gt;
-&lt;p&gt;在现代的显示器（比如LCD）中，虽然没有电子枪进行隔行扫描，但是同时控制上百万个像素点是不可能的，还是需要动态扫描进行刷新。这个刷新过程可以理解为从上往下的逐行扫描。因此VBI的含义是一段可以安全的换出&quot;显示到显示器上的图像&quot;的时间，可以简单理解为在从上到下扫描完帧缓冲，即可以认为屏幕上显示了完整画面（实际上某些情况下有撕裂）后的一段空白时间。这个扫描过程只受帧同步信号（VSYNC）影响。&lt;/p&gt;
-&lt;h3 id=&quot;撕裂tearing&quot;&gt;撕裂(tearing)&lt;/h3&gt;
-&lt;p&gt;在显示引擎正在显示一张图像时，如果它不再显示当前这张图像，而是显示另一张图像（某些模式下会有这样做），那么屏幕上有一部分是旧的图像（比如上面一半），另一部分是新的图像（比如下面一半）。这个现象就是撕裂。&lt;/p&gt;</summary>
+Interval)&lt;/h3&gt;</summary>
     
     
     
@@ -239,17 +211,10 @@ Interval)&lt;/h3&gt;
     <link href="https://grahamzen.github.io/2023/03/04/BSpline/"/>
     <id>https://grahamzen.github.io/2023/03/04/BSpline/</id>
     <published>2023-03-04T14:13:56.000Z</published>
-    <updated>2023-12-17T23:03:12.841Z</updated>
+    <updated>2023-12-17T23:09:28.965Z</updated>
     
     
-    <summary type="html">&lt;h2 id=&quot;bspline上任意点的计算公式&quot;&gt;Bspline上任意点的计算公式&lt;/h2&gt;
-&lt;p&gt;Bspline和贝塞尔曲线类似，也是将所有控制点用基函数&lt;span class=&quot;math inline&quot;&gt;\(N_{i}^{k}\)&lt;/span&gt;进行加权得到曲线上的点。也就是说，Bspline有&lt;span class=&quot;math inline&quot;&gt;\(n+1\)&lt;/span&gt;个控制点，&lt;span class=&quot;math inline&quot;&gt;\(n+1\)&lt;/span&gt;个基函数，&lt;span class=&quot;math inline&quot;&gt;\(k\)&lt;/span&gt;为次数（t在基函数中出现的最高次幂），&lt;span class=&quot;math inline&quot;&gt;\(i\in[0,n]\)&lt;/span&gt;。比如有10个控制点&lt;span class=&quot;math inline&quot;&gt;\(p_0,p_1,p_2,p_3,...,p_{9}\)&lt;/span&gt;，使用4次的Bspline基函数&lt;span class=&quot;math inline&quot;&gt;\(N^{4}_{0}(t),N^{4}_{1}(t),N^{4}_{2}(t),N^{4}_{3}(t),...,N^{4}_{9}(t)\)&lt;/span&gt;，那么曲线上任意一点可以表示为：&lt;/p&gt;
-&lt;p&gt;&lt;span class=&quot;math display&quot;&gt;\[
-\begin{align*}
-f(t)&amp;amp;=\sum_{i=0}^{n}N_{i}^{k}(t)p_i\\
-    &amp;amp;=N_{0}^{4}p_0+N_{1}^{4}p_1+N_{2}^{4}p_2...+N_{9}^{4}p_{9}\tag{1}
-\end{align*}
-\]&lt;/span&gt;&lt;/p&gt;</summary>
+    <summary type="html">&lt;h2 id=&quot;bspline上任意点的计算公式&quot;&gt;Bspline上任意点的计算公式&lt;/h2&gt;</summary>
     
     
     
@@ -387,18 +352,13 @@ Edition&lt;/a&gt;，非常推荐阅读。&lt;/p&gt;</summary>
     <link href="https://grahamzen.github.io/2023/01/14/raycast-formula/"/>
     <id>https://grahamzen.github.io/2023/01/14/raycast-formula/</id>
     <published>2023-01-14T09:01:49.000Z</published>
-    <updated>2023-01-14T23:05:28.251Z</updated>
+    <updated>2023-12-17T23:10:43.134Z</updated>
     
     
     <summary type="html">&lt;h2 id=&quot;光线投射公式&quot;&gt;光线投射公式&lt;/h2&gt;
 &lt;p&gt;从相机发出一条光线，穿过与相机距离为1的屏幕上的某点，已知相机参数和点在屏幕空间上的位置&lt;code&gt;(sx,sy)&lt;/code&gt;，计算世界空间中投影到该点的对应点的坐标的公式为：
 &lt;span class=&quot;math display&quot;&gt;\[
 P = ViewMat^{-1} * ProjMat^{-1} * ((sx, sy, 1, 1) * farClip).
-\]&lt;/span&gt; 使用下面的公式得到的结果实际上是一样的。 &lt;span class=&quot;math display&quot;&gt;\[
-P = ViewMat^{-1} * ProjMat^{-1} * (sx, sy, 1, 1),
-\]&lt;/span&gt; 但是需要对向量进行规范化，即：&lt;/p&gt;
-&lt;p&gt;&lt;span class=&quot;math display&quot;&gt;\[
-P=[p.x,p.y,p.z,p.w]/p.w.
 \]&lt;/span&gt;&lt;/p&gt;</summary>
     
     

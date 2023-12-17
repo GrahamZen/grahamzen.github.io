@@ -2,6 +2,60 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://grahamzen.github.io/2023/01/14/raycast-formula/</loc>
+    
+    <lastmod>2023-12-17</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://grahamzen.github.io/2023/12/16/Linear-Systems-and-LU/</loc>
+    
+    <lastmod>2023-12-17</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://grahamzen.github.io/2023/11/19/tensor/</loc>
+    
+    <lastmod>2023-12-17</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://grahamzen.github.io/2023/03/04/BSpline/</loc>
+    
+    <lastmod>2023-12-17</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://grahamzen.github.io/2023/03/07/VkPresentModeKHR/</loc>
+    
+    <lastmod>2023-12-17</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://grahamzen.github.io/2023/04/09/GAMES103/</loc>
+    
+    <lastmod>2023-12-17</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://grahamzen.github.io/2023/12/16/Introduction-number-systems-measuring-error/</loc>
     
     <lastmod>2023-12-17</lastmod>
@@ -20,34 +74,7 @@
   </url>
   
   <url>
-    <loc>https://grahamzen.github.io/2023/03/04/BSpline/</loc>
-    
-    <lastmod>2023-12-17</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://grahamzen.github.io/2023/04/09/GAMES103/</loc>
-    
-    <lastmod>2023-12-17</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://grahamzen.github.io/2022/03/16/plotneuralnet-in-a-project/</loc>
-    
-    <lastmod>2023-12-17</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://grahamzen.github.io/2023/12/16/Linear-Systems-and-LU/</loc>
     
     <lastmod>2023-12-17</lastmod>
     
@@ -101,15 +128,6 @@
   </url>
   
   <url>
-    <loc>https://grahamzen.github.io/2023/11/19/tensor/</loc>
-    
-    <lastmod>2023-12-16</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://grahamzen.github.io/googlefd6bdd99b89cec5b.html</loc>
     
     <lastmod>2023-11-20</lastmod>
@@ -122,15 +140,6 @@
     <loc>https://grahamzen.github.io/2023/11/19/llvm-vscode/</loc>
     
     <lastmod>2023-11-20</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://grahamzen.github.io/2023/03/07/VkPresentModeKHR/</loc>
-    
-    <lastmod>2023-03-14</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -158,15 +167,6 @@
     <loc>https://grahamzen.github.io/about/index.html</loc>
     
     <lastmod>2023-01-29</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://grahamzen.github.io/2023/01/14/raycast-formula/</loc>
-    
-    <lastmod>2023-01-14</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
