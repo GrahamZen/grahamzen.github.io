@@ -6,7 +6,7 @@
   <link href="https://grahamzen.github.io/atom.xml" rel="self"/>
   
   <link href="https://grahamzen.github.io/"/>
-  <updated>2023-12-17T20:16:21.974Z</updated>
+  <updated>2023-12-17T22:53:49.687Z</updated>
   <id>https://grahamzen.github.io/</id>
   
   <author>
@@ -21,16 +21,36 @@
     <link href="https://grahamzen.github.io/2023/12/16/Linear-Systems-and-LU/"/>
     <id>https://grahamzen.github.io/2023/12/16/Linear-Systems-and-LU/</id>
     <published>2023-12-17T04:50:28.000Z</published>
-    <updated>2023-12-17T20:16:21.974Z</updated>
+    <updated>2023-12-17T22:53:49.687Z</updated>
     
     
-      
-      
-        
-        
-    <summary type="html"></summary>
-        
-      
+    <summary type="html">&lt;h2 id=&quot;linear-systems&quot;&gt;Linear Systems&lt;/h2&gt;
+&lt;p&gt;&lt;span class=&quot;math display&quot;&gt;\[
+\begin{align}
+    Ax &amp;amp;= b \\
+    A &amp;amp;\in \mathbb{R}^{n \times n} \\
+    x &amp;amp;\in \mathbb{R}^n \\
+    b &amp;amp;\in \mathbb{R}^n
+\end{align}
+\]&lt;/span&gt;&lt;/p&gt;
+&lt;h3 id=&quot;case-1-solvable&quot;&gt;Case 1: Solvable&lt;/h3&gt;
+&lt;p&gt;&lt;span class=&quot;math display&quot;&gt;\[
+\begin{align}
+    \begin{bmatrix}
+        1 &amp;amp; 0 \\
+        0 &amp;amp; 1
+    \end{bmatrix}
+    \begin{bmatrix}
+        x \\
+        y
+    \end{bmatrix}
+    &amp;amp;=
+    \begin{bmatrix}
+        -1 \\
+        1
+    \end{bmatrix}
+\end{align}
+\]&lt;/span&gt; Completely determined&lt;/p&gt;</summary>
     
     
     
@@ -52,7 +72,7 @@
     <link href="https://grahamzen.github.io/2023/12/16/Introduction-number-systems-measuring-error/"/>
     <id>https://grahamzen.github.io/2023/12/16/Introduction-number-systems-measuring-error/</id>
     <published>2023-12-16T07:47:52.000Z</published>
-    <updated>2023-12-17T17:49:45.526Z</updated>
+    <updated>2023-12-17T22:53:20.807Z</updated>
     
     
       
