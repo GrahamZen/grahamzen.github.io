@@ -6,7 +6,7 @@
   <link href="https://grahamzen.github.io/atom.xml" rel="self"/>
   
   <link href="https://grahamzen.github.io/"/>
-  <updated>2023-12-17T23:10:15.879Z</updated>
+  <updated>2023-12-17T23:11:24.858Z</updated>
   <id>https://grahamzen.github.io/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://grahamzen.github.io/2023/12/16/Linear-Systems-and-LU/"/>
     <id>https://grahamzen.github.io/2023/12/16/Linear-Systems-and-LU/</id>
     <published>2023-12-17T04:50:28.000Z</published>
-    <updated>2023-12-17T23:10:15.879Z</updated>
+    <updated>2023-12-17T23:11:24.858Z</updated>
     
     
     <summary type="html">&lt;h2 id=&quot;linear-systems&quot;&gt;Linear Systems&lt;/h2&gt;
@@ -40,9 +40,7 @@
     
     <category term="数学" scheme="https://grahamzen.github.io/categories/%E5%AD%A6%E4%B9%A0/%E6%95%B0%E5%AD%A6/"/>
     
-    <category term="课程" scheme="https://grahamzen.github.io/categories/%E5%AD%A6%E4%B9%A0/%E6%95%B0%E5%AD%A6/%E8%AF%BE%E7%A8%8B/"/>
-    
-    <category term="Applied Numerical Algorithms" scheme="https://grahamzen.github.io/categories/%E5%AD%A6%E4%B9%A0/%E6%95%B0%E5%AD%A6/%E8%AF%BE%E7%A8%8B/Applied-Numerical-Algorithms/"/>
+    <category term="Applied Numerical Algorithms" scheme="https://grahamzen.github.io/categories/%E5%AD%A6%E4%B9%A0/%E6%95%B0%E5%AD%A6/Applied-Numerical-Algorithms/"/>
     
     
     <category term="数学" scheme="https://grahamzen.github.io/tags/%E6%95%B0%E5%AD%A6/"/>

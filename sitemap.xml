@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://grahamzen.github.io/2023/01/14/raycast-formula/</loc>
+    <loc>https://grahamzen.github.io/2023/12/16/Linear-Systems-and-LU/</loc>
     
     <lastmod>2023-12-17</lastmod>
     
@@ -11,7 +11,7 @@
   </url>
   
   <url>
-    <loc>https://grahamzen.github.io/2023/12/16/Linear-Systems-and-LU/</loc>
+    <loc>https://grahamzen.github.io/2023/01/14/raycast-formula/</loc>
     
     <lastmod>2023-12-17</lastmod>
     
@@ -507,21 +507,7 @@
   </url>
   
   <url>
-    <loc>https://grahamzen.github.io/categories/%E5%AD%A6%E4%B9%A0/%E6%95%B0%E5%AD%A6/%E8%AF%BE%E7%A8%8B/</loc>
-    <lastmod>2023-12-17</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://grahamzen.github.io/categories/%E5%AD%A6%E4%B9%A0/%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89/%E5%9B%BE%E5%83%8F%E5%8A%A8%E7%94%BB/</loc>
-    <lastmod>2023-12-17</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://grahamzen.github.io/categories/%E5%AD%A6%E4%B9%A0/%E6%95%B0%E5%AD%A6/%E8%AF%BE%E7%A8%8B/Applied-Numerical-Algorithms/</loc>
     <lastmod>2023-12-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
