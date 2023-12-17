@@ -6,7 +6,7 @@
   <link href="https://grahamzen.github.io/atom.xml" rel="self"/>
   
   <link href="https://grahamzen.github.io/"/>
-  <updated>2023-11-20T17:42:30.246Z</updated>
+  <updated>2023-12-17T20:16:21.974Z</updated>
   <id>https://grahamzen.github.io/</id>
   
   <author>
@@ -15,6 +15,68 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Linear Systems and LU</title>
+    <link href="https://grahamzen.github.io/2023/12/16/Linear-Systems-and-LU/"/>
+    <id>https://grahamzen.github.io/2023/12/16/Linear-Systems-and-LU/</id>
+    <published>2023-12-17T04:50:28.000Z</published>
+    <updated>2023-12-17T20:16:21.974Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html"></summary>
+        
+      
+    
+    
+    
+    <category term="学习" scheme="https://grahamzen.github.io/categories/%E5%AD%A6%E4%B9%A0/"/>
+    
+    <category term="数学" scheme="https://grahamzen.github.io/categories/%E5%AD%A6%E4%B9%A0/%E6%95%B0%E5%AD%A6/"/>
+    
+    <category term="Applied Numerical Algorithms" scheme="https://grahamzen.github.io/categories/%E5%AD%A6%E4%B9%A0/%E6%95%B0%E5%AD%A6/Applied-Numerical-Algorithms/"/>
+    
+    
+    <category term="数学" scheme="https://grahamzen.github.io/tags/%E6%95%B0%E5%AD%A6/"/>
+    
+    <category term="数值计算" scheme="https://grahamzen.github.io/tags/%E6%95%B0%E5%80%BC%E8%AE%A1%E7%AE%97/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Introduction, number systems, measuring error</title>
+    <link href="https://grahamzen.github.io/2023/12/16/Introduction-number-systems-measuring-error/"/>
+    <id>https://grahamzen.github.io/2023/12/16/Introduction-number-systems-measuring-error/</id>
+    <published>2023-12-16T07:47:52.000Z</published>
+    <updated>2023-12-17T17:49:45.526Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html"></summary>
+        
+      
+    
+    
+    
+    <category term="学习" scheme="https://grahamzen.github.io/categories/%E5%AD%A6%E4%B9%A0/"/>
+    
+    <category term="数学" scheme="https://grahamzen.github.io/categories/%E5%AD%A6%E4%B9%A0/%E6%95%B0%E5%AD%A6/"/>
+    
+    <category term="Applied Numerical Algorithms" scheme="https://grahamzen.github.io/categories/%E5%AD%A6%E4%B9%A0/%E6%95%B0%E5%AD%A6/Applied-Numerical-Algorithms/"/>
+    
+    
+    <category term="数学" scheme="https://grahamzen.github.io/tags/%E6%95%B0%E5%AD%A6/"/>
+    
+    <category term="数值计算" scheme="https://grahamzen.github.io/tags/%E6%95%B0%E5%80%BC%E8%AE%A1%E7%AE%97/"/>
+    
+  </entry>
   
   <entry>
     <title>对LLVM的Pass进行调试的vscode配置</title>
@@ -53,7 +115,7 @@
     <link href="https://grahamzen.github.io/2023/11/19/tensor/"/>
     <id>https://grahamzen.github.io/2023/11/19/tensor/</id>
     <published>2023-11-19T15:32:17.000Z</published>
-    <updated>2023-11-20T17:58:59.286Z</updated>
+    <updated>2023-12-16T20:49:56.050Z</updated>
     
     
       
@@ -70,6 +132,8 @@
     
     <category term="数学" scheme="https://grahamzen.github.io/categories/%E5%AD%A6%E4%B9%A0/%E6%95%B0%E5%AD%A6/"/>
     
+    
+    <category term="数学" scheme="https://grahamzen.github.io/tags/%E6%95%B0%E5%AD%A6/"/>
     
     <category term="微积分" scheme="https://grahamzen.github.io/tags/%E5%BE%AE%E7%A7%AF%E5%88%86/"/>
     
@@ -158,7 +222,7 @@ Interval)&lt;/h3&gt;
     <link href="https://grahamzen.github.io/2023/03/04/BSpline/"/>
     <id>https://grahamzen.github.io/2023/03/04/BSpline/</id>
     <published>2023-03-04T14:13:56.000Z</published>
-    <updated>2023-11-20T18:06:46.364Z</updated>
+    <updated>2023-12-16T20:50:13.635Z</updated>
     
     
     <summary type="html">&lt;h2 id=&quot;bspline上任意点的计算公式&quot;&gt;Bspline上任意点的计算公式&lt;/h2&gt;
@@ -180,6 +244,10 @@ f(t)&amp;amp;=\sum_{i=0}^{n}N_{i}^{k}(t)p_i\\
     
     
     <category term="Bspline" scheme="https://grahamzen.github.io/tags/Bspline/"/>
+    
+    <category term="数学" scheme="https://grahamzen.github.io/tags/%E6%95%B0%E5%AD%A6/"/>
+    
+    <category term="几何处理" scheme="https://grahamzen.github.io/tags/%E5%87%A0%E4%BD%95%E5%A4%84%E7%90%86/"/>
     
   </entry>
   
@@ -416,7 +484,7 @@ Edition&lt;/a&gt;，非常推荐阅读。&lt;/p&gt;</summary>
     <link href="https://grahamzen.github.io/2023/02/04/derivative/"/>
     <id>https://grahamzen.github.io/2023/02/04/derivative/</id>
     <published>2023-02-04T13:52:00.000Z</published>
-    <updated>2023-02-10T06:41:13.854Z</updated>
+    <updated>2023-12-16T20:50:25.093Z</updated>
     
     
     <summary type="html">&lt;p&gt;标量求导和向量求导是矩阵求导的特殊情况。向量求导使用的频率较高。对向量求导时运用乘法和除法公式时会出现标量求导，这里记录一下各种求导的结果。&lt;/p&gt;</summary>
@@ -427,6 +495,8 @@ Edition&lt;/a&gt;，非常推荐阅读。&lt;/p&gt;</summary>
     
     <category term="数学" scheme="https://grahamzen.github.io/categories/%E5%AD%A6%E4%B9%A0/%E6%95%B0%E5%AD%A6/"/>
     
+    
+    <category term="数学" scheme="https://grahamzen.github.io/tags/%E6%95%B0%E5%AD%A6/"/>
     
     <category term="微积分" scheme="https://grahamzen.github.io/tags/%E5%BE%AE%E7%A7%AF%E5%88%86/"/>
     
@@ -492,7 +562,7 @@ P=[p.x,p.y,p.z,p.w]/p.w.
     <link href="https://grahamzen.github.io/2023/01/05/float-number/"/>
     <id>https://grahamzen.github.io/2023/01/05/float-number/</id>
     <published>2023-01-05T14:03:16.000Z</published>
-    <updated>2023-01-06T03:13:49.739Z</updated>
+    <updated>2023-12-16T20:50:35.915Z</updated>
     
     
       
