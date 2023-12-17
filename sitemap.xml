@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://grahamzen.github.io/2023/12/16/Introduction-number-systems-measuring-error/</loc>
+    
+    <lastmod>2023-12-17</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://grahamzen.github.io/2022/05/06/table-caption-continued/</loc>
     
     <lastmod>2023-12-17</lastmod>
@@ -66,15 +75,6 @@
   
   <url>
     <loc>https://grahamzen.github.io/2021/12/13/JOKR-report/</loc>
-    
-    <lastmod>2023-12-17</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://grahamzen.github.io/2023/12/16/Introduction-number-systems-measuring-error/</loc>
     
     <lastmod>2023-12-17</lastmod>
     

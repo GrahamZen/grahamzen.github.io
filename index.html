@@ -62,61 +62,8 @@
         1
     \end{bmatrix}
 \end{align}
-\]</span> Completely determined</p></div><hr style="height:1px;margin:1rem 0"><div class="level is-mobile is-flex"><div class="article-tags is-size-7 is-uppercase"><i class="fas fa-tags has-text-grey"></i> <a class="link-muted" rel="tag" href="/tags/%E6%95%B0%E5%AD%A6/">数学, </a><a class="link-muted" rel="tag" href="/tags/%E6%95%B0%E5%80%BC%E8%AE%A1%E7%AE%97/">数值计算 </a></div><a class="article-more button is-small is-size-7" href="/2023/12/16/Linear-Systems-and-LU/#more"><i class="fas fa-book-reader has-text-grey"></i>  阅读更多</a></div>                    </article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2023-12-16T07:47:52.000Z" title="2023/12/16 上午2:47:52">2023-12-16</time>发表</span><span class="level-item"><time dateTime="2023-12-17T22:53:20.807Z" title="2023/12/17 下午5:53:20">2023-12-18</time>更新</span><span class="level-item"><a class="link-muted" href="/categories/%E5%AD%A6%E4%B9%A0/">学习</a><span> / </span><a class="link-muted" href="/categories/%E5%AD%A6%E4%B9%A0/%E6%95%B0%E5%AD%A6/">数学</a><span> / </span><a class="link-muted" href="/categories/%E5%AD%A6%E4%B9%A0/%E6%95%B0%E5%AD%A6/Applied-Numerical-Algorithms/">Applied Numerical Algorithms</a></span><span class="level-item">2 分钟读完 (大约243个字)</span></div></div><h1 class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2023/12/16/Introduction-number-systems-measuring-error/">Introduction, number systems, measuring error</a></h1><div class="content"><p>Mathematically correct != numerically sound. Using Tolerance:
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">double</span> x = <span class="number">1.0</span>;</span><br><span class="line"><span class="type">double</span> y = x / <span class="number">3.0</span>;</span><br><span class="line"><span class="keyword">if</span>(<span class="built_in">fabs</span>(x-y*<span class="number">3.0</span>) &lt; numeric_limits&lt;<span class="type">double</span>&gt;::<span class="built_in">epsilon</span>())&#123;</span><br><span class="line">    cout &lt;&lt; <span class="string">&quot;They are equal&quot;</span> &lt;&lt; endl;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">else</span></span><br><span class="line">    cout &lt;&lt; <span class="string">&quot;They are not equal&quot;</span> &lt;&lt; endl;</span><br></pre></td></tr></table></figure></p>
-<h2 id="sources-of-error">Sources of Error</h2>
-<ul>
-<li>Rounding
-<ul>
-<li>example: Using IEEE 754</li>
-</ul></li>
-<li>Discretization</li>
-<li>Modeling
-<ul>
-<li>Example: Neglecting butterfly wing flapping in a weather model</li>
-</ul></li>
-<li>Input
-<ul>
-<li>Example: Measuring error for initial conditions in physical
-system</li>
-</ul></li>
-</ul>
-<h2 id="absolute-vs.-relative-error">Absolute vs. Relative Error</h2>
-<ul>
-<li>Absolute Error: The difference between the approximate value and the
-underlying true value</li>
-<li>Relative Error: Absolute error divided by the true value</li>
-</ul>
-<h3 id="relative-error-difficulty">Relative Error: Difficulty</h3>
-<p>Problem: Generally not computable Common fix: Be conservative</p>
-<h2 id="computable-measures-of-success">Computable Measures of
-Success</h2>
-<p>Root-finding problem: For <span class="math inline">\(f: \mathbb{R}
-\rightarrow \mathbb{R}\)</span>, find <span class="math inline">\(x^*\)</span> such that <span class="math inline">\(f(x^*) = 0\)</span>. Actual output: <span class="math inline">\(x_{est}\)</span> with <span class="math inline">\(|f(x_{est})| &lt;&lt;1\)</span>.</p>
-<h3 id="backward-error">Backward Error</h3>
-<p>The amount the problem statement would have to change to make the
-approximate solution exact.</p>
-<h3 id="conditioning">Conditioning</h3>
-<ul>
-<li>Well conditioned: Small backward error <span class="math inline">\(\xRightarrow{}\)</span> small relative error</li>
-<li>Poorly conditioned: Otherwise</li>
-<li>Condition number: Ratio of forward to backward error (we want it to
-be small)
-<ul>
-<li>Root-finding example: <span class="math inline">\(\frac{1}{|f&#39;(x^*)|}\)</span></li>
-</ul></li>
-</ul>
-<h3 id="example-x_2">Example: <span class="math inline">\(||x||_2\)</span></h3>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">double</span> normSquared = <span class="number">0</span>;</span><br><span class="line"><span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">0</span>; i &lt; n; i++)&#123;</span><br><span class="line">    normSquared += x[i]*x[i];</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">return</span> <span class="built_in">sqrt</span>(normSquared);</span><br></pre></td></tr></table></figure>
-<p>Overflow, underflow.</p>
-<h3 id="improved-x_2">Improved <span class="math inline">\(||x||_2\)</span></h3>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">double</span> maxElement = epsilon;</span><br><span class="line"><span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">0</span>; i &lt; n; i++)&#123;</span><br><span class="line">    maxElement = <span class="built_in">max</span>(maxElement, <span class="built_in">fabs</span>(x[i]));</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">0</span>; i &lt; n; i++)&#123;</span><br><span class="line">    <span class="type">double</span> scaled = x[i]/maxElement;</span><br><span class="line">    normSquared += scaled*scaled;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">return</span> <span class="built_in">sqrt</span>(normSquared)*maxElement;</span><br></pre></td></tr></table></figure>
-<h2 id="motivation-for-kahan-algorithm">Motivation for Kahan
-Algorithm</h2>
-<p><span class="math display">\[
-((a+b) - a) - b \xlongequal{?} 0
-\]</span> Store compensation value!</p>
-</div><hr style="height:1px;margin:1rem 0"><div class="level is-mobile is-flex"><div class="article-tags is-size-7 is-uppercase"><i class="fas fa-tags has-text-grey"></i> <a class="link-muted" rel="tag" href="/tags/%E6%95%B0%E5%AD%A6/">数学, </a><a class="link-muted" rel="tag" href="/tags/%E6%95%B0%E5%80%BC%E8%AE%A1%E7%AE%97/">数值计算 </a></div></div>                    </article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2023-11-20T04:26:12.000Z" title="2023/11/19 下午11:26:12">2023-11-20</time>发表</span><span class="level-item"><time dateTime="2023-11-20T17:42:30.246Z" title="2023/11/20 下午12:42:30">2023-11-21</time>更新</span><span class="level-item"><a class="link-muted" href="/categories/%E5%AD%A6%E4%B9%A0/">学习</a><span> / </span><a class="link-muted" href="/categories/%E5%AD%A6%E4%B9%A0/%E8%BD%AF%E4%BB%B6%E5%88%86%E6%9E%90/">软件分析</a></span><span class="level-item">2 分钟读完 (大约366个字)</span></div></div><h1 class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2023/11/19/llvm-vscode/">对LLVM的Pass进行调试的vscode配置</a></h1><div class="content"><h2 id="文件夹结构">文件夹结构</h2>
+\]</span> Completely determined</p></div><hr style="height:1px;margin:1rem 0"><div class="level is-mobile is-flex"><div class="article-tags is-size-7 is-uppercase"><i class="fas fa-tags has-text-grey"></i> <a class="link-muted" rel="tag" href="/tags/%E6%95%B0%E5%AD%A6/">数学, </a><a class="link-muted" rel="tag" href="/tags/%E6%95%B0%E5%80%BC%E8%AE%A1%E7%AE%97/">数值计算 </a></div><a class="article-more button is-small is-size-7" href="/2023/12/16/Linear-Systems-and-LU/#more"><i class="fas fa-book-reader has-text-grey"></i>  阅读更多</a></div>                    </article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2023-12-16T07:47:52.000Z" title="2023/12/16 上午2:47:52">2023-12-16</time>发表</span><span class="level-item"><time dateTime="2023-12-17T23:04:46.627Z" title="2023/12/17 下午6:04:46">2023-12-18</time>更新</span><span class="level-item"><a class="link-muted" href="/categories/%E5%AD%A6%E4%B9%A0/">学习</a><span> / </span><a class="link-muted" href="/categories/%E5%AD%A6%E4%B9%A0/%E6%95%B0%E5%AD%A6/">数学</a><span> / </span><a class="link-muted" href="/categories/%E5%AD%A6%E4%B9%A0/%E6%95%B0%E5%AD%A6/Applied-Numerical-Algorithms/">Applied Numerical Algorithms</a></span><span class="level-item">2 分钟读完 (大约244个字)</span></div></div><h1 class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2023/12/16/Introduction-number-systems-measuring-error/">Introduction, number systems, measuring error</a></h1><div class="content"><p>Mathematically correct != numerically sound. Using Tolerance:
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">double</span> x = <span class="number">1.0</span>;</span><br><span class="line"><span class="type">double</span> y = x / <span class="number">3.0</span>;</span><br><span class="line"><span class="keyword">if</span>(<span class="built_in">fabs</span>(x-y*<span class="number">3.0</span>) &lt; numeric_limits&lt;<span class="type">double</span>&gt;::<span class="built_in">epsilon</span>())&#123;</span><br><span class="line">    cout &lt;&lt; <span class="string">&quot;They are equal&quot;</span> &lt;&lt; endl;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">else</span></span><br><span class="line">    cout &lt;&lt; <span class="string">&quot;They are not equal&quot;</span> &lt;&lt; endl;</span><br></pre></td></tr></table></figure></p></div><hr style="height:1px;margin:1rem 0"><div class="level is-mobile is-flex"><div class="article-tags is-size-7 is-uppercase"><i class="fas fa-tags has-text-grey"></i> <a class="link-muted" rel="tag" href="/tags/%E6%95%B0%E5%AD%A6/">数学, </a><a class="link-muted" rel="tag" href="/tags/%E6%95%B0%E5%80%BC%E8%AE%A1%E7%AE%97/">数值计算 </a></div><a class="article-more button is-small is-size-7" href="/2023/12/16/Introduction-number-systems-measuring-error/#more"><i class="fas fa-book-reader has-text-grey"></i>  阅读更多</a></div>                    </article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2023-11-20T04:26:12.000Z" title="2023/11/19 下午11:26:12">2023-11-20</time>发表</span><span class="level-item"><time dateTime="2023-11-20T17:42:30.246Z" title="2023/11/20 下午12:42:30">2023-11-21</time>更新</span><span class="level-item"><a class="link-muted" href="/categories/%E5%AD%A6%E4%B9%A0/">学习</a><span> / </span><a class="link-muted" href="/categories/%E5%AD%A6%E4%B9%A0/%E8%BD%AF%E4%BB%B6%E5%88%86%E6%9E%90/">软件分析</a></span><span class="level-item">2 分钟读完 (大约366个字)</span></div></div><h1 class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2023/11/19/llvm-vscode/">对LLVM的Pass进行调试的vscode配置</a></h1><div class="content"><h2 id="文件夹结构">文件夹结构</h2>
 <p>安装LLVM的过程省去，假设当前目录下有:</p>
 <ul>
 <li>CMakeLists.txt文件；编译pass</li>

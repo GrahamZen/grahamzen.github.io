@@ -74,16 +74,11 @@
     <link href="https://grahamzen.github.io/2023/12/16/Introduction-number-systems-measuring-error/"/>
     <id>https://grahamzen.github.io/2023/12/16/Introduction-number-systems-measuring-error/</id>
     <published>2023-12-16T07:47:52.000Z</published>
-    <updated>2023-12-17T22:53:20.807Z</updated>
+    <updated>2023-12-17T23:04:46.627Z</updated>
     
     
-      
-      
-        
-        
-    <summary type="html"></summary>
-        
-      
+    <summary type="html">&lt;p&gt;Mathematically correct != numerically sound. Using Tolerance:
+&lt;figure class=&quot;highlight c++&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;type&quot;&gt;double&lt;/span&gt; x = &lt;span class=&quot;number&quot;&gt;1.0&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;type&quot;&gt;double&lt;/span&gt; y = x / &lt;span class=&quot;number&quot;&gt;3.0&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;if&lt;/span&gt;(&lt;span class=&quot;built_in&quot;&gt;fabs&lt;/span&gt;(x-y*&lt;span class=&quot;number&quot;&gt;3.0&lt;/span&gt;) &amp;lt; numeric_limits&amp;lt;&lt;span class=&quot;type&quot;&gt;double&lt;/span&gt;&amp;gt;::&lt;span class=&quot;built_in&quot;&gt;epsilon&lt;/span&gt;())&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    cout &amp;lt;&amp;lt; &lt;span class=&quot;string&quot;&gt;&amp;quot;They are equal&amp;quot;&lt;/span&gt; &amp;lt;&amp;lt; endl;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;else&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    cout &amp;lt;&amp;lt; &lt;span class=&quot;string&quot;&gt;&amp;quot;They are not equal&amp;quot;&lt;/span&gt; &amp;lt;&amp;lt; endl;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;</summary>
     
     
     
