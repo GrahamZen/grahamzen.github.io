@@ -2,7 +2,34 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://grahamzen.github.io/2023/03/04/cmake-related/</loc>
+    <loc>https://grahamzen.github.io/2022/05/06/table-caption-continued/</loc>
+    
+    <lastmod>2023-12-17</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://grahamzen.github.io/2023/03/04/BSpline/</loc>
+    
+    <lastmod>2023-12-17</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://grahamzen.github.io/2023/04/09/GAMES103/</loc>
+    
+    <lastmod>2023-12-17</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://grahamzen.github.io/2022/03/16/plotneuralnet-in-a-project/</loc>
     
     <lastmod>2023-12-17</lastmod>
     
@@ -12,6 +39,33 @@
   
   <url>
     <loc>https://grahamzen.github.io/2023/12/16/Linear-Systems-and-LU/</loc>
+    
+    <lastmod>2023-12-17</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://grahamzen.github.io/2023/03/04/cmake-related/</loc>
+    
+    <lastmod>2023-12-17</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://grahamzen.github.io/2021/12/13/FOMM-AA-SDEMT/</loc>
+    
+    <lastmod>2023-12-17</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://grahamzen.github.io/2021/12/13/JOKR-report/</loc>
     
     <lastmod>2023-12-17</lastmod>
     
@@ -47,15 +101,6 @@
   </url>
   
   <url>
-    <loc>https://grahamzen.github.io/2023/03/04/BSpline/</loc>
-    
-    <lastmod>2023-12-16</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://grahamzen.github.io/2023/11/19/tensor/</loc>
     
     <lastmod>2023-12-16</lastmod>
@@ -74,25 +119,7 @@
   </url>
   
   <url>
-    <loc>https://grahamzen.github.io/2023/04/09/GAMES103/</loc>
-    
-    <lastmod>2023-11-20</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://grahamzen.github.io/2023/11/19/llvm-vscode/</loc>
-    
-    <lastmod>2023-11-20</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://grahamzen.github.io/2022/05/06/table-caption-continued/</loc>
     
     <lastmod>2023-11-20</lastmod>
     
@@ -155,25 +182,7 @@
   </url>
   
   <url>
-    <loc>https://grahamzen.github.io/2021/12/13/JOKR-report/</loc>
-    
-    <lastmod>2023-01-04</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://grahamzen.github.io/2021/12/12/hello-world/</loc>
-    
-    <lastmod>2023-01-04</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://grahamzen.github.io/2022/03/16/plotneuralnet-in-a-project/</loc>
     
     <lastmod>2023-01-04</lastmod>
     
@@ -192,15 +201,6 @@
   
   <url>
     <loc>https://grahamzen.github.io/tags/index.html</loc>
-    
-    <lastmod>2023-01-04</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://grahamzen.github.io/2021/12/13/FOMM-AA-SDEMT/</loc>
     
     <lastmod>2023-01-04</lastmod>
     
@@ -385,24 +385,38 @@
     <priority>0.2</priority>
   </url>
   
+  <url>
+    <loc>https://grahamzen.github.io/tags/CIS-5620/</loc>
+    <lastmod>2023-12-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://grahamzen.github.io/tags/%E6%A8%A1%E6%8B%9F/</loc>
+    <lastmod>2023-12-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://grahamzen.github.io/tags/plotneuralnet/</loc>
+    <lastmod>2023-12-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://grahamzen.github.io/tags/%E6%96%87%E7%AB%A0%E6%8E%92%E7%89%88/</loc>
+    <lastmod>2023-12-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
 
   
   <url>
     <loc>https://grahamzen.github.io/categories/%E5%AD%A6%E4%B9%A0/</loc>
-    <lastmod>2023-12-17</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://grahamzen.github.io/categories/%E5%AD%A6%E4%B9%A0/%E8%AE%BA%E6%96%87%E7%AC%94%E8%AE%B0/</loc>
-    <lastmod>2023-12-17</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://grahamzen.github.io/categories/%E5%AD%A6%E4%B9%A0/%E5%BB%BA%E6%A8%A1/</loc>
     <lastmod>2023-12-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -444,35 +458,7 @@
   </url>
   
   <url>
-    <loc>https://grahamzen.github.io/categories/%E5%AD%A6%E4%B9%A0/%E5%B7%A5%E5%85%B7%E4%BD%BF%E7%94%A8/</loc>
-    <lastmod>2023-12-17</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://grahamzen.github.io/categories/%E5%AD%A6%E4%B9%A0/%E8%AE%BA%E6%96%87%E7%AC%94%E8%AE%B0/%E5%9B%BE%E5%83%8F%E5%8A%A8%E7%94%BB/</loc>
-    <lastmod>2023-12-17</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://grahamzen.github.io/categories/%E5%AD%A6%E4%B9%A0/%E5%BB%BA%E6%A8%A1/CIS-5620/</loc>
-    <lastmod>2023-12-17</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://grahamzen.github.io/categories/%E5%AD%A6%E4%B9%A0/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9B%BE%E5%BD%A2%E5%AD%A6/%E5%9B%BE%E5%BD%A2API/</loc>
-    <lastmod>2023-12-17</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://grahamzen.github.io/categories/%E5%AD%A6%E4%B9%A0/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9B%BE%E5%BD%A2%E5%AD%A6/%E6%A8%A1%E6%8B%9F/</loc>
     <lastmod>2023-12-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -486,13 +472,6 @@
   </url>
   
   <url>
-    <loc>https://grahamzen.github.io/categories/%E5%AD%A6%E4%B9%A0/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9B%BE%E5%BD%A2%E5%AD%A6/%E6%A8%A1%E6%8B%9F/%E5%88%9A%E4%BD%93/</loc>
-    <lastmod>2023-12-17</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://grahamzen.github.io/categories/%E5%AD%A6%E4%B9%A0/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9B%BE%E5%BD%A2%E5%AD%A6/CIS-5610/</loc>
     <lastmod>2023-12-17</lastmod>
     <changefreq>weekly</changefreq>
@@ -500,28 +479,91 @@
   </url>
   
   <url>
-    <loc>https://grahamzen.github.io/categories/%E5%AD%A6%E4%B9%A0/%E6%96%87%E7%AB%A0%E6%8E%92%E7%89%88/</loc>
-    <lastmod>2023-12-17</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://grahamzen.github.io/categories/%E5%AD%A6%E4%B9%A0/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86/</loc>
-    <lastmod>2023-12-17</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://grahamzen.github.io/categories/%E5%AD%A6%E4%B9%A0/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86/cmake/</loc>
-    <lastmod>2023-12-17</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://grahamzen.github.io/categories/%E5%AD%A6%E4%B9%A0/%E6%95%B0%E5%AD%A6/Applied-Numerical-Algorithms/</loc>
+    <lastmod>2023-12-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://grahamzen.github.io/categories/%E5%AD%A6%E4%B9%A0/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9B%BE%E5%BD%A2%E5%AD%A6/CIS-5620/</loc>
+    <lastmod>2023-12-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://grahamzen.github.io/categories/%E5%AD%A6%E4%B9%A0/%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89/</loc>
+    <lastmod>2023-12-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://grahamzen.github.io/categories/%E5%AD%A6%E4%B9%A0/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9B%BE%E5%BD%A2%E5%AD%A6/GAMES103/</loc>
+    <lastmod>2023-12-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://grahamzen.github.io/categories/%E5%AD%A6%E4%B9%A0/%E6%95%B0%E5%AD%A6/%E8%AF%BE%E7%A8%8B/</loc>
+    <lastmod>2023-12-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://grahamzen.github.io/categories/%E5%AD%A6%E4%B9%A0/%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89/%E5%9B%BE%E5%83%8F%E5%8A%A8%E7%94%BB/</loc>
+    <lastmod>2023-12-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://grahamzen.github.io/categories/%E5%AD%A6%E4%B9%A0/%E6%95%B0%E5%AD%A6/%E8%AF%BE%E7%A8%8B/Applied-Numerical-Algorithms/</loc>
+    <lastmod>2023-12-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://grahamzen.github.io/categories/%E5%AD%A6%E4%B9%A0/MISC/</loc>
+    <lastmod>2023-12-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://grahamzen.github.io/categories/%E5%AD%A6%E4%B9%A0/MISC/%E6%96%87%E7%AB%A0%E6%8E%92%E7%89%88/</loc>
+    <lastmod>2023-12-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://grahamzen.github.io/categories/%E5%AD%A6%E4%B9%A0/MISC/%E6%96%87%E7%AB%A0%E6%8E%92%E7%89%88/plotneuralnet/</loc>
+    <lastmod>2023-12-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://grahamzen.github.io/categories/%E5%AD%A6%E4%B9%A0/MISC/%E6%96%87%E7%AB%A0%E6%8E%92%E7%89%88/latex/</loc>
+    <lastmod>2023-12-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://grahamzen.github.io/categories/%E5%AD%A6%E4%B9%A0/MISC/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86/</loc>
+    <lastmod>2023-12-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://grahamzen.github.io/categories/%E5%AD%A6%E4%B9%A0/MISC/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86/cmake/</loc>
     <lastmod>2023-12-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>

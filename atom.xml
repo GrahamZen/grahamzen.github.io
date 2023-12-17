@@ -6,7 +6,7 @@
   <link href="https://grahamzen.github.io/atom.xml" rel="self"/>
   
   <link href="https://grahamzen.github.io/"/>
-  <updated>2023-12-17T22:53:49.687Z</updated>
+  <updated>2023-12-17T23:02:18.074Z</updated>
   <id>https://grahamzen.github.io/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://grahamzen.github.io/2023/12/16/Linear-Systems-and-LU/"/>
     <id>https://grahamzen.github.io/2023/12/16/Linear-Systems-and-LU/</id>
     <published>2023-12-17T04:50:28.000Z</published>
-    <updated>2023-12-17T22:53:49.687Z</updated>
+    <updated>2023-12-17T23:02:18.074Z</updated>
     
     
     <summary type="html">&lt;h2 id=&quot;linear-systems&quot;&gt;Linear Systems&lt;/h2&gt;
@@ -58,7 +58,9 @@
     
     <category term="数学" scheme="https://grahamzen.github.io/categories/%E5%AD%A6%E4%B9%A0/%E6%95%B0%E5%AD%A6/"/>
     
-    <category term="Applied Numerical Algorithms" scheme="https://grahamzen.github.io/categories/%E5%AD%A6%E4%B9%A0/%E6%95%B0%E5%AD%A6/Applied-Numerical-Algorithms/"/>
+    <category term="课程" scheme="https://grahamzen.github.io/categories/%E5%AD%A6%E4%B9%A0/%E6%95%B0%E5%AD%A6/%E8%AF%BE%E7%A8%8B/"/>
+    
+    <category term="Applied Numerical Algorithms" scheme="https://grahamzen.github.io/categories/%E5%AD%A6%E4%B9%A0/%E6%95%B0%E5%AD%A6/%E8%AF%BE%E7%A8%8B/Applied-Numerical-Algorithms/"/>
     
     
     <category term="数学" scheme="https://grahamzen.github.io/tags/%E6%95%B0%E5%AD%A6/"/>
@@ -164,7 +166,7 @@
     <link href="https://grahamzen.github.io/2023/04/09/GAMES103/"/>
     <id>https://grahamzen.github.io/2023/04/09/GAMES103/</id>
     <published>2023-04-09T09:50:21.000Z</published>
-    <updated>2023-11-20T18:07:39.929Z</updated>
+    <updated>2023-12-17T23:03:03.259Z</updated>
     
     
     <summary type="html">&lt;h1 id=&quot;math&quot;&gt;2 Math&lt;/h1&gt;
@@ -184,9 +186,7 @@
     
     <category term="计算机图形学" scheme="https://grahamzen.github.io/categories/%E5%AD%A6%E4%B9%A0/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9B%BE%E5%BD%A2%E5%AD%A6/"/>
     
-    <category term="模拟" scheme="https://grahamzen.github.io/categories/%E5%AD%A6%E4%B9%A0/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9B%BE%E5%BD%A2%E5%AD%A6/%E6%A8%A1%E6%8B%9F/"/>
-    
-    <category term="刚体" scheme="https://grahamzen.github.io/categories/%E5%AD%A6%E4%B9%A0/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9B%BE%E5%BD%A2%E5%AD%A6/%E6%A8%A1%E6%8B%9F/%E5%88%9A%E4%BD%93/"/>
+    <category term="GAMES103" scheme="https://grahamzen.github.io/categories/%E5%AD%A6%E4%B9%A0/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9B%BE%E5%BD%A2%E5%AD%A6/GAMES103/"/>
     
     
     <category term="计算机图形学" scheme="https://grahamzen.github.io/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9B%BE%E5%BD%A2%E5%AD%A6/"/>
@@ -196,6 +196,8 @@
     <category term="数学" scheme="https://grahamzen.github.io/tags/%E6%95%B0%E5%AD%A6/"/>
     
     <category term="刚体" scheme="https://grahamzen.github.io/tags/%E5%88%9A%E4%BD%93/"/>
+    
+    <category term="模拟" scheme="https://grahamzen.github.io/tags/%E6%A8%A1%E6%8B%9F/"/>
     
   </entry>
   
@@ -242,7 +244,7 @@ Interval)&lt;/h3&gt;
     <link href="https://grahamzen.github.io/2023/03/04/BSpline/"/>
     <id>https://grahamzen.github.io/2023/03/04/BSpline/</id>
     <published>2023-03-04T14:13:56.000Z</published>
-    <updated>2023-12-16T20:50:13.635Z</updated>
+    <updated>2023-12-17T23:03:12.841Z</updated>
     
     
     <summary type="html">&lt;h2 id=&quot;bspline上任意点的计算公式&quot;&gt;Bspline上任意点的计算公式&lt;/h2&gt;
@@ -258,16 +260,20 @@ f(t)&amp;amp;=\sum_{i=0}^{n}N_{i}^{k}(t)p_i\\
     
     <category term="学习" scheme="https://grahamzen.github.io/categories/%E5%AD%A6%E4%B9%A0/"/>
     
-    <category term="建模" scheme="https://grahamzen.github.io/categories/%E5%AD%A6%E4%B9%A0/%E5%BB%BA%E6%A8%A1/"/>
+    <category term="计算机图形学" scheme="https://grahamzen.github.io/categories/%E5%AD%A6%E4%B9%A0/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9B%BE%E5%BD%A2%E5%AD%A6/"/>
     
-    <category term="CIS-5620" scheme="https://grahamzen.github.io/categories/%E5%AD%A6%E4%B9%A0/%E5%BB%BA%E6%A8%A1/CIS-5620/"/>
+    <category term="CIS-5620" scheme="https://grahamzen.github.io/categories/%E5%AD%A6%E4%B9%A0/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9B%BE%E5%BD%A2%E5%AD%A6/CIS-5620/"/>
     
     
     <category term="Bspline" scheme="https://grahamzen.github.io/tags/Bspline/"/>
     
+    <category term="计算机图形学" scheme="https://grahamzen.github.io/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9B%BE%E5%BD%A2%E5%AD%A6/"/>
+    
     <category term="数学" scheme="https://grahamzen.github.io/tags/%E6%95%B0%E5%AD%A6/"/>
     
     <category term="几何处理" scheme="https://grahamzen.github.io/tags/%E5%87%A0%E4%BD%95%E5%A4%84%E7%90%86/"/>
+    
+    <category term="CIS-5620" scheme="https://grahamzen.github.io/tags/CIS-5620/"/>
     
   </entry>
   
@@ -276,7 +282,7 @@ f(t)&amp;amp;=\sum_{i=0}^{n}N_{i}^{k}(t)p_i\\
     <link href="https://grahamzen.github.io/2023/03/04/cmake-related/"/>
     <id>https://grahamzen.github.io/2023/03/04/cmake-related/</id>
     <published>2023-03-04T10:53:03.000Z</published>
-    <updated>2023-12-17T22:55:36.773Z</updated>
+    <updated>2023-12-17T23:01:23.868Z</updated>
     
     
     <summary type="html">&lt;p&gt;记录一个&lt;code&gt;CMake&lt;/code&gt;速查表。&lt;/p&gt;
@@ -288,9 +294,11 @@ f(t)&amp;amp;=\sum_{i=0}^{n}N_{i}^{k}(t)p_i\\
     
     <category term="学习" scheme="https://grahamzen.github.io/categories/%E5%AD%A6%E4%B9%A0/"/>
     
-    <category term="项目管理" scheme="https://grahamzen.github.io/categories/%E5%AD%A6%E4%B9%A0/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86/"/>
+    <category term="MISC" scheme="https://grahamzen.github.io/categories/%E5%AD%A6%E4%B9%A0/MISC/"/>
     
-    <category term="cmake" scheme="https://grahamzen.github.io/categories/%E5%AD%A6%E4%B9%A0/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86/cmake/"/>
+    <category term="项目管理" scheme="https://grahamzen.github.io/categories/%E5%AD%A6%E4%B9%A0/MISC/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86/"/>
+    
+    <category term="cmake" scheme="https://grahamzen.github.io/categories/%E5%AD%A6%E4%B9%A0/MISC/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86/cmake/"/>
     
     
     <category term="cmake" scheme="https://grahamzen.github.io/tags/cmake/"/>
@@ -466,7 +474,7 @@ P=[p.x,p.y,p.z,p.w]/p.w.
     <link href="https://grahamzen.github.io/2022/05/06/table-caption-continued/"/>
     <id>https://grahamzen.github.io/2022/05/06/table-caption-continued/</id>
     <published>2022-05-06T05:28:06.000Z</published>
-    <updated>2023-11-20T17:39:47.601Z</updated>
+    <updated>2023-12-17T23:03:43.506Z</updated>
     
     
     <summary type="html">&lt;p&gt;使用latex写文章，尤其是和图像相关的文章时，常常会遇到需要用图片表格的情况。为了能够跨页，我们可以使用&lt;code&gt;longtable&lt;/code&gt;。因为图片较大，如果没有刻意缩小，那么表格就会跨页。有的文章接收方会要求跨页表格在第二页顶部增加额外的题注来接上上一页的表格，以及第一个题注在表格顶部。&lt;/p&gt;
@@ -478,7 +486,11 @@ P=[p.x,p.y,p.z,p.w]/p.w.
     
     <category term="学习" scheme="https://grahamzen.github.io/categories/%E5%AD%A6%E4%B9%A0/"/>
     
-    <category term="文章排版" scheme="https://grahamzen.github.io/categories/%E5%AD%A6%E4%B9%A0/%E6%96%87%E7%AB%A0%E6%8E%92%E7%89%88/"/>
+    <category term="MISC" scheme="https://grahamzen.github.io/categories/%E5%AD%A6%E4%B9%A0/MISC/"/>
+    
+    <category term="文章排版" scheme="https://grahamzen.github.io/categories/%E5%AD%A6%E4%B9%A0/MISC/%E6%96%87%E7%AB%A0%E6%8E%92%E7%89%88/"/>
+    
+    <category term="latex" scheme="https://grahamzen.github.io/categories/%E5%AD%A6%E4%B9%A0/MISC/%E6%96%87%E7%AB%A0%E6%8E%92%E7%89%88/latex/"/>
     
     
     <category term="latex" scheme="https://grahamzen.github.io/tags/latex/"/>
@@ -490,7 +502,7 @@ P=[p.x,p.y,p.z,p.w]/p.w.
     <link href="https://grahamzen.github.io/2022/03/16/plotneuralnet-in-a-project/"/>
     <id>https://grahamzen.github.io/2022/03/16/plotneuralnet-in-a-project/</id>
     <published>2022-03-17T03:48:26.000Z</published>
-    <updated>2023-01-04T08:51:24.000Z</updated>
+    <updated>2023-12-17T23:02:40.555Z</updated>
     
     
     <summary type="html">&lt;p&gt;plotneuralnet是一个绘制神经网络的工具，使用该工具可以将python脚本转换为latex脚本，编译得到pdf。需要以下几个步骤：&lt;/p&gt;
@@ -505,12 +517,20 @@ P=[p.x,p.y,p.z,p.w]/p.w.
     
     <category term="学习" scheme="https://grahamzen.github.io/categories/%E5%AD%A6%E4%B9%A0/"/>
     
-    <category term="工具使用" scheme="https://grahamzen.github.io/categories/%E5%AD%A6%E4%B9%A0/%E5%B7%A5%E5%85%B7%E4%BD%BF%E7%94%A8/"/>
+    <category term="MISC" scheme="https://grahamzen.github.io/categories/%E5%AD%A6%E4%B9%A0/MISC/"/>
+    
+    <category term="文章排版" scheme="https://grahamzen.github.io/categories/%E5%AD%A6%E4%B9%A0/MISC/%E6%96%87%E7%AB%A0%E6%8E%92%E7%89%88/"/>
+    
+    <category term="plotneuralnet" scheme="https://grahamzen.github.io/categories/%E5%AD%A6%E4%B9%A0/MISC/%E6%96%87%E7%AB%A0%E6%8E%92%E7%89%88/plotneuralnet/"/>
     
     
     <category term="latex" scheme="https://grahamzen.github.io/tags/latex/"/>
     
     <category term="神经网络可视化" scheme="https://grahamzen.github.io/tags/%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C%E5%8F%AF%E8%A7%86%E5%8C%96/"/>
+    
+    <category term="plotneuralnet" scheme="https://grahamzen.github.io/tags/plotneuralnet/"/>
+    
+    <category term="文章排版" scheme="https://grahamzen.github.io/tags/%E6%96%87%E7%AB%A0%E6%8E%92%E7%89%88/"/>
     
   </entry>
   
@@ -519,7 +539,7 @@ P=[p.x,p.y,p.z,p.w]/p.w.
     <link href="https://grahamzen.github.io/2021/12/13/JOKR-report/"/>
     <id>https://grahamzen.github.io/2021/12/13/JOKR-report/</id>
     <published>2021-12-14T03:15:01.000Z</published>
-    <updated>2023-01-04T08:51:24.000Z</updated>
+    <updated>2023-12-17T22:58:41.298Z</updated>
     
     
     <summary type="html">&lt;h2 id=&quot;jokr-joint-keypoint-representation-for-unsupervised-cross-domain-motion-retargeting&quot;&gt;&lt;a href=&quot;https://arxiv.org/abs/2106.09679&quot;&gt;JOKR: Joint Keypoint
@@ -533,9 +553,9 @@ confusion项有利于对于两个domain的动作的一致的部分的解耦，�
     
     <category term="学习" scheme="https://grahamzen.github.io/categories/%E5%AD%A6%E4%B9%A0/"/>
     
-    <category term="论文笔记" scheme="https://grahamzen.github.io/categories/%E5%AD%A6%E4%B9%A0/%E8%AE%BA%E6%96%87%E7%AC%94%E8%AE%B0/"/>
+    <category term="计算机视觉" scheme="https://grahamzen.github.io/categories/%E5%AD%A6%E4%B9%A0/%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89/"/>
     
-    <category term="图像动画" scheme="https://grahamzen.github.io/categories/%E5%AD%A6%E4%B9%A0/%E8%AE%BA%E6%96%87%E7%AC%94%E8%AE%B0/%E5%9B%BE%E5%83%8F%E5%8A%A8%E7%94%BB/"/>
+    <category term="图像动画" scheme="https://grahamzen.github.io/categories/%E5%AD%A6%E4%B9%A0/%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89/%E5%9B%BE%E5%83%8F%E5%8A%A8%E7%94%BB/"/>
     
     
     <category term="图像动画" scheme="https://grahamzen.github.io/tags/%E5%9B%BE%E5%83%8F%E5%8A%A8%E7%94%BB/"/>
@@ -549,7 +569,7 @@ confusion项有利于对于两个domain的动作的一致的部分的解耦，�
     <link href="https://grahamzen.github.io/2021/12/13/FOMM-AA-SDEMT/"/>
     <id>https://grahamzen.github.io/2021/12/13/FOMM-AA-SDEMT/</id>
     <published>2021-12-14T02:45:19.000Z</published>
-    <updated>2023-01-04T05:52:53.631Z</updated>
+    <updated>2023-12-17T22:59:48.829Z</updated>
     
     
     <summary type="html">&lt;p&gt;FOMM和AA是很经典的论文，都来自作者Aliaksandr
@@ -564,9 +584,9 @@ Differential Evolution for Motion Transfer&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;</summ
     
     <category term="学习" scheme="https://grahamzen.github.io/categories/%E5%AD%A6%E4%B9%A0/"/>
     
-    <category term="论文笔记" scheme="https://grahamzen.github.io/categories/%E5%AD%A6%E4%B9%A0/%E8%AE%BA%E6%96%87%E7%AC%94%E8%AE%B0/"/>
+    <category term="计算机视觉" scheme="https://grahamzen.github.io/categories/%E5%AD%A6%E4%B9%A0/%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89/"/>
     
-    <category term="图像动画" scheme="https://grahamzen.github.io/categories/%E5%AD%A6%E4%B9%A0/%E8%AE%BA%E6%96%87%E7%AC%94%E8%AE%B0/%E5%9B%BE%E5%83%8F%E5%8A%A8%E7%94%BB/"/>
+    <category term="图像动画" scheme="https://grahamzen.github.io/categories/%E5%AD%A6%E4%B9%A0/%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89/%E5%9B%BE%E5%83%8F%E5%8A%A8%E7%94%BB/"/>
     
     
     <category term="图像动画" scheme="https://grahamzen.github.io/tags/%E5%9B%BE%E5%83%8F%E5%8A%A8%E7%94%BB/"/>
