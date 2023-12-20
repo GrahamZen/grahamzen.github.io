@@ -11,6 +11,15 @@
   </url>
   
   <url>
+    <loc>https://grahamzen.github.io/2023/12/17/Applied%20Numerical%20Algorithms/Cholesky-factorization-sparse-matrices/</loc>
+    
+    <lastmod>2023-12-20</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://grahamzen.github.io/2023/12/16/Applied%20Numerical%20Algorithms/Linear-Systems-and-LU/</loc>
     
     <lastmod>2023-12-20</lastmod>
@@ -21,15 +30,6 @@
   
   <url>
     <loc>https://grahamzen.github.io/2023/12/16/Applied%20Numerical%20Algorithms/Introduction-number-systems-measuring-error/</loc>
-    
-    <lastmod>2023-12-20</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://grahamzen.github.io/2023/12/17/Applied%20Numerical%20Algorithms/Cholesky-factorization-sparse-matrices/</loc>
     
     <lastmod>2023-12-20</lastmod>
     
