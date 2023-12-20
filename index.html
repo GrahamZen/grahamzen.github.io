@@ -36,7 +36,7 @@
       window.addEventListener('hashchange', switchTab, false);
   })();
   </script><!-- hexo injector head_end end --><meta name="generator" content="Hexo 6.3.0"><link rel="alternate" href="/atom.xml" title="Gehan Zheng's blog" type="application/atom+xml">
-</head><body class="is-3-column"><nav class="navbar navbar-main"><div class="container navbar-container"><div class="navbar-brand justify-content-center"><a class="navbar-item navbar-logo" href="/"><img src="/img/logo.svg" alt="Gehan Zheng&#039;s blog" height="28"></a></div><div class="navbar-menu"><div class="navbar-start"><a class="navbar-item is-active" href="/">Home</a><a class="navbar-item" href="/archives">Archives</a><a class="navbar-item" href="/categories">Categories</a><a class="navbar-item" href="/tags">Tags</a><a class="navbar-item" href="/about">About</a></div><div class="navbar-end"><a class="navbar-item" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/ppoffice/hexo-theme-icarus"><i class="fab fa-github"></i></a><a class="navbar-item search" title="搜索" href="javascript:;"><i class="fas fa-search"></i></a></div></div></div></nav><section class="section"><div class="container"><div class="columns"><div class="column order-2 column-main is-8-tablet is-8-desktop is-6-widescreen"><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2023-12-17T10:23:19.000Z" title="2023/12/17 上午5:23:19">2023-12-17</time>发表</span><span class="level-item"><time dateTime="2023-12-20T05:28:41.199Z" title="2023/12/20 上午12:28:41">2023-12-20</time>更新</span><span class="level-item"><a class="link-muted" href="/categories/%E5%AD%A6%E4%B9%A0/">学习</a><span> / </span><a class="link-muted" href="/categories/%E5%AD%A6%E4%B9%A0/%E6%95%B0%E5%AD%A6/">数学</a><span> / </span><a class="link-muted" href="/categories/%E5%AD%A6%E4%B9%A0/%E6%95%B0%E5%AD%A6/Applied-Numerical-Algorithms/">Applied Numerical Algorithms</a></span><span class="level-item">8 分钟读完 (大约1185个字)</span></div></div><h1 class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2023/12/17/Applied%20Numerical%20Algorithms/Cholesky-factorization-sparse-matrices/">Cholesky factorization, sparse matrices</a></h1><div class="content"><h2 id="structured-linear-systems">Structured Linear Systems</h2>
+</head><body class="is-3-column"><nav class="navbar navbar-main"><div class="container navbar-container"><div class="navbar-brand justify-content-center"><a class="navbar-item navbar-logo" href="/"><img src="/img/logo.svg" alt="Gehan Zheng&#039;s blog" height="28"></a></div><div class="navbar-menu"><div class="navbar-start"><a class="navbar-item is-active" href="/">Home</a><a class="navbar-item" href="/archives">Archives</a><a class="navbar-item" href="/categories">Categories</a><a class="navbar-item" href="/tags">Tags</a><a class="navbar-item" href="/about">About</a></div><div class="navbar-end"><a class="navbar-item" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/ppoffice/hexo-theme-icarus"><i class="fab fa-github"></i></a><a class="navbar-item search" title="搜索" href="javascript:;"><i class="fas fa-search"></i></a></div></div></div></nav><section class="section"><div class="container"><div class="columns"><div class="column order-2 column-main is-8-tablet is-8-desktop is-6-widescreen"><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2023-12-17T10:23:19.000Z" title="2023/12/17 上午5:23:19">2023-12-17</time>发表</span><span class="level-item"><time dateTime="2023-12-20T05:34:01.897Z" title="2023/12/20 上午12:34:01">2023-12-20</time>更新</span><span class="level-item"><a class="link-muted" href="/categories/%E5%AD%A6%E4%B9%A0/">学习</a><span> / </span><a class="link-muted" href="/categories/%E5%AD%A6%E4%B9%A0/%E6%95%B0%E5%AD%A6/">数学</a><span> / </span><a class="link-muted" href="/categories/%E5%AD%A6%E4%B9%A0/%E6%95%B0%E5%AD%A6/Applied-Numerical-Algorithms/">Applied Numerical Algorithms</a></span><span class="level-item">8 分钟读完 (大约1189个字)</span></div></div><h1 class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2023/12/17/Applied%20Numerical%20Algorithms/Cholesky-factorization-sparse-matrices/">Cholesky factorization, sparse matrices</a></h1><div class="content"><h2 id="structured-linear-systems">Structured Linear Systems</h2>
 <p>Gaussian elimination and/or LU can solve all the example problems
 above. But these systems can have special properties that make them
 easier or stabler to solve.</p>
@@ -150,8 +150,10 @@ L_{11} &amp; \vec{0} &amp; 0 \\
 L_{31} &amp; \vec{l_{k}&#39;} &amp; L_{33}
 \end{bmatrix}
 \]</span></p>
-$$ LL^T =
-<span class="math display">\[\begin{bmatrix}
+<p><span class="math display">\[
+\begin{aligned}
+    LL^T &amp;=
+\begin{bmatrix}
 L_{11} &amp; \vec{0} &amp; 0 \\
 \vec{l_k^T} &amp; l_{kk} &amp; \vec{0} \\
 L_{31} &amp; \vec{l_{k}&#39;} &amp; L_{33}
@@ -160,22 +162,27 @@ L_{31} &amp; \vec{l_{k}&#39;} &amp; L_{33}
 L_{11}^T &amp; \vec{l_k} &amp; L_{31}^T \\
 \vec{0} &amp; l_{kk} &amp; \vec{l_k&#39;}^T \\
 0 &amp; \vec{0} &amp; L_{33}^T
-\end{bmatrix}\]</span>
-=
-<span class="math display">\[\begin{bmatrix}
+\end{bmatrix}\\
+&amp;=
+\begin{bmatrix}
 .. &amp; .. &amp; .. \\
 \vec{l_k}^T L_{11}^T &amp; ||\vec{l_k}||^2 + l_{kk}^2 &amp; ..\\
 .. &amp; .. &amp; ..
-\end{bmatrix}\]</span>
-<h1 id="section">\</h1>
-<span class="math display">\[\begin{bmatrix}
+\end{bmatrix}\\
+&amp;=
+\begin{bmatrix}
 c_{11} &amp; .. &amp; .. \\
 c_{k}^T &amp; c_{kk} &amp; ..\\
 c_{31} &amp; c_{k}&#39; &amp; ..
-\end{bmatrix}\]</span>
-<p>\</p>
-<p>L_{11}l_k = c_k, O((k-1)^2)\ c_{kk} = ||||^2 + l_{kk}^2 \ l_{kk}^2 =
-c_{kk} - ||||^2 \ l_{kk} = \ $$ <span class="math inline">\(l_{kk}\)</span>取正负都可以，但是为了方便一般取正的。
+\end{bmatrix}\\
+\end{aligned}
+\]</span></p>
+<p><span class="math display">\[
+L_{11}l_k = c_k\text{:LT Solve}, O((k-1)^2)\\
+c_{kk} = ||\vec{l_k}||^2 + l_{kk}^2 \\ \Rightarrow l_{kk}^2 = c_{kk} -
+||\vec{l_k}||^2 \\ \Rightarrow l_{kk} = \sqrt{c_{kk} -
+||\vec{l_k}||^2}\\
+\]</span> <span class="math inline">\(l_{kk}\)</span>取正负都可以，但是为了方便一般取正的。
 算法是逐行进行的。首先<span class="math inline">\(L_{11}\)</span>可以直接求出，然后从第二行开始，根据公式依次：
 1. 求解下三角线性方程组，<span class="math inline">\(L_{11}l_k = c_k,
 O((k-1)^2)\)</span>得到<span class="math inline">\(l_k\)</span>。 2.
