@@ -6,7 +6,7 @@
   <link href="https://grahamzen.github.io/atom.xml" rel="self"/>
   
   <link href="https://grahamzen.github.io/"/>
-  <updated>2023-12-20T18:55:11.966Z</updated>
+  <updated>2023-12-20T23:08:32.593Z</updated>
   <id>https://grahamzen.github.io/</id>
   
   <author>
@@ -15,6 +15,45 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Projective Dynamics 的local step实现推导</title>
+    <link href="https://grahamzen.github.io/2023/12/20/local-step-inference/"/>
+    <id>https://grahamzen.github.io/2023/12/20/local-step-inference/</id>
+    <published>2023-12-20T08:08:06.000Z</published>
+    <updated>2023-12-20T23:08:32.593Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html"></summary>
+        
+      
+    
+    
+    
+    <category term="学习" scheme="https://grahamzen.github.io/categories/%E5%AD%A6%E4%B9%A0/"/>
+    
+    <category term="计算机图形学" scheme="https://grahamzen.github.io/categories/%E5%AD%A6%E4%B9%A0/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9B%BE%E5%BD%A2%E5%AD%A6/"/>
+    
+    <category term="物理模拟" scheme="https://grahamzen.github.io/categories/%E5%AD%A6%E4%B9%A0/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9B%BE%E5%BD%A2%E5%AD%A6/%E7%89%A9%E7%90%86%E6%A8%A1%E6%8B%9F/"/>
+    
+    <category term="FEM" scheme="https://grahamzen.github.io/categories/%E5%AD%A6%E4%B9%A0/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9B%BE%E5%BD%A2%E5%AD%A6/%E7%89%A9%E7%90%86%E6%A8%A1%E6%8B%9F/FEM/"/>
+    
+    
+    <category term="计算机图形学" scheme="https://grahamzen.github.io/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9B%BE%E5%BD%A2%E5%AD%A6/"/>
+    
+    <category term="物理模拟" scheme="https://grahamzen.github.io/tags/%E7%89%A9%E7%90%86%E6%A8%A1%E6%8B%9F/"/>
+    
+    <category term="FEM" scheme="https://grahamzen.github.io/tags/FEM/"/>
+    
+    <category term="Projective Dynamics" scheme="https://grahamzen.github.io/tags/Projective-Dynamics/"/>
+    
+    <category term="软体模拟" scheme="https://grahamzen.github.io/tags/%E8%BD%AF%E4%BD%93%E6%A8%A1%E6%8B%9F/"/>
+    
+  </entry>
   
   <entry>
     <title>Condition number for linear systems</title>
@@ -199,10 +238,10 @@ Tensor）可以视为一个&lt;span class=&quot;math inline&quot;&gt;&#92;(3 &#9
   
   <entry>
     <title>GAMES103:刚体模拟笔记</title>
-    <link href="https://grahamzen.github.io/2023/04/09/GAMES103/"/>
-    <id>https://grahamzen.github.io/2023/04/09/GAMES103/</id>
+    <link href="https://grahamzen.github.io/2023/04/09/rigidBody-note/"/>
+    <id>https://grahamzen.github.io/2023/04/09/rigidBody-note/</id>
     <published>2023-04-09T09:50:21.000Z</published>
-    <updated>2023-12-20T06:17:18.433Z</updated>
+    <updated>2023-12-20T21:09:48.509Z</updated>
     
     
     <summary type="html">&lt;h1 id=&quot;math&quot;&gt;2 Math&lt;/h1&gt;
@@ -218,7 +257,9 @@ Tensor）可以视为一个&lt;span class=&quot;math inline&quot;&gt;&#92;(3 &#9
     
     <category term="计算机图形学" scheme="https://grahamzen.github.io/categories/%E5%AD%A6%E4%B9%A0/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9B%BE%E5%BD%A2%E5%AD%A6/"/>
     
-    <category term="GAMES103" scheme="https://grahamzen.github.io/categories/%E5%AD%A6%E4%B9%A0/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9B%BE%E5%BD%A2%E5%AD%A6/GAMES103/"/>
+    <category term="物理模拟" scheme="https://grahamzen.github.io/categories/%E5%AD%A6%E4%B9%A0/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9B%BE%E5%BD%A2%E5%AD%A6/%E7%89%A9%E7%90%86%E6%A8%A1%E6%8B%9F/"/>
+    
+    <category term="GAMES103" scheme="https://grahamzen.github.io/categories/%E5%AD%A6%E4%B9%A0/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9B%BE%E5%BD%A2%E5%AD%A6/%E7%89%A9%E7%90%86%E6%A8%A1%E6%8B%9F/GAMES103/"/>
     
     
     <category term="计算机图形学" scheme="https://grahamzen.github.io/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9B%BE%E5%BD%A2%E5%AD%A6/"/>
@@ -564,37 +605,6 @@ Representation for Unsupervised Cross-Domain Motion Retargeting&lt;/a&gt;&lt;/h2
 &lt;p&gt;原视频和目标视频形状不同时，之前专注于特定对象先验的方法就会失败，作者提出联合关键点表达可以捕捉原视频和目标视频都有的动作，而且不需要物体先验或者数据采集。使用domain
 confusion项有利于对于两个domain的动作的一致的部分的解耦，可区分的外观和动作使得捕捉其中一个视频动作同时描绘另一个视频的风格的视频得以生成。&lt;/p&gt;
 &lt;p&gt;为处理物体有不同比例缩放或者不同方向的情形，作者应用了JOKR之间的仿射变换。这使得表达具有仿射不变性。&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="学习" scheme="https://grahamzen.github.io/categories/%E5%AD%A6%E4%B9%A0/"/>
-    
-    <category term="计算机视觉" scheme="https://grahamzen.github.io/categories/%E5%AD%A6%E4%B9%A0/%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89/"/>
-    
-    <category term="图像动画" scheme="https://grahamzen.github.io/categories/%E5%AD%A6%E4%B9%A0/%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89/%E5%9B%BE%E5%83%8F%E5%8A%A8%E7%94%BB/"/>
-    
-    
-    <category term="图像动画" scheme="https://grahamzen.github.io/tags/%E5%9B%BE%E5%83%8F%E5%8A%A8%E7%94%BB/"/>
-    
-    <category term="计算机视觉" scheme="https://grahamzen.github.io/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>三篇图像动画论文的比较(FOMM,AA,SDEMT)</title>
-    <link href="https://grahamzen.github.io/2021/12/13/FOMM-AA-SDEMT/"/>
-    <id>https://grahamzen.github.io/2021/12/13/FOMM-AA-SDEMT/</id>
-    <published>2021-12-14T02:45:19.000Z</published>
-    <updated>2023-12-17T22:59:48.829Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;FOMM和AA是很经典的论文，都来自作者Aliaksandr
-Siarohin，最近有一篇新论文在此基础上做了较大的改进，给出的效果看起来也很好，因此总结三个论文的内容。&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://arxiv.org/abs/2003.00196&quot;&gt;FOMM&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://arxiv.org/abs/2104.11280&quot;&gt;AA&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://arxiv.org/abs/2110.04658&quot;&gt;Self-appearance-aided
-Differential Evolution for Motion Transfer&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;</summary>
     
     
     
