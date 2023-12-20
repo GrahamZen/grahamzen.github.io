@@ -6,7 +6,7 @@
   <link href="https://grahamzen.github.io/atom.xml" rel="self"/>
   
   <link href="https://grahamzen.github.io/"/>
-  <updated>2023-12-20T23:08:32.593Z</updated>
+  <updated>2023-12-20T23:12:53.747Z</updated>
   <id>https://grahamzen.github.io/</id>
   
   <author>
@@ -21,16 +21,15 @@
     <link href="https://grahamzen.github.io/2023/12/20/local-step-inference/"/>
     <id>https://grahamzen.github.io/2023/12/20/local-step-inference/</id>
     <published>2023-12-20T08:08:06.000Z</published>
-    <updated>2023-12-20T23:08:32.593Z</updated>
+    <updated>2023-12-20T23:12:53.747Z</updated>
     
     
-      
-      
-        
-        
-    <summary type="html"></summary>
-        
-      
+    <summary type="html">&lt;h2 id=&quot;介绍&quot;&gt;介绍&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&quot;https://dl.acm.org/doi/10.1145/2601097.2601116&quot;&gt;Projective
+Dynamics&lt;/a&gt;是一种用于软体模拟的方法，算法分为local step和global
+step两个部分。其中local step可以对于每个四面体约束并行计算，global
+step只需要求解一个线性方程组，而他的矩阵非常特殊，是一个Gram矩阵，因此可以预先用Cholesky分解。本文主要介绍local
+step的实现的推导过程。用Corotated strain model的CUDA的实现作为例子。&lt;/p&gt;</summary>
     
     
     
