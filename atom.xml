@@ -6,7 +6,7 @@
   <link href="https://grahamzen.github.io/atom.xml" rel="self"/>
   
   <link href="https://grahamzen.github.io/"/>
-  <updated>2023-12-20T05:35:01.373Z</updated>
+  <updated>2023-12-20T05:50:27.054Z</updated>
   <id>https://grahamzen.github.io/</id>
   
   <author>
@@ -21,16 +21,14 @@
     <link href="https://grahamzen.github.io/2023/12/17/Applied%20Numerical%20Algorithms/Cholesky-factorization-sparse-matrices/"/>
     <id>https://grahamzen.github.io/2023/12/17/Applied%20Numerical%20Algorithms/Cholesky-factorization-sparse-matrices/</id>
     <published>2023-12-17T10:23:19.000Z</published>
-    <updated>2023-12-20T05:35:01.373Z</updated>
+    <updated>2023-12-20T05:50:27.054Z</updated>
     
     
-      
-      
-        
-        
-    <summary type="html"></summary>
-        
-      
+    <summary type="html">&lt;h2 id=&quot;structured-linear-systems&quot;&gt;Structured Linear Systems&lt;/h2&gt;
+&lt;p&gt;Gaussian elimination and/or LU can solve all the example problems
+above. But these systems can have special properties that make them
+easier or stabler to solve.&lt;/p&gt;
+&lt;p&gt;Today&#39;s example: Positive definite, sparsity.&lt;/p&gt;</summary>
     
     
     
