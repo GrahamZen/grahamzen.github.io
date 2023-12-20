@@ -54,14 +54,14 @@ easier or stabler to solve.&lt;/p&gt;
     
     
     <summary type="html">&lt;h2 id=&quot;linear-systems&quot;&gt;Linear Systems&lt;/h2&gt;
-&lt;p&gt;&lt;span class=&quot;math display&quot;&gt;\[
-\begin{align}
-    Ax &amp;amp;= b \\
-    A &amp;amp;\in \mathbb{R}^{n \times n} \\
-    x &amp;amp;\in \mathbb{R}^n \\
-    b &amp;amp;\in \mathbb{R}^n
-\end{align}
-\]&lt;/span&gt;&lt;/p&gt;</summary>
+&lt;p&gt;&lt;span class=&quot;math display&quot;&gt;&#92;[
+&#92;begin{align}
+    Ax &amp;amp;= b &#92;&#92;
+    A &amp;amp;&#92;in &#92;mathbb{R}^{n &#92;times n} &#92;&#92;
+    x &amp;amp;&#92;in &#92;mathbb{R}^n &#92;&#92;
+    b &amp;amp;&#92;in &#92;mathbb{R}^n
+&#92;end{align}
+&#92;]&lt;/span&gt;&lt;/p&gt;</summary>
     
     
     
@@ -149,9 +149,9 @@ easier or stabler to solve.&lt;/p&gt;
     
     
     <summary type="html">&lt;p&gt;对于三维空间中的各向同性材料，弹性模量张量（Elastic Modulus
-Tensor）可以视为一个&lt;span class=&quot;math inline&quot;&gt;\(3 \times
-3\)&lt;/span&gt;矩阵，其中每个元素本身又是一个 &lt;span class=&quot;math inline&quot;&gt;\(3
-\times 3\)&lt;/span&gt;
+Tensor）可以视为一个&lt;span class=&quot;math inline&quot;&gt;&#92;(3 &#92;times
+3&#92;)&lt;/span&gt;矩阵，其中每个元素本身又是一个 &lt;span class=&quot;math inline&quot;&gt;&#92;(3
+&#92;times 3&#92;)&lt;/span&gt;
 的矩阵。这样的表示反映了张量的四阶本质，即它有四个索引。&lt;/p&gt;</summary>
     
     
@@ -306,9 +306,9 @@ Interval)&lt;/h3&gt;</summary>
     
     <summary type="html">&lt;h2 id=&quot;光传播方程the-light-transport-equation-lte&quot;&gt;光传播方程(The Light
 Transport Equation, LTE)&lt;/h2&gt;
-&lt;p&gt;&lt;span class=&quot;math display&quot;&gt;\[
-L_o(p,\omega_o)=L_e(p,\omega_o)+\int_{s^2}f(p,\omega_o,\omega_i)|\cos\theta_i|d\omega_i
-\]&lt;/span&gt;&lt;/p&gt;</summary>
+&lt;p&gt;&lt;span class=&quot;math display&quot;&gt;&#92;[
+L_o(p,&#92;omega_o)=L_e(p,&#92;omega_o)+&#92;int_{s^2}f(p,&#92;omega_o,&#92;omega_i)|&#92;cos&#92;theta_i|d&#92;omega_i
+&#92;]&lt;/span&gt;&lt;/p&gt;</summary>
     
     
     
@@ -388,9 +388,9 @@ Edition&lt;/a&gt;，非常推荐阅读。&lt;/p&gt;</summary>
     
     <summary type="html">&lt;h2 id=&quot;光线投射公式&quot;&gt;光线投射公式&lt;/h2&gt;
 &lt;p&gt;从相机发出一条光线，穿过与相机距离为1的屏幕上的某点，已知相机参数和点在屏幕空间上的位置&lt;code&gt;(sx,sy)&lt;/code&gt;，计算世界空间中投影到该点的对应点的坐标的公式为：
-&lt;span class=&quot;math display&quot;&gt;\[
+&lt;span class=&quot;math display&quot;&gt;&#92;[
 P = ViewMat^{-1} * ProjMat^{-1} * ((sx, sy, 1, 1) * farClip).
-\]&lt;/span&gt;&lt;/p&gt;</summary>
+&#92;]&lt;/span&gt;&lt;/p&gt;</summary>
     
     
     
