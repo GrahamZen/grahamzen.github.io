@@ -172,13 +172,13 @@ Tensor）可以视为一个&lt;span class=&quot;math inline&quot;&gt;&#92;(3 &#9
     <link href="https://grahamzen.github.io/2023/04/09/GAMES103/"/>
     <id>https://grahamzen.github.io/2023/04/09/GAMES103/</id>
     <published>2023-04-09T09:50:21.000Z</published>
-    <updated>2023-12-17T23:08:40.644Z</updated>
+    <updated>2023-12-20T06:17:18.433Z</updated>
     
     
     <summary type="html">&lt;h1 id=&quot;math&quot;&gt;2 Math&lt;/h1&gt;
 &lt;h2 id=&quot;tetrahedral-volume&quot;&gt;Tetrahedral Volume&lt;/h2&gt;
 &lt;figure&gt;
-&lt;img src=&quot;../images/GAMES103/1681077071804.png&quot; alt=&quot;1681077071804&quot;&gt;
+&lt;img src=&quot;../../../../../images/GAMES103/1681077071804.png&quot; alt=&quot;1681077071804&quot;&gt;
 &lt;figcaption aria-hidden=&quot;true&quot;&gt;1681077071804&lt;/figcaption&gt;
 &lt;/figure&gt;</summary>
     
@@ -242,7 +242,7 @@ Interval)&lt;/h3&gt;</summary>
     <link href="https://grahamzen.github.io/2023/03/04/BSpline/"/>
     <id>https://grahamzen.github.io/2023/03/04/BSpline/</id>
     <published>2023-03-04T14:13:56.000Z</published>
-    <updated>2023-12-17T23:09:28.965Z</updated>
+    <updated>2023-12-20T06:17:56.050Z</updated>
     
     
     <summary type="html">&lt;h2 id=&quot;bspline上任意点的计算公式&quot;&gt;Bspline上任意点的计算公式&lt;/h2&gt;</summary>
@@ -273,7 +273,7 @@ Interval)&lt;/h3&gt;</summary>
     <link href="https://grahamzen.github.io/2023/03/04/cmake-related/"/>
     <id>https://grahamzen.github.io/2023/03/04/cmake-related/</id>
     <published>2023-03-04T10:53:03.000Z</published>
-    <updated>2023-12-17T23:01:23.868Z</updated>
+    <updated>2023-12-20T06:17:56.049Z</updated>
     
     
     <summary type="html">&lt;p&gt;记录一个&lt;code&gt;CMake&lt;/code&gt;速查表。&lt;/p&gt;
@@ -433,7 +433,7 @@ P = ViewMat^{-1} * ProjMat^{-1} * ((sx, sy, 1, 1) * farClip).
     <link href="https://grahamzen.github.io/2023/01/05/float-number/"/>
     <id>https://grahamzen.github.io/2023/01/05/float-number/</id>
     <published>2023-01-05T14:03:16.000Z</published>
-    <updated>2023-12-16T20:50:35.915Z</updated>
+    <updated>2023-12-20T06:17:56.045Z</updated>
     
     
       
@@ -460,7 +460,7 @@ P = ViewMat^{-1} * ProjMat^{-1} * ((sx, sy, 1, 1) * farClip).
     <link href="https://grahamzen.github.io/2022/05/06/table-caption-continued/"/>
     <id>https://grahamzen.github.io/2022/05/06/table-caption-continued/</id>
     <published>2022-05-06T05:28:06.000Z</published>
-    <updated>2023-12-17T23:03:43.506Z</updated>
+    <updated>2023-12-20T06:17:56.029Z</updated>
     
     
     <summary type="html">&lt;p&gt;使用latex写文章，尤其是和图像相关的文章时，常常会遇到需要用图片表格的情况。为了能够跨页，我们可以使用&lt;code&gt;longtable&lt;/code&gt;。因为图片较大，如果没有刻意缩小，那么表格就会跨页。有的文章接收方会要求跨页表格在第二页顶部增加额外的题注来接上上一页的表格，以及第一个题注在表格顶部。&lt;/p&gt;
@@ -525,7 +525,7 @@ P = ViewMat^{-1} * ProjMat^{-1} * ((sx, sy, 1, 1) * farClip).
     <link href="https://grahamzen.github.io/2021/12/13/JOKR-report/"/>
     <id>https://grahamzen.github.io/2021/12/13/JOKR-report/</id>
     <published>2021-12-14T03:15:01.000Z</published>
-    <updated>2023-12-17T22:58:41.298Z</updated>
+    <updated>2023-12-20T06:17:56.034Z</updated>
     
     
     <summary type="html">&lt;h2 id=&quot;jokr-joint-keypoint-representation-for-unsupervised-cross-domain-motion-retargeting&quot;&gt;&lt;a href=&quot;https://arxiv.org/abs/2106.09679&quot;&gt;JOKR: Joint Keypoint
