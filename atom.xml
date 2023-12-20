@@ -6,7 +6,7 @@
   <link href="https://grahamzen.github.io/atom.xml" rel="self"/>
   
   <link href="https://grahamzen.github.io/"/>
-  <updated>2023-12-20T06:14:22.767Z</updated>
+  <updated>2023-12-20T18:41:17.247Z</updated>
   <id>https://grahamzen.github.io/</id>
   
   <author>
@@ -17,11 +17,42 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Condition number for linear systems</title>
+    <link href="https://grahamzen.github.io/2023/12/19/Applied%20Numerical%20Algorithms/Condition-number-for-linear-systems/"/>
+    <id>https://grahamzen.github.io/2023/12/19/Applied%20Numerical%20Algorithms/Condition-number-for-linear-systems/</id>
+    <published>2023-12-20T04:06:16.000Z</published>
+    <updated>2023-12-20T18:41:17.247Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html"></summary>
+        
+      
+    
+    
+    
+    <category term="学习" scheme="https://grahamzen.github.io/categories/%E5%AD%A6%E4%B9%A0/"/>
+    
+    <category term="数学" scheme="https://grahamzen.github.io/categories/%E5%AD%A6%E4%B9%A0/%E6%95%B0%E5%AD%A6/"/>
+    
+    <category term="Applied Numerical Algorithms" scheme="https://grahamzen.github.io/categories/%E5%AD%A6%E4%B9%A0/%E6%95%B0%E5%AD%A6/Applied-Numerical-Algorithms/"/>
+    
+    
+    <category term="数学" scheme="https://grahamzen.github.io/tags/%E6%95%B0%E5%AD%A6/"/>
+    
+    <category term="数值计算" scheme="https://grahamzen.github.io/tags/%E6%95%B0%E5%80%BC%E8%AE%A1%E7%AE%97/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Cholesky factorization, sparse matrices</title>
     <link href="https://grahamzen.github.io/2023/12/17/Applied%20Numerical%20Algorithms/Cholesky-factorization-sparse-matrices/"/>
     <id>https://grahamzen.github.io/2023/12/17/Applied%20Numerical%20Algorithms/Cholesky-factorization-sparse-matrices/</id>
     <published>2023-12-17T10:23:19.000Z</published>
-    <updated>2023-12-20T06:14:22.767Z</updated>
+    <updated>2023-12-20T17:13:33.547Z</updated>
     
     
     <summary type="html">&lt;h2 id=&quot;structured-linear-systems&quot;&gt;Structured Linear Systems&lt;/h2&gt;
@@ -50,17 +81,17 @@ easier or stabler to solve.&lt;/p&gt;
     <link href="https://grahamzen.github.io/2023/12/16/Applied%20Numerical%20Algorithms/Linear-Systems-and-LU/"/>
     <id>https://grahamzen.github.io/2023/12/16/Applied%20Numerical%20Algorithms/Linear-Systems-and-LU/</id>
     <published>2023-12-17T04:50:28.000Z</published>
-    <updated>2023-12-17T23:25:32.616Z</updated>
+    <updated>2023-12-20T18:10:04.475Z</updated>
     
     
     <summary type="html">&lt;h2 id=&quot;linear-systems&quot;&gt;Linear Systems&lt;/h2&gt;
 &lt;p&gt;&lt;span class=&quot;math display&quot;&gt;&#92;[
-&#92;begin{align}
+&#92;begin{aligned}
     Ax &amp;amp;= b &#92;&#92;
     A &amp;amp;&#92;in &#92;mathbb{R}^{n &#92;times n} &#92;&#92;
     x &amp;amp;&#92;in &#92;mathbb{R}^n &#92;&#92;
     b &amp;amp;&#92;in &#92;mathbb{R}^n
-&#92;end{align}
+&#92;end{aligned}
 &#92;]&lt;/span&gt;&lt;/p&gt;</summary>
     
     
@@ -85,7 +116,7 @@ easier or stabler to solve.&lt;/p&gt;
     <link href="https://grahamzen.github.io/2023/12/16/Applied%20Numerical%20Algorithms/Introduction-number-systems-measuring-error/"/>
     <id>https://grahamzen.github.io/2023/12/16/Applied%20Numerical%20Algorithms/Introduction-number-systems-measuring-error/</id>
     <published>2023-12-16T07:47:52.000Z</published>
-    <updated>2023-12-17T23:25:36.808Z</updated>
+    <updated>2023-12-20T17:31:00.360Z</updated>
     
     
     <summary type="html">&lt;p&gt;Mathematically correct != numerically sound. Using Tolerance:
@@ -578,25 +609,6 @@ Differential Evolution for Motion Transfer&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;</summ
     <category term="图像动画" scheme="https://grahamzen.github.io/tags/%E5%9B%BE%E5%83%8F%E5%8A%A8%E7%94%BB/"/>
     
     <category term="计算机视觉" scheme="https://grahamzen.github.io/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%A7%86%E8%A7%89/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Hello World</title>
-    <link href="https://grahamzen.github.io/2021/12/12/hello-world/"/>
-    <id>https://grahamzen.github.io/2021/12/12/hello-world/</id>
-    <published>2021-12-12T14:09:13.000Z</published>
-    <updated>2023-01-04T08:51:24.000Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;是时候建个blog了，参考的&lt;a href=&quot;https://www.bilibili.com/read/cv12633102&quot;&gt;2021最全hexo搭建博客+matery美化+使用&lt;/a&gt;，写的比较详细。踩的坑都在main和master分支上。以后大概主要写学习相关的文章，记录一下免得忘记。&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="随笔" scheme="https://grahamzen.github.io/categories/%E9%9A%8F%E7%AC%94/"/>
-    
-    
-    <category term="随笔" scheme="https://grahamzen.github.io/tags/%E9%9A%8F%E7%AC%94/"/>
     
   </entry>
   
