@@ -6,7 +6,7 @@
   <link href="https://grahamzen.github.io/atom.xml" rel="self"/>
   
   <link href="https://grahamzen.github.io/"/>
-  <updated>2023-12-21T15:46:03.643Z</updated>
+  <updated>2023-12-21T20:50:17.891Z</updated>
   <id>https://grahamzen.github.io/</id>
   
   <author>
@@ -17,11 +17,11 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>QR factorization</title>
-    <link href="https://grahamzen.github.io/2023/12/20/QR-factorization/"/>
-    <id>https://grahamzen.github.io/2023/12/20/QR-factorization/</id>
+    <title>Column Space QR</title>
+    <link href="https://grahamzen.github.io/2023/12/20/Applied%20Numerical%20Algorithms/QR-factorization/"/>
+    <id>https://grahamzen.github.io/2023/12/20/Applied%20Numerical%20Algorithms/QR-factorization/</id>
     <published>2023-12-21T02:46:03.000Z</published>
-    <updated>2023-12-21T15:46:03.643Z</updated>
+    <updated>2023-12-21T20:50:17.891Z</updated>
     
     
       
@@ -34,6 +34,18 @@
     
     
     
+    <category term="学习" scheme="https://grahamzen.github.io/categories/%E5%AD%A6%E4%B9%A0/"/>
+    
+    <category term="数学" scheme="https://grahamzen.github.io/categories/%E5%AD%A6%E4%B9%A0/%E6%95%B0%E5%AD%A6/"/>
+    
+    <category term="Applied Numerical Algorithms" scheme="https://grahamzen.github.io/categories/%E5%AD%A6%E4%B9%A0/%E6%95%B0%E5%AD%A6/Applied-Numerical-Algorithms/"/>
+    
+    
+    <category term="数学" scheme="https://grahamzen.github.io/tags/%E6%95%B0%E5%AD%A6/"/>
+    
+    <category term="数值计算" scheme="https://grahamzen.github.io/tags/%E6%95%B0%E5%80%BC%E8%AE%A1%E7%AE%97/"/>
+    
+    <category term="线性代数" scheme="https://grahamzen.github.io/tags/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/"/>
     
   </entry>
   
