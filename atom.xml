@@ -6,7 +6,7 @@
   <link href="https://grahamzen.github.io/atom.xml" rel="self"/>
   
   <link href="https://grahamzen.github.io/"/>
-  <updated>2023-12-22T21:17:40.769Z</updated>
+  <updated>2023-12-22T23:54:11.523Z</updated>
   <id>https://grahamzen.github.io/</id>
   
   <author>
@@ -21,16 +21,14 @@
     <link href="https://grahamzen.github.io/2023/12/22/Applied%20Numerical%20Algorithms/Applications-of-eigenvectors/"/>
     <id>https://grahamzen.github.io/2023/12/22/Applied%20Numerical%20Algorithms/Applications-of-eigenvectors/</id>
     <published>2023-12-22T05:14:13.000Z</published>
-    <updated>2023-12-22T21:17:40.769Z</updated>
+    <updated>2023-12-22T23:54:11.523Z</updated>
     
     
-      
-      
-        
-        
-    <summary type="html"></summary>
-        
-      
+    <summary type="html">&lt;p&gt;很多时候需要把已有问题转化为特征值问题。&lt;/p&gt;
+&lt;ol type=&quot;1&quot;&gt;
+&lt;li&gt;有一个对称矩阵（有时候是对称半正定矩阵），我们想要找一个方便的基。&lt;/li&gt;
+&lt;li&gt;具体的优化问题。&lt;/li&gt;
+&lt;/ol&gt;</summary>
     
     
     
