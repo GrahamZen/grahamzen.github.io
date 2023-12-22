@@ -6,7 +6,7 @@
   <link href="https://grahamzen.github.io/atom.xml" rel="self"/>
   
   <link href="https://grahamzen.github.io/"/>
-  <updated>2023-12-21T20:50:17.891Z</updated>
+  <updated>2023-12-22T03:13:23.845Z</updated>
   <id>https://grahamzen.github.io/</id>
   
   <author>
@@ -21,16 +21,20 @@
     <link href="https://grahamzen.github.io/2023/12/20/Applied%20Numerical%20Algorithms/QR-factorization/"/>
     <id>https://grahamzen.github.io/2023/12/20/Applied%20Numerical%20Algorithms/QR-factorization/</id>
     <published>2023-12-21T02:46:03.000Z</published>
-    <updated>2023-12-21T20:50:17.891Z</updated>
+    <updated>2023-12-22T03:13:23.845Z</updated>
     
     
-      
-      
-        
-        
-    <summary type="html"></summary>
-        
-      
+    <summary type="html">&lt;h2 id=&quot;high-level-idea&quot;&gt;High-Level Idea&lt;/h2&gt;
+&lt;h3 id=&quot;why-qr&quot;&gt;Why QR?&lt;/h3&gt;
+&lt;p&gt;&lt;span class=&quot;math display&quot;&gt;&#92;[
+&#92;begin{aligned}
+cond A^T A &amp;amp;= ||A^T A|| &#92;cdot ||(A^T A)^{-1}||&#92;&#92;
+&amp;amp;&#92;approx ||A^T|| &#92;cdot ||A|| &#92;cdot ||A^{-1}|| &#92;cdot ||A^{-T}||
+&amp;amp;= cond A^2
+&#92;end{aligned}
+&#92;]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;为了避免计算&lt;span class=&quot;math inline&quot;&gt;&#92;(A^T
+A&#92;)&lt;/span&gt;，我们可以使用QR分解。&lt;/p&gt;</summary>
     
     
     
