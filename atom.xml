@@ -6,7 +6,7 @@
   <link href="https://grahamzen.github.io/atom.xml" rel="self"/>
   
   <link href="https://grahamzen.github.io/"/>
-  <updated>2023-12-23T23:08:14.343Z</updated>
+  <updated>2023-12-23T23:10:31.839Z</updated>
   <id>https://grahamzen.github.io/</id>
   
   <author>
@@ -21,16 +21,13 @@
     <link href="https://grahamzen.github.io/2023/12/22/Applied%20Numerical%20Algorithms/Eigenvalue-iteration-deflation/"/>
     <id>https://grahamzen.github.io/2023/12/22/Applied%20Numerical%20Algorithms/Eigenvalue-iteration-deflation/</id>
     <published>2023-12-22T05:14:17.000Z</published>
-    <updated>2023-12-23T23:08:14.343Z</updated>
+    <updated>2023-12-23T23:10:31.839Z</updated>
     
     
-      
-      
-        
-        
-    <summary type="html"></summary>
-        
-      
+    <summary type="html">&lt;h2 id=&quot;two-basic-properties&quot;&gt;Two basic Properties&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Lemma&lt;/strong&gt;: Every matrix &lt;span class=&quot;math inline&quot;&gt;&#92;(A
+&#92;in &#92;mathbb{R}^{n &#92;times n}&#92;)&lt;/span&gt; has at least one (complex)
+eigenvalue.&lt;/p&gt;</summary>
     
     
     
