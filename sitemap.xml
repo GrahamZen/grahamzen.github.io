@@ -11,6 +11,15 @@
   </url>
   
   <url>
+    <loc>https://grahamzen.github.io/2023/12/22/Applied%20Numerical%20Algorithms/Eigenvalue-iteration-deflation/</loc>
+    
+    <lastmod>2023-12-23</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://grahamzen.github.io/2023/12/20/Applied%20Numerical%20Algorithms/QR-factorization/</loc>
     
     <lastmod>2023-12-22</lastmod>

@@ -6,7 +6,7 @@
   <link href="https://grahamzen.github.io/atom.xml" rel="self"/>
   
   <link href="https://grahamzen.github.io/"/>
-  <updated>2023-12-23T02:09:34.844Z</updated>
+  <updated>2023-12-23T23:06:26.754Z</updated>
   <id>https://grahamzen.github.io/</id>
   
   <author>
@@ -17,11 +17,44 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Eigenvalue iteration, deflation</title>
+    <link href="https://grahamzen.github.io/2023/12/22/Applied%20Numerical%20Algorithms/Eigenvalue-iteration-deflation/"/>
+    <id>https://grahamzen.github.io/2023/12/22/Applied%20Numerical%20Algorithms/Eigenvalue-iteration-deflation/</id>
+    <published>2023-12-22T05:14:17.000Z</published>
+    <updated>2023-12-23T23:06:26.754Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html"></summary>
+        
+      
+    
+    
+    
+    <category term="学习" scheme="https://grahamzen.github.io/categories/%E5%AD%A6%E4%B9%A0/"/>
+    
+    <category term="数学" scheme="https://grahamzen.github.io/categories/%E5%AD%A6%E4%B9%A0/%E6%95%B0%E5%AD%A6/"/>
+    
+    <category term="Applied Numerical Algorithms" scheme="https://grahamzen.github.io/categories/%E5%AD%A6%E4%B9%A0/%E6%95%B0%E5%AD%A6/Applied-Numerical-Algorithms/"/>
+    
+    
+    <category term="数学" scheme="https://grahamzen.github.io/tags/%E6%95%B0%E5%AD%A6/"/>
+    
+    <category term="数值计算" scheme="https://grahamzen.github.io/tags/%E6%95%B0%E5%80%BC%E8%AE%A1%E7%AE%97/"/>
+    
+    <category term="线性代数" scheme="https://grahamzen.github.io/tags/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Applications of eigenvectors</title>
     <link href="https://grahamzen.github.io/2023/12/22/Applied%20Numerical%20Algorithms/Applications-of-eigenvectors/"/>
     <id>https://grahamzen.github.io/2023/12/22/Applied%20Numerical%20Algorithms/Applications-of-eigenvectors/</id>
     <published>2023-12-22T05:14:13.000Z</published>
-    <updated>2023-12-23T02:09:34.844Z</updated>
+    <updated>2023-12-23T23:06:50.693Z</updated>
     
     
     <summary type="html">&lt;p&gt;很多时候需要把已有问题转化为特征值问题。&lt;/p&gt;
@@ -593,34 +626,6 @@ P = ViewMat^{-1} * ProjMat^{-1} * ((sx, sy, 1, 1) * farClip).
     
     
     <category term="计算机组成原理" scheme="https://grahamzen.github.io/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>跨页表格的题注</title>
-    <link href="https://grahamzen.github.io/2022/05/06/table-caption-continued/"/>
-    <id>https://grahamzen.github.io/2022/05/06/table-caption-continued/</id>
-    <published>2022-05-06T05:28:06.000Z</published>
-    <updated>2023-12-20T06:17:56.029Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;使用latex写文章，尤其是和图像相关的文章时，常常会遇到需要用图片表格的情况。为了能够跨页，我们可以使用&lt;code&gt;longtable&lt;/code&gt;。因为图片较大，如果没有刻意缩小，那么表格就会跨页。有的文章接收方会要求跨页表格在第二页顶部增加额外的题注来接上上一页的表格，以及第一个题注在表格顶部。&lt;/p&gt;
-&lt;h2 id=&quot;跨页题注&quot;&gt;跨页题注&lt;/h2&gt;
-&lt;p&gt;https://tex.stackexchange.com/questions/115195/table-captions-continued
-给出了一个解决方法。&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="学习" scheme="https://grahamzen.github.io/categories/%E5%AD%A6%E4%B9%A0/"/>
-    
-    <category term="MISC" scheme="https://grahamzen.github.io/categories/%E5%AD%A6%E4%B9%A0/MISC/"/>
-    
-    <category term="文章排版" scheme="https://grahamzen.github.io/categories/%E5%AD%A6%E4%B9%A0/MISC/%E6%96%87%E7%AB%A0%E6%8E%92%E7%89%88/"/>
-    
-    <category term="latex" scheme="https://grahamzen.github.io/categories/%E5%AD%A6%E4%B9%A0/MISC/%E6%96%87%E7%AB%A0%E6%8E%92%E7%89%88/latex/"/>
-    
-    
-    <category term="latex" scheme="https://grahamzen.github.io/tags/latex/"/>
     
   </entry>
   
