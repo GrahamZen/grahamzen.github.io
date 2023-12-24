@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://grahamzen.github.io/2023/12/23/Applied%20Numerical%20Algorithms/SVD/</loc>
+    
+    <lastmod>2023-12-24</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://grahamzen.github.io/2023/12/23/Applied%20Numerical%20Algorithms/QR-iteration/</loc>
     
     <lastmod>2023-12-24</lastmod>
