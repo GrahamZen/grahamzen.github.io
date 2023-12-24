@@ -6,7 +6,7 @@
   <link href="https://grahamzen.github.io/atom.xml" rel="self"/>
   
   <link href="https://grahamzen.github.io/"/>
-  <updated>2023-12-23T23:15:31.435Z</updated>
+  <updated>2023-12-24T05:38:04.593Z</updated>
   <id>https://grahamzen.github.io/</id>
   
   <author>
@@ -15,6 +15,35 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>QR iteration</title>
+    <link href="https://grahamzen.github.io/2023/12/23/Applied%20Numerical%20Algorithms/QR-iteration/"/>
+    <id>https://grahamzen.github.io/2023/12/23/Applied%20Numerical%20Algorithms/QR-iteration/</id>
+    <published>2023-12-23T05:14:20.000Z</published>
+    <updated>2023-12-24T05:38:04.593Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;Assumption: &lt;span class=&quot;math inline&quot;&gt;&#92;(A &#92;in &#92;mathbb{R}^{n &#92;times
+n}&#92;)&lt;/span&gt; is symmetric, no repeated eigenvalues &lt;span
+class=&quot;math inline&quot;&gt;&#92;(&#92;lambda&#92;)&lt;/span&gt;s.&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="学习" scheme="https://grahamzen.github.io/categories/%E5%AD%A6%E4%B9%A0/"/>
+    
+    <category term="数学" scheme="https://grahamzen.github.io/categories/%E5%AD%A6%E4%B9%A0/%E6%95%B0%E5%AD%A6/"/>
+    
+    <category term="Applied Numerical Algorithms" scheme="https://grahamzen.github.io/categories/%E5%AD%A6%E4%B9%A0/%E6%95%B0%E5%AD%A6/Applied-Numerical-Algorithms/"/>
+    
+    
+    <category term="数学" scheme="https://grahamzen.github.io/tags/%E6%95%B0%E5%AD%A6/"/>
+    
+    <category term="数值计算" scheme="https://grahamzen.github.io/tags/%E6%95%B0%E5%80%BC%E8%AE%A1%E7%AE%97/"/>
+    
+    <category term="线性代数" scheme="https://grahamzen.github.io/tags/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/"/>
+    
+  </entry>
   
   <entry>
     <title>Eigenvalue iteration, deflation</title>
@@ -587,33 +616,6 @@ P = ViewMat^{-1} * ProjMat^{-1} * ((sx, sy, 1, 1) * farClip).
     
     
     <summary type="html">&lt;p&gt;C代码中有许多比较通用的可以优化的地方。其中大部分优化方式在其他语言中也是有效的。&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="学习" scheme="https://grahamzen.github.io/categories/%E5%AD%A6%E4%B9%A0/"/>
-    
-    <category term="计算机组成原理" scheme="https://grahamzen.github.io/categories/%E5%AD%A6%E4%B9%A0/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/"/>
-    
-    
-    <category term="计算机组成原理" scheme="https://grahamzen.github.io/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>浮点数</title>
-    <link href="https://grahamzen.github.io/2023/01/05/float-number/"/>
-    <id>https://grahamzen.github.io/2023/01/05/float-number/</id>
-    <published>2023-01-05T14:03:16.000Z</published>
-    <updated>2023-12-20T06:17:56.045Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html"></summary>
-        
-      
     
     
     
