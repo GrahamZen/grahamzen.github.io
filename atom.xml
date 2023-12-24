@@ -6,7 +6,7 @@
   <link href="https://grahamzen.github.io/atom.xml" rel="self"/>
   
   <link href="https://grahamzen.github.io/"/>
-  <updated>2023-12-24T20:58:49.073Z</updated>
+  <updated>2023-12-24T21:36:01.856Z</updated>
   <id>https://grahamzen.github.io/</id>
   
   <author>
@@ -21,16 +21,16 @@
     <link href="https://grahamzen.github.io/2023/12/23/Applied%20Numerical%20Algorithms/SVD/"/>
     <id>https://grahamzen.github.io/2023/12/23/Applied%20Numerical%20Algorithms/SVD/</id>
     <published>2023-12-24T04:29:22.000Z</published>
-    <updated>2023-12-24T20:58:49.073Z</updated>
+    <updated>2023-12-24T21:36:01.856Z</updated>
     
     
-      
-      
-        
-        
-    <summary type="html"></summary>
-        
-      
+    <summary type="html">&lt;h2 id=&quot;understading-the-geometry-of-ain-mathbbrmtimes-n&quot;&gt;Understading
+the Geometry of &lt;span class=&quot;math inline&quot;&gt;&#92;(A&#92;in &#92;mathbb{R}^{m&#92;times
+n}&#92;)&lt;/span&gt;&lt;/h2&gt;
+&lt;p&gt;&lt;span class=&quot;math display&quot;&gt;&#92;[
+A&#92;in &#92;mathbb{R}^{m&#92;times n} &#92;&#92;
+x&#92;in &#92;mathbb{R}^n &#92;mapsto Ax &#92;in &#92;mathbb{R}^m
+&#92;]&lt;/span&gt;&lt;/p&gt;</summary>
     
     
     
