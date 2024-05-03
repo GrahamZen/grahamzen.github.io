@@ -6,7 +6,7 @@
   <link href="https://grahamzen.github.io/atom.xml" rel="self"/>
   
   <link href="https://grahamzen.github.io/"/>
-  <updated>2023-12-24T21:36:01.856Z</updated>
+  <updated>2024-05-03T03:12:48.261Z</updated>
   <id>https://grahamzen.github.io/</id>
   
   <author>
@@ -17,11 +17,50 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>有限元法中的梯度计算公式验证</title>
+    <link href="https://grahamzen.github.io/2024/05/02/FEM-gradient/"/>
+    <id>https://grahamzen.github.io/2024/05/02/FEM-gradient/</id>
+    <published>2024-05-02T14:43:25.000Z</published>
+    <updated>2024-05-03T03:12:48.261Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html"></summary>
+        
+      
+    
+    
+    
+    <category term="学习" scheme="https://grahamzen.github.io/categories/%E5%AD%A6%E4%B9%A0/"/>
+    
+    <category term="计算机图形学" scheme="https://grahamzen.github.io/categories/%E5%AD%A6%E4%B9%A0/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9B%BE%E5%BD%A2%E5%AD%A6/"/>
+    
+    <category term="物理模拟" scheme="https://grahamzen.github.io/categories/%E5%AD%A6%E4%B9%A0/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9B%BE%E5%BD%A2%E5%AD%A6/%E7%89%A9%E7%90%86%E6%A8%A1%E6%8B%9F/"/>
+    
+    <category term="FEM" scheme="https://grahamzen.github.io/categories/%E5%AD%A6%E4%B9%A0/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9B%BE%E5%BD%A2%E5%AD%A6/%E7%89%A9%E7%90%86%E6%A8%A1%E6%8B%9F/FEM/"/>
+    
+    
+    <category term="计算机图形学" scheme="https://grahamzen.github.io/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9B%BE%E5%BD%A2%E5%AD%A6/"/>
+    
+    <category term="物理模拟" scheme="https://grahamzen.github.io/tags/%E7%89%A9%E7%90%86%E6%A8%A1%E6%8B%9F/"/>
+    
+    <category term="FEM" scheme="https://grahamzen.github.io/tags/FEM/"/>
+    
+    <category term="Projective Dynamics" scheme="https://grahamzen.github.io/tags/Projective-Dynamics/"/>
+    
+    <category term="软体模拟" scheme="https://grahamzen.github.io/tags/%E8%BD%AF%E4%BD%93%E6%A8%A1%E6%8B%9F/"/>
+    
+  </entry>
+  
+  <entry>
     <title>SVD</title>
     <link href="https://grahamzen.github.io/2023/12/23/Applied%20Numerical%20Algorithms/SVD/"/>
     <id>https://grahamzen.github.io/2023/12/23/Applied%20Numerical%20Algorithms/SVD/</id>
     <published>2023-12-24T04:29:22.000Z</published>
-    <updated>2023-12-24T21:36:01.856Z</updated>
+    <updated>2024-01-11T23:49:22.183Z</updated>
     
     
     <summary type="html">&lt;h2 id=&quot;understading-the-geometry-of-ain-mathbbrmtimes-n&quot;&gt;Understading
@@ -608,35 +647,6 @@ Edition&lt;/a&gt;，非常推荐阅读。&lt;/p&gt;</summary>
     <category term="数学" scheme="https://grahamzen.github.io/tags/%E6%95%B0%E5%AD%A6/"/>
     
     <category term="微积分" scheme="https://grahamzen.github.io/tags/%E5%BE%AE%E7%A7%AF%E5%88%86/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>光线投射（raycast）公式中的far-clip</title>
-    <link href="https://grahamzen.github.io/2023/01/14/raycast-formula/"/>
-    <id>https://grahamzen.github.io/2023/01/14/raycast-formula/</id>
-    <published>2023-01-14T09:01:49.000Z</published>
-    <updated>2023-12-17T23:10:43.134Z</updated>
-    
-    
-    <summary type="html">&lt;h2 id=&quot;光线投射公式&quot;&gt;光线投射公式&lt;/h2&gt;
-&lt;p&gt;从相机发出一条光线，穿过与相机距离为1的屏幕上的某点，已知相机参数和点在屏幕空间上的位置&lt;code&gt;(sx,sy)&lt;/code&gt;，计算世界空间中投影到该点的对应点的坐标的公式为：
-&lt;span class=&quot;math display&quot;&gt;&#92;[
-P = ViewMat^{-1} * ProjMat^{-1} * ((sx, sy, 1, 1) * farClip).
-&#92;]&lt;/span&gt;&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="学习" scheme="https://grahamzen.github.io/categories/%E5%AD%A6%E4%B9%A0/"/>
-    
-    <category term="计算机图形学" scheme="https://grahamzen.github.io/categories/%E5%AD%A6%E4%B9%A0/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9B%BE%E5%BD%A2%E5%AD%A6/"/>
-    
-    <category term="CIS-5610" scheme="https://grahamzen.github.io/categories/%E5%AD%A6%E4%B9%A0/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9B%BE%E5%BD%A2%E5%AD%A6/CIS-5610/"/>
-    
-    
-    <category term="计算机图形学" scheme="https://grahamzen.github.io/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9B%BE%E5%BD%A2%E5%AD%A6/"/>
-    
-    <category term="光线跟踪" scheme="https://grahamzen.github.io/tags/%E5%85%89%E7%BA%BF%E8%B7%9F%E8%B8%AA/"/>
     
   </entry>
   
