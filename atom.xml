@@ -6,7 +6,7 @@
   <link href="https://grahamzen.github.io/atom.xml" rel="self"/>
   
   <link href="https://grahamzen.github.io/"/>
-  <updated>2024-05-03T03:12:48.261Z</updated>
+  <updated>2024-08-09T15:46:17.867Z</updated>
   <id>https://grahamzen.github.io/</id>
   
   <author>
@@ -17,20 +17,38 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>有限元法中的梯度计算公式验证</title>
-    <link href="https://grahamzen.github.io/2024/05/02/FEM-gradient/"/>
-    <id>https://grahamzen.github.io/2024/05/02/FEM-gradient/</id>
-    <published>2024-05-02T14:43:25.000Z</published>
-    <updated>2024-05-03T03:12:48.261Z</updated>
+    <title>Stress hessian computation in FEM</title>
+    <link href="https://grahamzen.github.io/2024/08/08/stress-hessian/"/>
+    <id>https://grahamzen.github.io/2024/08/08/stress-hessian/</id>
+    <published>2024-08-08T10:05:16.000Z</published>
+    <updated>2024-08-09T15:46:17.867Z</updated>
     
     
-      
-      
-        
-        
-    <summary type="html"></summary>
-        
-      
+    <summary type="html">&lt;h2 id=&quot;介绍&quot;&gt;介绍&lt;/h2&gt;
+&lt;p&gt;在进行软体模拟时，如果使用牛顿法计算最优的下降方向，需要计算能量密度函数&lt;span
+class=&quot;math inline&quot;&gt;&#92;(&#92;Psi&#92;)&lt;/span&gt;关于位置&lt;span
+class=&quot;math inline&quot;&gt;&#92;(&#92;vec {&#92;mathbf{x}}&#92;)&lt;/span&gt; 的Hessian矩阵，即&lt;span
+class=&quot;math inline&quot;&gt;&#92;(&#92;frac{&#92;partial^2 &#92;Psi}{&#92;partial &#92;vec
+{&#92;mathbf{x}}^2}&#92;)&lt;/span&gt;。其中&lt;span class=&quot;math inline&quot;&gt;&#92;(&#92;vec
+{&#92;mathbf{x}}&#92;)&lt;/span&gt;是一个四面体的四个顶点的位置。因为：&lt;/p&gt;
+&lt;p&gt;&lt;span class=&quot;math display&quot;&gt;&#92;[
+&#92;begin{aligned}
+&#92;frac{&#92;partial^2 &#92;Psi}{&#92;partial &#92;vec {&#92;mathbf{x}}^2}
+&amp;amp;= &#92;frac{&#92;partial}{&#92;partial &#92;vec {&#92;mathbf{x}}} &#92;left(&#92;frac{&#92;partial
+&#92;Psi}{&#92;partial &#92;vec {&#92;mathbf{x}}}&#92;right) &#92;&#92;
+&amp;amp;= &#92;frac{&#92;partial}{&#92;partial &#92;vec {&#92;mathbf{x}}} &#92;left(&#92;frac{&#92;partial
+&#92;Psi}{&#92;partial F}:&#92;frac{&#92;partial F}{&#92;partial &#92;vec {&#92;mathbf{x}}}&#92;right)
+&#92;&#92;
+&amp;amp;= &#92;frac{&#92;partial}{&#92;partial &#92;vec {&#92;mathbf{x}}} &#92;left(&#92;frac{&#92;partial
+&#92;Psi}{&#92;partial F}&#92;right):&#92;frac{&#92;partial F}{&#92;partial &#92;vec {&#92;mathbf{x}}} +
+&#92;frac{&#92;partial &#92;Psi}{&#92;partial F}:&#92;frac{&#92;partial^2 F}{&#92;partial &#92;vec
+{&#92;mathbf{x}}^2}&#92;&#92;
+&amp;amp;=&#92;frac{&#92;partial}{&#92;partial &#92;vec {&#92;mathbf{x}}}
+&#92;left(P&#92;right):&#92;frac{&#92;partial F}{&#92;partial &#92;vec {&#92;mathbf{x}}}&#92;&#92;
+&amp;amp;=(&#92;frac{&#92;partial F}{&#92;partial &#92;vec {&#92;mathbf{x}}}: &#92;frac{&#92;partial
+P}{&#92;partial F}):&#92;frac{&#92;partial F}{&#92;partial &#92;vec {&#92;mathbf{x}}}
+&#92;end{aligned}
+&#92;]&lt;/span&gt;&lt;/p&gt;</summary>
     
     
     
@@ -38,14 +56,66 @@
     
     <category term="计算机图形学" scheme="https://grahamzen.github.io/categories/%E5%AD%A6%E4%B9%A0/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9B%BE%E5%BD%A2%E5%AD%A6/"/>
     
-    <category term="物理模拟" scheme="https://grahamzen.github.io/categories/%E5%AD%A6%E4%B9%A0/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9B%BE%E5%BD%A2%E5%AD%A6/%E7%89%A9%E7%90%86%E6%A8%A1%E6%8B%9F/"/>
+    <category term="仿真" scheme="https://grahamzen.github.io/categories/%E5%AD%A6%E4%B9%A0/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9B%BE%E5%BD%A2%E5%AD%A6/%E4%BB%BF%E7%9C%9F/"/>
     
-    <category term="FEM" scheme="https://grahamzen.github.io/categories/%E5%AD%A6%E4%B9%A0/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9B%BE%E5%BD%A2%E5%AD%A6/%E7%89%A9%E7%90%86%E6%A8%A1%E6%8B%9F/FEM/"/>
+    <category term="FEM" scheme="https://grahamzen.github.io/categories/%E5%AD%A6%E4%B9%A0/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9B%BE%E5%BD%A2%E5%AD%A6/%E4%BB%BF%E7%9C%9F/FEM/"/>
     
     
     <category term="计算机图形学" scheme="https://grahamzen.github.io/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9B%BE%E5%BD%A2%E5%AD%A6/"/>
     
-    <category term="物理模拟" scheme="https://grahamzen.github.io/tags/%E7%89%A9%E7%90%86%E6%A8%A1%E6%8B%9F/"/>
+    <category term="仿真" scheme="https://grahamzen.github.io/tags/%E4%BB%BF%E7%9C%9F/"/>
+    
+    <category term="FEM" scheme="https://grahamzen.github.io/tags/FEM/"/>
+    
+    <category term="软体模拟" scheme="https://grahamzen.github.io/tags/%E8%BD%AF%E4%BD%93%E6%A8%A1%E6%8B%9F/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>FEM中的梯度计算公式证明与matlab验证</title>
+    <link href="https://grahamzen.github.io/2024/05/02/FEM-gradient/"/>
+    <id>https://grahamzen.github.io/2024/05/02/FEM-gradient/</id>
+    <published>2024-05-02T14:43:25.000Z</published>
+    <updated>2024-08-09T15:47:13.106Z</updated>
+    
+    
+    <summary type="html">&lt;h2 id=&quot;证明&quot;&gt;证明&lt;/h2&gt;
+&lt;p&gt;首先，已知&lt;/p&gt;
+&lt;p&gt;&lt;span class=&quot;math display&quot;&gt;&#92;[
+&#92;vec {&#92;mathbf{x}} = &#92;begin{bmatrix}
+&#92;vec x_1 &amp;amp; &#92;vec x_2 &amp;amp; &#92;vec x_3
+&#92;end{bmatrix}&#92;&#92;
+D_s = &#92;begin{bmatrix}
+&#92;vec x_1-&#92;vec x_4 &amp;amp; &#92;vec x_2-&#92;vec x_4 &amp;amp; &#92;vec x_3-&#92;vec x_4
+&#92;end{bmatrix}&#92;&#92;
+&#92;begin{aligned}
+&amp;amp;&#92;frac{&#92;partial (D_s)_{kl}}{&#92;partial &#92;vec {&#92;mathbf{x}_{ij}}}
+e_i&#92;otimes e_j&#92;otimes e_k&#92;otimes e_l&#92;&#92;
+&amp;amp;=&#92;frac{&#92;partial &#92;vec {&#92;mathbf{x}}_{kl}}{&#92;partial &#92;vec
+{&#92;mathbf{x}}_{ij}} e_i&#92;otimes e_j&#92;otimes e_k&#92;otimes e_l&#92;&#92;
+&amp;amp;= &#92;delta_{ik}&#92;delta_{jl} e_i&#92;otimes e_j&#92;otimes e_k&#92;otimes e_l
+&#92;end{aligned}
+&#92;]&lt;/span&gt; &lt;span class=&quot;math inline&quot;&gt;&#92;(D_m^{-1}&#92;)&lt;/span&gt;的分量表示为&lt;span
+class=&quot;math inline&quot;&gt;&#92;(d_{mn}&#92;)&lt;/span&gt;，&lt;span
+class=&quot;math inline&quot;&gt;&#92;(P&#92;)&lt;/span&gt;的分量表示为&lt;span
+class=&quot;math inline&quot;&gt;&#92;(P_{rs}&#92;)&lt;/span&gt;，则能量密度函数&lt;span
+class=&quot;math inline&quot;&gt;&#92;(&#92;Psi&#92;)&lt;/span&gt;关于位置&lt;span
+class=&quot;math inline&quot;&gt;&#92;(&#92;vec {&#92;mathbf{x}}&#92;)&lt;/span&gt; 的梯度为：&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="学习" scheme="https://grahamzen.github.io/categories/%E5%AD%A6%E4%B9%A0/"/>
+    
+    <category term="计算机图形学" scheme="https://grahamzen.github.io/categories/%E5%AD%A6%E4%B9%A0/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9B%BE%E5%BD%A2%E5%AD%A6/"/>
+    
+    <category term="仿真" scheme="https://grahamzen.github.io/categories/%E5%AD%A6%E4%B9%A0/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9B%BE%E5%BD%A2%E5%AD%A6/%E4%BB%BF%E7%9C%9F/"/>
+    
+    <category term="FEM" scheme="https://grahamzen.github.io/categories/%E5%AD%A6%E4%B9%A0/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9B%BE%E5%BD%A2%E5%AD%A6/%E4%BB%BF%E7%9C%9F/FEM/"/>
+    
+    
+    <category term="计算机图形学" scheme="https://grahamzen.github.io/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9B%BE%E5%BD%A2%E5%AD%A6/"/>
+    
+    <category term="仿真" scheme="https://grahamzen.github.io/tags/%E4%BB%BF%E7%9C%9F/"/>
     
     <category term="FEM" scheme="https://grahamzen.github.io/tags/FEM/"/>
     
@@ -57,10 +127,10 @@
   
   <entry>
     <title>SVD</title>
-    <link href="https://grahamzen.github.io/2023/12/23/Applied%20Numerical%20Algorithms/SVD/"/>
-    <id>https://grahamzen.github.io/2023/12/23/Applied%20Numerical%20Algorithms/SVD/</id>
+    <link href="https://grahamzen.github.io/2023/12/24/Applied%20Numerical%20Algorithms/SVD/"/>
+    <id>https://grahamzen.github.io/2023/12/24/Applied%20Numerical%20Algorithms/SVD/</id>
     <published>2023-12-24T04:29:22.000Z</published>
-    <updated>2024-01-11T23:49:22.183Z</updated>
+    <updated>2024-01-11T23:49:22.000Z</updated>
     
     
     <summary type="html">&lt;h2 id=&quot;understading-the-geometry-of-ain-mathbbrmtimes-n&quot;&gt;Understading
@@ -93,7 +163,7 @@ x&#92;in &#92;mathbb{R}^n &#92;mapsto Ax &#92;in &#92;mathbb{R}^m
     <link href="https://grahamzen.github.io/2023/12/23/Applied%20Numerical%20Algorithms/QR-iteration/"/>
     <id>https://grahamzen.github.io/2023/12/23/Applied%20Numerical%20Algorithms/QR-iteration/</id>
     <published>2023-12-23T05:14:20.000Z</published>
-    <updated>2023-12-24T05:58:07.890Z</updated>
+    <updated>2023-12-24T05:58:07.000Z</updated>
     
     
     <summary type="html">&lt;p&gt;Assumption: &lt;span class=&quot;math inline&quot;&gt;&#92;(A &#92;in &#92;mathbb{R}^{n &#92;times
@@ -122,7 +192,7 @@ class=&quot;math inline&quot;&gt;&#92;(&#92;lambda&#92;)&lt;/span&gt;s.&lt;/p&gt
     <link href="https://grahamzen.github.io/2023/12/23/Applied%20Numerical%20Algorithms/Eigenvalue-iteration-deflation/"/>
     <id>https://grahamzen.github.io/2023/12/23/Applied%20Numerical%20Algorithms/Eigenvalue-iteration-deflation/</id>
     <published>2023-12-23T05:14:17.000Z</published>
-    <updated>2023-12-23T23:15:31.435Z</updated>
+    <updated>2023-12-23T23:15:31.000Z</updated>
     
     
     <summary type="html">&lt;h2 id=&quot;two-basic-properties&quot;&gt;Two basic Properties&lt;/h2&gt;
@@ -152,7 +222,7 @@ eigenvalue.&lt;/p&gt;</summary>
     <link href="https://grahamzen.github.io/2023/12/22/Applied%20Numerical%20Algorithms/Applications-of-eigenvectors/"/>
     <id>https://grahamzen.github.io/2023/12/22/Applied%20Numerical%20Algorithms/Applications-of-eigenvectors/</id>
     <published>2023-12-22T05:14:13.000Z</published>
-    <updated>2023-12-23T23:06:50.693Z</updated>
+    <updated>2023-12-23T23:06:50.000Z</updated>
     
     
     <summary type="html">&lt;p&gt;很多时候需要把已有问题转化为特征值问题。&lt;/p&gt;
@@ -180,10 +250,10 @@ eigenvalue.&lt;/p&gt;</summary>
   
   <entry>
     <title>Column Space QR</title>
-    <link href="https://grahamzen.github.io/2023/12/20/Applied%20Numerical%20Algorithms/QR-factorization/"/>
-    <id>https://grahamzen.github.io/2023/12/20/Applied%20Numerical%20Algorithms/QR-factorization/</id>
+    <link href="https://grahamzen.github.io/2023/12/21/Applied%20Numerical%20Algorithms/QR-factorization/"/>
+    <id>https://grahamzen.github.io/2023/12/21/Applied%20Numerical%20Algorithms/QR-factorization/</id>
     <published>2023-12-21T02:46:03.000Z</published>
-    <updated>2023-12-22T03:13:23.845Z</updated>
+    <updated>2023-12-22T03:13:23.000Z</updated>
     
     
     <summary type="html">&lt;h2 id=&quot;high-level-idea&quot;&gt;High-Level Idea&lt;/h2&gt;
@@ -220,7 +290,7 @@ A&#92;)&lt;/span&gt;，我们可以使用QR分解。&lt;/p&gt;</summary>
     <link href="https://grahamzen.github.io/2023/12/20/local-step-inference/"/>
     <id>https://grahamzen.github.io/2023/12/20/local-step-inference/</id>
     <published>2023-12-20T08:08:06.000Z</published>
-    <updated>2023-12-20T23:12:53.747Z</updated>
+    <updated>2024-08-09T03:16:21.579Z</updated>
     
     
     <summary type="html">&lt;h2 id=&quot;介绍&quot;&gt;介绍&lt;/h2&gt;
@@ -236,14 +306,14 @@ step的实现的推导过程。用Corotated strain model的CUDA的实现作为�
     
     <category term="计算机图形学" scheme="https://grahamzen.github.io/categories/%E5%AD%A6%E4%B9%A0/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9B%BE%E5%BD%A2%E5%AD%A6/"/>
     
-    <category term="物理模拟" scheme="https://grahamzen.github.io/categories/%E5%AD%A6%E4%B9%A0/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9B%BE%E5%BD%A2%E5%AD%A6/%E7%89%A9%E7%90%86%E6%A8%A1%E6%8B%9F/"/>
+    <category term="仿真" scheme="https://grahamzen.github.io/categories/%E5%AD%A6%E4%B9%A0/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9B%BE%E5%BD%A2%E5%AD%A6/%E4%BB%BF%E7%9C%9F/"/>
     
-    <category term="FEM" scheme="https://grahamzen.github.io/categories/%E5%AD%A6%E4%B9%A0/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9B%BE%E5%BD%A2%E5%AD%A6/%E7%89%A9%E7%90%86%E6%A8%A1%E6%8B%9F/FEM/"/>
+    <category term="FEM" scheme="https://grahamzen.github.io/categories/%E5%AD%A6%E4%B9%A0/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9B%BE%E5%BD%A2%E5%AD%A6/%E4%BB%BF%E7%9C%9F/FEM/"/>
     
     
     <category term="计算机图形学" scheme="https://grahamzen.github.io/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9B%BE%E5%BD%A2%E5%AD%A6/"/>
     
-    <category term="物理模拟" scheme="https://grahamzen.github.io/tags/%E7%89%A9%E7%90%86%E6%A8%A1%E6%8B%9F/"/>
+    <category term="仿真" scheme="https://grahamzen.github.io/tags/%E4%BB%BF%E7%9C%9F/"/>
     
     <category term="FEM" scheme="https://grahamzen.github.io/tags/FEM/"/>
     
@@ -255,10 +325,10 @@ step的实现的推导过程。用Corotated strain model的CUDA的实现作为�
   
   <entry>
     <title>Condition number for linear systems</title>
-    <link href="https://grahamzen.github.io/2023/12/19/Applied%20Numerical%20Algorithms/Condition-number-for-linear-systems/"/>
-    <id>https://grahamzen.github.io/2023/12/19/Applied%20Numerical%20Algorithms/Condition-number-for-linear-systems/</id>
+    <link href="https://grahamzen.github.io/2023/12/20/Applied%20Numerical%20Algorithms/Condition-number-for-linear-systems/"/>
+    <id>https://grahamzen.github.io/2023/12/20/Applied%20Numerical%20Algorithms/Condition-number-for-linear-systems/</id>
     <published>2023-12-20T04:06:16.000Z</published>
-    <updated>2023-12-20T18:55:11.966Z</updated>
+    <updated>2023-12-20T18:55:11.000Z</updated>
     
     
     <summary type="html">&lt;h2 id=&quot;sensitivity-and-conditioning&quot;&gt;Sensitivity and Conditioning&lt;/h2&gt;
@@ -288,7 +358,7 @@ error)?&lt;/p&gt;</summary>
     <link href="https://grahamzen.github.io/2023/12/17/Applied%20Numerical%20Algorithms/Cholesky-factorization-sparse-matrices/"/>
     <id>https://grahamzen.github.io/2023/12/17/Applied%20Numerical%20Algorithms/Cholesky-factorization-sparse-matrices/</id>
     <published>2023-12-17T10:23:19.000Z</published>
-    <updated>2023-12-20T18:55:43.506Z</updated>
+    <updated>2023-12-20T18:55:43.000Z</updated>
     
     
     <summary type="html">&lt;h2 id=&quot;structured-linear-systems&quot;&gt;Structured Linear Systems&lt;/h2&gt;
@@ -314,10 +384,10 @@ easier or stabler to solve.&lt;/p&gt;
   
   <entry>
     <title>Linear Systems and LU</title>
-    <link href="https://grahamzen.github.io/2023/12/16/Applied%20Numerical%20Algorithms/Linear-Systems-and-LU/"/>
-    <id>https://grahamzen.github.io/2023/12/16/Applied%20Numerical%20Algorithms/Linear-Systems-and-LU/</id>
+    <link href="https://grahamzen.github.io/2023/12/17/Applied%20Numerical%20Algorithms/Linear-Systems-and-LU/"/>
+    <id>https://grahamzen.github.io/2023/12/17/Applied%20Numerical%20Algorithms/Linear-Systems-and-LU/</id>
     <published>2023-12-17T04:50:28.000Z</published>
-    <updated>2023-12-20T18:56:55.641Z</updated>
+    <updated>2023-12-20T18:56:55.000Z</updated>
     
     
     <summary type="html">&lt;h2 id=&quot;linear-systems&quot;&gt;Linear Systems&lt;/h2&gt;
@@ -352,7 +422,7 @@ easier or stabler to solve.&lt;/p&gt;
     <link href="https://grahamzen.github.io/2023/12/16/Applied%20Numerical%20Algorithms/Introduction-number-systems-measuring-error/"/>
     <id>https://grahamzen.github.io/2023/12/16/Applied%20Numerical%20Algorithms/Introduction-number-systems-measuring-error/</id>
     <published>2023-12-16T07:47:52.000Z</published>
-    <updated>2023-12-20T17:31:00.360Z</updated>
+    <updated>2023-12-20T17:31:00.000Z</updated>
     
     
     <summary type="html">&lt;p&gt;Mathematically correct != numerically sound. Using Tolerance:
@@ -377,10 +447,10 @@ easier or stabler to solve.&lt;/p&gt;
   
   <entry>
     <title>对LLVM的Pass进行调试的vscode配置</title>
-    <link href="https://grahamzen.github.io/2023/11/19/llvm-vscode/"/>
-    <id>https://grahamzen.github.io/2023/11/19/llvm-vscode/</id>
+    <link href="https://grahamzen.github.io/2023/11/20/llvm-vscode/"/>
+    <id>https://grahamzen.github.io/2023/11/20/llvm-vscode/</id>
     <published>2023-11-20T04:26:12.000Z</published>
-    <updated>2023-11-20T17:42:30.246Z</updated>
+    <updated>2023-11-20T17:42:30.000Z</updated>
     
     
     <summary type="html">&lt;h2 id=&quot;文件夹结构&quot;&gt;文件夹结构&lt;/h2&gt;
@@ -412,7 +482,7 @@ easier or stabler to solve.&lt;/p&gt;
     <link href="https://grahamzen.github.io/2023/11/19/tensor/"/>
     <id>https://grahamzen.github.io/2023/11/19/tensor/</id>
     <published>2023-11-19T15:32:17.000Z</published>
-    <updated>2023-12-17T23:09:58.821Z</updated>
+    <updated>2023-12-17T23:09:58.000Z</updated>
     
     
     <summary type="html">&lt;p&gt;对于三维空间中的各向同性材料，弹性模量张量（Elastic Modulus
@@ -439,7 +509,7 @@ Tensor）可以视为一个&lt;span class=&quot;math inline&quot;&gt;&#92;(3 &#9
     <link href="https://grahamzen.github.io/2023/04/09/rigidBody-note/"/>
     <id>https://grahamzen.github.io/2023/04/09/rigidBody-note/</id>
     <published>2023-04-09T09:50:21.000Z</published>
-    <updated>2023-12-20T21:09:48.509Z</updated>
+    <updated>2024-08-09T03:16:21.579Z</updated>
     
     
     <summary type="html">&lt;h1 id=&quot;math&quot;&gt;2 Math&lt;/h1&gt;
@@ -456,9 +526,9 @@ alt=&quot;1681077071804&quot; /&gt;
     
     <category term="计算机图形学" scheme="https://grahamzen.github.io/categories/%E5%AD%A6%E4%B9%A0/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9B%BE%E5%BD%A2%E5%AD%A6/"/>
     
-    <category term="物理模拟" scheme="https://grahamzen.github.io/categories/%E5%AD%A6%E4%B9%A0/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9B%BE%E5%BD%A2%E5%AD%A6/%E7%89%A9%E7%90%86%E6%A8%A1%E6%8B%9F/"/>
+    <category term="仿真" scheme="https://grahamzen.github.io/categories/%E5%AD%A6%E4%B9%A0/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9B%BE%E5%BD%A2%E5%AD%A6/%E4%BB%BF%E7%9C%9F/"/>
     
-    <category term="GAMES103" scheme="https://grahamzen.github.io/categories/%E5%AD%A6%E4%B9%A0/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9B%BE%E5%BD%A2%E5%AD%A6/%E7%89%A9%E7%90%86%E6%A8%A1%E6%8B%9F/GAMES103/"/>
+    <category term="GAMES103" scheme="https://grahamzen.github.io/categories/%E5%AD%A6%E4%B9%A0/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9B%BE%E5%BD%A2%E5%AD%A6/%E4%BB%BF%E7%9C%9F/GAMES103/"/>
     
     
     <category term="数学" scheme="https://grahamzen.github.io/tags/%E6%95%B0%E5%AD%A6/"/>
@@ -478,7 +548,7 @@ alt=&quot;1681077071804&quot; /&gt;
     <link href="https://grahamzen.github.io/2023/03/07/VkPresentModeKHR/"/>
     <id>https://grahamzen.github.io/2023/03/07/VkPresentModeKHR/</id>
     <published>2023-03-07T06:15:11.000Z</published>
-    <updated>2023-12-17T23:09:10.368Z</updated>
+    <updated>2023-12-17T23:09:10.000Z</updated>
     
     
     <summary type="html">&lt;p&gt;在构建交换链 &lt;code&gt;vk::SwapchainCreateInfoKHR&lt;/code&gt;时，有一个设置是
@@ -513,7 +583,7 @@ Interval)&lt;/h3&gt;</summary>
     <link href="https://grahamzen.github.io/2023/03/04/BSpline/"/>
     <id>https://grahamzen.github.io/2023/03/04/BSpline/</id>
     <published>2023-03-04T14:13:56.000Z</published>
-    <updated>2023-12-20T06:17:56.050Z</updated>
+    <updated>2024-08-09T15:33:56.708Z</updated>
     
     
     <summary type="html">&lt;h2 id=&quot;bspline上任意点的计算公式&quot;&gt;Bspline上任意点的计算公式&lt;/h2&gt;</summary>
@@ -544,7 +614,7 @@ Interval)&lt;/h3&gt;</summary>
     <link href="https://grahamzen.github.io/2023/03/04/cmake-related/"/>
     <id>https://grahamzen.github.io/2023/03/04/cmake-related/</id>
     <published>2023-03-04T10:53:03.000Z</published>
-    <updated>2023-12-20T06:17:56.049Z</updated>
+    <updated>2023-12-20T06:17:56.000Z</updated>
     
     
     <summary type="html">&lt;p&gt;记录一个&lt;code&gt;CMake&lt;/code&gt;速查表。&lt;/p&gt;
@@ -569,10 +639,10 @@ Interval)&lt;/h3&gt;</summary>
   
   <entry>
     <title>渲染方程及BSDFs</title>
-    <link href="https://grahamzen.github.io/2023/02/09/rendering-equation/"/>
-    <id>https://grahamzen.github.io/2023/02/09/rendering-equation/</id>
+    <link href="https://grahamzen.github.io/2023/02/10/rendering-equation/"/>
+    <id>https://grahamzen.github.io/2023/02/10/rendering-equation/</id>
     <published>2023-02-09T17:42:42.000Z</published>
-    <updated>2023-02-21T17:28:53.139Z</updated>
+    <updated>2023-02-21T17:28:53.000Z</updated>
     
     
     <summary type="html">&lt;h2 id=&quot;光传播方程the-light-transport-equation-lte&quot;&gt;光传播方程(The Light
@@ -603,7 +673,7 @@ L_o(p,&#92;omega_o)=L_e(p,&#92;omega_o)+&#92;int_{s^2}f(p,&#92;omega_o,&#92;omeg
     <link href="https://grahamzen.github.io/2023/02/09/rendering-equation-bg/"/>
     <id>https://grahamzen.github.io/2023/02/09/rendering-equation-bg/</id>
     <published>2023-02-09T15:49:50.000Z</published>
-    <updated>2023-03-05T17:04:31.606Z</updated>
+    <updated>2023-03-05T17:04:31.000Z</updated>
     
     
     <summary type="html">&lt;p&gt;本来想写BSDF的推导，但是发现基础知识很多，正好整理一下作为复习。部分内容参考&lt;a
@@ -624,29 +694,6 @@ Edition&lt;/a&gt;，非常推荐阅读。&lt;/p&gt;</summary>
     <category term="概率论" scheme="https://grahamzen.github.io/tags/%E6%A6%82%E7%8E%87%E8%AE%BA/"/>
     
     <category term="蒙特卡洛" scheme="https://grahamzen.github.io/tags/%E8%92%99%E7%89%B9%E5%8D%A1%E6%B4%9B/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>导数</title>
-    <link href="https://grahamzen.github.io/2023/02/04/derivative/"/>
-    <id>https://grahamzen.github.io/2023/02/04/derivative/</id>
-    <published>2023-02-04T13:52:00.000Z</published>
-    <updated>2023-12-16T20:50:25.093Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;标量求导和向量求导是矩阵求导的特殊情况。向量求导使用的频率较高。对向量求导时运用乘法和除法公式时会出现标量求导，这里记录一下各种求导的结果。&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="学习" scheme="https://grahamzen.github.io/categories/%E5%AD%A6%E4%B9%A0/"/>
-    
-    <category term="数学" scheme="https://grahamzen.github.io/categories/%E5%AD%A6%E4%B9%A0/%E6%95%B0%E5%AD%A6/"/>
-    
-    
-    <category term="数学" scheme="https://grahamzen.github.io/tags/%E6%95%B0%E5%AD%A6/"/>
-    
-    <category term="微积分" scheme="https://grahamzen.github.io/tags/%E5%BE%AE%E7%A7%AF%E5%88%86/"/>
     
   </entry>
   
