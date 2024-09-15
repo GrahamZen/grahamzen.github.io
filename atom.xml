@@ -6,7 +6,7 @@
   <link href="https://grahamzen.github.io/atom.xml" rel="self"/>
   
   <link href="https://grahamzen.github.io/"/>
-  <updated>2024-09-15T07:22:38.116Z</updated>
+  <updated>2024-09-15T07:24:41.846Z</updated>
   <id>https://grahamzen.github.io/</id>
   
   <author>
@@ -21,16 +21,29 @@
     <link href="https://grahamzen.github.io/2024/09/15/point-triangle-distance/"/>
     <id>https://grahamzen.github.io/2024/09/15/point-triangle-distance/</id>
     <published>2024-09-15T06:17:09.000Z</published>
-    <updated>2024-09-15T07:22:38.116Z</updated>
+    <updated>2024-09-15T07:24:41.846Z</updated>
     
     
-      
-      
-        
-        
-    <summary type="html"></summary>
-        
-      
+    <summary type="html">&lt;h2 id=&quot;介绍&quot;&gt;介绍&lt;/h2&gt;
+&lt;p&gt;该文章中的c++代码参考了&lt;a
+href=&quot;https://github.com/ipc-sim/ipc-toolkit&quot;&gt;ipc-toolkit&lt;/a&gt;的实现。&lt;/p&gt;
+&lt;p&gt;点到三角形的距离可以用如下定义：&lt;/p&gt;
+&lt;p&gt;&lt;span class=&quot;math display&quot;&gt;&#92;[
+&#92;begin{aligned}
+&#92;text{distance}(&#92;vec{&#92;mathbf{x_p}}, &#92;vec{&#92;mathbf{x_t}_1},
+&#92;vec{&#92;mathbf{x_t}_2}, &#92;vec{&#92;mathbf{x_t}_3}) &amp;amp;= &#92;min_{&#92;beta_1,
+&#92;beta_2} &#92;left&#92;| &#92;vec{&#92;mathbf{x_p}} - ( &#92;vec{&#92;mathbf{x_t}_1} + &#92;beta_1
+(&#92;vec{&#92;mathbf{x_t}_2} - &#92;vec{&#92;mathbf{x_t}_1}) + &#92;beta_2
+(&#92;vec{&#92;mathbf{x_t}_3} - &#92;vec{&#92;mathbf{x_t}_1}) ) &#92;right&#92;| &#92;&#92;&amp;amp;s.t.
+&#92;beta_1 &#92;geq 0, &#92;beta_2 &#92;geq 0, &#92;beta_1 + &#92;beta_2 &#92;leq 1
+&#92;end{aligned}
+&#92;]&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;这是一个分断连续的函数，实际计算时可以根据点和三角形的位置关系分以下几种情况讨论，首先要将点投影到三角形所在的平面上：&lt;/p&gt;
+&lt;ol type=&quot;1&quot;&gt;
+&lt;li&gt;投影后，点在三角形内部，此时距离为点到三角形所在平面的距离。&lt;/li&gt;
+&lt;li&gt;投影后，点在三角形的某个边朝外的半平面且投影在边上的点在边上，此时距离为点到边的距离。&lt;/li&gt;
+&lt;li&gt;其他情况，此时距离为点到三角形的三个顶点的最小距离。&lt;/li&gt;
+&lt;/ol&gt;</summary>
     
     
     
@@ -77,6 +90,22 @@ P}{&#92;partial F}):&#92;frac{&#92;partial F}{&#92;partial &#92;vec {&#92;mathbf
     
     
     
+    <category term="学习" scheme="https://grahamzen.github.io/categories/%E5%AD%A6%E4%B9%A0/"/>
+    
+    <category term="计算机图形学" scheme="https://grahamzen.github.io/categories/%E5%AD%A6%E4%B9%A0/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9B%BE%E5%BD%A2%E5%AD%A6/"/>
+    
+    <category term="仿真" scheme="https://grahamzen.github.io/categories/%E5%AD%A6%E4%B9%A0/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9B%BE%E5%BD%A2%E5%AD%A6/%E4%BB%BF%E7%9C%9F/"/>
+    
+    <category term="FEM" scheme="https://grahamzen.github.io/categories/%E5%AD%A6%E4%B9%A0/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9B%BE%E5%BD%A2%E5%AD%A6/%E4%BB%BF%E7%9C%9F/FEM/"/>
+    
+    
+    <category term="计算机图形学" scheme="https://grahamzen.github.io/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9B%BE%E5%BD%A2%E5%AD%A6/"/>
+    
+    <category term="仿真" scheme="https://grahamzen.github.io/tags/%E4%BB%BF%E7%9C%9F/"/>
+    
+    <category term="FEM" scheme="https://grahamzen.github.io/tags/FEM/"/>
+    
+    <category term="软体模拟" scheme="https://grahamzen.github.io/tags/%E8%BD%AF%E4%BD%93%E6%A8%A1%E6%8B%9F/"/>
     
   </entry>
   
@@ -113,6 +142,24 @@ class=&quot;math inline&quot;&gt;&#92;(&#92;vec {&#92;mathbf{x}}&#92;)&lt;/span&
     
     
     
+    <category term="学习" scheme="https://grahamzen.github.io/categories/%E5%AD%A6%E4%B9%A0/"/>
+    
+    <category term="计算机图形学" scheme="https://grahamzen.github.io/categories/%E5%AD%A6%E4%B9%A0/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9B%BE%E5%BD%A2%E5%AD%A6/"/>
+    
+    <category term="仿真" scheme="https://grahamzen.github.io/categories/%E5%AD%A6%E4%B9%A0/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9B%BE%E5%BD%A2%E5%AD%A6/%E4%BB%BF%E7%9C%9F/"/>
+    
+    <category term="FEM" scheme="https://grahamzen.github.io/categories/%E5%AD%A6%E4%B9%A0/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9B%BE%E5%BD%A2%E5%AD%A6/%E4%BB%BF%E7%9C%9F/FEM/"/>
+    
+    
+    <category term="计算机图形学" scheme="https://grahamzen.github.io/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9B%BE%E5%BD%A2%E5%AD%A6/"/>
+    
+    <category term="仿真" scheme="https://grahamzen.github.io/tags/%E4%BB%BF%E7%9C%9F/"/>
+    
+    <category term="FEM" scheme="https://grahamzen.github.io/tags/FEM/"/>
+    
+    <category term="Projective Dynamics" scheme="https://grahamzen.github.io/tags/Projective-Dynamics/"/>
+    
+    <category term="软体模拟" scheme="https://grahamzen.github.io/tags/%E8%BD%AF%E4%BD%93%E6%A8%A1%E6%8B%9F/"/>
     
   </entry>
   
@@ -134,6 +181,18 @@ x&#92;in &#92;mathbb{R}^n &#92;mapsto Ax &#92;in &#92;mathbb{R}^m
     
     
     
+    <category term="学习" scheme="https://grahamzen.github.io/categories/%E5%AD%A6%E4%B9%A0/"/>
+    
+    <category term="数学" scheme="https://grahamzen.github.io/categories/%E5%AD%A6%E4%B9%A0/%E6%95%B0%E5%AD%A6/"/>
+    
+    <category term="Applied Numerical Algorithms" scheme="https://grahamzen.github.io/categories/%E5%AD%A6%E4%B9%A0/%E6%95%B0%E5%AD%A6/Applied-Numerical-Algorithms/"/>
+    
+    
+    <category term="数学" scheme="https://grahamzen.github.io/tags/%E6%95%B0%E5%AD%A6/"/>
+    
+    <category term="数值计算" scheme="https://grahamzen.github.io/tags/%E6%95%B0%E5%80%BC%E8%AE%A1%E7%AE%97/"/>
+    
+    <category term="线性代数" scheme="https://grahamzen.github.io/tags/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/"/>
     
   </entry>
   
@@ -151,6 +210,18 @@ class=&quot;math inline&quot;&gt;&#92;(&#92;lambda&#92;)&lt;/span&gt;s.&lt;/p&gt
     
     
     
+    <category term="学习" scheme="https://grahamzen.github.io/categories/%E5%AD%A6%E4%B9%A0/"/>
+    
+    <category term="数学" scheme="https://grahamzen.github.io/categories/%E5%AD%A6%E4%B9%A0/%E6%95%B0%E5%AD%A6/"/>
+    
+    <category term="Applied Numerical Algorithms" scheme="https://grahamzen.github.io/categories/%E5%AD%A6%E4%B9%A0/%E6%95%B0%E5%AD%A6/Applied-Numerical-Algorithms/"/>
+    
+    
+    <category term="数学" scheme="https://grahamzen.github.io/tags/%E6%95%B0%E5%AD%A6/"/>
+    
+    <category term="数值计算" scheme="https://grahamzen.github.io/tags/%E6%95%B0%E5%80%BC%E8%AE%A1%E7%AE%97/"/>
+    
+    <category term="线性代数" scheme="https://grahamzen.github.io/tags/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/"/>
     
   </entry>
   
@@ -169,6 +240,18 @@ eigenvalue.&lt;/p&gt;</summary>
     
     
     
+    <category term="学习" scheme="https://grahamzen.github.io/categories/%E5%AD%A6%E4%B9%A0/"/>
+    
+    <category term="数学" scheme="https://grahamzen.github.io/categories/%E5%AD%A6%E4%B9%A0/%E6%95%B0%E5%AD%A6/"/>
+    
+    <category term="Applied Numerical Algorithms" scheme="https://grahamzen.github.io/categories/%E5%AD%A6%E4%B9%A0/%E6%95%B0%E5%AD%A6/Applied-Numerical-Algorithms/"/>
+    
+    
+    <category term="数学" scheme="https://grahamzen.github.io/tags/%E6%95%B0%E5%AD%A6/"/>
+    
+    <category term="数值计算" scheme="https://grahamzen.github.io/tags/%E6%95%B0%E5%80%BC%E8%AE%A1%E7%AE%97/"/>
+    
+    <category term="线性代数" scheme="https://grahamzen.github.io/tags/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/"/>
     
   </entry>
   
@@ -188,6 +271,18 @@ eigenvalue.&lt;/p&gt;</summary>
     
     
     
+    <category term="学习" scheme="https://grahamzen.github.io/categories/%E5%AD%A6%E4%B9%A0/"/>
+    
+    <category term="数学" scheme="https://grahamzen.github.io/categories/%E5%AD%A6%E4%B9%A0/%E6%95%B0%E5%AD%A6/"/>
+    
+    <category term="Applied Numerical Algorithms" scheme="https://grahamzen.github.io/categories/%E5%AD%A6%E4%B9%A0/%E6%95%B0%E5%AD%A6/Applied-Numerical-Algorithms/"/>
+    
+    
+    <category term="数学" scheme="https://grahamzen.github.io/tags/%E6%95%B0%E5%AD%A6/"/>
+    
+    <category term="数值计算" scheme="https://grahamzen.github.io/tags/%E6%95%B0%E5%80%BC%E8%AE%A1%E7%AE%97/"/>
+    
+    <category term="线性代数" scheme="https://grahamzen.github.io/tags/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/"/>
     
   </entry>
   
@@ -213,6 +308,18 @@ A&#92;)&lt;/span&gt;，我们可以使用QR分解。&lt;/p&gt;</summary>
     
     
     
+    <category term="学习" scheme="https://grahamzen.github.io/categories/%E5%AD%A6%E4%B9%A0/"/>
+    
+    <category term="数学" scheme="https://grahamzen.github.io/categories/%E5%AD%A6%E4%B9%A0/%E6%95%B0%E5%AD%A6/"/>
+    
+    <category term="Applied Numerical Algorithms" scheme="https://grahamzen.github.io/categories/%E5%AD%A6%E4%B9%A0/%E6%95%B0%E5%AD%A6/Applied-Numerical-Algorithms/"/>
+    
+    
+    <category term="数学" scheme="https://grahamzen.github.io/tags/%E6%95%B0%E5%AD%A6/"/>
+    
+    <category term="数值计算" scheme="https://grahamzen.github.io/tags/%E6%95%B0%E5%80%BC%E8%AE%A1%E7%AE%97/"/>
+    
+    <category term="线性代数" scheme="https://grahamzen.github.io/tags/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/"/>
     
   </entry>
   
@@ -233,6 +340,24 @@ step的实现的推导过程。用Corotated strain model的CUDA的实现作为�
     
     
     
+    <category term="学习" scheme="https://grahamzen.github.io/categories/%E5%AD%A6%E4%B9%A0/"/>
+    
+    <category term="计算机图形学" scheme="https://grahamzen.github.io/categories/%E5%AD%A6%E4%B9%A0/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9B%BE%E5%BD%A2%E5%AD%A6/"/>
+    
+    <category term="仿真" scheme="https://grahamzen.github.io/categories/%E5%AD%A6%E4%B9%A0/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9B%BE%E5%BD%A2%E5%AD%A6/%E4%BB%BF%E7%9C%9F/"/>
+    
+    <category term="FEM" scheme="https://grahamzen.github.io/categories/%E5%AD%A6%E4%B9%A0/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9B%BE%E5%BD%A2%E5%AD%A6/%E4%BB%BF%E7%9C%9F/FEM/"/>
+    
+    
+    <category term="计算机图形学" scheme="https://grahamzen.github.io/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9B%BE%E5%BD%A2%E5%AD%A6/"/>
+    
+    <category term="仿真" scheme="https://grahamzen.github.io/tags/%E4%BB%BF%E7%9C%9F/"/>
+    
+    <category term="FEM" scheme="https://grahamzen.github.io/tags/FEM/"/>
+    
+    <category term="Projective Dynamics" scheme="https://grahamzen.github.io/tags/Projective-Dynamics/"/>
+    
+    <category term="软体模拟" scheme="https://grahamzen.github.io/tags/%E8%BD%AF%E4%BD%93%E6%A8%A1%E6%8B%9F/"/>
     
   </entry>
   
@@ -253,6 +378,16 @@ error)?&lt;/p&gt;</summary>
     
     
     
+    <category term="学习" scheme="https://grahamzen.github.io/categories/%E5%AD%A6%E4%B9%A0/"/>
+    
+    <category term="数学" scheme="https://grahamzen.github.io/categories/%E5%AD%A6%E4%B9%A0/%E6%95%B0%E5%AD%A6/"/>
+    
+    <category term="Applied Numerical Algorithms" scheme="https://grahamzen.github.io/categories/%E5%AD%A6%E4%B9%A0/%E6%95%B0%E5%AD%A6/Applied-Numerical-Algorithms/"/>
+    
+    
+    <category term="数学" scheme="https://grahamzen.github.io/tags/%E6%95%B0%E5%AD%A6/"/>
+    
+    <category term="数值计算" scheme="https://grahamzen.github.io/tags/%E6%95%B0%E5%80%BC%E8%AE%A1%E7%AE%97/"/>
     
   </entry>
   
@@ -272,6 +407,16 @@ easier or stabler to solve.&lt;/p&gt;
     
     
     
+    <category term="学习" scheme="https://grahamzen.github.io/categories/%E5%AD%A6%E4%B9%A0/"/>
+    
+    <category term="数学" scheme="https://grahamzen.github.io/categories/%E5%AD%A6%E4%B9%A0/%E6%95%B0%E5%AD%A6/"/>
+    
+    <category term="Applied Numerical Algorithms" scheme="https://grahamzen.github.io/categories/%E5%AD%A6%E4%B9%A0/%E6%95%B0%E5%AD%A6/Applied-Numerical-Algorithms/"/>
+    
+    
+    <category term="数学" scheme="https://grahamzen.github.io/tags/%E6%95%B0%E5%AD%A6/"/>
+    
+    <category term="数值计算" scheme="https://grahamzen.github.io/tags/%E6%95%B0%E5%80%BC%E8%AE%A1%E7%AE%97/"/>
     
   </entry>
   
@@ -295,6 +440,18 @@ easier or stabler to solve.&lt;/p&gt;
     
     
     
+    <category term="学习" scheme="https://grahamzen.github.io/categories/%E5%AD%A6%E4%B9%A0/"/>
+    
+    <category term="数学" scheme="https://grahamzen.github.io/categories/%E5%AD%A6%E4%B9%A0/%E6%95%B0%E5%AD%A6/"/>
+    
+    <category term="Applied Numerical Algorithms" scheme="https://grahamzen.github.io/categories/%E5%AD%A6%E4%B9%A0/%E6%95%B0%E5%AD%A6/Applied-Numerical-Algorithms/"/>
+    
+    
+    <category term="数学" scheme="https://grahamzen.github.io/tags/%E6%95%B0%E5%AD%A6/"/>
+    
+    <category term="数值计算" scheme="https://grahamzen.github.io/tags/%E6%95%B0%E5%80%BC%E8%AE%A1%E7%AE%97/"/>
+    
+    <category term="线性代数" scheme="https://grahamzen.github.io/tags/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/"/>
     
   </entry>
   
@@ -311,6 +468,18 @@ easier or stabler to solve.&lt;/p&gt;
     
     
     
+    <category term="学习" scheme="https://grahamzen.github.io/categories/%E5%AD%A6%E4%B9%A0/"/>
+    
+    <category term="数学" scheme="https://grahamzen.github.io/categories/%E5%AD%A6%E4%B9%A0/%E6%95%B0%E5%AD%A6/"/>
+    
+    <category term="Applied Numerical Algorithms" scheme="https://grahamzen.github.io/categories/%E5%AD%A6%E4%B9%A0/%E6%95%B0%E5%AD%A6/Applied-Numerical-Algorithms/"/>
+    
+    
+    <category term="数学" scheme="https://grahamzen.github.io/tags/%E6%95%B0%E5%AD%A6/"/>
+    
+    <category term="数值计算" scheme="https://grahamzen.github.io/tags/%E6%95%B0%E5%80%BC%E8%AE%A1%E7%AE%97/"/>
+    
+    <category term="线性代数" scheme="https://grahamzen.github.io/tags/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/"/>
     
   </entry>
   
@@ -333,6 +502,16 @@ easier or stabler to solve.&lt;/p&gt;
     
     
     
+    <category term="学习" scheme="https://grahamzen.github.io/categories/%E5%AD%A6%E4%B9%A0/"/>
+    
+    <category term="软件分析" scheme="https://grahamzen.github.io/categories/%E5%AD%A6%E4%B9%A0/%E8%BD%AF%E4%BB%B6%E5%88%86%E6%9E%90/"/>
+    
+    
+    <category term="LLVM" scheme="https://grahamzen.github.io/tags/LLVM/"/>
+    
+    <category term="vscode" scheme="https://grahamzen.github.io/tags/vscode/"/>
+    
+    <category term="静态分析" scheme="https://grahamzen.github.io/tags/%E9%9D%99%E6%80%81%E5%88%86%E6%9E%90/"/>
     
   </entry>
   
@@ -352,6 +531,14 @@ Tensor）可以视为一个&lt;span class=&quot;math inline&quot;&gt;&#92;(3 &#9
     
     
     
+    <category term="学习" scheme="https://grahamzen.github.io/categories/%E5%AD%A6%E4%B9%A0/"/>
+    
+    <category term="数学" scheme="https://grahamzen.github.io/categories/%E5%AD%A6%E4%B9%A0/%E6%95%B0%E5%AD%A6/"/>
+    
+    
+    <category term="数学" scheme="https://grahamzen.github.io/tags/%E6%95%B0%E5%AD%A6/"/>
+    
+    <category term="微积分" scheme="https://grahamzen.github.io/tags/%E5%BE%AE%E7%A7%AF%E5%88%86/"/>
     
   </entry>
   
@@ -373,6 +560,24 @@ alt=&quot;1681077071804&quot; /&gt;
     
     
     
+    <category term="学习" scheme="https://grahamzen.github.io/categories/%E5%AD%A6%E4%B9%A0/"/>
+    
+    <category term="计算机图形学" scheme="https://grahamzen.github.io/categories/%E5%AD%A6%E4%B9%A0/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9B%BE%E5%BD%A2%E5%AD%A6/"/>
+    
+    <category term="仿真" scheme="https://grahamzen.github.io/categories/%E5%AD%A6%E4%B9%A0/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9B%BE%E5%BD%A2%E5%AD%A6/%E4%BB%BF%E7%9C%9F/"/>
+    
+    <category term="GAMES103" scheme="https://grahamzen.github.io/categories/%E5%AD%A6%E4%B9%A0/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9B%BE%E5%BD%A2%E5%AD%A6/%E4%BB%BF%E7%9C%9F/GAMES103/"/>
+    
+    
+    <category term="数学" scheme="https://grahamzen.github.io/tags/%E6%95%B0%E5%AD%A6/"/>
+    
+    <category term="计算机图形学" scheme="https://grahamzen.github.io/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9B%BE%E5%BD%A2%E5%AD%A6/"/>
+    
+    <category term="最优化" scheme="https://grahamzen.github.io/tags/%E6%9C%80%E4%BC%98%E5%8C%96/"/>
+    
+    <category term="模拟" scheme="https://grahamzen.github.io/tags/%E6%A8%A1%E6%8B%9F/"/>
+    
+    <category term="刚体" scheme="https://grahamzen.github.io/tags/%E5%88%9A%E4%BD%93/"/>
     
   </entry>
   
@@ -394,6 +599,20 @@ Interval)&lt;/h3&gt;</summary>
     
     
     
+    <category term="学习" scheme="https://grahamzen.github.io/categories/%E5%AD%A6%E4%B9%A0/"/>
+    
+    <category term="计算机图形学" scheme="https://grahamzen.github.io/categories/%E5%AD%A6%E4%B9%A0/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9B%BE%E5%BD%A2%E5%AD%A6/"/>
+    
+    <category term="图形API" scheme="https://grahamzen.github.io/categories/%E5%AD%A6%E4%B9%A0/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9B%BE%E5%BD%A2%E5%AD%A6/%E5%9B%BE%E5%BD%A2API/"/>
+    
+    <category term="Vulkan" scheme="https://grahamzen.github.io/categories/%E5%AD%A6%E4%B9%A0/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9B%BE%E5%BD%A2%E5%AD%A6/%E5%9B%BE%E5%BD%A2API/Vulkan/"/>
+    
+    
+    <category term="swapchian" scheme="https://grahamzen.github.io/tags/swapchian/"/>
+    
+    <category term="交换链" scheme="https://grahamzen.github.io/tags/%E4%BA%A4%E6%8D%A2%E9%93%BE/"/>
+    
+    <category term="Vulkan" scheme="https://grahamzen.github.io/tags/Vulkan/"/>
     
   </entry>
   
@@ -409,6 +628,22 @@ Interval)&lt;/h3&gt;</summary>
     
     
     
+    <category term="学习" scheme="https://grahamzen.github.io/categories/%E5%AD%A6%E4%B9%A0/"/>
+    
+    <category term="计算机图形学" scheme="https://grahamzen.github.io/categories/%E5%AD%A6%E4%B9%A0/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9B%BE%E5%BD%A2%E5%AD%A6/"/>
+    
+    <category term="CIS-5620" scheme="https://grahamzen.github.io/categories/%E5%AD%A6%E4%B9%A0/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9B%BE%E5%BD%A2%E5%AD%A6/CIS-5620/"/>
+    
+    
+    <category term="Bspline" scheme="https://grahamzen.github.io/tags/Bspline/"/>
+    
+    <category term="数学" scheme="https://grahamzen.github.io/tags/%E6%95%B0%E5%AD%A6/"/>
+    
+    <category term="几何处理" scheme="https://grahamzen.github.io/tags/%E5%87%A0%E4%BD%95%E5%A4%84%E7%90%86/"/>
+    
+    <category term="计算机图形学" scheme="https://grahamzen.github.io/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9B%BE%E5%BD%A2%E5%AD%A6/"/>
+    
+    <category term="CIS-5620" scheme="https://grahamzen.github.io/tags/CIS-5620/"/>
     
   </entry>
   
@@ -427,6 +662,16 @@ Interval)&lt;/h3&gt;</summary>
     
     
     
+    <category term="学习" scheme="https://grahamzen.github.io/categories/%E5%AD%A6%E4%B9%A0/"/>
+    
+    <category term="MISC" scheme="https://grahamzen.github.io/categories/%E5%AD%A6%E4%B9%A0/MISC/"/>
+    
+    <category term="项目管理" scheme="https://grahamzen.github.io/categories/%E5%AD%A6%E4%B9%A0/MISC/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86/"/>
+    
+    <category term="cmake" scheme="https://grahamzen.github.io/categories/%E5%AD%A6%E4%B9%A0/MISC/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86/cmake/"/>
+    
+    
+    <category term="cmake" scheme="https://grahamzen.github.io/tags/cmake/"/>
     
   </entry>
   
@@ -446,6 +691,18 @@ L_o(p,&#92;omega_o)=L_e(p,&#92;omega_o)+&#92;int_{s^2}f(p,&#92;omega_o,&#92;omeg
     
     
     
+    <category term="学习" scheme="https://grahamzen.github.io/categories/%E5%AD%A6%E4%B9%A0/"/>
+    
+    <category term="计算机图形学" scheme="https://grahamzen.github.io/categories/%E5%AD%A6%E4%B9%A0/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9B%BE%E5%BD%A2%E5%AD%A6/"/>
+    
+    <category term="CIS-5610" scheme="https://grahamzen.github.io/categories/%E5%AD%A6%E4%B9%A0/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9B%BE%E5%BD%A2%E5%AD%A6/CIS-5610/"/>
+    
+    
+    <category term="计算机图形学" scheme="https://grahamzen.github.io/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9B%BE%E5%BD%A2%E5%AD%A6/"/>
+    
+    <category term="光线跟踪" scheme="https://grahamzen.github.io/tags/%E5%85%89%E7%BA%BF%E8%B7%9F%E8%B8%AA/"/>
+    
+    <category term="蒙特卡洛" scheme="https://grahamzen.github.io/tags/%E8%92%99%E7%89%B9%E5%8D%A1%E6%B4%9B/"/>
     
   </entry>
   
