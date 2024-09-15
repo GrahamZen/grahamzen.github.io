@@ -710,4 +710,11 @@
     <priority>0.2</priority>
   </url>
   
+  <url>
+    <loc>https://grahamzen.github.io/categories/%E5%AD%A6%E4%B9%A0/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9B%BE%E5%BD%A2%E5%AD%A6/%E5%87%A0%E4%BD%95/</loc>
+    <lastmod>2024-09-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
 </urlset>
