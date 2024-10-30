@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="zh"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta><title>Hermite Interpolation - Gehan Zheng&#039;s blog</title><link rel="manifest" href="/manifest.json"><meta name="application-name" content="Gehan Zheng&#039;s blog"><meta name="msapplication-TileImage" content="/img/favicon.svg"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="Gehan Zheng&#039;s blog"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta name="description" content="Hermite插值多项式 Hermite插值是一种插值方法，可以通过给定的点和导数值构造插值多项式。给定点\((x_0,y_0),(x_1,y_1),...,(x_n,y_n)\)和导数值\(y&amp;#39;_0,y&amp;#39;_1,...,y&amp;#39;_n\)，可以构造插值多项式。本文介绍如何使用Newton差商生成Hermite插值多项式。"><meta property="og:type" content="blog"><meta property="og:title" content="Hermite Interpolation"><meta property="og:url" content="https://grahamzen.github.io/"><meta property="og:site_name" content="Gehan Zheng&#039;s blog"><meta property="og:description" content="Hermite插值多项式 Hermite插值是一种插值方法，可以通过给定的点和导数值构造插值多项式。给定点\((x_0,y_0),(x_1,y_1),...,(x_n,y_n)\)和导数值\(y&amp;#39;_0,y&amp;#39;_1,...,y&amp;#39;_n\)，可以构造插值多项式。本文介绍如何使用Newton差商生成Hermite插值多项式。"><meta property="og:locale" content="zh_CN"><meta property="article:published_time" content="2024-10-30T04:52:19.000Z"><meta property="article:modified_time" content="2024-10-30T05:36:00.421Z"><meta property="article:author" content="Gehan Zheng"><meta property="article:tag" content="数学"><meta property="article:tag" content="几何处理"><meta property="article:tag" content="计算机图形学"><meta property="article:tag" content="CIS-5620"><meta property="article:tag" content="Hermite"><meta property="twitter:card" content="summary"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://grahamzen.github.io/2024/10/30/hermite-interpolation/"},"headline":"Hermite Interpolation","image":[],"datePublished":"2024-10-30T04:52:19.000Z","dateModified":"2024-10-30T05:36:00.421Z","author":{"@type":"Person","name":"Gehan Zheng"},"publisher":{"@type":"Organization","name":"Gehan Zheng's blog","logo":{"@type":"ImageObject","url":"https://grahamzen.github.io/img/logo.svg"}},"description":"Hermite插值多项式\r Hermite插值是一种插值方法，可以通过给定的点和导数值构造插值多项式。给定点\\((x_0,y_0),(x_1,y_1),...,(x_n,y_n)\\)和导数值\\(y&#39;_0,y&#39;_1,...,y&#39;_n\\)，可以构造插值多项式。本文介绍如何使用Newton差商生成Hermite插值多项式。"}</script><link rel="canonical" href="https://grahamzen.github.io/2024/10/30/hermite-interpolation/"><link rel="icon" href="/img/favicon.svg"><link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.0.0/css/all.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@9.12.0/styles/atom-one-light.css"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;600&amp;family=Source+Code+Pro"><link rel="stylesheet" href="/css/default.css"><style>body>.footer,body>.navbar,body>.section{opacity:0}</style><!--!--><!--!--><!--!--><!--!--><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.10.0/dist/css/lightgallery.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/css/justifiedGallery.min.css"><script src="https://www.googletagmanager.com/gtag/js?id=G-6SWYYJMYWS" async></script><script>window.dataLayer = window.dataLayer || [];
+<html lang="zh"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta><title>Hermite Interpolation - Gehan Zheng&#039;s blog</title><link rel="manifest" href="/manifest.json"><meta name="application-name" content="Gehan Zheng&#039;s blog"><meta name="msapplication-TileImage" content="/img/favicon.svg"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="Gehan Zheng&#039;s blog"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta name="description" content="Hermite插值多项式 Hermite插值是一种插值方法，可以通过给定的点和导数值构造插值多项式。给定点\((x_0,y_0),(x_1,y_1),...,(x_n,y_n)\)和导数值\(y&amp;#39;_0,y&amp;#39;_1,...,y&amp;#39;_n\)，可以构造插值多项式。本文介绍如何使用Newton差商生成Hermite插值多项式。"><meta property="og:type" content="blog"><meta property="og:title" content="Hermite Interpolation"><meta property="og:url" content="https://grahamzen.github.io/"><meta property="og:site_name" content="Gehan Zheng&#039;s blog"><meta property="og:description" content="Hermite插值多项式 Hermite插值是一种插值方法，可以通过给定的点和导数值构造插值多项式。给定点\((x_0,y_0),(x_1,y_1),...,(x_n,y_n)\)和导数值\(y&amp;#39;_0,y&amp;#39;_1,...,y&amp;#39;_n\)，可以构造插值多项式。本文介绍如何使用Newton差商生成Hermite插值多项式。"><meta property="og:locale" content="zh_CN"><meta property="article:published_time" content="2024-10-30T04:52:19.000Z"><meta property="article:modified_time" content="2024-10-30T06:39:24.190Z"><meta property="article:author" content="Gehan Zheng"><meta property="article:tag" content="数学"><meta property="article:tag" content="几何处理"><meta property="article:tag" content="计算机图形学"><meta property="article:tag" content="CIS-5620"><meta property="article:tag" content="Hermite"><meta property="twitter:card" content="summary"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://grahamzen.github.io/2024/10/30/hermite-interpolation/"},"headline":"Hermite Interpolation","image":[],"datePublished":"2024-10-30T04:52:19.000Z","dateModified":"2024-10-30T06:39:24.190Z","author":{"@type":"Person","name":"Gehan Zheng"},"publisher":{"@type":"Organization","name":"Gehan Zheng's blog","logo":{"@type":"ImageObject","url":"https://grahamzen.github.io/img/logo.svg"}},"description":"Hermite插值多项式\r Hermite插值是一种插值方法，可以通过给定的点和导数值构造插值多项式。给定点\\((x_0,y_0),(x_1,y_1),...,(x_n,y_n)\\)和导数值\\(y&#39;_0,y&#39;_1,...,y&#39;_n\\)，可以构造插值多项式。本文介绍如何使用Newton差商生成Hermite插值多项式。"}</script><link rel="canonical" href="https://grahamzen.github.io/2024/10/30/hermite-interpolation/"><link rel="icon" href="/img/favicon.svg"><link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.0.0/css/all.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@9.12.0/styles/atom-one-light.css"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;600&amp;family=Source+Code+Pro"><link rel="stylesheet" href="/css/default.css"><style>body>.footer,body>.navbar,body>.section{opacity:0}</style><!--!--><!--!--><!--!--><!--!--><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.10.0/dist/css/lightgallery.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/css/justifiedGallery.min.css"><script src="https://www.googletagmanager.com/gtag/js?id=G-6SWYYJMYWS" async></script><script>window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
     
@@ -36,7 +36,7 @@
       window.addEventListener('hashchange', switchTab, false);
   })();
   </script><!-- hexo injector head_end end --><meta name="generator" content="Hexo 6.3.0"><link rel="alternate" href="/atom.xml" title="Gehan Zheng's blog" type="application/atom+xml">
-</head><body class="is-3-column"><nav class="navbar navbar-main"><div class="container navbar-container"><div class="navbar-brand justify-content-center"><a class="navbar-item navbar-logo" href="/"><img src="/img/logo.svg" alt="Gehan Zheng&#039;s blog" height="28"></a></div><div class="navbar-menu"><div class="navbar-start"><a class="navbar-item" href="/">Home</a><a class="navbar-item" href="/archives">Archives</a><a class="navbar-item" href="/categories">Categories</a><a class="navbar-item" href="/tags">Tags</a><a class="navbar-item" href="/about">About</a></div><div class="navbar-end"><a class="navbar-item" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/ppoffice/hexo-theme-icarus"><i class="fab fa-github"></i></a><a class="navbar-item is-hidden-tablet catalogue" title="目录" href="javascript:;"><i class="fas fa-list-ul"></i></a><a class="navbar-item search" title="搜索" href="javascript:;"><i class="fas fa-search"></i></a></div></div></div></nav><section class="section"><div class="container"><div class="columns"><div class="column order-2 column-main is-8-tablet is-8-desktop is-6-widescreen"><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2024-10-30T04:52:19.000Z" title="2024/10/30 下午12:52:19">2024-10-30</time>发表</span><span class="level-item"><time dateTime="2024-10-30T05:36:00.421Z" title="2024/10/30 下午1:36:00">2024-10-30</time>更新</span><span class="level-item"><a class="link-muted" href="/categories/%E5%AD%A6%E4%B9%A0/">学习</a><span> / </span><a class="link-muted" href="/categories/%E5%AD%A6%E4%B9%A0/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9B%BE%E5%BD%A2%E5%AD%A6/">计算机图形学</a><span> / </span><a class="link-muted" href="/categories/%E5%AD%A6%E4%B9%A0/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9B%BE%E5%BD%A2%E5%AD%A6/CIS-5620/">CIS-5620</a></span><span class="level-item">8 分钟读完 (大约1179个字)</span></div></div><h1 class="title is-3 is-size-4-mobile">Hermite Interpolation</h1><div class="content"><h2 id="hermite插值多项式">Hermite插值多项式</h2>
+</head><body class="is-3-column"><nav class="navbar navbar-main"><div class="container navbar-container"><div class="navbar-brand justify-content-center"><a class="navbar-item navbar-logo" href="/"><img src="/img/logo.svg" alt="Gehan Zheng&#039;s blog" height="28"></a></div><div class="navbar-menu"><div class="navbar-start"><a class="navbar-item" href="/">Home</a><a class="navbar-item" href="/archives">Archives</a><a class="navbar-item" href="/categories">Categories</a><a class="navbar-item" href="/tags">Tags</a><a class="navbar-item" href="/about">About</a></div><div class="navbar-end"><a class="navbar-item" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/ppoffice/hexo-theme-icarus"><i class="fab fa-github"></i></a><a class="navbar-item is-hidden-tablet catalogue" title="目录" href="javascript:;"><i class="fas fa-list-ul"></i></a><a class="navbar-item search" title="搜索" href="javascript:;"><i class="fas fa-search"></i></a></div></div></div></nav><section class="section"><div class="container"><div class="columns"><div class="column order-2 column-main is-8-tablet is-8-desktop is-6-widescreen"><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2024-10-30T04:52:19.000Z" title="2024/10/30 下午12:52:19">2024-10-30</time>发表</span><span class="level-item"><time dateTime="2024-10-30T06:39:24.190Z" title="2024/10/30 下午2:39:24">2024-10-30</time>更新</span><span class="level-item"><a class="link-muted" href="/categories/%E5%AD%A6%E4%B9%A0/">学习</a><span> / </span><a class="link-muted" href="/categories/%E5%AD%A6%E4%B9%A0/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9B%BE%E5%BD%A2%E5%AD%A6/">计算机图形学</a><span> / </span><a class="link-muted" href="/categories/%E5%AD%A6%E4%B9%A0/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9B%BE%E5%BD%A2%E5%AD%A6/CIS-5620/">CIS-5620</a></span><span class="level-item">8 分钟读完 (大约1269个字)</span></div></div><h1 class="title is-3 is-size-4-mobile">Hermite Interpolation</h1><div class="content"><h2 id="hermite插值多项式">Hermite插值多项式</h2>
 <p>Hermite插值是一种插值方法，可以通过给定的点和导数值构造插值多项式。给定点<span
 class="math inline">\((x_0,y_0),(x_1,y_1),...,(x_n,y_n)\)</span>和导数值<span
 class="math inline">\(y&#39;_0,y&#39;_1,...,y&#39;_n\)</span>，可以构造插值多项式。本文介绍如何使用Newton差商生成Hermite插值多项式。</p>
@@ -122,6 +122,10 @@ class="math inline">\((0,0),(1,16),(2,46),(3,94),(4,160)\)</span>，可以生成
 <p><span class="math display">\[
 p(x)=f[x_0]+\sum_{i=1}^{n}f[x_0,x_1,...,x_i]\prod_{j=0}^{i-1}(x-x_j)\tag{2}
 \]</span></p>
+<p>用上一节生成的差商表格，可以写出</p>
+<p><span class="math display">\[
+p(x)=(x-0)+16(x-0)(x-1)+7(x-0)(x-1)(x-2)+\frac{2}{3}(x-0)(x-1)(x-2)(x-3)\tag{3}
+\]</span> 可以看出，插值多项式的系数是差商表格的对角线元素。</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">newton_interpolation</span>(<span class="params">tb</span>):</span><br><span class="line">    x = sp.symbols(<span class="string">&quot;x&quot;</span>)</span><br><span class="line">    n = <span class="built_in">len</span>(tb.columns) - <span class="number">2</span></span><br><span class="line">    p = tb.iloc[<span class="number">0</span>, <span class="number">1</span>]</span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">1</span>, n + <span class="number">1</span>):</span><br><span class="line">        term = tb.iloc[i, i + <span class="number">1</span>]</span><br><span class="line">        <span class="keyword">for</span> j <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">0</span>, i):</span><br><span class="line">            term *= x - tb.iloc[j, <span class="number">0</span>]</span><br><span class="line">        p += term</span><br><span class="line">    <span class="keyword">return</span> p</span><br></pre></td></tr></table></figure>
 <p>绘制插值多项式：</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">plot_interpolation</span>(<span class="params">p, x, y</span>):</span><br><span class="line">    xx = np.linspace(x[<span class="number">0</span>], x[-<span class="number">1</span>], <span class="number">100</span>)</span><br><span class="line">    plt.plot(xx, [p.subs(<span class="string">&quot;x&quot;</span>, i) <span class="keyword">for</span> i <span class="keyword">in</span> xx])</span><br><span class="line">    plt.scatter(x, y)</span><br><span class="line">    plt.show()</span><br><span class="line"></span><br><span class="line">p = newton_interpolation(newton_diff_quotient_table)</span><br><span class="line">plot_interpolation(p, x, y)</span><br></pre></td></tr></table></figure>
@@ -137,18 +141,17 @@ class="math inline">\(0.5,0.8,1.2,1.8\)</span>，可以生成差商表格：</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">x = [<span class="number">0</span>, <span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>]</span><br><span class="line">y = [<span class="number">0</span>, <span class="number">16</span>, <span class="number">46</span>, <span class="number">94</span>, <span class="number">160</span>]</span><br><span class="line">y_prime = [<span class="number">0.5</span>, <span class="number">0.5</span>, <span class="number">0.8</span>, <span class="number">1.2</span>, <span class="number">1.8</span>]</span><br><span class="line">hermite_diff_quotient_table = generate_hermite_diff_quotient_table(x, y, y_prime)</span><br><span class="line"><span class="built_in">print</span>(hermite_diff_quotient_table)</span><br></pre></td></tr></table></figure>
 <table>
 <colgroup>
-<col style="width: 8%" />
-<col style="width: 8%" />
-<col style="width: 8%" />
-<col style="width: 8%" />
-<col style="width: 8%" />
-<col style="width: 8%" />
-<col style="width: 8%" />
-<col style="width: 8%" />
-<col style="width: 8%" />
-<col style="width: 8%" />
-<col style="width: 8%" />
-<col style="width: 8%" />
+<col style="width: 9%" />
+<col style="width: 9%" />
+<col style="width: 9%" />
+<col style="width: 9%" />
+<col style="width: 9%" />
+<col style="width: 9%" />
+<col style="width: 9%" />
+<col style="width: 9%" />
+<col style="width: 9%" />
+<col style="width: 9%" />
+<col style="width: 9%" />
 </colgroup>
 <thead>
 <tr>
@@ -167,8 +170,6 @@ class="math inline">\(f[x_0,x_0,x_1,x_1,x_2,x_2,x_3,x_3]\)</span></th>
 class="math inline">\(f[x_0,x_0,x_1,x_1,x_2,x_2,x_3,x_3,x_4]\)</span></th>
 <th><span
 class="math inline">\(f[x_0,x_0,x_1,x_1,x_2,x_2,x_3,x_3,x_4,x_4]\)</span></th>
-<th><span
-class="math inline">\(f[x_0,x_0,x_1,x_1,x_2,x_2,x_3,x_3,x_4,x_4,x_4]\)</span></th>
 </tr>
 </thead>
 <tbody>
@@ -184,12 +185,10 @@ class="math inline">\(f[x_0,x_0,x_1,x_1,x_2,x_2,x_3,x_3,x_4,x_4,x_4]\)</span></t
 <td>/</td>
 <td>/</td>
 <td>/</td>
-<td>/</td>
 </tr>
 <tr>
 <td>0.0</td>
 <td>0.0</td>
-<td>0.5</td>
 <td>0.5</td>
 <td>/</td>
 <td>/</td>
@@ -204,7 +203,6 @@ class="math inline">\(f[x_0,x_0,x_1,x_1,x_2,x_2,x_3,x_3,x_4,x_4,x_4]\)</span></t
 <td>1.0</td>
 <td>16.0</td>
 <td>16.0</td>
-<td>0.5</td>
 <td>15.5</td>
 <td>/</td>
 <td>/</td>
@@ -217,7 +215,6 @@ class="math inline">\(f[x_0,x_0,x_1,x_1,x_2,x_2,x_3,x_3,x_4,x_4,x_4]\)</span></t
 <tr>
 <td>1.0</td>
 <td>16.0</td>
-<td>0.5</td>
 <td>0.5</td>
 <td>-15.5</td>
 <td>-31.0</td>
@@ -232,7 +229,6 @@ class="math inline">\(f[x_0,x_0,x_1,x_1,x_2,x_2,x_3,x_3,x_4,x_4,x_4]\)</span></t
 <td>2.0</td>
 <td>46.0</td>
 <td>30.0</td>
-<td>0.5</td>
 <td>29.5</td>
 <td>22.5</td>
 <td>26.75</td>
@@ -246,7 +242,6 @@ class="math inline">\(f[x_0,x_0,x_1,x_1,x_2,x_2,x_3,x_3,x_4,x_4,x_4]\)</span></t
 <td>2.0</td>
 <td>46.0</td>
 <td>0.8</td>
-<td>0.5</td>
 <td>-29.2</td>
 <td>-58.7</td>
 <td>-40.60</td>
@@ -260,7 +255,6 @@ class="math inline">\(f[x_0,x_0,x_1,x_1,x_2,x_2,x_3,x_3,x_4,x_4,x_4]\)</span></t
 <td>3.0</td>
 <td>94.0</td>
 <td>48.0</td>
-<td>0.5</td>
 <td>47.2</td>
 <td>38.2</td>
 <td>48.45</td>
@@ -274,7 +268,6 @@ class="math inline">\(f[x_0,x_0,x_1,x_1,x_2,x_2,x_3,x_3,x_4,x_4,x_4]\)</span></t
 <td>3.0</td>
 <td>94.0</td>
 <td>1.2</td>
-<td>0.5</td>
 <td>-46.8</td>
 <td>-94.0</td>
 <td>-66.10</td>
@@ -288,7 +281,6 @@ class="math inline">\(f[x_0,x_0,x_1,x_1,x_2,x_2,x_3,x_3,x_4,x_4,x_4]\)</span></t
 <td>4.0</td>
 <td>160.0</td>
 <td>66.0</td>
-<td>0.5</td>
 <td>64.8</td>
 <td>55.8</td>
 <td>74.90</td>
@@ -302,7 +294,6 @@ class="math inline">\(f[x_0,x_0,x_1,x_1,x_2,x_2,x_3,x_3,x_4,x_4,x_4]\)</span></t
 <td>4.0</td>
 <td>160.0</td>
 <td>1.8</td>
-<td>0.5</td>
 <td>-64.2</td>
 <td>-129.0</td>
 <td>-92.40</td>
@@ -315,6 +306,9 @@ class="math inline">\(f[x_0,x_0,x_1,x_1,x_2,x_2,x_3,x_3,x_4,x_4,x_4]\)</span></t
 </tbody>
 </table>
 <p>然后可以用和Newton插值多项式一样的方法生成Hermite插值多项式：</p>
+<p><span class="math display">\[
+p(x)=(x-0)+0.5(x-0)(x-0)+15.5(x-0)(x-0)(x-1)-31(x-0)(x-0)(x-1)(x-1)+26.75(x-0)(x-0)(x-1)(x-1)(x-2)-40.60(x-0)(x-0)(x-1)(x-1)(x-2)(x-2)+29.683333(x-0)(x-0)(x-1)(x-1)(x-2)(x-2)(x-3)-57.275000(x-0)(x-0)(x-1)(x-1)(x-2)(x-2)(x-3)(x-3)+8.159491(x-0)(x-0)(x-1)(x-1)(x-2)(x-2)(x-3)(x-3)(x-4)
+\]</span></p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">p = newton_interpolation(hermite_diff_quotient_table)</span><br><span class="line">plot_interpolation(p, x, y)</span><br></pre></td></tr></table></figure>
 <p><img
 src="../../../../../images/hermite-interpolation/hermite.png" /></p>
