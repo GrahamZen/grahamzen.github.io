@@ -6,7 +6,7 @@
   <link href="https://grahamzen.github.io/atom.xml" rel="self"/>
   
   <link href="https://grahamzen.github.io/"/>
-  <updated>2024-09-15T07:26:30.561Z</updated>
+  <updated>2024-10-30T05:22:30.950Z</updated>
   <id>https://grahamzen.github.io/</id>
   
   <author>
@@ -15,6 +15,43 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>hermite interpolation</title>
+    <link href="https://grahamzen.github.io/2024/10/30/hermite-interpolation/"/>
+    <id>https://grahamzen.github.io/2024/10/30/hermite-interpolation/</id>
+    <published>2024-10-30T04:52:19.000Z</published>
+    <updated>2024-10-30T05:22:30.950Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html"></summary>
+        
+      
+    
+    
+    
+    <category term="学习" scheme="https://grahamzen.github.io/categories/%E5%AD%A6%E4%B9%A0/"/>
+    
+    <category term="计算机图形学" scheme="https://grahamzen.github.io/categories/%E5%AD%A6%E4%B9%A0/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9B%BE%E5%BD%A2%E5%AD%A6/"/>
+    
+    <category term="CIS-5620" scheme="https://grahamzen.github.io/categories/%E5%AD%A6%E4%B9%A0/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9B%BE%E5%BD%A2%E5%AD%A6/CIS-5620/"/>
+    
+    
+    <category term="数学" scheme="https://grahamzen.github.io/tags/%E6%95%B0%E5%AD%A6/"/>
+    
+    <category term="几何处理" scheme="https://grahamzen.github.io/tags/%E5%87%A0%E4%BD%95%E5%A4%84%E7%90%86/"/>
+    
+    <category term="计算机图形学" scheme="https://grahamzen.github.io/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9B%BE%E5%BD%A2%E5%AD%A6/"/>
+    
+    <category term="CIS-5620" scheme="https://grahamzen.github.io/tags/CIS-5620/"/>
+    
+    <category term="Hermite" scheme="https://grahamzen.github.io/tags/Hermite/"/>
+    
+  </entry>
   
   <entry>
     <title>Point triangle distance</title>
@@ -678,37 +715,6 @@ Interval)&lt;/h3&gt;</summary>
     
     
     <category term="cmake" scheme="https://grahamzen.github.io/tags/cmake/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>渲染方程及BSDFs</title>
-    <link href="https://grahamzen.github.io/2023/02/10/rendering-equation/"/>
-    <id>https://grahamzen.github.io/2023/02/10/rendering-equation/</id>
-    <published>2023-02-09T17:42:42.000Z</published>
-    <updated>2023-02-21T17:28:53.000Z</updated>
-    
-    
-    <summary type="html">&lt;h2 id=&quot;光传播方程the-light-transport-equation-lte&quot;&gt;光传播方程(The Light
-Transport Equation, LTE)&lt;/h2&gt;
-&lt;p&gt;&lt;span class=&quot;math display&quot;&gt;&#92;[
-L_o(p,&#92;omega_o)=L_e(p,&#92;omega_o)+&#92;int_{s^2}f(p,&#92;omega_o,&#92;omega_i)|&#92;cos&#92;theta_i|d&#92;omega_i
-&#92;]&lt;/span&gt;&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="学习" scheme="https://grahamzen.github.io/categories/%E5%AD%A6%E4%B9%A0/"/>
-    
-    <category term="计算机图形学" scheme="https://grahamzen.github.io/categories/%E5%AD%A6%E4%B9%A0/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9B%BE%E5%BD%A2%E5%AD%A6/"/>
-    
-    <category term="CIS-5610" scheme="https://grahamzen.github.io/categories/%E5%AD%A6%E4%B9%A0/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9B%BE%E5%BD%A2%E5%AD%A6/CIS-5610/"/>
-    
-    
-    <category term="计算机图形学" scheme="https://grahamzen.github.io/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9B%BE%E5%BD%A2%E5%AD%A6/"/>
-    
-    <category term="光线跟踪" scheme="https://grahamzen.github.io/tags/%E5%85%89%E7%BA%BF%E8%B7%9F%E8%B8%AA/"/>
-    
-    <category term="蒙特卡洛" scheme="https://grahamzen.github.io/tags/%E8%92%99%E7%89%B9%E5%8D%A1%E6%B4%9B/"/>
     
   </entry>
   
