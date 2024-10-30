@@ -6,7 +6,7 @@
   <link href="https://grahamzen.github.io/atom.xml" rel="self"/>
   
   <link href="https://grahamzen.github.io/"/>
-  <updated>2024-10-30T05:24:19.019Z</updated>
+  <updated>2024-10-30T05:27:35.566Z</updated>
   <id>https://grahamzen.github.io/</id>
   
   <author>
@@ -17,20 +17,17 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>hermite interpolation</title>
+    <title>Hermite Interpolation</title>
     <link href="https://grahamzen.github.io/2024/10/30/hermite-interpolation/"/>
     <id>https://grahamzen.github.io/2024/10/30/hermite-interpolation/</id>
     <published>2024-10-30T04:52:19.000Z</published>
-    <updated>2024-10-30T05:24:19.019Z</updated>
+    <updated>2024-10-30T05:27:35.566Z</updated>
     
     
-      
-      
-        
-        
-    <summary type="html"></summary>
-        
-      
+    <summary type="html">&lt;h2 id=&quot;hermite插值多项式&quot;&gt;Hermite插值多项式&lt;/h2&gt;
+&lt;p&gt;Hermite插值是一种插值方法，可以通过给定的点和导数值构造插值多项式。给定点&lt;span
+class=&quot;math inline&quot;&gt;&#92;((x_0,y_0),(x_1,y_1),...,(x_n,y_n)&#92;)&lt;/span&gt;和导数值&lt;span
+class=&quot;math inline&quot;&gt;&#92;(y&amp;#39;_0,y&amp;#39;_1,...,y&amp;#39;_n&#92;)&lt;/span&gt;，可以构造插值多项式。本文介绍如何使用Newton差商生成Hermite插值多项式。&lt;/p&gt;</summary>
     
     
     
