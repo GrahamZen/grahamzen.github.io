@@ -6,7 +6,7 @@
   <link href="https://grahamzen.github.io/atom.xml" rel="self"/>
   
   <link href="https://grahamzen.github.io/"/>
-  <updated>2025-01-02T15:35:18.787Z</updated>
+  <updated>2025-01-02T15:36:09.327Z</updated>
   <id>https://grahamzen.github.io/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://grahamzen.github.io/2025/01/02/graph-coloring/"/>
     <id>https://grahamzen.github.io/2025/01/02/graph-coloring/</id>
     <published>2025-01-02T11:41:24.000Z</published>
-    <updated>2025-01-02T15:35:18.787Z</updated>
+    <updated>2025-01-02T15:36:09.327Z</updated>
     
     
     <summary type="html">&lt;p&gt;Jacobi和Gauss-Seidel都是用于求解线性方程组的迭代方法。Jacobi迭代很容易实现在GPU上并行的版本，但是收敛速度很慢甚至有可能发散。Gauss-Seidel迭代并不能用类似Jacobi的方法并行，因为它是一个依赖于顺序的迭代方法。但是Gauss-Seidel迭代的收敛速度比Jacobi快很多。因此出现了用图论的图着色算法加速Gauss-Seidel迭代的研究。&lt;/p&gt;</summary>
