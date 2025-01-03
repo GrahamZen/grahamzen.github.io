@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://grahamzen.github.io/2023/02/04/derivative/</loc>
+    
+    <lastmod>2025-01-03</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://grahamzen.github.io/2025/01/02/graph-coloring/</loc>
     
     <lastmod>2025-01-03</lastmod>
@@ -104,15 +113,6 @@
     <loc>https://grahamzen.github.io/2023/03/07/VkPresentModeKHR/</loc>
     
     <lastmod>2025-01-02</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://grahamzen.github.io/2023/02/04/derivative/</loc>
-    
-    <lastmod>2024-12-27</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
